@@ -1,0 +1,18 @@
+//
+//  main.m
+//  Nutrient Wise
+//
+//  Created by drvolks on 12-01-08.
+//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+#import "REDACTED_nutrientwiseAppDelegate.h"
+
+int main(int argc, char *argv[])
+{
+    @autoreleasepool {
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([REDACTED_nutrientwiseAppDelegate class]));
+    }
+}

@@ -1,0 +1,466 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6EB9B2F614BA0AEB007C9666 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB9B2F514BA0AEB007C9666 /* UIKit.framework */; };
+		6EB9B2F814BA0AEB007C9666 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB9B2F714BA0AEB007C9666 /* Foundation.framework */; };
+		6EB9B2FA14BA0AEB007C9666 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB9B2F914BA0AEB007C9666 /* CoreGraphics.framework */; };
+		6EB9B30014BA0AEB007C9666 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EB9B2FE14BA0AEB007C9666 /* InfoPlist.strings */; };
+		6EB9B30214BA0AEB007C9666 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB9B30114BA0AEB007C9666 /* main.m */; };
+		6EB9B30614BA0AEB007C9666 /* massawippi_nutrientwiseAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB9B30514BA0AEB007C9666 /* massawippi_nutrientwiseAppDelegate.m */; };
+		6EB9B30914BA0AEB007C9666 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EB9B30714BA0AEB007C9666 /* MainStoryboard.storyboard */; };
+		6EB9B30C14BA0AEB007C9666 /* massawippi_nutrientwiseFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB9B30B14BA0AEB007C9666 /* massawippi_nutrientwiseFirstViewController.m */; };
+		6EB9B30E14BA0AEB007C9666 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB9B30D14BA0AEB007C9666 /* first.png */; };
+		6EB9B31014BA0AEB007C9666 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB9B30F14BA0AEB007C9666 /* first@2x.png */; };
+		6EB9B31314BA0AEB007C9666 /* massawippi_nutrientwiseSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB9B31214BA0AEB007C9666 /* massawippi_nutrientwiseSecondViewController.m */; };
+		6EB9B31514BA0AEB007C9666 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB9B31414BA0AEB007C9666 /* second.png */; };
+		6EB9B31714BA0AEB007C9666 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB9B31614BA0AEB007C9666 /* second@2x.png */; };
+		6EB9B31F14BA0AEB007C9666 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB9B31E14BA0AEB007C9666 /* SenTestingKit.framework */; };
+		6EB9B32014BA0AEB007C9666 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB9B2F514BA0AEB007C9666 /* UIKit.framework */; };
+		6EB9B32114BA0AEB007C9666 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB9B2F714BA0AEB007C9666 /* Foundation.framework */; };
+		6EB9B32914BA0AEB007C9666 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EB9B32714BA0AEB007C9666 /* InfoPlist.strings */; };
+		6EB9B32C14BA0AEB007C9666 /* Nutrient_WiseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB9B32B14BA0AEB007C9666 /* Nutrient_WiseTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6EB9B32214BA0AEB007C9666 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EB9B2E814BA0AEB007C9666 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6EB9B2F014BA0AEB007C9666;
+			remoteInfo = "Nutrient Wise";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6EB9B2F114BA0AEB007C9666 /* Nutrient Wise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nutrient Wise.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EB9B2F514BA0AEB007C9666 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6EB9B2F714BA0AEB007C9666 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6EB9B2F914BA0AEB007C9666 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6EB9B2FD14BA0AEB007C9666 /* Nutrient Wise-Info.plist */ = {isa = PBXFileReference; path = "Nutrient Wise-Info.plist"; sourceTree = "<group>"; };
+		6EB9B2FF14BA0AEB007C9666 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6EB9B30114BA0AEB007C9666 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6EB9B30314BA0AEB007C9666 /* Nutrient Wise-Prefix.pch */ = {isa = PBXFileReference; path = "Nutrient Wise-Prefix.pch"; sourceTree = "<group>"; };
+		6EB9B30414BA0AEB007C9666 /* massawippi_nutrientwiseAppDelegate.h */ = {isa = PBXFileReference; path = massawippi_nutrientwiseAppDelegate.h; sourceTree = "<group>"; };
+		6EB9B30514BA0AEB007C9666 /* massawippi_nutrientwiseAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = massawippi_nutrientwiseAppDelegate.m; sourceTree = "<group>"; };
+		6EB9B30814BA0AEB007C9666 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		6EB9B30A14BA0AEB007C9666 /* massawippi_nutrientwiseFirstViewController.h */ = {isa = PBXFileReference; path = massawippi_nutrientwiseFirstViewController.h; sourceTree = "<group>"; };
+		6EB9B30B14BA0AEB007C9666 /* massawippi_nutrientwiseFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = massawippi_nutrientwiseFirstViewController.m; sourceTree = "<group>"; };
+		6EB9B30D14BA0AEB007C9666 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		6EB9B30F14BA0AEB007C9666 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		6EB9B31114BA0AEB007C9666 /* massawippi_nutrientwiseSecondViewController.h */ = {isa = PBXFileReference; path = massawippi_nutrientwiseSecondViewController.h; sourceTree = "<group>"; };
+		6EB9B31214BA0AEB007C9666 /* massawippi_nutrientwiseSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = massawippi_nutrientwiseSecondViewController.m; sourceTree = "<group>"; };
+		6EB9B31414BA0AEB007C9666 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		6EB9B31614BA0AEB007C9666 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		6EB9B31D14BA0AEB007C9666 /* Nutrient WiseTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nutrient WiseTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EB9B31E14BA0AEB007C9666 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		6EB9B32614BA0AEB007C9666 /* Nutrient WiseTests-Info.plist */ = {isa = PBXFileReference; path = "Nutrient WiseTests-Info.plist"; sourceTree = "<group>"; };
+		6EB9B32814BA0AEB007C9666 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6EB9B32A14BA0AEB007C9666 /* Nutrient_WiseTests.h */ = {isa = PBXFileReference; path = Nutrient_WiseTests.h; sourceTree = "<group>"; };
+		6EB9B32B14BA0AEB007C9666 /* Nutrient_WiseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Nutrient_WiseTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6EB9B2EE14BA0AEB007C9666 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EB9B2F614BA0AEB007C9666 /* UIKit.framework in Frameworks */,
+				6EB9B2F814BA0AEB007C9666 /* Foundation.framework in Frameworks */,
+				6EB9B2FA14BA0AEB007C9666 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EB9B31914BA0AEB007C9666 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EB9B31F14BA0AEB007C9666 /* SenTestingKit.framework in Frameworks */,
+				6EB9B32014BA0AEB007C9666 /* UIKit.framework in Frameworks */,
+				6EB9B32114BA0AEB007C9666 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6EB9B2E614BA0AEB007C9666 = {
+			isa = PBXGroup;
+			children = (
+				6EB9B2FB14BA0AEB007C9666 /* Nutrient Wise */,
+				6EB9B32414BA0AEB007C9666 /* Nutrient WiseTests */,
+				6EB9B2F414BA0AEB007C9666 /* Frameworks */,
+				6EB9B2F214BA0AEB007C9666 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6EB9B2F214BA0AEB007C9666 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6EB9B2F114BA0AEB007C9666 /* Nutrient Wise.app */,
+				6EB9B31D14BA0AEB007C9666 /* Nutrient WiseTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6EB9B2F414BA0AEB007C9666 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6EB9B2F514BA0AEB007C9666 /* UIKit.framework */,
+				6EB9B2F714BA0AEB007C9666 /* Foundation.framework */,
+				6EB9B2F914BA0AEB007C9666 /* CoreGraphics.framework */,
+				6EB9B31E14BA0AEB007C9666 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6EB9B2FB14BA0AEB007C9666 /* Nutrient Wise */ = {
+			isa = PBXGroup;
+			children = (
+				6EB9B30414BA0AEB007C9666 /* massawippi_nutrientwiseAppDelegate.h */,
+				6EB9B30514BA0AEB007C9666 /* massawippi_nutrientwiseAppDelegate.m */,
+				6EB9B30714BA0AEB007C9666 /* MainStoryboard.storyboard */,
+				6EB9B30A14BA0AEB007C9666 /* massawippi_nutrientwiseFirstViewController.h */,
+				6EB9B30B14BA0AEB007C9666 /* massawippi_nutrientwiseFirstViewController.m */,
+				6EB9B30D14BA0AEB007C9666 /* first.png */,
+				6EB9B30F14BA0AEB007C9666 /* first@2x.png */,
+				6EB9B31114BA0AEB007C9666 /* massawippi_nutrientwiseSecondViewController.h */,
+				6EB9B31214BA0AEB007C9666 /* massawippi_nutrientwiseSecondViewController.m */,
+				6EB9B31414BA0AEB007C9666 /* second.png */,
+				6EB9B31614BA0AEB007C9666 /* second@2x.png */,
+				6EB9B2FC14BA0AEB007C9666 /* Supporting Files */,
+			);
+			path = "Nutrient Wise";
+			sourceTree = "<group>";
+		};
+		6EB9B2FC14BA0AEB007C9666 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6EB9B2FD14BA0AEB007C9666 /* Nutrient Wise-Info.plist */,
+				6EB9B2FE14BA0AEB007C9666 /* InfoPlist.strings */,
+				6EB9B30114BA0AEB007C9666 /* main.m */,
+				6EB9B30314BA0AEB007C9666 /* Nutrient Wise-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6EB9B32414BA0AEB007C9666 /* Nutrient WiseTests */ = {
+			isa = PBXGroup;
+			children = (
+				6EB9B32A14BA0AEB007C9666 /* Nutrient_WiseTests.h */,
+				6EB9B32B14BA0AEB007C9666 /* Nutrient_WiseTests.m */,
+				6EB9B32514BA0AEB007C9666 /* Supporting Files */,
+			);
+			path = "Nutrient WiseTests";
+			sourceTree = "<group>";
+		};
+		6EB9B32514BA0AEB007C9666 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6EB9B32614BA0AEB007C9666 /* Nutrient WiseTests-Info.plist */,
+				6EB9B32714BA0AEB007C9666 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6EB9B2F014BA0AEB007C9666 /* Nutrient Wise */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6EB9B32F14BA0AEB007C9666 /* Build configuration list for PBXNativeTarget "Nutrient Wise" */;
+			buildPhases = (
+				6EB9B2ED14BA0AEB007C9666 /* Sources */,
+				6EB9B2EE14BA0AEB007C9666 /* Frameworks */,
+				6EB9B2EF14BA0AEB007C9666 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Nutrient Wise";
+			productName = "Nutrient Wise";
+			productReference = 6EB9B2F114BA0AEB007C9666 /* Nutrient Wise.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6EB9B31C14BA0AEB007C9666 /* Nutrient WiseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6EB9B33214BA0AEB007C9666 /* Build configuration list for PBXNativeTarget "Nutrient WiseTests" */;
+			buildPhases = (
+				6EB9B31814BA0AEB007C9666 /* Sources */,
+				6EB9B31914BA0AEB007C9666 /* Frameworks */,
+				6EB9B31A14BA0AEB007C9666 /* Resources */,
+				6EB9B31B14BA0AEB007C9666 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6EB9B32314BA0AEB007C9666 /* PBXTargetDependency */,
+			);
+			name = "Nutrient WiseTests";
+			productName = "Nutrient WiseTests";
+			productReference = 6EB9B31D14BA0AEB007C9666 /* Nutrient WiseTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6EB9B2E814BA0AEB007C9666 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 6EB9B2EB14BA0AEB007C9666 /* Build configuration list for PBXProject "Nutrient Wise" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6EB9B2E614BA0AEB007C9666;
+			productRefGroup = 6EB9B2F214BA0AEB007C9666 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6EB9B2F014BA0AEB007C9666 /* Nutrient Wise */,
+				6EB9B31C14BA0AEB007C9666 /* Nutrient WiseTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6EB9B2EF14BA0AEB007C9666 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EB9B30014BA0AEB007C9666 /* InfoPlist.strings in Resources */,
+				6EB9B30914BA0AEB007C9666 /* MainStoryboard.storyboard in Resources */,
+				6EB9B30E14BA0AEB007C9666 /* first.png in Resources */,
+				6EB9B31014BA0AEB007C9666 /* first@2x.png in Resources */,
+				6EB9B31514BA0AEB007C9666 /* second.png in Resources */,
+				6EB9B31714BA0AEB007C9666 /* second@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EB9B31A14BA0AEB007C9666 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EB9B32914BA0AEB007C9666 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6EB9B31B14BA0AEB007C9666 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6EB9B2ED14BA0AEB007C9666 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EB9B30214BA0AEB007C9666 /* main.m in Sources */,
+				6EB9B30614BA0AEB007C9666 /* massawippi_nutrientwiseAppDelegate.m in Sources */,
+				6EB9B30C14BA0AEB007C9666 /* massawippi_nutrientwiseFirstViewController.m in Sources */,
+				6EB9B31314BA0AEB007C9666 /* massawippi_nutrientwiseSecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EB9B31814BA0AEB007C9666 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EB9B32C14BA0AEB007C9666 /* Nutrient_WiseTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6EB9B32314BA0AEB007C9666 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6EB9B2F014BA0AEB007C9666 /* Nutrient Wise */;
+			targetProxy = 6EB9B32214BA0AEB007C9666 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6EB9B2FE14BA0AEB007C9666 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6EB9B2FF14BA0AEB007C9666 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6EB9B30714BA0AEB007C9666 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6EB9B30814BA0AEB007C9666 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		6EB9B32714BA0AEB007C9666 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6EB9B32814BA0AEB007C9666 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6EB9B32D14BA0AEB007C9666 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6EB9B32E14BA0AEB007C9666 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6EB9B33014BA0AEB007C9666 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
+				INFOPLIST_FILE = "Nutrient Wise/Nutrient Wise-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6EB9B33114BA0AEB007C9666 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
+				INFOPLIST_FILE = "Nutrient Wise/Nutrient Wise-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		6EB9B33314BA0AEB007C9666 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Nutrient Wise.app/Nutrient Wise";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
+				INFOPLIST_FILE = "Nutrient WiseTests/Nutrient WiseTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		6EB9B33414BA0AEB007C9666 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Nutrient Wise.app/Nutrient Wise";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
+				INFOPLIST_FILE = "Nutrient WiseTests/Nutrient WiseTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6EB9B2EB14BA0AEB007C9666 /* Build configuration list for PBXProject "Nutrient Wise" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EB9B32D14BA0AEB007C9666 /* Debug */,
+				6EB9B32E14BA0AEB007C9666 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6EB9B32F14BA0AEB007C9666 /* Build configuration list for PBXNativeTarget "Nutrient Wise" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EB9B33014BA0AEB007C9666 /* Debug */,
+				6EB9B33114BA0AEB007C9666 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6EB9B33214BA0AEB007C9666 /* Build configuration list for PBXNativeTarget "Nutrient WiseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EB9B33314BA0AEB007C9666 /* Debug */,
+				6EB9B33414BA0AEB007C9666 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6EB9B2E814BA0AEB007C9666 /* Project object */;
+}

@@ -6,9 +6,12 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "massawippi_nutrientwiseFirstViewController.h"
+#import "massawippi_nutrientwiseFirstViewController.h" 
+#import "Importer.h"
 
 @implementation massawippi_nutrientwiseFirstViewController
+
+@synthesize managedObjectContext;
 
 - (void)didReceiveMemoryWarning
 {
@@ -22,6 +25,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+
+    
+
 }
 
 - (void)viewDidUnload
@@ -56,5 +62,7 @@
     // Return YES for supported orientations
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
+
+
 
 @end

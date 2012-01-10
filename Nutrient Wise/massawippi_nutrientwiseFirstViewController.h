@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
-@interface massawippi_nutrientwiseFirstViewController : UIViewController
+@interface massawippi_nutrientwiseFirstViewController : UIViewController {
+    NSManagedObjectContext *managedObjectContext;
+}
+
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
 @end

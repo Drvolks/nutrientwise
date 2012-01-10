@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
-@interface REDACTED_nutrientwiseFirstViewController : UIViewController
+@interface REDACTED_nutrientwiseFirstViewController : UIViewController {
+    NSManagedObjectContext *managedObjectContext;
+}
+
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
 @end

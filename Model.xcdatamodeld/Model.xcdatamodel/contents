@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="878" systemVersion="11C74" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="FoodName" representedClassName="FoodName" syncable="YES">
+        <attribute name="foodCode" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="foodGroupId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="foodId" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="foodSourceId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="longNameEnglish" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longNameFrench" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="nutritiveValues" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NutritiveValue" syncable="YES"/>
+    </entity>
+    <entity name="NutritiveValue" representedClassName="NutritiveValue" syncable="YES">
+        <attribute name="foodId" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="nutritiveId" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="nutritiveValue" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="foodName" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="FoodName" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="FoodName" positionX="160" positionY="192" width="128" height="135"/>
+        <element name="NutritiveValue" positionX="-1638" positionY="-126" width="128" height="105"/>
+    </elements>
+</model>

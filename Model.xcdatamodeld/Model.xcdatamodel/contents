@@ -3,9 +3,9 @@
     <entity name="ConversionFactor" representedClassName="ConversionFactor" syncable="YES">
         <attribute name="conversionFactor" optional="YES" attributeType="Decimal" defaultValueString="0" syncable="YES"/>
         <attribute name="foodId" optional="YES" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
-        <attribute name="mesureId" optional="YES" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="measureId" optional="YES" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
         <relationship name="foodName" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="FoodName" inverseName="conversionFactors" inverseEntity="FoodName" syncable="YES"/>
-        <relationship name="mesure" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Mesure" syncable="YES"/>
+        <relationship name="maesure" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Measure" syncable="YES"/>
     </entity>
     <entity name="FoodName" representedClassName="FoodName" syncable="YES">
         <attribute name="englishName" optional="YES" attributeType="String" syncable="YES"/>
@@ -34,10 +34,10 @@
         <attribute name="groupNameId" optional="YES" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
         <relationship name="foodNames" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="FoodName" inverseName="groupName" inverseEntity="FoodName" syncable="YES"/>
     </entity>
-    <entity name="Mesure" representedClassName="Mesure" syncable="YES">
+    <entity name="Measure" representedClassName="Mesure" syncable="YES">
         <attribute name="englishName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="frenchName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="mesureId" optional="YES" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="measureId" optional="YES" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
     </entity>
     <entity name="NutritiveName" representedClassName="NutritiveName" syncable="YES">
         <attribute name="englishName" optional="YES" attributeType="String" syncable="YES"/>
@@ -89,7 +89,7 @@
         <element name="FoodName" positionX="160" positionY="192" width="128" height="225"/>
         <element name="FoodSource" positionX="160" positionY="192" width="128" height="105"/>
         <element name="GroupName" positionX="160" positionY="192" width="128" height="120"/>
-        <element name="Mesure" positionX="160" positionY="192" width="128" height="90"/>
+        <element name="Measure" positionX="160" positionY="192" width="128" height="90"/>
         <element name="NutritiveName" positionX="160" positionY="192" width="128" height="135"/>
         <element name="NutritiveSource" positionX="160" positionY="192" width="128" height="105"/>
         <element name="NutritiveValue" positionX="-1638" positionY="-126" width="128" height="150"/>

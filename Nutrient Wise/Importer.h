@@ -17,12 +17,14 @@
 
 @interface Importer : NSObject {
     NSManagedObjectContext *managedObjectContext;
-    NSNumberFormatter *formatter;
+    NSNumberFormatter *formatterInteger;
+    NSNumberFormatter *formatterDecimal;
     Finder *finder;
 }
 
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
-@property (nonatomic, retain) NSNumberFormatter *formatter;
+@property (nonatomic, retain) NSNumberFormatter *formatterInteger;
+@property (nonatomic, retain) NSNumberFormatter *formatterDecimal;
 @property (nonatomic, retain) Finder *finder;
     
 - (void)importData;

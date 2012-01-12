@@ -2,7 +2,7 @@
 //  Yield.m
 //  Nutrient Wise
 //
-//  Created by Jean-François Dufour on 12-01-11.
+//  Created by Jean-François Dufour on 12-01-12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
@@ -13,8 +13,8 @@
 @implementation Yield
 
 @dynamic foodId;
-@dynamic yieldNameId;
 @dynamic yieldAmount;
+@dynamic yieldNameId;
 @dynamic yieldName;
 
 @end

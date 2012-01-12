@@ -2,7 +2,7 @@
 //  NutritiveName.m
 //  Nutrient Wise
 //
-//  Created by Jean-François Dufour on 12-01-11.
+//  Created by Jean-François Dufour on 12-01-12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
@@ -11,11 +11,11 @@
 
 @implementation NutritiveName
 
-@dynamic nutritiveNameId;
-@dynamic nutritiveCode;
-@dynamic nutritiveSymbol;
-@dynamic unit;
 @dynamic englishName;
 @dynamic frenchName;
+@dynamic nutritiveCode;
+@dynamic nutritiveNameId;
+@dynamic nutritiveSymbol;
+@dynamic unit;
 
 @end

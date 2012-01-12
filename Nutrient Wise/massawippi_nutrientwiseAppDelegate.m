@@ -19,9 +19,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    Importer *importer = [Importer alloc];
     NSManagedObjectContext *context = [self managedObjectContext];
-    [importer importData:context];
+    Importer *importer = [[Importer alloc] initWithContext:context];
+    [importer importData];
     
     return YES;
 } 

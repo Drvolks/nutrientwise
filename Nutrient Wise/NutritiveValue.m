@@ -2,7 +2,7 @@
 //  NutritiveValue.m
 //  Nutrient Wise
 //
-//  Created by Jean-François Dufour on 12-01-08.
+//  Created by Jean-François Dufour on 12-01-11.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
@@ -12,9 +12,10 @@
 
 @implementation NutritiveValue
 
+@dynamic foodId;
 @dynamic nutritiveId;
 @dynamic nutritiveValue;
-@dynamic foodId;
+@dynamic nutritiveSourceId;
 @dynamic foodName;
 
 @end

@@ -2,7 +2,7 @@
 //  NutritiveValue.h
 //  Nutrient Wise
 //
-//  Created by Jean-François Dufour on 12-01-08.
+//  Created by Jean-François Dufour on 12-01-11.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
@@ -13,9 +13,10 @@
 
 @interface NutritiveValue : NSManagedObject
 
+@property (nonatomic, retain) NSNumber * foodId;
 @property (nonatomic, retain) NSNumber * nutritiveId;
 @property (nonatomic, retain) NSNumber * nutritiveValue;
-@property (nonatomic, retain) NSNumber * foodId;
+@property (nonatomic, retain) NSNumber * nutritiveSourceId;
 @property (nonatomic, retain) FoodName *foodName;
 
 @end

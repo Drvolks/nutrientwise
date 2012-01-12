@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6E3E404414BA535E002048B8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E3E404314BA535E002048B8 /* CoreData.framework */; };
-		6E417F3714BE439700F2A2AC /* NutritiveValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E417F3614BE439700F2A2AC /* NutritiveValue.m */; };
 		6E417F3B14BE50B000F2A2AC /* Finder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E417F3A14BE50B000F2A2AC /* Finder.m */; };
-		6E417F4A14BE581300F2A2AC /* FoodName.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E417F4914BE581300F2A2AC /* FoodName.m */; };
 		6E6C988714BF92D40068D6AA /* FoodName.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E6C988614BF92D40068D6AA /* FoodName.m */; };
 		6E6C988A14BF92D40068D6AA /* YieldName.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E6C988914BF92D40068D6AA /* YieldName.m */; };
 		6E6C988D14BF92D40068D6AA /* GroupName.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E6C988C14BF92D40068D6AA /* GroupName.m */; };
@@ -73,7 +71,6 @@
 		6E417F3614BE439700F2A2AC /* NutritiveValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NutritiveValue.m; sourceTree = "<group>"; };
 		6E417F3914BE50B000F2A2AC /* Finder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finder.h; sourceTree = "<group>"; };
 		6E417F3A14BE50B000F2A2AC /* Finder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finder.m; sourceTree = "<group>"; };
-		6E417F4914BE581300F2A2AC /* FoodName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FoodName.m; path = ../FoodName.m; sourceTree = "<group>"; };
 		6E6C988514BF92D40068D6AA /* FoodName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodName.h; sourceTree = "<group>"; };
 		6E6C988614BF92D40068D6AA /* FoodName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodName.m; sourceTree = "<group>"; };
 		6E6C988814BF92D40068D6AA /* YieldName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YieldName.h; sourceTree = "<group>"; };
@@ -180,6 +177,8 @@
 				6E6C989B14BF92D50068D6AA /* ConversionFactor.m */,
 				6E6C989714BF92D40068D6AA /* NutritiveSource.h */,
 				6E6C989814BF92D40068D6AA /* NutritiveSource.m */,
+				6E417F3514BE439700F2A2AC /* NutritiveValue.h */,
+				6E417F3614BE439700F2A2AC /* NutritiveValue.m */,
 				6E6C989414BF92D40068D6AA /* RefuseName.h */,
 				6E6C989514BF92D40068D6AA /* RefuseName.m */,
 				6E6C989114BF92D40068D6AA /* Mesure.h */,
@@ -188,10 +187,10 @@
 				6E6C988F14BF92D40068D6AA /* Refuse.m */,
 				6E6C988B14BF92D40068D6AA /* GroupName.h */,
 				6E6C988C14BF92D40068D6AA /* GroupName.m */,
-				6E6C988814BF92D40068D6AA /* YieldName.h */,
-				6E6C988914BF92D40068D6AA /* YieldName.m */,
 				6E6C988514BF92D40068D6AA /* FoodName.h */,
 				6E6C988614BF92D40068D6AA /* FoodName.m */,
+				6E6C988814BF92D40068D6AA /* YieldName.h */,
+				6E6C988914BF92D40068D6AA /* YieldName.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -241,8 +240,6 @@
 				6EB9B35E14BA1C1E007C9666 /* Importer.m */,
 				6E417F3914BE50B000F2A2AC /* Finder.h */,
 				6E417F3A14BE50B000F2A2AC /* Finder.m */,
-				6E417F3514BE439700F2A2AC /* NutritiveValue.h */,
-				6E417F3614BE439700F2A2AC /* NutritiveValue.m */,
 				6EB9B30D14BA0AEB007C9666 /* first.png */,
 				6EB9B30F14BA0AEB007C9666 /* first@2x.png */,
 				6EB9B31114BA0AEB007C9666 /* massawippi_nutrientwiseSecondViewController.h */,
@@ -440,9 +437,7 @@
 				6EB9B31314BA0AEB007C9666 /* massawippi_nutrientwiseSecondViewController.m in Sources */,
 				6EB9B33714BA0AFA007C9666 /* Model.xcdatamodeld in Sources */,
 				6EB9B35F14BA1C1E007C9666 /* Importer.m in Sources */,
-				6E417F3714BE439700F2A2AC /* NutritiveValue.m in Sources */,
 				6E417F3B14BE50B000F2A2AC /* Finder.m in Sources */,
-				6E417F4A14BE581300F2A2AC /* FoodName.m in Sources */,
 				6E6C988714BF92D40068D6AA /* FoodName.m in Sources */,
 				6E6C988A14BF92D40068D6AA /* YieldName.m in Sources */,
 				6E6C988D14BF92D40068D6AA /* GroupName.m in Sources */,

@@ -13,16 +13,33 @@
 
 #endif
 
+#import "Finder.h"
+
 @interface Importer : NSObject {
     NSManagedObjectContext *managedObjectContext;
+    NSNumberFormatter *formatter;
+    Finder *finder;
 }
 
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, retain) NSNumberFormatter *formatter;
+@property (nonatomic, retain) Finder *finder;
     
-- (void)importData:(NSManagedObjectContext *)mObjectContext;
-
+- (void)importData;
+- (id)initWithContext:(NSManagedObjectContext *)mObjectContext;
 
 - (NSArray *) loadFile:(NSString *) fileName;
 - (void) processFoodName:(NSArray *) list;
+- (void) processNutritiveValue:(NSArray *) list;
+- (void) processConversionFactor:(NSArray *) list;
+- (void) processFoodSource:(NSArray *) list;
+- (void) processGroupName:(NSArray *) list;
+- (void) processMesure:(NSArray *) list;
+- (void) processNutritiveName:(NSArray *) list;
+- (void) processNutritiveSource:(NSArray *) list;
+- (void) processRefuse:(NSArray *) list;
+- (void) processRefuseName:(NSArray *) list;
+- (void) processYield:(NSArray *) list;
+- (void) processYieldName:(NSArray *) list;
 
 @end

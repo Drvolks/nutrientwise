@@ -5,14 +5,18 @@
 @implementation Importer
 
 @synthesize managedObjectContext;
-@synthesize formatter;
+@synthesize formatterInteger;
+@synthesize formatterDecimal;
 @synthesize finder;
 
 - (id)initWithContext:(NSManagedObjectContext *)mObjectContext {
     self.managedObjectContext = mObjectContext;
     
-    self.formatter = [[NSNumberFormatter alloc] init];
-    [self.formatter setNumberStyle:NSNumberFormatterNoStyle];
+    self.formatterInteger = [[NSNumberFormatter alloc] init];
+    [self.formatterInteger setNumberStyle:NSNumberFormatterNoStyle];
+    
+    self.formatterDecimal = [[NSNumberFormatter alloc] init];
+    [self.formatterDecimal setNumberStyle:NSNumberFormatterDecimalStyle];
     
     self.finder = [[Finder alloc] initWithContext:mObjectContext];
     
@@ -96,10 +100,10 @@
             NSString *longNameFrench = [content objectAtIndex:7];
            
             FoodName *foodNameEntity = (FoodName *)[NSEntityDescription insertNewObjectForEntityForName:@"FoodName" inManagedObjectContext:managedObjectContext];
-            [foodNameEntity setFoodId:[formatter numberFromString:foodId]];
-            [foodNameEntity setFoodCode:[formatter numberFromString:foodCode]];
-            [foodNameEntity setGroupNameId:[formatter numberFromString:foodGroupId]];
-            [foodNameEntity setFoodSourceId:[formatter numberFromString:foodSourceId]];
+            [foodNameEntity setFoodId:[formatterInteger numberFromString:foodId]];
+            [foodNameEntity setFoodCode:[formatterInteger numberFromString:foodCode]];
+            [foodNameEntity setGroupNameId:[formatterInteger numberFromString:foodGroupId]];
+            [foodNameEntity setFoodSourceId:[formatterInteger numberFromString:foodSourceId]];
             [foodNameEntity setEnglishName:longNameEnglish];
             [foodNameEntity setFrenchName:longNameFrench];
             
@@ -127,17 +131,17 @@
         NSUInteger elementCount = [content count];
         if(elementCount == 8) {
             NSString *foodId = [content objectAtIndex:0];
-            NSString *nutritiveId = [content objectAtIndex:1];
+            NSString *nutritiveNameId = [content objectAtIndex:1];
             NSString *nutrientValue = [content objectAtIndex:2];
             NSString *nutritiveSourceId = [content objectAtIndex:5];
             
             NutritiveValue *nutritiveValueEntity = (NutritiveValue *)[NSEntityDescription insertNewObjectForEntityForName:@"NutritiveValue" inManagedObjectContext:managedObjectContext];
-            [nutritiveValueEntity setFoodId:[formatter numberFromString:foodId]];
-            [nutritiveValueEntity setNutritiveId:[formatter numberFromString:nutritiveId]];
-            [nutritiveValueEntity setNutritiveValue:[formatter numberFromString:nutrientValue]];
-            [nutritiveValueEntity setNutritiveSourceId:[formatter numberFromString:nutritiveSourceId]];
+            [nutritiveValueEntity setFoodId:[formatterInteger numberFromString:foodId]];
+            [nutritiveValueEntity setNutritiveNameId:[formatterInteger numberFromString:nutritiveNameId]];
+            [nutritiveValueEntity setNutritiveValue:[formatterDecimal numberFromString:nutrientValue]];
+            [nutritiveValueEntity setNutritiveSourceId:[formatterInteger numberFromString:nutritiveSourceId]];
             
-            FoodName *foodName = [finder getFoodName:[formatter numberFromString:foodId]];
+            FoodName *foodName = [finder getFoodName:[formatterInteger numberFromString:foodId]];
             if(foodName != nil) {
                 [nutritiveValueEntity setFoodName:foodName];
                 //[foodName addNutritiveValuesObject:nutritiveValueEntity];

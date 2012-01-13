@@ -7,6 +7,7 @@
 //
 
 #import "Refuse.h"
+#import "FoodName.h"
 #import "RefuseName.h"
 
 
@@ -16,5 +17,6 @@
 @dynamic refuseAmount;
 @dynamic refuseNameId;
 @dynamic refuseName;
+@dynamic foodName;
 
 @end

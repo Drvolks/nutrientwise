@@ -19,19 +19,34 @@
 @property (nonatomic, retain) NSNumber * foodSourceId;
 @property (nonatomic, retain) NSString * frenchName;
 @property (nonatomic, retain) NSNumber * groupNameId;
-@property (nonatomic, retain) ConversionFactor *conversionFactors;
-@property (nonatomic, retain) FoodSource *foudSource;
+@property (nonatomic, retain) NSSet *conversionFactors;
+@property (nonatomic, retain) FoodSource *foodSource;
 @property (nonatomic, retain) GroupName *groupName;
 @property (nonatomic, retain) NSSet *nutritiveValues;
-@property (nonatomic, retain) Refuse *refuses;
-@property (nonatomic, retain) Yield *yields;
+@property (nonatomic, retain) NSSet *refuses;
+@property (nonatomic, retain) NSSet *yields;
 @end
 
 @interface FoodName (CoreDataGeneratedAccessors)
+
+- (void)addConversionFactorsObject:(ConversionFactor *)value;
+- (void)removeConversionFactorsObject:(ConversionFactor *)value;
+- (void)addConversionFactors:(NSSet *)values;
+- (void)removeConversionFactors:(NSSet *)values;
 
 - (void)addNutritiveValuesObject:(NutritiveValue *)value;
 - (void)removeNutritiveValuesObject:(NutritiveValue *)value;
 - (void)addNutritiveValues:(NSSet *)values;
 - (void)removeNutritiveValues:(NSSet *)values;
+
+- (void)addRefusesObject:(Refuse *)value;
+- (void)removeRefusesObject:(Refuse *)value;
+- (void)addRefuses:(NSSet *)values;
+- (void)removeRefuses:(NSSet *)values;
+
+- (void)addYieldsObject:(Yield *)value;
+- (void)removeYieldsObject:(Yield *)value;
+- (void)addYields:(NSSet *)values;
+- (void)removeYields:(NSSet *)values;
 
 @end

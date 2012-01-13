@@ -8,7 +8,7 @@
 
 #import "ConversionFactor.h"
 #import "FoodName.h"
-#import "Mesure.h"
+#import "Measure.h"
 
 
 @implementation ConversionFactor

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class YieldName;
+@class FoodName, YieldName;
 
 @interface Yield : NSManagedObject
 
@@ -17,5 +17,6 @@
 @property (nonatomic, retain) NSDecimalNumber * yieldAmount;
 @property (nonatomic, retain) NSNumber * yieldNameId;
 @property (nonatomic, retain) YieldName *yieldName;
+@property (nonatomic, retain) FoodName *foodName;
 
 @end

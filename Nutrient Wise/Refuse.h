@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class RefuseName;
+@class FoodName, RefuseName;
 
 @interface Refuse : NSManagedObject
 
@@ -17,5 +17,6 @@
 @property (nonatomic, retain) NSDecimalNumber * refuseAmount;
 @property (nonatomic, retain) NSNumber * refuseNameId;
 @property (nonatomic, retain) RefuseName *refuseName;
+@property (nonatomic, retain) FoodName *foodName;
 
 @end

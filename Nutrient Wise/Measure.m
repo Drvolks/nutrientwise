@@ -1,21 +1,18 @@
 //
-//  NutritiveName.m
+//  Measure.m
 //  Nutrient Wise
 //
 //  Created by drvolks on 12-01-12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "NutritiveName.h"
+#import "Measure.h"
 
 
-@implementation NutritiveName
+@implementation Measure
 
 @dynamic englishName;
 @dynamic frenchName;
-@dynamic nutritiveNameCode;
-@dynamic nutritiveNameId;
-@dynamic nutritiveSymbol;
-@dynamic unit;
+@dynamic measureId;
 
 @end

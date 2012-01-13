@@ -14,7 +14,7 @@
 
 @dynamic englishName;
 @dynamic frenchName;
-@dynamic groupCode;
+@dynamic groupNameCode;
 @dynamic groupNameId;
 @dynamic foodNames;
 

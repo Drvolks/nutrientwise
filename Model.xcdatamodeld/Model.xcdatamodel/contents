@@ -14,12 +14,12 @@
         <attribute name="foodSourceId" optional="YES" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
         <attribute name="frenchName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="groupNameId" optional="YES" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
-        <relationship name="conversionFactors" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ConversionFactor" inverseName="foodName" inverseEntity="ConversionFactor" syncable="YES"/>
-        <relationship name="foudSource" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="FoodSource" syncable="YES"/>
-        <relationship name="groupName" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="GroupName" inverseName="foodNames" inverseEntity="GroupName" syncable="YES"/>
+        <relationship name="conversionFactors" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ConversionFactor" inverseName="foodName" inverseEntity="ConversionFactor" syncable="YES"/>
+        <relationship name="foodSource" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="FoodSource" syncable="YES"/>
+        <relationship name="groupName" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="GroupName" syncable="YES"/>
         <relationship name="nutritiveValues" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NutritiveValue" inverseName="foodName" inverseEntity="NutritiveValue" syncable="YES"/>
-        <relationship name="refuses" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Refuse" syncable="YES"/>
-        <relationship name="yields" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Yield" syncable="YES"/>
+        <relationship name="refuses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Refuse" inverseName="foodName" inverseEntity="Refuse" syncable="YES"/>
+        <relationship name="yields" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Yield" inverseName="foodName" inverseEntity="Yield" syncable="YES"/>
     </entity>
     <entity name="FoodSource" representedClassName="FoodSource" syncable="YES">
         <attribute name="englishName" optional="YES" attributeType="String" syncable="YES"/>
@@ -30,11 +30,11 @@
     <entity name="GroupName" representedClassName="GroupName" syncable="YES">
         <attribute name="englishName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="frenchName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="groupCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupNameCode" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="groupNameId" optional="YES" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
-        <relationship name="foodNames" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="FoodName" inverseName="groupName" inverseEntity="FoodName" syncable="YES"/>
+        <relationship name="foodNames" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="FoodName" syncable="YES"/>
     </entity>
-    <entity name="Measure" representedClassName="Mesure" syncable="YES">
+    <entity name="Measure" representedClassName="Measure" syncable="YES">
         <attribute name="englishName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="frenchName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="measureId" optional="YES" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
@@ -42,7 +42,7 @@
     <entity name="NutritiveName" representedClassName="NutritiveName" syncable="YES">
         <attribute name="englishName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="frenchName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="nutritiveCode" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="nutritiveNameCode" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="nutritiveNameId" optional="YES" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
         <attribute name="nutritiveSymbol" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="unit" optional="YES" attributeType="String" syncable="YES"/>
@@ -66,6 +66,7 @@
         <attribute name="foodId" optional="YES" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
         <attribute name="refuseAmount" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="refuseNameId" optional="YES" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <relationship name="foodName" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="FoodName" inverseName="refuses" inverseEntity="FoodName" syncable="YES"/>
         <relationship name="refuseName" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="RefuseName" syncable="YES"/>
     </entity>
     <entity name="RefuseName" representedClassName="RefuseName" syncable="YES">
@@ -77,6 +78,7 @@
         <attribute name="foodId" optional="YES" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
         <attribute name="yieldAmount" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="yieldNameId" optional="YES" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <relationship name="foodName" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="FoodName" inverseName="yields" inverseEntity="FoodName" syncable="YES"/>
         <relationship name="yieldName" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="YieldName" syncable="YES"/>
     </entity>
     <entity name="YieldName" representedClassName="YieldName" syncable="YES">

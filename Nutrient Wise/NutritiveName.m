@@ -13,7 +13,7 @@
 
 @dynamic englishName;
 @dynamic frenchName;
-@dynamic nutritiveCode;
+@dynamic nutritiveNameCode;
 @dynamic nutritiveNameId;
 @dynamic nutritiveSymbol;
 @dynamic unit;

@@ -1,21 +1,18 @@
 //
-//  GroupName.m
+//  Measure.m
 //  Nutrient Wise
 //
 //  Created by Jean-François Dufour on 12-01-12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "GroupName.h"
-#import "FoodName.h"
+#import "Measure.h"
 
 
-@implementation GroupName
+@implementation Measure
 
 @dynamic englishName;
 @dynamic frenchName;
-@dynamic groupNameCode;
-@dynamic groupNameId;
-@dynamic foodNames;
+@dynamic measureId;
 
 @end

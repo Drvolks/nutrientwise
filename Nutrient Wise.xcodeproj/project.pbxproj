@@ -9,18 +9,18 @@
 /* Begin PBXBuildFile section */
 		6E3E404414BA535E002048B8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E3E404314BA535E002048B8 /* CoreData.framework */; };
 		6E417F3B14BE50B000F2A2AC /* Finder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E417F3A14BE50B000F2A2AC /* Finder.m */; };
-		6E6C988714BF92D40068D6AA /* FoodName.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E6C988614BF92D40068D6AA /* FoodName.m */; };
-		6E6C988A14BF92D40068D6AA /* YieldName.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E6C988914BF92D40068D6AA /* YieldName.m */; };
-		6E6C988D14BF92D40068D6AA /* GroupName.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E6C988C14BF92D40068D6AA /* GroupName.m */; };
-		6E6C989014BF92D40068D6AA /* Refuse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E6C988F14BF92D40068D6AA /* Refuse.m */; };
-		6E6C989314BF92D40068D6AA /* Mesure.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E6C989214BF92D40068D6AA /* Mesure.m */; };
-		6E6C989614BF92D40068D6AA /* RefuseName.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E6C989514BF92D40068D6AA /* RefuseName.m */; };
-		6E6C989914BF92D40068D6AA /* NutritiveSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E6C989814BF92D40068D6AA /* NutritiveSource.m */; };
-		6E6C989C14BF92D50068D6AA /* ConversionFactor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E6C989B14BF92D50068D6AA /* ConversionFactor.m */; };
-		6E6C989F14BF92D50068D6AA /* NutritiveName.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E6C989E14BF92D50068D6AA /* NutritiveName.m */; };
-		6E6C98A214BF92D50068D6AA /* NutritiveValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E6C98A114BF92D50068D6AA /* NutritiveValue.m */; };
-		6E6C98A514BF92D50068D6AA /* Yield.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E6C98A414BF92D50068D6AA /* Yield.m */; };
-		6E6C98A814BF92D50068D6AA /* FoodSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E6C98A714BF92D50068D6AA /* FoodSource.m */; };
+		6E87392714BFA8A10054A2E6 /* Measure.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87392614BFA8A10054A2E6 /* Measure.m */; };
+		6E87392A14BFA8A20054A2E6 /* GroupName.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87392914BFA8A20054A2E6 /* GroupName.m */; };
+		6E87392D14BFA8A20054A2E6 /* NutritiveSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87392C14BFA8A20054A2E6 /* NutritiveSource.m */; };
+		6E87393014BFA8A30054A2E6 /* FoodSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87392F14BFA8A30054A2E6 /* FoodSource.m */; };
+		6E87393314BFA8A40054A2E6 /* NutritiveValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87393214BFA8A40054A2E6 /* NutritiveValue.m */; };
+		6E87393614BFA8A40054A2E6 /* RefuseName.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87393514BFA8A40054A2E6 /* RefuseName.m */; };
+		6E87393914BFA8A40054A2E6 /* Refuse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87393814BFA8A40054A2E6 /* Refuse.m */; };
+		6E87393C14BFA8A50054A2E6 /* YieldName.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87393B14BFA8A40054A2E6 /* YieldName.m */; };
+		6E87393F14BFA8A50054A2E6 /* ConversionFactor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87393E14BFA8A50054A2E6 /* ConversionFactor.m */; };
+		6E87394214BFA8A50054A2E6 /* FoodName.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87394114BFA8A50054A2E6 /* FoodName.m */; };
+		6E87394514BFA8A50054A2E6 /* NutritiveName.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87394414BFA8A50054A2E6 /* NutritiveName.m */; };
+		6E87394814BFA8A50054A2E6 /* Yield.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87394714BFA8A50054A2E6 /* Yield.m */; };
 		6EB9B2F614BA0AEB007C9666 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB9B2F514BA0AEB007C9666 /* UIKit.framework */; };
 		6EB9B2F814BA0AEB007C9666 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB9B2F714BA0AEB007C9666 /* Foundation.framework */; };
 		6EB9B2FA14BA0AEB007C9666 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB9B2F914BA0AEB007C9666 /* CoreGraphics.framework */; };
@@ -67,34 +67,32 @@
 
 /* Begin PBXFileReference section */
 		6E3E404314BA535E002048B8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		6E417F3514BE439700F2A2AC /* NutritiveValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NutritiveValue.h; sourceTree = "<group>"; };
-		6E417F3614BE439700F2A2AC /* NutritiveValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NutritiveValue.m; sourceTree = "<group>"; };
 		6E417F3914BE50B000F2A2AC /* Finder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finder.h; sourceTree = "<group>"; };
 		6E417F3A14BE50B000F2A2AC /* Finder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finder.m; sourceTree = "<group>"; };
-		6E6C988514BF92D40068D6AA /* FoodName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodName.h; sourceTree = "<group>"; };
-		6E6C988614BF92D40068D6AA /* FoodName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodName.m; sourceTree = "<group>"; };
-		6E6C988814BF92D40068D6AA /* YieldName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YieldName.h; sourceTree = "<group>"; };
-		6E6C988914BF92D40068D6AA /* YieldName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YieldName.m; sourceTree = "<group>"; };
-		6E6C988B14BF92D40068D6AA /* GroupName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupName.h; sourceTree = "<group>"; };
-		6E6C988C14BF92D40068D6AA /* GroupName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupName.m; sourceTree = "<group>"; };
-		6E6C988E14BF92D40068D6AA /* Refuse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Refuse.h; sourceTree = "<group>"; };
-		6E6C988F14BF92D40068D6AA /* Refuse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Refuse.m; sourceTree = "<group>"; };
-		6E6C989114BF92D40068D6AA /* Mesure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mesure.h; sourceTree = "<group>"; };
-		6E6C989214BF92D40068D6AA /* Mesure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mesure.m; sourceTree = "<group>"; };
-		6E6C989414BF92D40068D6AA /* RefuseName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefuseName.h; sourceTree = "<group>"; };
-		6E6C989514BF92D40068D6AA /* RefuseName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefuseName.m; sourceTree = "<group>"; };
-		6E6C989714BF92D40068D6AA /* NutritiveSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NutritiveSource.h; sourceTree = "<group>"; };
-		6E6C989814BF92D40068D6AA /* NutritiveSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NutritiveSource.m; sourceTree = "<group>"; };
-		6E6C989A14BF92D50068D6AA /* ConversionFactor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversionFactor.h; sourceTree = "<group>"; };
-		6E6C989B14BF92D50068D6AA /* ConversionFactor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversionFactor.m; sourceTree = "<group>"; };
-		6E6C989D14BF92D50068D6AA /* NutritiveName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NutritiveName.h; sourceTree = "<group>"; };
-		6E6C989E14BF92D50068D6AA /* NutritiveName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NutritiveName.m; sourceTree = "<group>"; };
-		6E6C98A014BF92D50068D6AA /* NutritiveValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NutritiveValue.h; sourceTree = "<group>"; };
-		6E6C98A114BF92D50068D6AA /* NutritiveValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NutritiveValue.m; sourceTree = "<group>"; };
-		6E6C98A314BF92D50068D6AA /* Yield.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Yield.h; sourceTree = "<group>"; };
-		6E6C98A414BF92D50068D6AA /* Yield.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Yield.m; sourceTree = "<group>"; };
-		6E6C98A614BF92D50068D6AA /* FoodSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodSource.h; sourceTree = "<group>"; };
-		6E6C98A714BF92D50068D6AA /* FoodSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodSource.m; sourceTree = "<group>"; };
+		6E87392514BFA8A10054A2E6 /* Measure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Measure.h; sourceTree = "<group>"; };
+		6E87392614BFA8A10054A2E6 /* Measure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Measure.m; sourceTree = "<group>"; };
+		6E87392814BFA8A20054A2E6 /* GroupName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupName.h; sourceTree = "<group>"; };
+		6E87392914BFA8A20054A2E6 /* GroupName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupName.m; sourceTree = "<group>"; };
+		6E87392B14BFA8A20054A2E6 /* NutritiveSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NutritiveSource.h; sourceTree = "<group>"; };
+		6E87392C14BFA8A20054A2E6 /* NutritiveSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NutritiveSource.m; sourceTree = "<group>"; };
+		6E87392E14BFA8A20054A2E6 /* FoodSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodSource.h; sourceTree = "<group>"; };
+		6E87392F14BFA8A30054A2E6 /* FoodSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodSource.m; sourceTree = "<group>"; };
+		6E87393114BFA8A30054A2E6 /* NutritiveValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NutritiveValue.h; sourceTree = "<group>"; };
+		6E87393214BFA8A40054A2E6 /* NutritiveValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NutritiveValue.m; sourceTree = "<group>"; };
+		6E87393414BFA8A40054A2E6 /* RefuseName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefuseName.h; sourceTree = "<group>"; };
+		6E87393514BFA8A40054A2E6 /* RefuseName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefuseName.m; sourceTree = "<group>"; };
+		6E87393714BFA8A40054A2E6 /* Refuse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Refuse.h; sourceTree = "<group>"; };
+		6E87393814BFA8A40054A2E6 /* Refuse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Refuse.m; sourceTree = "<group>"; };
+		6E87393A14BFA8A40054A2E6 /* YieldName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YieldName.h; sourceTree = "<group>"; };
+		6E87393B14BFA8A40054A2E6 /* YieldName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YieldName.m; sourceTree = "<group>"; };
+		6E87393D14BFA8A50054A2E6 /* ConversionFactor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversionFactor.h; sourceTree = "<group>"; };
+		6E87393E14BFA8A50054A2E6 /* ConversionFactor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversionFactor.m; sourceTree = "<group>"; };
+		6E87394014BFA8A50054A2E6 /* FoodName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodName.h; sourceTree = "<group>"; };
+		6E87394114BFA8A50054A2E6 /* FoodName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodName.m; sourceTree = "<group>"; };
+		6E87394314BFA8A50054A2E6 /* NutritiveName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NutritiveName.h; sourceTree = "<group>"; };
+		6E87394414BFA8A50054A2E6 /* NutritiveName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NutritiveName.m; sourceTree = "<group>"; };
+		6E87394614BFA8A50054A2E6 /* Yield.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Yield.h; sourceTree = "<group>"; };
+		6E87394714BFA8A50054A2E6 /* Yield.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Yield.m; sourceTree = "<group>"; };
 		6EB9B2F114BA0AEB007C9666 /* Nutrient Wise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nutrient Wise.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EB9B2F514BA0AEB007C9666 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6EB9B2F714BA0AEB007C9666 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -121,18 +119,18 @@
 		6EB9B32A14BA0AEB007C9666 /* Nutrient_WiseTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Nutrient_WiseTests.h; sourceTree = "<group>"; };
 		6EB9B32B14BA0AEB007C9666 /* Nutrient_WiseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Nutrient_WiseTests.m; sourceTree = "<group>"; };
 		6EB9B33614BA0AFA007C9666 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		6EB9B33A14BA0F9E007C9666 /* CONV_FAC.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CONV_FAC.txt; sourceTree = "<group>"; };
+		6EB9B33A14BA0F9E007C9666 /* CONV_FAC.txt */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = CONV_FAC.txt; sourceTree = "<group>"; };
 		6EB9B33B14BA0F9E007C9666 /* FOOD_GRP.txt */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = FOOD_GRP.txt; sourceTree = "<group>"; };
 		6EB9B33C14BA0F9E007C9666 /* FOOD_NM.txt */ = {isa = PBXFileReference; explicitFileType = text; fileEncoding = 5; lineEnding = 0; path = FOOD_NM.txt; sourceTree = "<group>"; };
-		6EB9B33D14BA0F9E007C9666 /* FOOD_SRC.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FOOD_SRC.txt; sourceTree = "<group>"; };
-		6EB9B33E14BA0F9E007C9666 /* MEASURE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MEASURE.txt; sourceTree = "<group>"; };
-		6EB9B33F14BA0F9E007C9666 /* NT_AMT.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NT_AMT.txt; sourceTree = "<group>"; };
-		6EB9B34014BA0F9E007C9666 /* NT_NM.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NT_NM.txt; sourceTree = "<group>"; };
-		6EB9B34114BA0F9E007C9666 /* NT_SRC.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NT_SRC.txt; sourceTree = "<group>"; };
-		6EB9B34214BA0F9E007C9666 /* REFU_NM.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = REFU_NM.txt; sourceTree = "<group>"; };
-		6EB9B34314BA0F9E007C9666 /* REFUSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = REFUSE.txt; sourceTree = "<group>"; };
-		6EB9B34414BA0F9E007C9666 /* YIELD.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = YIELD.txt; sourceTree = "<group>"; };
-		6EB9B34514BA0F9E007C9666 /* YLD_NM.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = YLD_NM.txt; sourceTree = "<group>"; };
+		6EB9B33D14BA0F9E007C9666 /* FOOD_SRC.txt */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = FOOD_SRC.txt; sourceTree = "<group>"; };
+		6EB9B33E14BA0F9E007C9666 /* MEASURE.txt */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = MEASURE.txt; sourceTree = "<group>"; };
+		6EB9B33F14BA0F9E007C9666 /* NT_AMT.txt */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = NT_AMT.txt; sourceTree = "<group>"; };
+		6EB9B34014BA0F9E007C9666 /* NT_NM.txt */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = NT_NM.txt; sourceTree = "<group>"; };
+		6EB9B34114BA0F9E007C9666 /* NT_SRC.txt */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = NT_SRC.txt; sourceTree = "<group>"; };
+		6EB9B34214BA0F9E007C9666 /* REFU_NM.txt */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = REFU_NM.txt; sourceTree = "<group>"; };
+		6EB9B34314BA0F9E007C9666 /* REFUSE.txt */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = REFUSE.txt; sourceTree = "<group>"; };
+		6EB9B34414BA0F9E007C9666 /* YIELD.txt */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = YIELD.txt; sourceTree = "<group>"; };
+		6EB9B34514BA0F9E007C9666 /* YLD_NM.txt */ = {isa = PBXFileReference; fileEncoding = 12; lastKnownFileType = text; path = YLD_NM.txt; sourceTree = "<group>"; };
 		6EB9B35D14BA1BD1007C9666 /* Importer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Importer.h; sourceTree = "<group>"; };
 		6EB9B35E14BA1C1E007C9666 /* Importer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Importer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,32 +163,30 @@
 		6E417F6114BE584300F2A2AC /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6E6C98A614BF92D50068D6AA /* FoodSource.h */,
-				6E6C98A714BF92D50068D6AA /* FoodSource.m */,
-				6E6C98A314BF92D50068D6AA /* Yield.h */,
-				6E6C98A414BF92D50068D6AA /* Yield.m */,
-				6E6C98A014BF92D50068D6AA /* NutritiveValue.h */,
-				6E6C98A114BF92D50068D6AA /* NutritiveValue.m */,
-				6E6C989D14BF92D50068D6AA /* NutritiveName.h */,
-				6E6C989E14BF92D50068D6AA /* NutritiveName.m */,
-				6E6C989A14BF92D50068D6AA /* ConversionFactor.h */,
-				6E6C989B14BF92D50068D6AA /* ConversionFactor.m */,
-				6E6C989714BF92D40068D6AA /* NutritiveSource.h */,
-				6E6C989814BF92D40068D6AA /* NutritiveSource.m */,
-				6E417F3514BE439700F2A2AC /* NutritiveValue.h */,
-				6E417F3614BE439700F2A2AC /* NutritiveValue.m */,
-				6E6C989414BF92D40068D6AA /* RefuseName.h */,
-				6E6C989514BF92D40068D6AA /* RefuseName.m */,
-				6E6C989114BF92D40068D6AA /* Mesure.h */,
-				6E6C989214BF92D40068D6AA /* Mesure.m */,
-				6E6C988E14BF92D40068D6AA /* Refuse.h */,
-				6E6C988F14BF92D40068D6AA /* Refuse.m */,
-				6E6C988B14BF92D40068D6AA /* GroupName.h */,
-				6E6C988C14BF92D40068D6AA /* GroupName.m */,
-				6E6C988514BF92D40068D6AA /* FoodName.h */,
-				6E6C988614BF92D40068D6AA /* FoodName.m */,
-				6E6C988814BF92D40068D6AA /* YieldName.h */,
-				6E6C988914BF92D40068D6AA /* YieldName.m */,
+				6E87394614BFA8A50054A2E6 /* Yield.h */,
+				6E87394714BFA8A50054A2E6 /* Yield.m */,
+				6E87394314BFA8A50054A2E6 /* NutritiveName.h */,
+				6E87394414BFA8A50054A2E6 /* NutritiveName.m */,
+				6E87394014BFA8A50054A2E6 /* FoodName.h */,
+				6E87394114BFA8A50054A2E6 /* FoodName.m */,
+				6E87393D14BFA8A50054A2E6 /* ConversionFactor.h */,
+				6E87393E14BFA8A50054A2E6 /* ConversionFactor.m */,
+				6E87393A14BFA8A40054A2E6 /* YieldName.h */,
+				6E87393B14BFA8A40054A2E6 /* YieldName.m */,
+				6E87393714BFA8A40054A2E6 /* Refuse.h */,
+				6E87393814BFA8A40054A2E6 /* Refuse.m */,
+				6E87393414BFA8A40054A2E6 /* RefuseName.h */,
+				6E87393514BFA8A40054A2E6 /* RefuseName.m */,
+				6E87393114BFA8A30054A2E6 /* NutritiveValue.h */,
+				6E87393214BFA8A40054A2E6 /* NutritiveValue.m */,
+				6E87392E14BFA8A20054A2E6 /* FoodSource.h */,
+				6E87392F14BFA8A30054A2E6 /* FoodSource.m */,
+				6E87392B14BFA8A20054A2E6 /* NutritiveSource.h */,
+				6E87392C14BFA8A20054A2E6 /* NutritiveSource.m */,
+				6E87392814BFA8A20054A2E6 /* GroupName.h */,
+				6E87392914BFA8A20054A2E6 /* GroupName.m */,
+				6E87392514BFA8A10054A2E6 /* Measure.h */,
+				6E87392614BFA8A10054A2E6 /* Measure.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -438,18 +434,18 @@
 				6EB9B33714BA0AFA007C9666 /* Model.xcdatamodeld in Sources */,
 				6EB9B35F14BA1C1E007C9666 /* Importer.m in Sources */,
 				6E417F3B14BE50B000F2A2AC /* Finder.m in Sources */,
-				6E6C988714BF92D40068D6AA /* FoodName.m in Sources */,
-				6E6C988A14BF92D40068D6AA /* YieldName.m in Sources */,
-				6E6C988D14BF92D40068D6AA /* GroupName.m in Sources */,
-				6E6C989014BF92D40068D6AA /* Refuse.m in Sources */,
-				6E6C989314BF92D40068D6AA /* Mesure.m in Sources */,
-				6E6C989614BF92D40068D6AA /* RefuseName.m in Sources */,
-				6E6C989914BF92D40068D6AA /* NutritiveSource.m in Sources */,
-				6E6C989C14BF92D50068D6AA /* ConversionFactor.m in Sources */,
-				6E6C989F14BF92D50068D6AA /* NutritiveName.m in Sources */,
-				6E6C98A214BF92D50068D6AA /* NutritiveValue.m in Sources */,
-				6E6C98A514BF92D50068D6AA /* Yield.m in Sources */,
-				6E6C98A814BF92D50068D6AA /* FoodSource.m in Sources */,
+				6E87392714BFA8A10054A2E6 /* Measure.m in Sources */,
+				6E87392A14BFA8A20054A2E6 /* GroupName.m in Sources */,
+				6E87392D14BFA8A20054A2E6 /* NutritiveSource.m in Sources */,
+				6E87393014BFA8A30054A2E6 /* FoodSource.m in Sources */,
+				6E87393314BFA8A40054A2E6 /* NutritiveValue.m in Sources */,
+				6E87393614BFA8A40054A2E6 /* RefuseName.m in Sources */,
+				6E87393914BFA8A40054A2E6 /* Refuse.m in Sources */,
+				6E87393C14BFA8A50054A2E6 /* YieldName.m in Sources */,
+				6E87393F14BFA8A50054A2E6 /* ConversionFactor.m in Sources */,
+				6E87394214BFA8A50054A2E6 /* FoodName.m in Sources */,
+				6E87394514BFA8A50054A2E6 /* NutritiveName.m in Sources */,
+				6E87394814BFA8A50054A2E6 /* Yield.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

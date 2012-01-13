@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class FoodName, Mesure;
+@class FoodName, Measure;
 
 @interface ConversionFactor : NSManagedObject
 
@@ -17,6 +17,6 @@
 @property (nonatomic, retain) NSNumber * foodId;
 @property (nonatomic, retain) NSNumber * measureId;
 @property (nonatomic, retain) FoodName *foodName;
-@property (nonatomic, retain) Mesure *maesure;
+@property (nonatomic, retain) Measure *maesure;
 
 @end

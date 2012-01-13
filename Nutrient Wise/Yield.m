@@ -7,6 +7,7 @@
 //
 
 #import "Yield.h"
+#import "FoodName.h"
 #import "YieldName.h"
 
 
@@ -16,5 +17,6 @@
 @dynamic yieldAmount;
 @dynamic yieldNameId;
 @dynamic yieldName;
+@dynamic foodName;
 
 @end

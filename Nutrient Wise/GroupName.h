@@ -15,7 +15,7 @@
 
 @property (nonatomic, retain) NSString * englishName;
 @property (nonatomic, retain) NSString * frenchName;
-@property (nonatomic, retain) NSString * groupCode;
+@property (nonatomic, retain) NSNumber * groupNameCode;
 @property (nonatomic, retain) NSNumber * groupNameId;
 @property (nonatomic, retain) FoodName *foodNames;
 

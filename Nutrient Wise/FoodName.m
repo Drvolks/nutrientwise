@@ -24,7 +24,7 @@
 @dynamic frenchName;
 @dynamic groupNameId;
 @dynamic conversionFactors;
-@dynamic foudSource;
+@dynamic foodSource;
 @dynamic groupName;
 @dynamic nutritiveValues;
 @dynamic refuses;

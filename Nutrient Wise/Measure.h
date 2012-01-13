@@ -1,5 +1,5 @@
 //
-//  NutritiveName.h
+//  Measure.h
 //  Nutrient Wise
 //
 //  Created by Jean-François Dufour on 12-01-12.
@@ -10,13 +10,10 @@
 #import <CoreData/CoreData.h>
 
 
-@interface NutritiveName : NSManagedObject
+@interface Measure : NSManagedObject
 
 @property (nonatomic, retain) NSString * englishName;
 @property (nonatomic, retain) NSString * frenchName;
-@property (nonatomic, retain) NSNumber * nutritiveNameCode;
-@property (nonatomic, retain) NSNumber * nutritiveNameId;
-@property (nonatomic, retain) NSString * nutritiveSymbol;
-@property (nonatomic, retain) NSString * unit;
+@property (nonatomic, retain) NSNumber * measureId;
 
 @end

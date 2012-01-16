@@ -12,7 +12,7 @@
 @interface massawippi_nutrientwiseAppDelegate : UIResponder <UIApplicationDelegate>
 
 - (void)saveContext;
-- (NSURL *)applicationDocumentsDirectory;
+- (NSString *)applicationDocumentsDirectory;
 
 @property (strong, nonatomic) UIWindow *window;
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;

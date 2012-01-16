@@ -20,8 +20,14 @@
 {
     // Override point for customization after application launch.
     NSManagedObjectContext *context = [self managedObjectContext];
-    Importer *importer = [[Importer alloc] initWithContext:context];
-    [importer importData];
+   // Importer *importer = [[Importer alloc] initWithContext:context];
+   // [importer importData];
+    
+    Finder *finder = [[Finder alloc] initWithContext:context];
+    NSNumber *number = [[NSNumber alloc] initWithInt:2];
+    FoodName *name = [finder getFoodName:number];
+    NSSet *set = [name valueForKey:@"nutritiveValues"];
+    NSLog(@"FoodName 2 has %d nutrients", [set count]);
     
     return YES;
 } 
@@ -132,7 +138,21 @@
         return __persistentStoreCoordinator;
     }
     
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"DATA.sqlite"];
+    NSString *storePath = [[self applicationDocumentsDirectory] stringByAppendingPathComponent: @"DATA.sqlite"];
+    /*
+     Set up the store.
+     For the sake of illustration, provide a pre-populated default store.
+     */
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    // If the expected store doesn't exist, copy the default store.
+    if (![fileManager fileExistsAtPath:storePath]) {
+        NSString *defaultStorePath = [[NSBundle mainBundle] pathForResource:@"DATA" ofType:@"sqlite"];
+        if (defaultStorePath) {
+            [fileManager copyItemAtPath:defaultStorePath toPath:storePath error:NULL];
+        }
+    }
+    
+    NSURL *storeURL = [NSURL fileURLWithPath:storePath];
     
     NSError *error = nil;
     __persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
@@ -168,14 +188,17 @@
     return __persistentStoreCoordinator;
 }
 
-#pragma mark - Application's Documents directory
+#pragma mark -
+#pragma mark Application's documents directory
 
 /**
- Returns the URL to the application's Documents directory.
+ Returns the path to the application's documents directory.
  */
-- (NSURL *)applicationDocumentsDirectory
-{
-    return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+- (NSString *)applicationDocumentsDirectory {
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
+    return basePath;
 }
 
 

@@ -73,10 +73,7 @@
     
     
     
-    //NSNumber *number = [[NSNumber alloc] initWithInt:2];
-    //FoodName *name = [finder getFoodName:number];
-    //NSSet *set = [name valueForKey:@"nutritiveValues"];
-    //NSLog(@"FoodName 2 has %d nutrients", [set count]);
+    
 } 
 
 - (NSArray *) loadFile:(NSString *) fileName {

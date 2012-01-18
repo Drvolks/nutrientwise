@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		6E3E404414BA535E002048B8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E3E404314BA535E002048B8 /* CoreData.framework */; };
 		6E417F3B14BE50B000F2A2AC /* Finder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E417F3A14BE50B000F2A2AC /* Finder.m */; };
+		6E740AEA14C7761E007A0C72 /* TabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E740AE814C7761E007A0C72 /* TabBarController.xib */; };
+		6E740AEF14C77964007A0C72 /* SearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E740AED14C77964007A0C72 /* SearchController.m */; };
+		6E740AF014C77964007A0C72 /* SearchController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E740AEE14C77964007A0C72 /* SearchController.xib */; };
 		6E87392714BFA8A10054A2E6 /* Measure.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87392614BFA8A10054A2E6 /* Measure.m */; };
 		6E87392A14BFA8A20054A2E6 /* GroupName.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87392914BFA8A20054A2E6 /* GroupName.m */; };
 		6E87392D14BFA8A20054A2E6 /* NutritiveSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87392C14BFA8A20054A2E6 /* NutritiveSource.m */; };
@@ -21,12 +24,13 @@
 		6E87394214BFA8A50054A2E6 /* FoodName.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87394114BFA8A50054A2E6 /* FoodName.m */; };
 		6E87394514BFA8A50054A2E6 /* NutritiveName.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87394414BFA8A50054A2E6 /* NutritiveName.m */; };
 		6E87394814BFA8A50054A2E6 /* Yield.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87394714BFA8A50054A2E6 /* Yield.m */; };
+		6E87394A14C0E5C80054A2E6 /* DATA.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 6E87394914C0E5C80054A2E6 /* DATA.sqlite */; };
 		6EB9B2F614BA0AEB007C9666 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB9B2F514BA0AEB007C9666 /* UIKit.framework */; };
 		6EB9B2F814BA0AEB007C9666 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB9B2F714BA0AEB007C9666 /* Foundation.framework */; };
 		6EB9B2FA14BA0AEB007C9666 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB9B2F914BA0AEB007C9666 /* CoreGraphics.framework */; };
 		6EB9B30014BA0AEB007C9666 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EB9B2FE14BA0AEB007C9666 /* InfoPlist.strings */; };
 		6EB9B30214BA0AEB007C9666 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB9B30114BA0AEB007C9666 /* main.m */; };
-		6EB9B30614BA0AEB007C9666 /* massawippi_nutrientwiseAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB9B30514BA0AEB007C9666 /* massawippi_nutrientwiseAppDelegate.m */; };
+		6EB9B30614BA0AEB007C9666 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB9B30514BA0AEB007C9666 /* AppDelegate.m */; };
 		6EB9B30914BA0AEB007C9666 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EB9B30714BA0AEB007C9666 /* MainStoryboard.storyboard */; };
 		6EB9B30C14BA0AEB007C9666 /* massawippi_nutrientwiseFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB9B30B14BA0AEB007C9666 /* massawippi_nutrientwiseFirstViewController.m */; };
 		6EB9B30E14BA0AEB007C9666 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB9B30D14BA0AEB007C9666 /* first.png */; };
@@ -69,6 +73,10 @@
 		6E3E404314BA535E002048B8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		6E417F3914BE50B000F2A2AC /* Finder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finder.h; sourceTree = "<group>"; };
 		6E417F3A14BE50B000F2A2AC /* Finder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finder.m; sourceTree = "<group>"; };
+		6E740AE814C7761E007A0C72 /* TabBarController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabBarController.xib; sourceTree = "<group>"; };
+		6E740AEC14C77964007A0C72 /* SearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchController.h; sourceTree = "<group>"; };
+		6E740AED14C77964007A0C72 /* SearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchController.m; sourceTree = "<group>"; };
+		6E740AEE14C77964007A0C72 /* SearchController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchController.xib; sourceTree = "<group>"; };
 		6E87392514BFA8A10054A2E6 /* Measure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Measure.h; sourceTree = "<group>"; };
 		6E87392614BFA8A10054A2E6 /* Measure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Measure.m; sourceTree = "<group>"; };
 		6E87392814BFA8A20054A2E6 /* GroupName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupName.h; sourceTree = "<group>"; };
@@ -93,6 +101,7 @@
 		6E87394414BFA8A50054A2E6 /* NutritiveName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NutritiveName.m; sourceTree = "<group>"; };
 		6E87394614BFA8A50054A2E6 /* Yield.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Yield.h; sourceTree = "<group>"; };
 		6E87394714BFA8A50054A2E6 /* Yield.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Yield.m; sourceTree = "<group>"; };
+		6E87394914C0E5C80054A2E6 /* DATA.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = DATA.sqlite; sourceTree = "<group>"; };
 		6EB9B2F114BA0AEB007C9666 /* Nutrient Wise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nutrient Wise.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EB9B2F514BA0AEB007C9666 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6EB9B2F714BA0AEB007C9666 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -101,8 +110,8 @@
 		6EB9B2FF14BA0AEB007C9666 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6EB9B30114BA0AEB007C9666 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6EB9B30314BA0AEB007C9666 /* Nutrient Wise-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Nutrient Wise-Prefix.pch"; sourceTree = "<group>"; };
-		6EB9B30414BA0AEB007C9666 /* massawippi_nutrientwiseAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = massawippi_nutrientwiseAppDelegate.h; sourceTree = "<group>"; };
-		6EB9B30514BA0AEB007C9666 /* massawippi_nutrientwiseAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = massawippi_nutrientwiseAppDelegate.m; sourceTree = "<group>"; };
+		6EB9B30414BA0AEB007C9666 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6EB9B30514BA0AEB007C9666 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6EB9B30814BA0AEB007C9666 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		6EB9B30A14BA0AEB007C9666 /* massawippi_nutrientwiseFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = massawippi_nutrientwiseFirstViewController.h; sourceTree = "<group>"; };
 		6EB9B30B14BA0AEB007C9666 /* massawippi_nutrientwiseFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = massawippi_nutrientwiseFirstViewController.m; sourceTree = "<group>"; };
@@ -227,10 +236,14 @@
 			isa = PBXGroup;
 			children = (
 				6E417F6114BE584300F2A2AC /* Model */,
-				6EB9B30414BA0AEB007C9666 /* massawippi_nutrientwiseAppDelegate.h */,
-				6EB9B30514BA0AEB007C9666 /* massawippi_nutrientwiseAppDelegate.m */,
+				6EB9B30414BA0AEB007C9666 /* AppDelegate.h */,
+				6EB9B30514BA0AEB007C9666 /* AppDelegate.m */,
+				6E740AEC14C77964007A0C72 /* SearchController.h */,
+				6E740AED14C77964007A0C72 /* SearchController.m */,
+				6E740AEE14C77964007A0C72 /* SearchController.xib */,
 				6EB9B30714BA0AEB007C9666 /* MainStoryboard.storyboard */,
 				6EB9B30A14BA0AEB007C9666 /* massawippi_nutrientwiseFirstViewController.h */,
+				6E740AE814C7761E007A0C72 /* TabBarController.xib */,
 				6EB9B30B14BA0AEB007C9666 /* massawippi_nutrientwiseFirstViewController.m */,
 				6EB9B35D14BA1BD1007C9666 /* Importer.h */,
 				6EB9B35E14BA1C1E007C9666 /* Importer.m */,
@@ -300,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				6EB9B33514BA0AFA007C9666 /* Model.xcdatamodeld */,
+				6E87394914C0E5C80054A2E6 /* DATA.sqlite */,
 				6EB9B33914BA0F7F007C9666 /* import */,
 			);
 			name = Resources;
@@ -393,6 +407,9 @@
 				6EB9B34F14BA0F9E007C9666 /* REFUSE.txt in Resources */,
 				6EB9B35014BA0F9E007C9666 /* YIELD.txt in Resources */,
 				6EB9B35114BA0F9E007C9666 /* YLD_NM.txt in Resources */,
+				6E87394A14C0E5C80054A2E6 /* DATA.sqlite in Resources */,
+				6E740AEA14C7761E007A0C72 /* TabBarController.xib in Resources */,
+				6E740AF014C77964007A0C72 /* SearchController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,7 +445,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EB9B30214BA0AEB007C9666 /* main.m in Sources */,
-				6EB9B30614BA0AEB007C9666 /* massawippi_nutrientwiseAppDelegate.m in Sources */,
+				6EB9B30614BA0AEB007C9666 /* AppDelegate.m in Sources */,
 				6EB9B30C14BA0AEB007C9666 /* massawippi_nutrientwiseFirstViewController.m in Sources */,
 				6EB9B31314BA0AEB007C9666 /* massawippi_nutrientwiseSecondViewController.m in Sources */,
 				6EB9B33714BA0AFA007C9666 /* Model.xcdatamodeld in Sources */,
@@ -446,6 +463,7 @@
 				6E87394214BFA8A50054A2E6 /* FoodName.m in Sources */,
 				6E87394514BFA8A50054A2E6 /* NutritiveName.m in Sources */,
 				6E87394814BFA8A50054A2E6 /* Yield.m in Sources */,
+				6E740AEF14C77964007A0C72 /* SearchController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

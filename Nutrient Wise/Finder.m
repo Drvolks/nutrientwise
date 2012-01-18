@@ -38,6 +38,19 @@
     return nil;
 }
 
+- (NSArray *) searchFoodByName:(NSString *)text {
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"FoodName" inManagedObjectContext:managedObjectContext];
+    [fetchRequest setEntity:entityDescription];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(frenchName contains[cd] %@)", text];
+    [fetchRequest setPredicate:predicate];
+    
+    NSError *error;
+    NSArray *result = [managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    return result;
+
+}
+
 - (Measure *) getMeasure:(NSNumber *) measureId {
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Measure" inManagedObjectContext:managedObjectContext];

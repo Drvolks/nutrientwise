@@ -8,13 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-#import "massawippi_nutrientwiseAppDelegate.h"
-
+#import "AppDelegate.h"
 
 
 int main(int argc, char *argv[])
 {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([massawippi_nutrientwiseAppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }

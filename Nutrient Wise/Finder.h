@@ -22,6 +22,7 @@
 
 - (id)initWithContext:(NSManagedObjectContext *)mObjectContext;
 - (FoodName *) getFoodName:(NSNumber *) foodId;
+- (NSArray *) searchFoodByName:(NSString *) text;
 - (Measure *) getMeasure:(NSNumber *) measureId;
 - (RefuseName *) getRefuseName:(NSNumber *) refuseNameId;
 - (YieldName *) getYieldName:(NSNumber *) yieldNameId;

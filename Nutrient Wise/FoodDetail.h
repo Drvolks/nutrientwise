@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "FoodName.h"
+#import "Language.h"
 
 @interface FoodDetail : UIViewController  <UITableViewDelegate, UITableViewDataSource>
 
@@ -15,10 +16,12 @@
 @property (strong, nonatomic) IBOutlet UITableView *table;
 @property (strong, nonatomic) FoodName *food;
 @property (strong, nonatomic) NSArray *nutritiveValues;
+@property (strong, nonatomic) Language *language;
 
 - (id)initWithFood:(FoodName *)foodEntity;
 - (NSArray *) nutritiveValueKeys;
 - (NSArray *) nutritiveValues:(NSArray *)keys;
-- (BOOL) isFrench;
+- (void) prepareDisplay;
+- (void) initializeFoodNameLabel;
 
 @end

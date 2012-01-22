@@ -38,11 +38,14 @@
     return nil;
 }
 
-- (NSArray *) searchFoodByName:(NSString *)text {
+- (NSArray *) searchFoodByName:(NSString *)text:(BOOL *) french {
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"FoodName" inManagedObjectContext:managedObjectContext];
     [fetchRequest setEntity:entityDescription];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(frenchName contains[cd] %@)", text];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(englishName contains[cd] %@)", text];
+    if(french) {
+        predicate = [NSPredicate predicateWithFormat:@"(frenchName contains[cd] %@)", text];
+    }
     [fetchRequest setPredicate:predicate];
     
     NSError *error;
@@ -124,6 +127,23 @@
     NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"GroupName" inManagedObjectContext:managedObjectContext];
     [fetchRequest setEntity:entityDescription];
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(groupNameId = %@)", groupNameId];
+    [fetchRequest setPredicate:predicate];
+    
+    NSError *error;
+    NSArray *result = [managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    if(result != nil && [result count] > 0) {
+        return [result objectAtIndex:0];
+    }
+    
+    return nil;
+}
+
+- (NutritiveName *) getNutritiveName:(NSNumber *)nutritiveNameId {
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"NutritiveName" inManagedObjectContext:managedObjectContext];
+    [fetchRequest setEntity:entityDescription];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(nutritiveNameId = %@)", nutritiveNameId];
     [fetchRequest setPredicate:predicate];
     
     NSError *error;

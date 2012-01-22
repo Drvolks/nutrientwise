@@ -9,11 +9,13 @@
 #import "AppDelegate.h"
 #import "Importer.h"
 #import "SearchController.h"
+#import "Search.h"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
 @synthesize rootController;
+@synthesize searchController;
 
 @synthesize managedObjectContext = __managedObjectContext;
 @synthesize managedObjectModel = __managedObjectModel;
@@ -24,28 +26,34 @@
     // Override point for customization after application launch.
     NSManagedObjectContext *context = [self managedObjectContext];
     
-   // Importer *importer = [[Importer alloc] initWithContext:context];
-   // [importer importData];
+    // one shot data import
+    Importer *importer = [[Importer alloc] initWithContext:context];
+    [importer importData];
     
-    //Finder *finder = [[Finder alloc] initWithContext:context];
-    //NSNumber *number = [[NSNumber alloc] initWithInt:2];
-    //FoodName *name = [finder getFoodName:number];
-    //NSSet *set = [name valueForKey:@"nutritiveValues"];
-    //NSLog(@"FoodName 2 has %d nutrients", [set count]);
-    
+    // tab bar controller stuff
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [[NSBundle mainBundle] loadNibNamed:@"TabBarController" owner:self options:nil];
     [self.window addSubview:rootController.view];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
+    // push the managed context to the views
     NSArray *viewControllers = [rootController viewControllers];
     for (id viewController in viewControllers) {
         if([viewController isKindOfClass:[SearchController class]]) {
             [viewController setFinder:[[Finder alloc] initWithContext:context]];
+            
+            NSArray *viewControllers2 = [viewController viewControllers];
+            for (id viewController2 in viewControllers2) {
+                [viewController2 setFinder:[[Finder alloc] initWithContext:context]];
+            }
         }
     }
     
+    // the settings
+    //NSDictionary *defaults = [NSDictionary dictionaryWithObjectsAndKeys:@"fr", @"language", nil];
+    //[[NSUserDefaults standardUserDefaults] registerDefaults:defaults];
+
     return YES;
 } 
 							

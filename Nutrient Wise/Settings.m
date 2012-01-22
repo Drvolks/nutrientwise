@@ -1,16 +1,17 @@
 //
-//  SearchController.m
+//  Settings.m
 //  Nutrient Wise
 //
 //  Created by Jean-François Dufour on 12-01-22.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "SearchController.h"
+#import "Settings.h"
 
-@implementation SearchController
+@implementation Settings
 
-@synthesize finder;
+@synthesize navigationItem;
+@synthesize languageField;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,19 +32,16 @@
 
 #pragma mark - View lifecycle
 
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView
-{
-}
-*/
-
-
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    // Do any additional setup after loading the view from its nib.
+    
+    self.navigationItem.title = @"Settings";
+    
+    NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];
+    NSString *language = [settings objectForKey:@"language"];
+    languageField.text = language;
 }
 
 - (void)viewDidUnload

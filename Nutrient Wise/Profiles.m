@@ -1,16 +1,14 @@
 //
-//  SearchController.m
+//  Profiles.m
 //  Nutrient Wise
 //
 //  Created by Jean-François Dufour on 12-01-22.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "SearchController.h"
+#import "Profiles.h"
 
-@implementation SearchController
-
-@synthesize finder;
+@implementation Profiles
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,19 +29,10 @@
 
 #pragma mark - View lifecycle
 
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView
-{
-}
-*/
-
-
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)viewDidUnload

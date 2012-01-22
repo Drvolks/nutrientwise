@@ -1,5 +1,5 @@
 //
-//  SearchController.h
+//  Profiles.h
 //  Nutrient Wise
 //
 //  Created by Jean-François Dufour on 12-01-22.
@@ -7,10 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Finder.h"
 
-@interface SearchController : UINavigationController
-
-@property (strong, nonatomic) Finder *finder;
+@interface Profiles : UIViewController
 
 @end

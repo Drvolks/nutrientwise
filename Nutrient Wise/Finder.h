@@ -13,6 +13,7 @@
 #import "YieldName.h"
 #import "FoodSource.h"
 #import "GroupName.h"
+#import "NutritiveName.h"
 
 @interface Finder : NSObject {
     NSManagedObjectContext *managedObjectContext;
@@ -22,11 +23,12 @@
 
 - (id)initWithContext:(NSManagedObjectContext *)mObjectContext;
 - (FoodName *) getFoodName:(NSNumber *) foodId;
-- (NSArray *) searchFoodByName:(NSString *) text;
+- (NSArray *) searchFoodByName:(NSString *) text:(BOOL *) french;
 - (Measure *) getMeasure:(NSNumber *) measureId;
 - (RefuseName *) getRefuseName:(NSNumber *) refuseNameId;
 - (YieldName *) getYieldName:(NSNumber *) yieldNameId;
 - (FoodSource *) getFoodSource:(NSNumber *) foodSourceId;
 - (GroupName *) getGroupName:(NSNumber *) groupNameId;
+- (NutritiveName *) getNutritiveName:(NSNumber *) nutritiveNameId;
 
 @end

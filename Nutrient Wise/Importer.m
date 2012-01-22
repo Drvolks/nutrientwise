@@ -167,6 +167,13 @@
                 NSLog(@"FoodName not found with id %@ for entity NutritiveValue", foodId);
             }
             
+            NutritiveName *nutritiveName = [finder getNutritiveName:[formatterInteger numberFromString:nutritiveNameId]];
+            if(nutritiveName != nil) {
+                [nutritiveValueEntity setNutritiveName:nutritiveName];
+            } else {
+                NSLog(@"NutritiveName not found with id %@ for entity NutritiveValue", nutritiveNameId);
+            }
+            
             NSError *error = nil;
             if (![managedObjectContext save:&error]) {
                 NSLog(@"Error: %@", error);

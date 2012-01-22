@@ -11,6 +11,14 @@
 #import "SearchController.h"
 #import "Search.h"
 
+#define kImportMode NO
+#define kMainNib @"TabBarController"
+#define kDatabase @"DATA.sqlite"
+#define kDatabaseFileName @"DATA"
+#define kDatabaseFileExt @"sqlite"
+#define kModelFileName @"Model"
+#define kModelFileExt @"momd"
+
 @implementation AppDelegate
 
 @synthesize window = _window;
@@ -23,21 +31,28 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    NSManagedObjectContext *context = [self managedObjectContext];
-    
     // one shot data import
-    Importer *importer = [[Importer alloc] initWithContext:context];
-    [importer importData];
+    if(kImportMode) {
+        [self importData];
+    }
     
-    // tab bar controller stuff
+    [self setupTabBarController];
+    [self pushManagedContextToViewControllers];
+    
+    return YES;
+} 
+
+- (void) setupTabBarController {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    [[NSBundle mainBundle] loadNibNamed:@"TabBarController" owner:self options:nil];
+    [[NSBundle mainBundle] loadNibNamed:kMainNib owner:self options:nil];
     [self.window addSubview:rootController.view];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+}
+
+- (void) pushManagedContextToViewControllers {
+    NSManagedObjectContext *context = [self managedObjectContext];
     
-    // push the managed context to the views
     NSArray *viewControllers = [rootController viewControllers];
     for (id viewController in viewControllers) {
         if([viewController isKindOfClass:[SearchController class]]) {
@@ -49,13 +64,14 @@
             }
         }
     }
-    
-    // the settings
-    //NSDictionary *defaults = [NSDictionary dictionaryWithObjectsAndKeys:@"fr", @"language", nil];
-    //[[NSUserDefaults standardUserDefaults] registerDefaults:defaults];
+}
 
-    return YES;
-} 
+- (void) importData {
+    NSManagedObjectContext *context = [self managedObjectContext];
+    
+    Importer *importer = [[Importer alloc] initWithContext:context];
+    [importer importData];
+}
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {
@@ -96,31 +112,9 @@
      */
 }
 
-- (void)saveContext
-{
-    NSError *error = nil;
-    NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
-    if (managedObjectContext != nil)
-    {
-        if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error])
-        {
-            /*
-             Replace this implementation with code to handle the error appropriately.
-             
-             abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
-             */
-            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-            abort();
-        } 
-    }
-}
 
 #pragma mark - Core Data stack
 
-/**
- Returns the managed object context for the application.
- If the context doesn't already exist, it is created and bound to the persistent store coordinator for the application.
- */
 - (NSManagedObjectContext *)managedObjectContext
 {
     if (__managedObjectContext != nil)
@@ -137,25 +131,17 @@
     return __managedObjectContext;
 }
 
-/**
- Returns the managed object model for the application.
- If the model doesn't already exist, it is created from the application's model.
- */
 - (NSManagedObjectModel *)managedObjectModel
 {
     if (__managedObjectModel != nil)
     {
         return __managedObjectModel;
     }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Model" withExtension:@"momd"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:kModelFileName withExtension:kModelFileExt];
     __managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return __managedObjectModel;
 }
 
-/**
- Returns the persistent store coordinator for the application.
- If the coordinator doesn't already exist, it is created and the application's store added to it.
- */
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator
 {
     if (__persistentStoreCoordinator != nil)
@@ -163,17 +149,16 @@
         return __persistentStoreCoordinator;
     }
     
-    NSString *storePath = [[self applicationDocumentsDirectory] stringByAppendingPathComponent: @"DATA.sqlite"];
-    /*
-     Set up the store.
-     For the sake of illustration, provide a pre-populated default store.
-     */
+    NSString *storePath = [[self applicationDocumentsDirectory] stringByAppendingPathComponent: kDatabase];
+
     NSFileManager *fileManager = [NSFileManager defaultManager];
-    // If the expected store doesn't exist, copy the default store.
-    if (![fileManager fileExistsAtPath:storePath]) {
-        NSString *defaultStorePath = [[NSBundle mainBundle] pathForResource:@"DATA" ofType:@"sqlite"];
-        if (defaultStorePath) {
-            [fileManager copyItemAtPath:defaultStorePath toPath:storePath error:NULL];
+    if(kImportMode == NO) {
+        // If the expected store doesn't exist, copy the default store.
+        if (![fileManager fileExistsAtPath:storePath]) {
+            NSString *defaultStorePath = [[NSBundle mainBundle] pathForResource:kDatabaseFileName ofType:kDatabaseFileExt];
+            if (defaultStorePath) {
+                [fileManager copyItemAtPath:defaultStorePath toPath:storePath error:NULL];
+            }
         }
     }
     
@@ -183,29 +168,6 @@
     __persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
     if (![__persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error])
     {
-        /*
-         Replace this implementation with code to handle the error appropriately.
-         
-         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
-         
-         Typical reasons for an error here include:
-         * The persistent store is not accessible;
-         * The schema for the persistent store is incompatible with current managed object model.
-         Check the error message to determine what the actual problem was.
-         
-         
-         If the persistent store is not accessible, there is typically something wrong with the file path. Often, a file URL is pointing into the application's resources directory instead of a writeable directory.
-         
-         If you encounter schema incompatibility errors during development, you can reduce their frequency by:
-         * Simply deleting the existing store:
-         [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil]
-         
-         * Performing automatic lightweight migration by passing the following dictionary as the options parameter: 
-         [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:YES], NSMigratePersistentStoresAutomaticallyOption, [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption, nil];
-         
-         Lightweight migration will only work for a limited set of schema changes; consult "Core Data Model Versioning and Data Migration Programming Guide" for details.
-         
-         */
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }    
@@ -216,9 +178,6 @@
 #pragma mark -
 #pragma mark Application's documents directory
 
-/**
- Returns the path to the application's documents directory.
- */
 - (NSString *)applicationDocumentsDirectory {
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);

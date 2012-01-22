@@ -12,15 +12,16 @@
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-- (void)saveContext;
-- (NSString *)applicationDocumentsDirectory;
-
 @property (strong, nonatomic) IBOutlet UIWindow *window;
 @property (strong, nonatomic) IBOutlet UITabBarController *rootController;
 @property (strong, nonatomic) IBOutlet SearchController *searchController;
-
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+
+- (NSString *)applicationDocumentsDirectory;
+- (void) pushManagedContextToViewControllers;
+- (void) importData;
+- (void) setupTabBarController;
 
 @end

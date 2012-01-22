@@ -75,10 +75,10 @@
 }
 
 - (NSArray *) nutritiveValues:(NSArray *)keys {
-    NSSet *nutritiveValues = [food valueForKey:@"nutritiveValues"];
+    NSSet *nutritiveValueEntities = [food valueForKey:@"nutritiveValues"];
     NSMutableArray *result = [[NSMutableArray alloc] init];
     
-    for(NutritiveValue *nutritiveValue in nutritiveValues) {
+    for(NutritiveValue *nutritiveValue in nutritiveValueEntities) {
         NutritiveName *nutritiveName = [nutritiveValue valueForKey:@"nutritiveName"];
         NSString *name = [nutritiveName valueForKey:@"nutritiveNameCode"];
         
@@ -121,13 +121,13 @@
     return cell; 
 }
 
-- (BOOL *) isFrench {
+- (BOOL) isFrench {
     NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];
     NSString *language = [settings objectForKey:@"language"];
     
     if([language compare:@"fr"] == NSOrderedSame) {
         return YES;
-    }
+    } 
     
     return NO;
 }

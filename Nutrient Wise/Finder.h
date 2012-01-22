@@ -14,21 +14,24 @@
 #import "FoodSource.h"
 #import "GroupName.h"
 #import "NutritiveName.h"
+#import "Language.h"
 
 @interface Finder : NSObject {
     NSManagedObjectContext *managedObjectContext;
 }
 
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, retain) Language *language;
 
 - (id)initWithContext:(NSManagedObjectContext *)mObjectContext;
 - (FoodName *) getFoodName:(NSNumber *) foodId;
-- (NSArray *) searchFoodByName:(NSString *) text:(BOOL *) french;
+- (NSArray *) searchFoodByName:(NSString *) text;
 - (Measure *) getMeasure:(NSNumber *) measureId;
 - (RefuseName *) getRefuseName:(NSNumber *) refuseNameId;
 - (YieldName *) getYieldName:(NSNumber *) yieldNameId;
 - (FoodSource *) getFoodSource:(NSNumber *) foodSourceId;
 - (GroupName *) getGroupName:(NSNumber *) groupNameId;
 - (NutritiveName *) getNutritiveName:(NSNumber *) nutritiveNameId;
+- (NSString *) predicateWithNameColumn;
 
 @end

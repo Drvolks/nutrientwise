@@ -9,12 +9,15 @@
 #import "Search.h"
 #import "FoodDetail.h"
 
+#define kTitle @"Search"
+
 @implementation Search
 
 @synthesize searchBar;
 @synthesize resultTable;
 @synthesize searchResults;
 @synthesize finder;
+@synthesize language;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -38,9 +41,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
     
-    self.title = @"Search";
+    self.language = [[Language alloc] init];
+    
+    self.title = [language localizedString:kTitle];
     
     [self resetSearch];
 
@@ -66,9 +70,7 @@
 - (void) search:(NSString *)text {
     [self resetSearch];
 
-    NSLog(@"searching %@", text);
-    self.searchResults = [finder searchFoodByName:text :[self isFrench]];
-    NSLog(@"Found %d foods", [self.searchResults count]);
+    self.searchResults = [finder searchFoodByName:text];
     [resultTable reloadData];
 }
 
@@ -90,11 +92,8 @@
     NSUInteger row = [indexPath row];
     FoodName *foodName = [searchResults objectAtIndex:row];
     
-    if([self isFrench]) {
-        cell.textLabel.text = [foodName valueForKey:@"frenchName"];
-    } else {
-         cell.textLabel.text = [foodName valueForKey:@"englishName"];
-    }
+    cell.textLabel.text = [foodName valueForKey:[language nameColumn]];
+
     return cell; 
 }
 
@@ -131,17 +130,6 @@
     
     FoodDetail *foodDetailView = [[FoodDetail alloc] initWithFood:foodName];
     [self.navigationController pushViewController:foodDetailView animated:YES];
-}
-
-- (BOOL *) isFrench {
-    NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];
-    NSString *language = [settings objectForKey:@"language"];
-    
-    if([language compare:@"fr"] == NSOrderedSame) {
-        return YES;
-    }
-    
-    return NO;
 }
 
 @end

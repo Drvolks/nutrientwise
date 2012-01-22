@@ -19,6 +19,6 @@
 - (id)initWithFood:(FoodName *)foodEntity;
 - (NSArray *) nutritiveValueKeys;
 - (NSArray *) nutritiveValues:(NSArray *)keys;
-- (BOOL *) isFrench;
+- (BOOL) isFrench;
 
 @end

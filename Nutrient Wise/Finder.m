@@ -11,6 +11,7 @@
 @implementation Finder
 
 @synthesize managedObjectContext;
+@synthesize language;
 
 - (id)initWithContext:(NSManagedObjectContext *)mObjectContext {
     self.managedObjectContext = mObjectContext;
@@ -38,14 +39,11 @@
     return nil;
 }
 
-- (NSArray *) searchFoodByName:(NSString *)text:(BOOL *) french {
+- (NSArray *) searchFoodByName:(NSString *)text {
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"FoodName" inManagedObjectContext:managedObjectContext];
     [fetchRequest setEntity:entityDescription];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(englishName contains[cd] %@)", text];
-    if(french) {
-        predicate = [NSPredicate predicateWithFormat:@"(frenchName contains[cd] %@)", text];
-    }
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:[self predicateWithNameColumn], text];
     [fetchRequest setPredicate:predicate];
     
     NSError *error;
@@ -154,6 +152,14 @@
     }
     
     return nil;
+}
+
+- (NSString *) predicateWithNameColumn {
+    NSString *predicate = @"(";
+    predicate = [predicate stringByAppendingString:[language nameColumn]];
+    predicate = [predicate stringByAppendingString:@"contains[cd] %@"];
+    
+    return predicate;
 }
 
 @end

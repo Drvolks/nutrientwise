@@ -2,7 +2,7 @@
 //  FoodName.m
 //  Nutrient Wise
 //
-//  Created by Jean-François Dufour on 12-01-12.
+//  Created by Jean-François Dufour on 12-01-22.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 

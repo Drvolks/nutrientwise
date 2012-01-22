@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PreferenceSpecifiers</key>
+	<array>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>general</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>language</string>
+			<key>Titles</key>
+			<array>
+				<string>Français</string>
+				<string>English</string>
+			</array>
+			<key>Key</key>
+			<string>language</string>
+			<key>DefaultValue</key>
+			<string>fr</string>
+			<key>Values</key>
+			<array>
+				<string>fr</string>
+				<string>en</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>profile</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>view</string>
+			<key>Key</key>
+			<string>profile</string>
+			<key>DefaultValue</key>
+			<string>generic</string>
+			<key>Titles</key>
+			<array>
+				<string>generic</string>
+				<string>kidney</string>
+				<string>diabete</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<string>generic</string>
+				<string>kidney</string>
+				<string>diabete</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

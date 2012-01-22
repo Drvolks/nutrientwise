@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		6E3E404414BA535E002048B8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E3E404314BA535E002048B8 /* CoreData.framework */; };
 		6E417F3B14BE50B000F2A2AC /* Finder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E417F3A14BE50B000F2A2AC /* Finder.m */; };
+		6E421ACD14CC757F002C21B0 /* FoodName.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E421ACC14CC757F002C21B0 /* FoodName.m */; };
+		6E421AD114CC75FB002C21B0 /* GroupName.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E421AD014CC75FB002C21B0 /* GroupName.m */; };
 		6E740AEA14C7761E007A0C72 /* TabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E740AE814C7761E007A0C72 /* TabBarController.xib */; };
-		6E740AEF14C77964007A0C72 /* SearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E740AED14C77964007A0C72 /* SearchController.m */; };
-		6E740AF014C77964007A0C72 /* SearchController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E740AEE14C77964007A0C72 /* SearchController.xib */; };
+		6E740AEF14C77964007A0C72 /* Search.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E740AED14C77964007A0C72 /* Search.m */; };
+		6E740AF014C77964007A0C72 /* Search.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E740AEE14C77964007A0C72 /* Search.xib */; };
 		6E87392714BFA8A10054A2E6 /* Measure.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87392614BFA8A10054A2E6 /* Measure.m */; };
-		6E87392A14BFA8A20054A2E6 /* GroupName.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87392914BFA8A20054A2E6 /* GroupName.m */; };
 		6E87392D14BFA8A20054A2E6 /* NutritiveSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87392C14BFA8A20054A2E6 /* NutritiveSource.m */; };
 		6E87393014BFA8A30054A2E6 /* FoodSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87392F14BFA8A30054A2E6 /* FoodSource.m */; };
 		6E87393314BFA8A40054A2E6 /* NutritiveValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87393214BFA8A40054A2E6 /* NutritiveValue.m */; };
@@ -21,10 +22,22 @@
 		6E87393914BFA8A40054A2E6 /* Refuse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87393814BFA8A40054A2E6 /* Refuse.m */; };
 		6E87393C14BFA8A50054A2E6 /* YieldName.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87393B14BFA8A40054A2E6 /* YieldName.m */; };
 		6E87393F14BFA8A50054A2E6 /* ConversionFactor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87393E14BFA8A50054A2E6 /* ConversionFactor.m */; };
-		6E87394214BFA8A50054A2E6 /* FoodName.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87394114BFA8A50054A2E6 /* FoodName.m */; };
 		6E87394514BFA8A50054A2E6 /* NutritiveName.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87394414BFA8A50054A2E6 /* NutritiveName.m */; };
 		6E87394814BFA8A50054A2E6 /* Yield.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87394714BFA8A50054A2E6 /* Yield.m */; };
 		6E87394A14C0E5C80054A2E6 /* DATA.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 6E87394914C0E5C80054A2E6 /* DATA.sqlite */; };
+		6EAD166214CC7DD500D82BFD /* Favorites.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD166014CC7DD500D82BFD /* Favorites.m */; };
+		6EAD166314CC7DD500D82BFD /* Favorites.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EAD166114CC7DD500D82BFD /* Favorites.xib */; };
+		6EAD166714CC7DE700D82BFD /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD166514CC7DE700D82BFD /* Settings.m */; };
+		6EAD166814CC7DE700D82BFD /* Settings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EAD166614CC7DE700D82BFD /* Settings.xib */; };
+		6EAD166C14CC7DF500D82BFD /* Profiles.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD166A14CC7DF400D82BFD /* Profiles.m */; };
+		6EAD166D14CC7DF500D82BFD /* Profiles.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EAD166B14CC7DF400D82BFD /* Profiles.xib */; };
+		6EAD167014CC7F6300D82BFD /* SearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD166F14CC7F6300D82BFD /* SearchController.m */; };
+		6EAD167114CC81B800D82BFD /* Search.h in Sources */ = {isa = PBXBuildFile; fileRef = 6E740AEC14C77964007A0C72 /* Search.h */; };
+		6EAD167214CC81B800D82BFD /* SearchController.h in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD166E14CC7F6300D82BFD /* SearchController.h */; };
+		6EAD167414CC85F900D82BFD /* SearchController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EAD167314CC85F900D82BFD /* SearchController.xib */; };
+		6EAD167814CC93CF00D82BFD /* FoodDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD167614CC93CE00D82BFD /* FoodDetail.m */; };
+		6EAD167914CC93CF00D82BFD /* FoodDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EAD167714CC93CF00D82BFD /* FoodDetail.xib */; };
+		6EAD167B14CC9D8C00D82BFD /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6EAD167A14CC9D8C00D82BFD /* Settings.bundle */; };
 		6EB9B2F614BA0AEB007C9666 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB9B2F514BA0AEB007C9666 /* UIKit.framework */; };
 		6EB9B2F814BA0AEB007C9666 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB9B2F714BA0AEB007C9666 /* Foundation.framework */; };
 		6EB9B2FA14BA0AEB007C9666 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB9B2F914BA0AEB007C9666 /* CoreGraphics.framework */; };
@@ -73,14 +86,16 @@
 		6E3E404314BA535E002048B8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		6E417F3914BE50B000F2A2AC /* Finder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finder.h; sourceTree = "<group>"; };
 		6E417F3A14BE50B000F2A2AC /* Finder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finder.m; sourceTree = "<group>"; };
+		6E421ACB14CC757F002C21B0 /* FoodName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodName.h; sourceTree = "<group>"; };
+		6E421ACC14CC757F002C21B0 /* FoodName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodName.m; sourceTree = "<group>"; };
+		6E421ACF14CC75FB002C21B0 /* GroupName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupName.h; sourceTree = "<group>"; };
+		6E421AD014CC75FB002C21B0 /* GroupName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupName.m; sourceTree = "<group>"; };
 		6E740AE814C7761E007A0C72 /* TabBarController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabBarController.xib; sourceTree = "<group>"; };
-		6E740AEC14C77964007A0C72 /* SearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchController.h; sourceTree = "<group>"; };
-		6E740AED14C77964007A0C72 /* SearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchController.m; sourceTree = "<group>"; };
-		6E740AEE14C77964007A0C72 /* SearchController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchController.xib; sourceTree = "<group>"; };
+		6E740AEC14C77964007A0C72 /* Search.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Search.h; sourceTree = "<group>"; };
+		6E740AED14C77964007A0C72 /* Search.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Search.m; sourceTree = "<group>"; };
+		6E740AEE14C77964007A0C72 /* Search.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Search.xib; sourceTree = "<group>"; };
 		6E87392514BFA8A10054A2E6 /* Measure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Measure.h; sourceTree = "<group>"; };
 		6E87392614BFA8A10054A2E6 /* Measure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Measure.m; sourceTree = "<group>"; };
-		6E87392814BFA8A20054A2E6 /* GroupName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupName.h; sourceTree = "<group>"; };
-		6E87392914BFA8A20054A2E6 /* GroupName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupName.m; sourceTree = "<group>"; };
 		6E87392B14BFA8A20054A2E6 /* NutritiveSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NutritiveSource.h; sourceTree = "<group>"; };
 		6E87392C14BFA8A20054A2E6 /* NutritiveSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NutritiveSource.m; sourceTree = "<group>"; };
 		6E87392E14BFA8A20054A2E6 /* FoodSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodSource.h; sourceTree = "<group>"; };
@@ -95,13 +110,27 @@
 		6E87393B14BFA8A40054A2E6 /* YieldName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YieldName.m; sourceTree = "<group>"; };
 		6E87393D14BFA8A50054A2E6 /* ConversionFactor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversionFactor.h; sourceTree = "<group>"; };
 		6E87393E14BFA8A50054A2E6 /* ConversionFactor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversionFactor.m; sourceTree = "<group>"; };
-		6E87394014BFA8A50054A2E6 /* FoodName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodName.h; sourceTree = "<group>"; };
-		6E87394114BFA8A50054A2E6 /* FoodName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodName.m; sourceTree = "<group>"; };
 		6E87394314BFA8A50054A2E6 /* NutritiveName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NutritiveName.h; sourceTree = "<group>"; };
 		6E87394414BFA8A50054A2E6 /* NutritiveName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NutritiveName.m; sourceTree = "<group>"; };
 		6E87394614BFA8A50054A2E6 /* Yield.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Yield.h; sourceTree = "<group>"; };
 		6E87394714BFA8A50054A2E6 /* Yield.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Yield.m; sourceTree = "<group>"; };
 		6E87394914C0E5C80054A2E6 /* DATA.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = DATA.sqlite; sourceTree = "<group>"; };
+		6EAD165F14CC7DD400D82BFD /* Favorites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Favorites.h; sourceTree = "<group>"; };
+		6EAD166014CC7DD500D82BFD /* Favorites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Favorites.m; sourceTree = "<group>"; };
+		6EAD166114CC7DD500D82BFD /* Favorites.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Favorites.xib; sourceTree = "<group>"; };
+		6EAD166414CC7DE700D82BFD /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		6EAD166514CC7DE700D82BFD /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		6EAD166614CC7DE700D82BFD /* Settings.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Settings.xib; sourceTree = "<group>"; };
+		6EAD166914CC7DF400D82BFD /* Profiles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profiles.h; sourceTree = "<group>"; };
+		6EAD166A14CC7DF400D82BFD /* Profiles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profiles.m; sourceTree = "<group>"; };
+		6EAD166B14CC7DF400D82BFD /* Profiles.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Profiles.xib; sourceTree = "<group>"; };
+		6EAD166E14CC7F6300D82BFD /* SearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchController.h; sourceTree = "<group>"; };
+		6EAD166F14CC7F6300D82BFD /* SearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchController.m; sourceTree = "<group>"; };
+		6EAD167314CC85F900D82BFD /* SearchController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchController.xib; sourceTree = "<group>"; };
+		6EAD167514CC93CE00D82BFD /* FoodDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodDetail.h; sourceTree = "<group>"; };
+		6EAD167614CC93CE00D82BFD /* FoodDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodDetail.m; sourceTree = "<group>"; };
+		6EAD167714CC93CF00D82BFD /* FoodDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodDetail.xib; sourceTree = "<group>"; };
+		6EAD167A14CC9D8C00D82BFD /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		6EB9B2F114BA0AEB007C9666 /* Nutrient Wise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nutrient Wise.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EB9B2F514BA0AEB007C9666 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6EB9B2F714BA0AEB007C9666 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -172,12 +201,14 @@
 		6E417F6114BE584300F2A2AC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6E421ACF14CC75FB002C21B0 /* GroupName.h */,
+				6E421AD014CC75FB002C21B0 /* GroupName.m */,
+				6E421ACB14CC757F002C21B0 /* FoodName.h */,
+				6E421ACC14CC757F002C21B0 /* FoodName.m */,
 				6E87394614BFA8A50054A2E6 /* Yield.h */,
 				6E87394714BFA8A50054A2E6 /* Yield.m */,
 				6E87394314BFA8A50054A2E6 /* NutritiveName.h */,
 				6E87394414BFA8A50054A2E6 /* NutritiveName.m */,
-				6E87394014BFA8A50054A2E6 /* FoodName.h */,
-				6E87394114BFA8A50054A2E6 /* FoodName.m */,
 				6E87393D14BFA8A50054A2E6 /* ConversionFactor.h */,
 				6E87393E14BFA8A50054A2E6 /* ConversionFactor.m */,
 				6E87393A14BFA8A40054A2E6 /* YieldName.h */,
@@ -192,8 +223,6 @@
 				6E87392F14BFA8A30054A2E6 /* FoodSource.m */,
 				6E87392B14BFA8A20054A2E6 /* NutritiveSource.h */,
 				6E87392C14BFA8A20054A2E6 /* NutritiveSource.m */,
-				6E87392814BFA8A20054A2E6 /* GroupName.h */,
-				6E87392914BFA8A20054A2E6 /* GroupName.m */,
 				6E87392514BFA8A10054A2E6 /* Measure.h */,
 				6E87392614BFA8A10054A2E6 /* Measure.m */,
 			);
@@ -236,14 +265,29 @@
 			isa = PBXGroup;
 			children = (
 				6E417F6114BE584300F2A2AC /* Model */,
+				6EAD165F14CC7DD400D82BFD /* Favorites.h */,
+				6EAD166414CC7DE700D82BFD /* Settings.h */,
+				6EAD166914CC7DF400D82BFD /* Profiles.h */,
+				6EAD166A14CC7DF400D82BFD /* Profiles.m */,
+				6EAD166B14CC7DF400D82BFD /* Profiles.xib */,
+				6EAD166514CC7DE700D82BFD /* Settings.m */,
+				6EAD166614CC7DE700D82BFD /* Settings.xib */,
+				6EAD166014CC7DD500D82BFD /* Favorites.m */,
+				6EAD166114CC7DD500D82BFD /* Favorites.xib */,
 				6EB9B30414BA0AEB007C9666 /* AppDelegate.h */,
 				6EB9B30514BA0AEB007C9666 /* AppDelegate.m */,
-				6E740AEC14C77964007A0C72 /* SearchController.h */,
-				6E740AED14C77964007A0C72 /* SearchController.m */,
-				6E740AEE14C77964007A0C72 /* SearchController.xib */,
+				6E740AEC14C77964007A0C72 /* Search.h */,
+				6EAD166E14CC7F6300D82BFD /* SearchController.h */,
+				6EAD166F14CC7F6300D82BFD /* SearchController.m */,
+				6E740AED14C77964007A0C72 /* Search.m */,
+				6EAD167514CC93CE00D82BFD /* FoodDetail.h */,
+				6EAD167614CC93CE00D82BFD /* FoodDetail.m */,
+				6EAD167714CC93CF00D82BFD /* FoodDetail.xib */,
+				6E740AEE14C77964007A0C72 /* Search.xib */,
 				6EB9B30714BA0AEB007C9666 /* MainStoryboard.storyboard */,
 				6EB9B30A14BA0AEB007C9666 /* massawippi_nutrientwiseFirstViewController.h */,
 				6E740AE814C7761E007A0C72 /* TabBarController.xib */,
+				6EAD167314CC85F900D82BFD /* SearchController.xib */,
 				6EB9B30B14BA0AEB007C9666 /* massawippi_nutrientwiseFirstViewController.m */,
 				6EB9B35D14BA1BD1007C9666 /* Importer.h */,
 				6EB9B35E14BA1C1E007C9666 /* Importer.m */,
@@ -312,6 +356,7 @@
 		6EB9B35914BA1777007C9666 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6EAD167A14CC9D8C00D82BFD /* Settings.bundle */,
 				6EB9B33514BA0AFA007C9666 /* Model.xcdatamodeld */,
 				6E87394914C0E5C80054A2E6 /* DATA.sqlite */,
 				6EB9B33914BA0F7F007C9666 /* import */,
@@ -409,7 +454,13 @@
 				6EB9B35114BA0F9E007C9666 /* YLD_NM.txt in Resources */,
 				6E87394A14C0E5C80054A2E6 /* DATA.sqlite in Resources */,
 				6E740AEA14C7761E007A0C72 /* TabBarController.xib in Resources */,
-				6E740AF014C77964007A0C72 /* SearchController.xib in Resources */,
+				6E740AF014C77964007A0C72 /* Search.xib in Resources */,
+				6EAD166314CC7DD500D82BFD /* Favorites.xib in Resources */,
+				6EAD166814CC7DE700D82BFD /* Settings.xib in Resources */,
+				6EAD166D14CC7DF500D82BFD /* Profiles.xib in Resources */,
+				6EAD167414CC85F900D82BFD /* SearchController.xib in Resources */,
+				6EAD167914CC93CF00D82BFD /* FoodDetail.xib in Resources */,
+				6EAD167B14CC9D8C00D82BFD /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +495,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EAD167114CC81B800D82BFD /* Search.h in Sources */,
+				6EAD167214CC81B800D82BFD /* SearchController.h in Sources */,
 				6EB9B30214BA0AEB007C9666 /* main.m in Sources */,
 				6EB9B30614BA0AEB007C9666 /* AppDelegate.m in Sources */,
 				6EB9B30C14BA0AEB007C9666 /* massawippi_nutrientwiseFirstViewController.m in Sources */,
@@ -452,7 +505,6 @@
 				6EB9B35F14BA1C1E007C9666 /* Importer.m in Sources */,
 				6E417F3B14BE50B000F2A2AC /* Finder.m in Sources */,
 				6E87392714BFA8A10054A2E6 /* Measure.m in Sources */,
-				6E87392A14BFA8A20054A2E6 /* GroupName.m in Sources */,
 				6E87392D14BFA8A20054A2E6 /* NutritiveSource.m in Sources */,
 				6E87393014BFA8A30054A2E6 /* FoodSource.m in Sources */,
 				6E87393314BFA8A40054A2E6 /* NutritiveValue.m in Sources */,
@@ -460,10 +512,16 @@
 				6E87393914BFA8A40054A2E6 /* Refuse.m in Sources */,
 				6E87393C14BFA8A50054A2E6 /* YieldName.m in Sources */,
 				6E87393F14BFA8A50054A2E6 /* ConversionFactor.m in Sources */,
-				6E87394214BFA8A50054A2E6 /* FoodName.m in Sources */,
 				6E87394514BFA8A50054A2E6 /* NutritiveName.m in Sources */,
 				6E87394814BFA8A50054A2E6 /* Yield.m in Sources */,
-				6E740AEF14C77964007A0C72 /* SearchController.m in Sources */,
+				6E740AEF14C77964007A0C72 /* Search.m in Sources */,
+				6E421ACD14CC757F002C21B0 /* FoodName.m in Sources */,
+				6E421AD114CC75FB002C21B0 /* GroupName.m in Sources */,
+				6EAD166214CC7DD500D82BFD /* Favorites.m in Sources */,
+				6EAD166714CC7DE700D82BFD /* Settings.m in Sources */,
+				6EAD166C14CC7DF500D82BFD /* Profiles.m in Sources */,
+				6EAD167014CC7F6300D82BFD /* SearchController.m in Sources */,
+				6EAD167814CC93CF00D82BFD /* FoodDetail.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

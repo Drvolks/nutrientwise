@@ -10,6 +10,7 @@
 #import "FoodDetail.h"
 
 #define kTitle @"Search"
+#define kRowIdentifier @"rowIdentifier"
 
 @implementation Search
 
@@ -78,12 +79,10 @@
     return [self.searchResults count];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *TableIdentifier = @"TableIdentifier";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:TableIdentifier];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kRowIdentifier];
     if(cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:TableIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kRowIdentifier];
         cell.textLabel.font = [UIFont systemFontOfSize:12];
         cell.textLabel.numberOfLines = 2;
         cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;

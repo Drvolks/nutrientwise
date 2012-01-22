@@ -8,6 +8,8 @@
 
 #import "Finder.h"
 
+#define kFoodNameEntity @"FoodName"
+
 @implementation Finder
 
 @synthesize managedObjectContext;
@@ -24,7 +26,7 @@
     //NSLog(@"Find FoodName for id %@\n", foodId);
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"FoodName" inManagedObjectContext:managedObjectContext];
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:kFoodNameEntity inManagedObjectContext:managedObjectContext];
     [fetchRequest setEntity:entityDescription];
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(foodId = %@)", foodId];
     [fetchRequest setPredicate:predicate];
@@ -41,7 +43,7 @@
 
 - (NSArray *) searchFoodByName:(NSString *)text {
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"FoodName" inManagedObjectContext:managedObjectContext];
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:kFoodNameEntity inManagedObjectContext:managedObjectContext];
     [fetchRequest setEntity:entityDescription];
     NSPredicate *predicate = [NSPredicate predicateWithFormat:[self predicateWithNameColumn], text];
     [fetchRequest setPredicate:predicate];
@@ -157,7 +159,7 @@
 - (NSString *) predicateWithNameColumn {
     NSString *predicate = @"(";
     predicate = [predicate stringByAppendingString:[language nameColumn]];
-    predicate = [predicate stringByAppendingString:@"contains[cd] %@"];
+    predicate = [predicate stringByAppendingString:@" contains[cd] %@"];
     
     return predicate;
 }

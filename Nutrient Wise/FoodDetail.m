@@ -26,6 +26,7 @@
 @synthesize languageHelper;
 @synthesize profileHelper;
 @synthesize favoriteHelper;
+@synthesize favoriteButton;
 
 - (id)initWithFood:(FoodName *)foodEntity {
     self.food = foodEntity;
@@ -68,13 +69,16 @@
 }
 
 - (void) prepareDisplay {
-    [self initializeFoodNameLabel];
-}
-
-- (void) initializeFoodNameLabel {
     foodName.text = [food valueForKey:[languageHelper nameColumn]];
     foodName.font = [UIFont systemFontOfSize:12];
     foodName.numberOfLines = 2;
+    
+    BOOL isFavorite = [favoriteHelper isFavorite:food];
+    if(isFavorite) {
+        [favoriteButton setHidden:YES];
+    } else {
+        [favoriteButton setHidden:NO];
+    }
 }
 
 - (void)viewDidUnload

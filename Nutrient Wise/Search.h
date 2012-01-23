@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Finder.h"
-#import "Language.h"
+#import "LanguageHelper.h"
 
 @interface Search : UIViewController <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
 
@@ -16,7 +16,7 @@
 @property (strong, nonatomic) IBOutlet UITableView *resultTable;
 @property (strong, nonatomic) NSArray *searchResults;
 @property (strong, nonatomic) Finder *finder;
-@property (strong, nonatomic) Language *language;
+@property (strong, nonatomic) LanguageHelper *languageHelper;
 
 - (void) resetSearch;
 - (void) search:(NSString *) text;

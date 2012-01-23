@@ -99,6 +99,8 @@
         
         NSUInteger elementCount = [content count];
         if(elementCount == 12) {
+            content = [self clean:content];
+            
             NSString *foodId = [content objectAtIndex:0];
             NSString *foodCode = [content objectAtIndex:1];
             NSString *foodGroupId = [content objectAtIndex:2];
@@ -149,6 +151,8 @@
         
         NSUInteger elementCount = [content count];
         if(elementCount == 8) {
+            content = [self clean:content];
+            
             NSString *foodId = [content objectAtIndex:0];
             NSString *nutritiveNameId = [content objectAtIndex:1];
             NSString *nutrientValue = [content objectAtIndex:2];
@@ -194,6 +198,8 @@
         
         NSUInteger elementCount = [content count];
         if(elementCount == 4) {
+            content = [self clean:content];
+            
             NSString *foodId = [content objectAtIndex:0];
             NSString *measureId = [content objectAtIndex:1];
             NSString *conversionFactor = [content objectAtIndex:2];
@@ -235,6 +241,8 @@
         
         NSUInteger elementCount = [content count];
         if(elementCount == 4) {
+            content = [self clean:content];
+            
             NSString *foodSourceId = [content objectAtIndex:0];
             NSString *foodSourceCode = [content objectAtIndex:1];
             NSString *englishName = [content objectAtIndex:2];
@@ -263,6 +271,8 @@
         
         NSUInteger elementCount = [content count];
         if(elementCount == 4) {
+            content = [self clean:content];
+            
             NSString *groupNameId = [content objectAtIndex:0];
             NSString *groupNameCode = [content objectAtIndex:1];
             NSString *englishName = [content objectAtIndex:2];
@@ -291,6 +301,8 @@
         
         NSUInteger elementCount = [content count];
         if(elementCount == 3) {
+            content = [self clean:content];
+            
             NSString *measureId = [content objectAtIndex:0];
             NSString *englishName = [content objectAtIndex:1];
             NSString *frenchName = [content objectAtIndex:2];
@@ -317,6 +329,8 @@
         
         NSUInteger elementCount = [content count];
         if(elementCount == 8) {
+            content = [self clean:content];
+            
             NSString *nutritiveNameId = [content objectAtIndex:0];
             NSString *nutritiveNameCode = [content objectAtIndex:1];
             NSString *nutritiveSymbol = [content objectAtIndex:2];
@@ -349,6 +363,8 @@
         
         NSUInteger elementCount = [content count];
         if(elementCount == 4) {
+            content = [self clean:content];
+            
             NSString *nutritiveSourceId = [content objectAtIndex:0];
             NSString *nutritiveSourceCode = [content objectAtIndex:1];
             NSString *englishName = [content objectAtIndex:2];
@@ -377,6 +393,8 @@
         
         NSUInteger elementCount = [content count];
         if(elementCount == 4) {
+            content = [self clean:content];
+            
             NSString *foodId = [content objectAtIndex:0];
             NSString *refuseNameId = [content objectAtIndex:1];
             NSString *refuseAmount = [content objectAtIndex:2];
@@ -417,6 +435,8 @@
         
         NSUInteger elementCount = [content count];
         if(elementCount == 3) {
+            content = [self clean:content];
+            
             NSString *refuseNameId = [content objectAtIndex:0];
             NSString *englishName = [content objectAtIndex:1];
             NSString *frenchName = [content objectAtIndex:2];
@@ -444,6 +464,8 @@
         
         NSUInteger elementCount = [content count];
         if(elementCount == 4) {
+            content = [self clean:content];
+            
             NSString *foodId = [content objectAtIndex:0];
             NSString *yieldNameId = [content objectAtIndex:1];
             NSString *yieldAmount = [content objectAtIndex:2];
@@ -485,6 +507,8 @@
         
         NSUInteger elementCount = [content count];
         if(elementCount == 3) {
+            content = [self clean:content];
+            
             NSString *yieldNameId = [content objectAtIndex:0];
             NSString *englishName = [content objectAtIndex:1];
             NSString *frenchName = [content objectAtIndex:2];
@@ -503,6 +527,19 @@
             NSLog(@"YieldName line does not have 3 elements");
         }
     }
+}
+
+- (NSArray *) clean:(NSArray *)list {
+    NSMutableArray *newList = [[NSMutableArray alloc] init];
+    
+    for(NSString *line in list) {
+        NSString *newLine = [line stringByReplacingOccurrencesOfString:@"\"" withString:@""];
+        
+        [newList addObject:newLine];
+    }
+    
+    return newList;
+    
 }
 
 @end

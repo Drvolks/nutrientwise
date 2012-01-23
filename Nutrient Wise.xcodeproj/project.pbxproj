@@ -11,6 +11,8 @@
 		6E417F3B14BE50B000F2A2AC /* Finder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E417F3A14BE50B000F2A2AC /* Finder.m */; };
 		6E421ACD14CC757F002C21B0 /* FoodName.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E421ACC14CC757F002C21B0 /* FoodName.m */; };
 		6E421AD114CC75FB002C21B0 /* GroupName.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E421AD014CC75FB002C21B0 /* GroupName.m */; };
+		6E528B8F14CDA01800712D87 /* ProfileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E528B8E14CDA01800712D87 /* ProfileHelper.m */; };
+		6E528B9314CDA9FD00712D87 /* FavoriteHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E528B9214CDA9FD00712D87 /* FavoriteHelper.m */; };
 		6E740AEA14C7761E007A0C72 /* TabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E740AE814C7761E007A0C72 /* TabBarController.xib */; };
 		6E740AEF14C77964007A0C72 /* Search.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E740AED14C77964007A0C72 /* Search.m */; };
 		6E740AF014C77964007A0C72 /* Search.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E740AEE14C77964007A0C72 /* Search.xib */; };
@@ -38,7 +40,7 @@
 		6EAD167814CC93CF00D82BFD /* FoodDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD167614CC93CE00D82BFD /* FoodDetail.m */; };
 		6EAD167914CC93CF00D82BFD /* FoodDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EAD167714CC93CF00D82BFD /* FoodDetail.xib */; };
 		6EAD167B14CC9D8C00D82BFD /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6EAD167A14CC9D8C00D82BFD /* Settings.bundle */; };
-		6EAD167E14CCCE8900D82BFD /* Language.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD167D14CCCE8800D82BFD /* Language.m */; };
+		6EAD167E14CCCE8900D82BFD /* LanguageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD167D14CCCE8800D82BFD /* LanguageHelper.m */; };
 		6EB9B2F614BA0AEB007C9666 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB9B2F514BA0AEB007C9666 /* UIKit.framework */; };
 		6EB9B2F814BA0AEB007C9666 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB9B2F714BA0AEB007C9666 /* Foundation.framework */; };
 		6EB9B2FA14BA0AEB007C9666 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB9B2F914BA0AEB007C9666 /* CoreGraphics.framework */; };
@@ -47,8 +49,6 @@
 		6EB9B30614BA0AEB007C9666 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB9B30514BA0AEB007C9666 /* AppDelegate.m */; };
 		6EB9B30914BA0AEB007C9666 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EB9B30714BA0AEB007C9666 /* MainStoryboard.storyboard */; };
 		6EB9B30C14BA0AEB007C9666 /* massawippi_nutrientwiseFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB9B30B14BA0AEB007C9666 /* massawippi_nutrientwiseFirstViewController.m */; };
-		6EB9B30E14BA0AEB007C9666 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB9B30D14BA0AEB007C9666 /* first.png */; };
-		6EB9B31014BA0AEB007C9666 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB9B30F14BA0AEB007C9666 /* first@2x.png */; };
 		6EB9B31314BA0AEB007C9666 /* massawippi_nutrientwiseSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB9B31214BA0AEB007C9666 /* massawippi_nutrientwiseSecondViewController.m */; };
 		6EB9B31514BA0AEB007C9666 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB9B31414BA0AEB007C9666 /* second.png */; };
 		6EB9B31714BA0AEB007C9666 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB9B31614BA0AEB007C9666 /* second@2x.png */; };
@@ -91,6 +91,11 @@
 		6E421ACC14CC757F002C21B0 /* FoodName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodName.m; sourceTree = "<group>"; };
 		6E421ACF14CC75FB002C21B0 /* GroupName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupName.h; sourceTree = "<group>"; };
 		6E421AD014CC75FB002C21B0 /* GroupName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupName.m; sourceTree = "<group>"; };
+		6E528B8D14CDA01800712D87 /* ProfileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileHelper.h; sourceTree = "<group>"; };
+		6E528B8E14CDA01800712D87 /* ProfileHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileHelper.m; sourceTree = "<group>"; };
+		6E528B9114CDA9FD00712D87 /* FavoriteHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteHelper.h; sourceTree = "<group>"; };
+		6E528B9214CDA9FD00712D87 /* FavoriteHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteHelper.m; sourceTree = "<group>"; };
+		6E528B9414CDB21000712D87 /* Nutrient Wise.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Nutrient Wise.entitlements"; sourceTree = "<group>"; };
 		6E740AE814C7761E007A0C72 /* TabBarController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabBarController.xib; sourceTree = "<group>"; };
 		6E740AEC14C77964007A0C72 /* Search.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Search.h; sourceTree = "<group>"; };
 		6E740AED14C77964007A0C72 /* Search.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Search.m; sourceTree = "<group>"; };
@@ -132,8 +137,8 @@
 		6EAD167614CC93CE00D82BFD /* FoodDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodDetail.m; sourceTree = "<group>"; };
 		6EAD167714CC93CF00D82BFD /* FoodDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodDetail.xib; sourceTree = "<group>"; };
 		6EAD167A14CC9D8C00D82BFD /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
-		6EAD167C14CCCE8800D82BFD /* Language.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Language.h; sourceTree = "<group>"; };
-		6EAD167D14CCCE8800D82BFD /* Language.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Language.m; sourceTree = "<group>"; };
+		6EAD167C14CCCE8800D82BFD /* LanguageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageHelper.h; sourceTree = "<group>"; };
+		6EAD167D14CCCE8800D82BFD /* LanguageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageHelper.m; sourceTree = "<group>"; };
 		6EB9B2F114BA0AEB007C9666 /* Nutrient Wise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nutrient Wise.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EB9B2F514BA0AEB007C9666 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6EB9B2F714BA0AEB007C9666 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -147,8 +152,6 @@
 		6EB9B30814BA0AEB007C9666 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		6EB9B30A14BA0AEB007C9666 /* massawippi_nutrientwiseFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = massawippi_nutrientwiseFirstViewController.h; sourceTree = "<group>"; };
 		6EB9B30B14BA0AEB007C9666 /* massawippi_nutrientwiseFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = massawippi_nutrientwiseFirstViewController.m; sourceTree = "<group>"; };
-		6EB9B30D14BA0AEB007C9666 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		6EB9B30F14BA0AEB007C9666 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
 		6EB9B31114BA0AEB007C9666 /* massawippi_nutrientwiseSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = massawippi_nutrientwiseSecondViewController.h; sourceTree = "<group>"; };
 		6EB9B31214BA0AEB007C9666 /* massawippi_nutrientwiseSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = massawippi_nutrientwiseSecondViewController.m; sourceTree = "<group>"; };
 		6EB9B31414BA0AEB007C9666 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
@@ -267,6 +270,7 @@
 		6EB9B2FB14BA0AEB007C9666 /* Nutrient Wise */ = {
 			isa = PBXGroup;
 			children = (
+				6E528B9414CDB21000712D87 /* Nutrient Wise.entitlements */,
 				6E417F6114BE584300F2A2AC /* Model */,
 				6EAD165F14CC7DD400D82BFD /* Favorites.h */,
 				6EAD166414CC7DE700D82BFD /* Settings.h */,
@@ -283,10 +287,14 @@
 				6EAD166E14CC7F6300D82BFD /* SearchController.h */,
 				6EAD166F14CC7F6300D82BFD /* SearchController.m */,
 				6E740AED14C77964007A0C72 /* Search.m */,
-				6EAD167C14CCCE8800D82BFD /* Language.h */,
-				6EAD167D14CCCE8800D82BFD /* Language.m */,
+				6EAD167C14CCCE8800D82BFD /* LanguageHelper.h */,
+				6EAD167D14CCCE8800D82BFD /* LanguageHelper.m */,
 				6EAD167514CC93CE00D82BFD /* FoodDetail.h */,
 				6EAD167614CC93CE00D82BFD /* FoodDetail.m */,
+				6E528B9114CDA9FD00712D87 /* FavoriteHelper.h */,
+				6E528B9214CDA9FD00712D87 /* FavoriteHelper.m */,
+				6E528B8D14CDA01800712D87 /* ProfileHelper.h */,
+				6E528B8E14CDA01800712D87 /* ProfileHelper.m */,
 				6EAD167714CC93CF00D82BFD /* FoodDetail.xib */,
 				6E740AEE14C77964007A0C72 /* Search.xib */,
 				6EB9B30714BA0AEB007C9666 /* MainStoryboard.storyboard */,
@@ -298,8 +306,6 @@
 				6EB9B35E14BA1C1E007C9666 /* Importer.m */,
 				6E417F3914BE50B000F2A2AC /* Finder.h */,
 				6E417F3A14BE50B000F2A2AC /* Finder.m */,
-				6EB9B30D14BA0AEB007C9666 /* first.png */,
-				6EB9B30F14BA0AEB007C9666 /* first@2x.png */,
 				6EB9B31114BA0AEB007C9666 /* massawippi_nutrientwiseSecondViewController.h */,
 				6EB9B31214BA0AEB007C9666 /* massawippi_nutrientwiseSecondViewController.m */,
 				6EB9B31414BA0AEB007C9666 /* second.png */,
@@ -441,8 +447,6 @@
 			files = (
 				6EB9B30014BA0AEB007C9666 /* InfoPlist.strings in Resources */,
 				6EB9B30914BA0AEB007C9666 /* MainStoryboard.storyboard in Resources */,
-				6EB9B30E14BA0AEB007C9666 /* first.png in Resources */,
-				6EB9B31014BA0AEB007C9666 /* first@2x.png in Resources */,
 				6EB9B31514BA0AEB007C9666 /* second.png in Resources */,
 				6EB9B31714BA0AEB007C9666 /* second@2x.png in Resources */,
 				6EB9B34614BA0F9E007C9666 /* CONV_FAC.txt in Resources */,
@@ -527,7 +531,9 @@
 				6EAD166C14CC7DF500D82BFD /* Profiles.m in Sources */,
 				6EAD167014CC7F6300D82BFD /* SearchController.m in Sources */,
 				6EAD167814CC93CF00D82BFD /* FoodDetail.m in Sources */,
-				6EAD167E14CCCE8900D82BFD /* Language.m in Sources */,
+				6EAD167E14CCCE8900D82BFD /* LanguageHelper.m in Sources */,
+				6E528B8F14CDA01800712D87 /* ProfileHelper.m in Sources */,
+				6E528B9314CDA9FD00712D87 /* FavoriteHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,6 +631,7 @@
 		6EB9B33014BA0AEB007C9666 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Nutrient Wise/Nutrient Wise.entitlements";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
 				INFOPLIST_FILE = "Nutrient Wise/Nutrient Wise-Info.plist";
@@ -636,6 +643,7 @@
 		6EB9B33114BA0AEB007C9666 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Nutrient Wise/Nutrient Wise.entitlements";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
 				INFOPLIST_FILE = "Nutrient Wise/Nutrient Wise-Info.plist";

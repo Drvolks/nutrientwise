@@ -21,7 +21,6 @@
 
 - (NSString *)applicationDocumentsDirectory;
 - (void) pushManagedContextToViewControllers;
-- (void) importData;
 - (void) setupTabBarController;
 
 @end

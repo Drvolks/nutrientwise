@@ -7,8 +7,18 @@
 //
 
 #import "Favorites.h"
+#import "FoodName.h"
+
+#define kRowIdentifier @"rowIdentifier"
+#define kTitle @"Favorites"
 
 @implementation Favorites
+
+@synthesize favoriteHelper;
+@synthesize table;
+@synthesize favorites;
+@synthesize finder;
+@synthesize languageHelper;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,7 +42,26 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    self.favoriteHelper = [[FavoriteHelper alloc] init];
+    self.languageHelper = [[LanguageHelper alloc] init];
+    
+    self.title = [languageHelper localizedString:kTitle];
+    
+    NSArray *favoriteIds = [self.favoriteHelper favotiteIds];
+    self.favorites = [finder searchFoodById:favoriteIds];
+}
+
+- (void) loadFavorites {
+    NSArray *favoriteIds = [self.favoriteHelper favotiteIds];
+    NSMutableArray *favoriteEntities = [[NSMutableArray alloc] init];
+    
+    for(NSString *favorite in favoriteIds) {
+        FoodName *food = [finder getFoodName:favorite];
+        [favoriteEntities addObject:food];
+    }
+    
+    self.favorites = favoriteEntities;
 }
 
 - (void)viewDidUnload
@@ -47,5 +76,28 @@
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.favorites count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kRowIdentifier];
+    if(cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kRowIdentifier];
+        cell.textLabel.font = [UIFont systemFontOfSize:12];
+        cell.textLabel.numberOfLines = 2;
+        cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
+    }
+    
+    NSUInteger row = [indexPath row];
+    FoodName *foodName = [favorites objectAtIndex:row];
+    
+    cell.textLabel.text = [foodName valueForKey:[languageHelper nameColumn]];
+    
+    return cell; 
+}
+
+
 
 @end

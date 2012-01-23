@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "FoodName.h"
-#import "Language.h"
+#import "LanguageHelper.h"
+#import "ProfileHelper.h"
+#import "FavoriteHelper.h"
 
 @interface FoodDetail : UIViewController  <UITableViewDelegate, UITableViewDataSource>
 
@@ -16,7 +18,9 @@
 @property (strong, nonatomic) IBOutlet UITableView *table;
 @property (strong, nonatomic) FoodName *food;
 @property (strong, nonatomic) NSArray *nutritiveValues;
-@property (strong, nonatomic) Language *language;
+@property (strong, nonatomic) LanguageHelper *languageHelper;
+@property (strong, nonatomic) ProfileHelper *profileHelper;
+@property (strong, nonatomic) FavoriteHelper *favoriteHelper;
 
 - (id)initWithFood:(FoodName *)foodEntity;
 - (NSArray *) nutritiveValueKeys;

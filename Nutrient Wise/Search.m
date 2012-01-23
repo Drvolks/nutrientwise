@@ -18,7 +18,7 @@
 @synthesize resultTable;
 @synthesize searchResults;
 @synthesize finder;
-@synthesize language;
+@synthesize languageHelper;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -43,9 +43,9 @@
 {
     [super viewDidLoad];
     
-    self.language = [[Language alloc] init];
+    self.languageHelper = [[LanguageHelper alloc] init];
     
-    self.title = [language localizedString:kTitle];
+    self.title = [languageHelper localizedString:kTitle];
     
     [self resetSearch];
 
@@ -91,7 +91,7 @@
     NSUInteger row = [indexPath row];
     FoodName *foodName = [searchResults objectAtIndex:row];
     
-    cell.textLabel.text = [foodName valueForKey:[language nameColumn]];
+    cell.textLabel.text = [foodName valueForKey:[languageHelper nameColumn]];
 
     return cell; 
 }

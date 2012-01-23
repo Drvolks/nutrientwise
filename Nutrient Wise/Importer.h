@@ -43,5 +43,6 @@
 - (void) processRefuseName:(NSArray *) list;
 - (void) processYield:(NSArray *) list;
 - (void) processYieldName:(NSArray *) list;
+- (NSArray *) clean:(NSArray *)list;
 
 @end

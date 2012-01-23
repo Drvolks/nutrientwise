@@ -27,12 +27,6 @@
 - (FoodName *) getFoodName:(NSNumber *) foodId;
 - (NSArray *) searchFoodByName:(NSString *) text;
 - (NSArray *) searchFoodById:(NSArray *) foodIds;
-- (Measure *) getMeasure:(NSNumber *) measureId;
-- (RefuseName *) getRefuseName:(NSNumber *) refuseNameId;
-- (YieldName *) getYieldName:(NSNumber *) yieldNameId;
-- (FoodSource *) getFoodSource:(NSNumber *) foodSourceId;
-- (GroupName *) getGroupName:(NSNumber *) groupNameId;
-- (NutritiveName *) getNutritiveName:(NSNumber *) nutritiveNameId;
 - (NSString *) predicateWithNameColumn;
 
 @end

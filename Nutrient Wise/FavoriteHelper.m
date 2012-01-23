@@ -10,6 +10,7 @@
 
 #define kFavorites @"favorites"
 #define kFoodIdColumn @"foodId"
+#define kDebug YES
 
 @implementation FavoriteHelper
 
@@ -26,22 +27,35 @@
 - (void) addToFavorite:(FoodName *) foodName {
     NSUserDefaults *pref = [NSUserDefaults standardUserDefaults];
     
+    NSMutableArray *favorites = [self favotiteIds];
+    
+    [favorites addObject:[foodName valueForKey:kFoodIdColumn]];
+    [pref setObject:favorites forKey:kFavorites];
+    
+    if(kDebug) {
+        NSLog(@"New favorite added. This is the new list: %@", [pref objectForKey:kFavorites]);
+    }
+}
+
+- (NSMutableArray *) favotiteIds {
+    NSUserDefaults *pref = [NSUserDefaults standardUserDefaults];
     NSArray *favorites = [pref objectForKey:kFavorites];
     NSMutableArray *newFavorites = [[NSMutableArray alloc] initWithArray:favorites];
     
-    [newFavorites addObject:[foodName valueForKey:kFoodIdColumn]];
-    
-    [pref setObject:newFavorites forKey:kFavorites];
-    [pref synchronize];
-    
-    NSLog(@"2 = %@", [pref objectForKey:kFavorites]);
+    return newFavorites;
 }
 
-- (NSArray *) favotiteIds {
+- (void) removeFavorite:(FoodName *) foodName {
     NSUserDefaults *pref = [NSUserDefaults standardUserDefaults];
-    NSArray *favorites = [pref objectForKey:kFavorites];
     
-    return favorites;
+    NSMutableArray *favorites = [self favotiteIds];
+    
+    [favorites removeObject:[foodName valueForKey:kFoodIdColumn]];
+    [pref setObject:favorites forKey:kFavorites];
+    
+    if(kDebug) {
+        NSLog(@"Favorite removed. This is the new list: %@", [pref objectForKey:kFavorites]);
+    }   
 }
 
 @end

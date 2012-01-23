@@ -25,7 +25,7 @@
 
 - (FoodName *) getFoodName:(NSNumber *) foodId
 {
-    //NSLog(@"Find FoodName for id %@\n", foodId);
+    NSLog(@"Find FoodName for id %@\n", foodId);
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entityDescription = [NSEntityDescription entityForName:kFoodNameEntity inManagedObjectContext:managedObjectContext];
@@ -35,7 +35,7 @@
     
     NSError *error;
     NSArray *result = [managedObjectContext executeFetchRequest:fetchRequest error:&error];
-    //NSLog(@"Number of result %d", [result count]);
+    NSLog(@"Number of result %d", [result count]);
     if(result != nil && [result count] > 0) {
         return [result objectAtIndex:0];
     }

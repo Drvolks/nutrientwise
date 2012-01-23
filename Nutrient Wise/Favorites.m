@@ -11,6 +11,8 @@
 
 #define kRowIdentifier @"rowIdentifier"
 #define kTitle @"Favorites"
+#define kEdit @"Edit"
+#define kDone @"Done"
 
 @implementation Favorites
 
@@ -19,6 +21,7 @@
 @synthesize favorites;
 @synthesize finder;
 @synthesize languageHelper;
+@synthesize navigationItem;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -46,22 +49,33 @@
     self.favoriteHelper = [[FavoriteHelper alloc] init];
     self.languageHelper = [[LanguageHelper alloc] init];
     
-    self.title = [languageHelper localizedString:kTitle];
+    self.navigationItem.title = [languageHelper localizedString:kTitle];
+    [self.navigationItem.rightBarButtonItem setTitle:[languageHelper localizedString:kEdit]];
     
-    NSArray *favoriteIds = [self.favoriteHelper favotiteIds];
-    self.favorites = [finder searchFoodById:favoriteIds];
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [self loadFavorites];
+
 }
 
 - (void) loadFavorites {
     NSArray *favoriteIds = [self.favoriteHelper favotiteIds];
     NSMutableArray *favoriteEntities = [[NSMutableArray alloc] init];
     
-    for(NSString *favorite in favoriteIds) {
+    NSLog(@"ids = %@", favoriteIds);
+    
+    for(NSNumber *favorite in favoriteIds) {
+        NSLog(@"search for %@", favorite);
         FoodName *food = [finder getFoodName:favorite];
-        [favoriteEntities addObject:food];
+        if(food) {
+            [favoriteEntities addObject:food];
+        }
     }
     
     self.favorites = favoriteEntities;
+    
+    [table reloadData];
 }
 
 - (void)viewDidUnload
@@ -98,6 +112,24 @@
     return cell; 
 }
 
+- (IBAction)toggleEdit:(id)sender {
+    [self.table setEditing:!self.table.editing animated:YES];
+    
+    if(self.table.editing) {
+        [self.navigationItem.rightBarButtonItem setTitle:[languageHelper localizedString:kDone]];
+    } else {
+        [self.navigationItem.rightBarButtonItem setTitle:[languageHelper localizedString:kEdit]];
+    }
 
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSUInteger row = [indexPath row];
+    FoodName *foodName = [favorites objectAtIndex:row];
+    
+    [favoriteHelper removeFavorite:foodName];
+    [self.favorites removeObjectAtIndex:row];
+    [table deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+}
 
 @end

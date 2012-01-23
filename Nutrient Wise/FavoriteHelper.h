@@ -12,6 +12,7 @@
 @interface FavoriteHelper : NSObject
 
 - (void) addToFavorite:(FoodName *) foodName;
-- (NSArray *) favotiteIds;
+- (NSMutableArray *) favotiteIds;
+- (void) removeFavorite:(FoodName *) foodName;
 
 @end

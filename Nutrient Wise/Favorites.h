@@ -13,12 +13,14 @@
 
 @interface Favorites : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
-@property (strong, nonatomic) FavoriteHelper *favoriteHelper;
+@property (strong, nonatomic) IBOutlet UINavigationItem *navigationItem;
 @property (strong, nonatomic) IBOutlet UITableView *table;
-@property (strong, nonatomic) NSArray *favorites;
+@property (strong, nonatomic) FavoriteHelper *favoriteHelper;
+@property (strong, nonatomic) NSMutableArray *favorites;
 @property (strong, nonatomic) Finder *finder;
 @property (strong, nonatomic) LanguageHelper *languageHelper;
 
+- (IBAction)toggleEdit:(id)sender;
 - (void) loadFavorites;
 
 @end

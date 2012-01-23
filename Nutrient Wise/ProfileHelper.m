@@ -11,14 +11,15 @@
 #define kGenericProfile @"generic"
 #define kRenalProfile @"rein"
 #define kDiabeteProfile @"diabete"
-#define kRenalProfileValues @""
+#define kRenalProfileValues @"PROT,H2O,K,P,NA,MG"
 #define kDiabeteProfileValues @""
 #define kGenericProfileValues @"KCAL,FAT"
 
 @implementation ProfileHelper
 
 - (NSArray *) nutritiveSymbolsForProfile:(NSString *)profile {
-    NSString *stringResult = kGenericProfileValues;
+    //NSString *stringResult = kGenericProfileValues;
+    NSString *stringResult = kRenalProfileValues;
     
     if([profile isEqualToString:kRenalProfile]) {
         stringResult = kRenalProfileValues;

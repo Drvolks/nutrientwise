@@ -63,6 +63,8 @@
     
     NSArray *keys = [self nutritiveValueKeys];
     self.nutritiveValues = [self nutritiveValues:keys];
+    
+    [self prepareDisplay];
 }
 
 - (void) prepareDisplay {

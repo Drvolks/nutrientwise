@@ -48,12 +48,14 @@
     
     NSArray *viewControllers = [rootController viewControllers];
     for (id viewController in viewControllers) {
-        if([viewController isKindOfClass:[SearchController class]]) {
+        if ([viewController respondsToSelector:@selector(setFinder:)]) {
             [viewController setFinder:[[Finder alloc] initWithContext:context]];
             
-            NSArray *viewControllers2 = [viewController viewControllers];
-            for (id viewController2 in viewControllers2) {
-                [viewController2 setFinder:[[Finder alloc] initWithContext:context]];
+            if ([viewController respondsToSelector:@selector(setViewControllers:)]) {
+                NSArray *viewControllers2 = [viewController viewControllers];
+                for (id viewController2 in viewControllers2) {
+                    [viewController2 setFinder:[[Finder alloc] initWithContext:context]];
+                }
             }
         }
     }

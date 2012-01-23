@@ -13,7 +13,6 @@
 
 @interface Favorites : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
-@property (strong, nonatomic) IBOutlet UINavigationItem *navigationItem;
 @property (strong, nonatomic) IBOutlet UITableView *table;
 @property (strong, nonatomic) FavoriteHelper *favoriteHelper;
 @property (strong, nonatomic) NSMutableArray *favorites;

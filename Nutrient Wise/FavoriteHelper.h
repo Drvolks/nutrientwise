@@ -14,5 +14,6 @@
 - (void) addToFavorite:(FoodName *) foodName;
 - (NSMutableArray *) favotiteIds;
 - (void) removeFavorite:(FoodName *) foodName;
+- (BOOL) isFavorite:(FoodName *) foodName;
 
 @end

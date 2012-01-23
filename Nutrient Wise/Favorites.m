@@ -8,6 +8,7 @@
 
 #import "Favorites.h"
 #import "FoodName.h"
+#import "FoodDetail.h"
 
 #define kRowIdentifier @"rowIdentifier"
 #define kTitle @"Favorites"
@@ -21,7 +22,6 @@
 @synthesize favorites;
 @synthesize finder;
 @synthesize languageHelper;
-@synthesize navigationItem;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -130,6 +130,14 @@
     [favoriteHelper removeFavorite:foodName];
     [self.favorites removeObjectAtIndex:row];
     [table deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSUInteger row = [indexPath row];
+    FoodName *foodName = [favorites objectAtIndex:row];
+    
+    FoodDetail *foodDetailView = [[FoodDetail alloc] initWithFood:foodName];
+    [self.navigationController pushViewController:foodDetailView animated:YES];
 }
 
 @end

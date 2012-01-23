@@ -58,4 +58,17 @@
     }   
 }
 
+- (BOOL) isFavorite:(FoodName *) foodName {
+    NSMutableArray *favorites = [self favotiteIds];
+    NSNumber *idToSearch = [foodName valueForKey:kFoodIdColumn];
+    
+    for(NSNumber *favoriteId in favorites) {
+        if(idToSearch == favoriteId) {
+            return YES;
+        }
+    }
+    
+    return NO;
+}
+
 @end

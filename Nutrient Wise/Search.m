@@ -120,7 +120,7 @@
     [self resetSearch];
     [resultTable reloadData];
 
-    [bar resignFirstResponder];
+    [searchBar resignFirstResponder];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -129,6 +129,13 @@
     
     FoodDetail *foodDetailView = [[FoodDetail alloc] initWithFood:foodName];
     [self.navigationController pushViewController:foodDetailView animated:YES];
+    
+    [searchBar resignFirstResponder];
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    [searchBar resignFirstResponder];
 }
 
 @end

@@ -7,11 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "Importer.h"
 #import "SearchController.h"
 #import "Search.h"
 
-#define kImportMode NO
 #define kMainNib @"TabBarController"
 #define kDatabase @"DATA.sqlite"
 #define kDatabaseFileName @"DATA"
@@ -31,11 +29,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // one shot data import
-    if(kImportMode) {
-        [self importData];
-    }
-    
     [self setupTabBarController];
     [self pushManagedContextToViewControllers];
     
@@ -55,22 +48,17 @@
     
     NSArray *viewControllers = [rootController viewControllers];
     for (id viewController in viewControllers) {
-        if([viewController isKindOfClass:[SearchController class]]) {
+        if ([viewController respondsToSelector:@selector(setFinder:)]) {
             [viewController setFinder:[[Finder alloc] initWithContext:context]];
             
-            NSArray *viewControllers2 = [viewController viewControllers];
-            for (id viewController2 in viewControllers2) {
-                [viewController2 setFinder:[[Finder alloc] initWithContext:context]];
+            if ([viewController respondsToSelector:@selector(setViewControllers:)]) {
+                NSArray *viewControllers2 = [viewController viewControllers];
+                for (id viewController2 in viewControllers2) {
+                    [viewController2 setFinder:[[Finder alloc] initWithContext:context]];
+                }
             }
         }
     }
-}
-
-- (void) importData {
-    NSManagedObjectContext *context = [self managedObjectContext];
-    
-    Importer *importer = [[Importer alloc] initWithContext:context];
-    [importer importData];
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -152,13 +140,11 @@
     NSString *storePath = [[self applicationDocumentsDirectory] stringByAppendingPathComponent: kDatabase];
 
     NSFileManager *fileManager = [NSFileManager defaultManager];
-    if(kImportMode == NO) {
-        // If the expected store doesn't exist, copy the default store.
-        if (![fileManager fileExistsAtPath:storePath]) {
-            NSString *defaultStorePath = [[NSBundle mainBundle] pathForResource:kDatabaseFileName ofType:kDatabaseFileExt];
-            if (defaultStorePath) {
-                [fileManager copyItemAtPath:defaultStorePath toPath:storePath error:NULL];
-            }
+    // If the expected store doesn't exist, copy the default store.
+    if (![fileManager fileExistsAtPath:storePath]) {
+        NSString *defaultStorePath = [[NSBundle mainBundle] pathForResource:kDatabaseFileName ofType:kDatabaseFileExt];
+        if (defaultStorePath) {
+            [fileManager copyItemAtPath:defaultStorePath toPath:storePath error:NULL];
         }
     }
     

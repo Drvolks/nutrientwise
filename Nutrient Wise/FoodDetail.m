@@ -9,13 +9,26 @@
 #import "FoodDetail.h"
 #import "NutritiveValue.h"
 #import "NutritiveName.h"
+#import "Measure.h"
+#import "NutientValueCell.h"
+#import "MeasureSelection.h"
+#import "AllNutritiveValues.h"
 
+#define kDebug YES
 #define kTitle @"NutritiveValues"
 #define kNutritiveNameColumn @"nutritiveName"
 #define kNutritiveSymbolColumn @"nutritiveSymbol"
 #define kNutritiveValuesAttribute @"nutritiveValues"
 #define kNutritiveValueColumn @"nutritiveValue"
-#define kRowIdentifier @"rowIdentifier"
+#define kRowIdentifierMeasure @"rowIdentifierMeasure"
+#define kRowIdentifierNutient @"rowIdentifierNutient"
+#define kRowIdentifierAll @"rowIdentifierAll"
+#define kFoodIdColumn @"foodId"
+#define kConversionFactorsAttribute @"conversionFactors"
+#define kMeasureColumn @"maesure"
+#define kMeasureIdColumn @"measureId"
+#define kUnitColumn @"unit"
+#define kConversionFactorColumn @"conversionFactor"
 
 @implementation FoodDetail
 
@@ -27,6 +40,7 @@
 @synthesize profileHelper;
 @synthesize favoriteHelper;
 @synthesize favoriteButton;
+@synthesize selectedConversionFactor;
 
 - (id)initWithFood:(FoodName *)foodEntity {
     self.food = foodEntity;
@@ -79,6 +93,15 @@
     } else {
         [favoriteButton setHidden:NO];
     }
+    
+    if(selectedConversionFactor == nil) {
+        NSSet *conversionFactors = [food valueForKey:kConversionFactorsAttribute];
+        selectedConversionFactor = [[conversionFactors allObjects] objectAtIndex:0];
+    }
+
+    if(kDebug) {
+        NSLog(@"Preparing display for FoodId %@", [food valueForKey:kFoodIdColumn]);
+    }
 }
 
 - (void)viewDidUnload
@@ -116,32 +139,129 @@
     return result;
 }
 
+/*
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.nutritiveValues count];
 }
+ */
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kRowIdentifier];
-    if(cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kRowIdentifier];
-    }
+    static BOOL NutientCellNibLoaded = NO;
     
     NSUInteger row = [indexPath row];
-    NutritiveValue *nutritiveValue = [self.nutritiveValues objectAtIndex:row];
-    NutritiveName *nutritiveName = [nutritiveValue valueForKey:kNutritiveNameColumn];
+    NSUInteger section = [indexPath section];
     
-    NSString *name = [nutritiveName valueForKey:[languageHelper nameColumn]];
+    if (section == 0) {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kRowIdentifierMeasure];
+        if(cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kRowIdentifierMeasure];
+        }
+        
+        Measure *measure = [selectedConversionFactor valueForKey:kMeasureColumn];
+        cell.textLabel.text = [measure valueForKey:[languageHelper nameColumn]];
+        
+        return cell;
+    }
+    else if(section == 1) {
+        if(!NutientCellNibLoaded) {
+            UINib *nib = [UINib nibWithNibName:@"NutientValueCell" bundle:nil];
+            [tableView registerNib:nib forCellReuseIdentifier:kRowIdentifierNutient];
+            NutientCellNibLoaded = YES;
+        }
+        NutientValueCell *cell = [tableView dequeueReusableCellWithIdentifier:kRowIdentifierNutient];
+        /*
+        if(cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kRowIdentifierNutient];
+        }
+         */
+        
+        NutritiveValue *nutritiveValue = [self.nutritiveValues objectAtIndex:row];
+        NutritiveName *nutritiveName = [nutritiveValue valueForKey:kNutritiveNameColumn];
+
+        cell.nutient.text = [nutritiveName valueForKey:[languageHelper nameColumn]];
+        
+        NSDecimalNumberHandler *roundingBehavior = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:NSRoundPlain scale:1 raiseOnExactness:FALSE raiseOnOverflow:TRUE raiseOnUnderflow:TRUE raiseOnDivideByZero:TRUE]; 
+
+        NSDecimalNumber *value = [nutritiveValue valueForKey:kNutritiveValueColumn];
+        NSDecimalNumber *conversion = [selectedConversionFactor valueForKey:kConversionFactorColumn];
+        value = [value decimalNumberByMultiplyingBy:conversion];
+        cell.value.text = [[value decimalNumberByRoundingAccordingToBehavior:roundingBehavior] stringValue];
+        cell.measure.text = [nutritiveName valueForKey:kUnitColumn];
+        
+        return cell;
+    } 
+    else if(section == 2) {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kRowIdentifierAll];
+        if(cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kRowIdentifierAll];
+        }
+        
+        cell.textLabel.text = @"All Values";
+        
+        return cell;
+    }
     
-    NSDecimalNumber *value = [nutritiveValue valueForKey:kNutritiveValueColumn];
-    
-    NSString *text = [name stringByAppendingFormat:@"=%@", value];
-    cell.textLabel.text = text;
-    
-    return cell; 
+    return nil; 
 }
 
 - (IBAction)favoriteButtonPressed:(id)sender {
     [favoriteHelper addToFavorite:self.food];
+    
+    [self prepareDisplay];
+}
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 3;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    switch (section) {
+        case (0):
+            return 1;
+            break;
+        case (1):
+            return [self.nutritiveValues count];
+            break;
+        case (2):
+            return 1;
+            break;
+    }
+    return 0;
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    switch (section) {
+        case (0):
+            return @"Measure";
+            break;
+        case (1):
+            return @"Values";
+            break;
+        case (3):
+            // no label
+            break;
+    }
+    return nil;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSUInteger section = [indexPath section];
+    
+    if(section == 0) {
+        NSSet *conversionFactors = [food valueForKey:kConversionFactorsAttribute];
+        MeasureSelection *measureSelectionView = [[MeasureSelection alloc] initWithConversionFactors:[conversionFactors allObjects]];
+        [measureSelectionView setDelegate:self];
+        [self.navigationController pushViewController:measureSelectionView animated:YES];
+    }
+    else if(section == 2) {
+        AllNutritiveValues *allView = [[AllNutritiveValues alloc] initWithFoodName:food :selectedConversionFactor];
+        [self.navigationController pushViewController:allView animated:YES];
+    }
+}
+
+- (void) conversionFactorSelected:(ConversionFactor *) conversionFactor {
+    selectedConversionFactor = conversionFactor;
+    [table reloadData];
 }
 
 @end

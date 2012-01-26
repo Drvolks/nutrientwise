@@ -11,8 +11,10 @@
 #import "LanguageHelper.h"
 #import "ProfileHelper.h"
 #import "FavoriteHelper.h"
+#import "ConversionFactor.h"
+#import "MeasureSelection.h"
 
-@interface FoodDetail : UIViewController  <UITableViewDelegate, UITableViewDataSource>
+@interface FoodDetail : UIViewController  <UITableViewDelegate, UITableViewDataSource, MeasureSelectionDelegate>
 
 @property (strong, nonatomic) IBOutlet UILabel *foodName;
 @property (strong, nonatomic) IBOutlet UITableView *table;
@@ -22,6 +24,7 @@
 @property (strong, nonatomic) LanguageHelper *languageHelper;
 @property (strong, nonatomic) ProfileHelper *profileHelper;
 @property (strong, nonatomic) FavoriteHelper *favoriteHelper;
+@property (strong, nonatomic) ConversionFactor *selectedConversionFactor;
 
 - (id)initWithFood:(FoodName *)foodEntity;
 - (NSArray *) nutritiveValueKeys;

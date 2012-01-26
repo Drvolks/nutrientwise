@@ -10,12 +10,23 @@
 #import "NutritiveValue.h"
 #import "NutritiveName.h"
 
+#define kTitle @"NutritiveValues"
+#define kNutritiveNameColumn @"nutritiveName"
+#define kNutritiveSymbolColumn @"nutritiveSymbol"
+#define kNutritiveValuesAttribute @"nutritiveValues"
+#define kNutritiveValueColumn @"nutritiveValue"
+#define kRowIdentifier @"rowIdentifier"
+
 @implementation FoodDetail
 
 @synthesize foodName;
 @synthesize food;
 @synthesize nutritiveValues;
 @synthesize table;
+@synthesize languageHelper;
+@synthesize profileHelper;
+@synthesize favoriteHelper;
+@synthesize favoriteButton;
 
 - (id)initWithFood:(FoodName *)foodEntity {
     self.food = foodEntity;
@@ -44,16 +55,30 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+ 
+    self.languageHelper = [[LanguageHelper alloc] init];
+    self.profileHelper = [[ProfileHelper alloc] init];
+    self.favoriteHelper = [[FavoriteHelper alloc] init];
     
-    self.title = @"Nutritive values";
-    
-    foodName.text = [food valueForKey:@"frenchName"];
-    foodName.font = [UIFont systemFontOfSize:12];
-    foodName.numberOfLines = 2;
+    self.title = [languageHelper localizedString:kTitle];
     
     NSArray *keys = [self nutritiveValueKeys];
     self.nutritiveValues = [self nutritiveValues:keys];
+    
+    [self prepareDisplay];
+}
+
+- (void) prepareDisplay {
+    foodName.text = [food valueForKey:[languageHelper nameColumn]];
+    foodName.font = [UIFont systemFontOfSize:12];
+    foodName.numberOfLines = 2;
+    
+    BOOL isFavorite = [favoriteHelper isFavorite:food];
+    if(isFavorite) {
+        [favoriteButton setHidden:YES];
+    } else {
+        [favoriteButton setHidden:NO];
+    }
 }
 
 - (void)viewDidUnload
@@ -70,20 +95,19 @@
 }
 
 - (NSArray *) nutritiveValueKeys {
-    NSArray *keys = [[NSArray alloc] initWithObjects:@"KCAL", nil];
-    return keys;
+    return [profileHelper nutritiveSymbolsForProfile:@"TODO"];
 }
 
 - (NSArray *) nutritiveValues:(NSArray *)keys {
-    NSSet *nutritiveValueEntities = [food valueForKey:@"nutritiveValues"];
+    NSSet *nutritiveValueEntities = [food valueForKey:kNutritiveValuesAttribute];
     NSMutableArray *result = [[NSMutableArray alloc] init];
     
     for(NutritiveValue *nutritiveValue in nutritiveValueEntities) {
-        NutritiveName *nutritiveName = [nutritiveValue valueForKey:@"nutritiveName"];
-        NSString *name = [nutritiveName valueForKey:@"nutritiveNameCode"];
+        NutritiveName *nutritiveName = [nutritiveValue valueForKey:kNutritiveNameColumn];
+        NSString *symbol = [nutritiveName valueForKey:kNutritiveSymbolColumn];
         
-        for(NSString *nutritiveNameCode in keys) {
-            if([nutritiveNameCode compare:name] == NSOrderedSame) {
+        for(NSString *keySymbol in keys) {
+            if([keySymbol isEqualToString:symbol]) {
                 [result addObject:nutritiveValue];
             }
         }
@@ -97,23 +121,18 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *TableIdentifier = @"TableIdentifier";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:TableIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kRowIdentifier];
     if(cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:TableIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kRowIdentifier];
     }
     
     NSUInteger row = [indexPath row];
     NutritiveValue *nutritiveValue = [self.nutritiveValues objectAtIndex:row];
-    NutritiveName *nutritiveName = [nutritiveValue valueForKey:@"nutritiveName"];
+    NutritiveName *nutritiveName = [nutritiveValue valueForKey:kNutritiveNameColumn];
     
-    NSString *name = [nutritiveName valueForKey:@"englishName"];
-    if([self isFrench]) {
-        cell.textLabel.text = [nutritiveName valueForKey:@"frenchName"];
-    }
+    NSString *name = [nutritiveName valueForKey:[languageHelper nameColumn]];
     
-    NSDecimalNumber *value = [nutritiveValue valueForKey:@"nutritiveValue"];
+    NSDecimalNumber *value = [nutritiveValue valueForKey:kNutritiveValueColumn];
     
     NSString *text = [name stringByAppendingFormat:@"=%@", value];
     cell.textLabel.text = text;
@@ -121,16 +140,8 @@
     return cell; 
 }
 
-- (BOOL) isFrench {
-    NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];
-    NSString *language = [settings objectForKey:@"language"];
-    
-    if([language compare:@"fr"] == NSOrderedSame) {
-        return YES;
-    } 
-    
-    return NO;
+- (IBAction)favoriteButtonPressed:(id)sender {
+    [favoriteHelper addToFavorite:self.food];
 }
-
 
 @end

@@ -7,8 +7,21 @@
 //
 
 #import "Favorites.h"
+#import "FoodName.h"
+#import "FoodDetail.h"
+
+#define kRowIdentifier @"rowIdentifier"
+#define kTitle @"Favorites"
+#define kEdit @"Edit"
+#define kDone @"Done"
 
 @implementation Favorites
+
+@synthesize favoriteHelper;
+@synthesize table;
+@synthesize favorites;
+@synthesize finder;
+@synthesize languageHelper;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,7 +45,37 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    self.favoriteHelper = [[FavoriteHelper alloc] init];
+    self.languageHelper = [[LanguageHelper alloc] init];
+    
+    self.navigationItem.title = [languageHelper localizedString:kTitle];
+    [self.navigationItem.rightBarButtonItem setTitle:[languageHelper localizedString:kEdit]];
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [self loadFavorites];
+
+}
+
+- (void) loadFavorites {
+    NSArray *favoriteIds = [self.favoriteHelper favotiteIds];
+    NSMutableArray *favoriteEntities = [[NSMutableArray alloc] init];
+    
+    NSLog(@"ids = %@", favoriteIds);
+    
+    for(NSNumber *favorite in favoriteIds) {
+        NSLog(@"search for %@", favorite);
+        FoodName *food = [finder getFoodName:favorite];
+        if(food) {
+            [favoriteEntities addObject:food];
+        }
+    }
+    
+    self.favorites = favoriteEntities;
+    
+    [table reloadData];
 }
 
 - (void)viewDidUnload
@@ -46,6 +89,55 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.favorites count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kRowIdentifier];
+    if(cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kRowIdentifier];
+        cell.textLabel.font = [UIFont systemFontOfSize:12];
+        cell.textLabel.numberOfLines = 2;
+        cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
+    }
+    
+    NSUInteger row = [indexPath row];
+    FoodName *foodName = [favorites objectAtIndex:row];
+    
+    cell.textLabel.text = [foodName valueForKey:[languageHelper nameColumn]];
+    
+    return cell; 
+}
+
+- (IBAction)toggleEdit:(id)sender {
+    [self.table setEditing:!self.table.editing animated:YES];
+    
+    if(self.table.editing) {
+        [self.navigationItem.rightBarButtonItem setTitle:[languageHelper localizedString:kDone]];
+    } else {
+        [self.navigationItem.rightBarButtonItem setTitle:[languageHelper localizedString:kEdit]];
+    }
+
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSUInteger row = [indexPath row];
+    FoodName *foodName = [favorites objectAtIndex:row];
+    
+    [favoriteHelper removeFavorite:foodName];
+    [self.favorites removeObjectAtIndex:row];
+    [table deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSUInteger row = [indexPath row];
+    FoodName *foodName = [favorites objectAtIndex:row];
+    
+    FoodDetail *foodDetailView = [[FoodDetail alloc] initWithFood:foodName];
+    [self.navigationController pushViewController:foodDetailView animated:YES];
 }
 
 @end

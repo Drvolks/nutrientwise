@@ -10,6 +10,7 @@
 #import "FoodDetail.h"
 
 #define kTitle @"Search"
+#define kRowIdentifier @"rowIdentifier"
 
 @implementation Search
 
@@ -17,7 +18,7 @@
 @synthesize resultTable;
 @synthesize searchResults;
 @synthesize finder;
-@synthesize language;
+@synthesize languageHelper;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -42,9 +43,9 @@
 {
     [super viewDidLoad];
     
-    self.language = [[Language alloc] init];
+    self.languageHelper = [[LanguageHelper alloc] init];
     
-    self.title = [language localizedString:kTitle];
+    self.title = [languageHelper localizedString:kTitle];
     
     [self resetSearch];
 
@@ -78,12 +79,10 @@
     return [self.searchResults count];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *TableIdentifier = @"TableIdentifier";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:TableIdentifier];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kRowIdentifier];
     if(cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:TableIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kRowIdentifier];
         cell.textLabel.font = [UIFont systemFontOfSize:12];
         cell.textLabel.numberOfLines = 2;
         cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
@@ -92,7 +91,7 @@
     NSUInteger row = [indexPath row];
     FoodName *foodName = [searchResults objectAtIndex:row];
     
-    cell.textLabel.text = [foodName valueForKey:[language nameColumn]];
+    cell.textLabel.text = [foodName valueForKey:[languageHelper nameColumn]];
 
     return cell; 
 }
@@ -121,7 +120,7 @@
     [self resetSearch];
     [resultTable reloadData];
 
-    [bar resignFirstResponder];
+    [searchBar resignFirstResponder];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -130,6 +129,13 @@
     
     FoodDetail *foodDetailView = [[FoodDetail alloc] initWithFood:foodName];
     [self.navigationController pushViewController:foodDetailView animated:YES];
+    
+    [searchBar resignFirstResponder];
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    [searchBar resignFirstResponder];
 }
 
 @end

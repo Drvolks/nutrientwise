@@ -27,6 +27,6 @@
 - (FoodName *) getFoodName:(NSNumber *) foodId;
 - (NSArray *) searchFoodByName:(NSString *) text;
 - (NSArray *) searchFoodById:(NSArray *) foodIds;
-- (NSString *) predicateWithNameColumn;
+- (NSString *) predicateWithNameColumn:(NSString *) searchTerm;
 
 @end

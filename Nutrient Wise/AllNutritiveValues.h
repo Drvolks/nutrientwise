@@ -17,6 +17,7 @@
 @property (strong, nonatomic) NSArray *nutritiveValues;
 @property (strong, nonatomic) ConversionFactor *selectedConversionFactor;
 @property (strong, nonatomic) LanguageHelper *languageHelper;
+@property (nonatomic) BOOL *cellNibLoaded;
 
 - (id) initWithFoodName:(FoodName *) food:(ConversionFactor *) conversionFactor;
 

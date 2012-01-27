@@ -29,7 +29,9 @@
     foodName = food;
     selectedConversionFactor = conversionFactor;
     NSSet *nutritiveValueEntities = [foodName valueForKey:kNutritiveValuesAttribute];
-    nutritiveValues = [nutritiveValueEntities allObjects];
+    
+    nutritiveValues = [nutritiveValueEntities sortedArrayUsingDescriptors:[nutritiveValueEntities valueForKey:kNutritiveNameColumn]];
+    //nutritiveValues = [nutritiveValueEntities allObjects];
     return self;
 }
 

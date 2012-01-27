@@ -8,6 +8,7 @@
 
 #import "Finder.h"
 
+#define kDebug YES
 #define kFoodNameEntity @"FoodName"
 
 @implementation Finder
@@ -47,7 +48,7 @@
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entityDescription = [NSEntityDescription entityForName:kFoodNameEntity inManagedObjectContext:managedObjectContext];
     [fetchRequest setEntity:entityDescription];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:[self predicateWithNameColumn], text];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:[self predicateWithNameColumn:text]];
     [fetchRequest setPredicate:predicate];
     
     NSError *error;
@@ -68,10 +69,26 @@
     return result;
 }
 
-- (NSString *) predicateWithNameColumn {
-    NSString *predicate = @"(";
-    predicate = [predicate stringByAppendingString:[languageHelper nameColumn]];
-    predicate = [predicate stringByAppendingString:@" contains[cd] %@)"];
+- (NSString *) predicateWithNameColumn:(NSString *) searchTerm {
+    NSString *predicate = @"";
+    BOOL *first = YES;
+    
+    NSArray *words = [searchTerm componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    for(NSString *word in words) {
+        if([word length] > 0) {
+            if(!first) {
+                predicate = [predicate stringByAppendingString:@" && "];
+            } else {
+                first = NO;
+            }
+            predicate = [predicate stringByAppendingString:[languageHelper nameColumn]];
+            predicate = [predicate stringByAppendingFormat:@" contains[cd] '%@'", word];
+        }
+    }
+        
+    if(kDebug) {
+        NSLog(@"Predicate is %@", predicate);
+    }
     
     return predicate;
 }

@@ -41,6 +41,7 @@
 @synthesize favoriteHelper;
 @synthesize favoriteButton;
 @synthesize selectedConversionFactor;
+@synthesize cellNibLoaded;
 
 - (id)initWithFood:(FoodName *)foodEntity {
     self.food = foodEntity;
@@ -78,6 +79,8 @@
     
     NSArray *keys = [self nutritiveValueKeys];
     self.nutritiveValues = [self nutritiveValues:keys];
+    
+    cellNibLoaded = NO;
     
     [self prepareDisplay];
 }
@@ -146,8 +149,6 @@
  */
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static BOOL NutientCellNibLoaded = NO;
-    
     NSUInteger row = [indexPath row];
     NSUInteger section = [indexPath section];
     
@@ -163,17 +164,12 @@
         return cell;
     }
     else if(section == 1) {
-        if(!NutientCellNibLoaded) {
+        if(!cellNibLoaded) {
             UINib *nib = [UINib nibWithNibName:@"NutientValueCell" bundle:nil];
             [tableView registerNib:nib forCellReuseIdentifier:kRowIdentifierNutient];
-            NutientCellNibLoaded = YES;
+            cellNibLoaded = YES;
         }
         NutientValueCell *cell = [tableView dequeueReusableCellWithIdentifier:kRowIdentifierNutient];
-        /*
-        if(cell == nil) {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kRowIdentifierNutient];
-        }
-         */
         
         NutritiveValue *nutritiveValue = [self.nutritiveValues objectAtIndex:row];
         NutritiveName *nutritiveName = [nutritiveValue valueForKey:kNutritiveNameColumn];
@@ -184,7 +180,13 @@
 
         NSDecimalNumber *value = [nutritiveValue valueForKey:kNutritiveValueColumn];
         NSDecimalNumber *conversion = [selectedConversionFactor valueForKey:kConversionFactorColumn];
-        value = [value decimalNumberByMultiplyingBy:conversion];
+        if(kDebug) {
+            NSLog(@"Nutritive value is %@", value);
+            NSLog(@"Conversion factor is %@", conversion);
+        }
+        if(conversion != nil) {
+            value = [value decimalNumberByMultiplyingBy:conversion];
+        }
         cell.value.text = [[value decimalNumberByRoundingAccordingToBehavior:roundingBehavior] stringValue];
         cell.measure.text = [nutritiveName valueForKey:kUnitColumn];
         
@@ -256,6 +258,7 @@
     else if(section == 2) {
         AllNutritiveValues *allView = [[AllNutritiveValues alloc] initWithFoodName:food :selectedConversionFactor];
         [self.navigationController pushViewController:allView animated:YES];
+        allView = nil;
     }
 }
 

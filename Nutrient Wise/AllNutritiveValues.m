@@ -24,6 +24,7 @@
 @synthesize nutritiveValues;
 @synthesize selectedConversionFactor;
 @synthesize languageHelper;
+@synthesize cellNibLoaded;
 
 - (id) initWithFoodName:(FoodName *)food:(ConversionFactor *) conversionFactor {
     foodName = food;
@@ -57,13 +58,18 @@
     [super viewDidLoad];
     
     languageHelper = [[LanguageHelper alloc] init];
+    
+    cellNibLoaded = NO;
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+    
+    foodName = nil;
+    nutritiveValues = nil;
+    selectedConversionFactor = nil;
+    languageHelper = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -77,17 +83,15 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {  
-    static BOOL NutientCellNibLoaded = NO;
-    
     NSUInteger row = [indexPath row];
     
-    if(!NutientCellNibLoaded) {
+    if(!cellNibLoaded) {
         UINib *nib = [UINib nibWithNibName:@"NutientValueCell" bundle:nil];
         [tableView registerNib:nib forCellReuseIdentifier:kRowIdentifier];
-        NutientCellNibLoaded = YES;
+        cellNibLoaded = YES;
     }
     NutientValueCell *cell = [tableView dequeueReusableCellWithIdentifier:kRowIdentifier];
-    
+        
     NutritiveValue *nutritiveValue = [self.nutritiveValues objectAtIndex:row];
     NutritiveName *nutritiveName = [nutritiveValue valueForKey:kNutritiveNameColumn];
     
@@ -97,12 +101,13 @@
     
     NSDecimalNumber *value = [nutritiveValue valueForKey:kNutritiveValueColumn];
     NSDecimalNumber *conversion = [selectedConversionFactor valueForKey:kConversionFactorColumn];
-    value = [value decimalNumberByMultiplyingBy:conversion];
+    if(conversion != nil) {
+        value = [value decimalNumberByMultiplyingBy:conversion];
+    }
     cell.value.text = [[value decimalNumberByRoundingAccordingToBehavior:roundingBehavior] stringValue];
     cell.measure.text = [nutritiveName valueForKey:kUnitColumn];
     
     return cell;
-
 }
 
 

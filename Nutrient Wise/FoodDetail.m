@@ -16,10 +16,8 @@
 
 #define kDebug YES
 #define kTitle @"NutritiveValues"
-#define kNutritiveNameColumn @"nutritiveName"
 #define kNutritiveSymbolColumn @"nutritiveSymbol"
 #define kNutritiveValuesAttribute @"nutritiveValues"
-#define kNutritiveValueColumn @"nutritiveValue"
 #define kRowIdentifierMeasure @"rowIdentifierMeasure"
 #define kRowIdentifierNutient @"rowIdentifierNutient"
 #define kRowIdentifierAll @"rowIdentifierAll"
@@ -27,8 +25,7 @@
 #define kConversionFactorsAttribute @"conversionFactors"
 #define kMeasureColumn @"maesure"
 #define kMeasureIdColumn @"measureId"
-#define kUnitColumn @"unit"
-#define kConversionFactorColumn @"conversionFactor"
+#define kNutritiveNameColumn @"nutritiveName"
 
 @implementation FoodDetail
 
@@ -42,6 +39,7 @@
 @synthesize favoriteButton;
 @synthesize selectedConversionFactor;
 @synthesize cellNibLoaded;
+@synthesize nutientValueCellHelper;
 
 - (id)initWithFood:(FoodName *)foodEntity {
     self.food = foodEntity;
@@ -71,14 +69,15 @@
 {
     [super viewDidLoad];
  
-    self.languageHelper = [[LanguageHelper alloc] init];
-    self.profileHelper = [[ProfileHelper alloc] init];
-    self.favoriteHelper = [[FavoriteHelper alloc] init];
+    languageHelper = [[LanguageHelper alloc] init];
+    profileHelper = [[ProfileHelper alloc] init];
+    favoriteHelper = [[FavoriteHelper alloc] init];
+    nutientValueCellHelper = [[NutientValueCellHelper alloc] init];
     
     self.title = [languageHelper localizedString:kTitle];
     
     NSArray *keys = [self nutritiveValueKeys];
-    self.nutritiveValues = [self nutritiveValues:keys];
+    nutritiveValues = [self nutritiveValues:keys];
     
     cellNibLoaded = NO;
     
@@ -164,7 +163,6 @@
  */
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSUInteger row = [indexPath row];
     NSUInteger section = [indexPath section];
     
     if (section == 0) {
@@ -184,28 +182,8 @@
             [tableView registerNib:nib forCellReuseIdentifier:kRowIdentifierNutient];
             cellNibLoaded = YES;
         }
-        NutientValueCell *cell = [tableView dequeueReusableCellWithIdentifier:kRowIdentifierNutient];
         
-        NutritiveValue *nutritiveValue = [self.nutritiveValues objectAtIndex:row];
-        NutritiveName *nutritiveName = [nutritiveValue valueForKey:kNutritiveNameColumn];
-
-        cell.nutient.text = [nutritiveName valueForKey:[languageHelper nameColumn]];
-        
-        NSDecimalNumberHandler *roundingBehavior = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:NSRoundPlain scale:1 raiseOnExactness:FALSE raiseOnOverflow:TRUE raiseOnUnderflow:TRUE raiseOnDivideByZero:TRUE]; 
-
-        NSDecimalNumber *value = [nutritiveValue valueForKey:kNutritiveValueColumn];
-        NSDecimalNumber *conversion = [selectedConversionFactor valueForKey:kConversionFactorColumn];
-        if(kDebug) {
-            NSLog(@"Nutritive value is %@", value);
-            NSLog(@"Conversion factor is %@", conversion);
-        }
-        if(conversion != nil) {
-            value = [value decimalNumberByMultiplyingBy:conversion];
-        }
-        cell.value.text = [[value decimalNumberByRoundingAccordingToBehavior:roundingBehavior] stringValue];
-        cell.measure.text = [nutritiveName valueForKey:kUnitColumn];
-        
-        return cell;
+        return [nutientValueCellHelper makeCell:tableView :kRowIdentifierNutient :nutritiveValues :indexPath :selectedConversionFactor];
     } 
     else if(section == 2) {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kRowIdentifierAll];

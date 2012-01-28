@@ -25,6 +25,7 @@
 @synthesize selectedConversionFactor;
 @synthesize languageHelper;
 @synthesize cellNibLoaded;
+@synthesize nutientValueCellHelper;
 
 - (id) initWithFoodName:(FoodName *)food:(ConversionFactor *) conversionFactor {
     foodName = food;
@@ -58,6 +59,7 @@
     [super viewDidLoad];
     
     languageHelper = [[LanguageHelper alloc] init];
+    nutientValueCellHelper = [[NutientValueCellHelper alloc] init];
     
     cellNibLoaded = NO;
 }
@@ -83,32 +85,13 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {  
-    NSUInteger row = [indexPath row];
-    
     if(!cellNibLoaded) {
         UINib *nib = [UINib nibWithNibName:@"NutientValueCell" bundle:nil];
         [tableView registerNib:nib forCellReuseIdentifier:kRowIdentifier];
         cellNibLoaded = YES;
     }
-    NutientValueCell *cell = [tableView dequeueReusableCellWithIdentifier:kRowIdentifier];
-        
-    NutritiveValue *nutritiveValue = [self.nutritiveValues objectAtIndex:row];
-    NutritiveName *nutritiveName = [nutritiveValue valueForKey:kNutritiveNameColumn];
     
-    cell.nutient.text = [nutritiveName valueForKey:[languageHelper nameColumn]];
-    
-    NSDecimalNumberHandler *roundingBehavior = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:NSRoundPlain scale:1 raiseOnExactness:FALSE raiseOnOverflow:TRUE raiseOnUnderflow:TRUE raiseOnDivideByZero:TRUE]; 
-    
-    NSDecimalNumber *value = [nutritiveValue valueForKey:kNutritiveValueColumn];
-    NSDecimalNumber *conversion = [selectedConversionFactor valueForKey:kConversionFactorColumn];
-    if(conversion != nil) {
-        value = [value decimalNumberByMultiplyingBy:conversion];
-    }
-    cell.value.text = [[value decimalNumberByRoundingAccordingToBehavior:roundingBehavior] stringValue];
-    cell.measure.text = [nutritiveName valueForKey:kUnitColumn];
-    
-    return cell;
+    return [nutientValueCellHelper makeCell:tableView :kRowIdentifier :nutritiveValues :indexPath :selectedConversionFactor];
 }
-
 
 @end

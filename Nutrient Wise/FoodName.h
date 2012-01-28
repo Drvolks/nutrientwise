@@ -2,7 +2,7 @@
 //  FoodName.h
 //  NutrientWiseImporter
 //
-//  Created by Jean-François Dufour on 12-01-26.
+//  Created by Jean-François Dufour on 12-01-28.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
@@ -17,7 +17,6 @@
 @property (nonatomic, retain) NSNumber * foodCode;
 @property (nonatomic, retain) NSNumber * foodId;
 @property (nonatomic, retain) NSString * frenchName;
-@property (nonatomic, retain) NSNumber * groupNameId;
 @property (nonatomic, retain) NSSet *conversionFactors;
 @property (nonatomic, retain) GroupName *groupName;
 @property (nonatomic, retain) NSSet *nutritiveValues;

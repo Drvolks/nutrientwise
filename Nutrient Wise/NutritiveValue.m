@@ -2,7 +2,7 @@
 //  NutritiveValue.m
 //  NutrientWiseImporter
 //
-//  Created by drvolks on 12-01-26.
+//  Created by drvolks on 12-01-28.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
@@ -13,8 +13,6 @@
 
 @implementation NutritiveValue
 
-@dynamic foodId;
-@dynamic nutritiveNameId;
 @dynamic nutritiveValue;
 @dynamic foodName;
 @dynamic nutritiveName;

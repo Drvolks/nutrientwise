@@ -2,8 +2,6 @@
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="878" systemVersion="11C74" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="ConversionFactor" representedClassName="ConversionFactor" syncable="YES">
         <attribute name="conversionFactor" optional="YES" attributeType="Decimal" defaultValueString="0" syncable="YES"/>
-        <attribute name="foodId" optional="YES" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
-        <attribute name="measureId" optional="YES" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
         <relationship name="foodName" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="FoodName" inverseName="conversionFactors" inverseEntity="FoodName" syncable="YES"/>
         <relationship name="maesure" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Measure" syncable="YES"/>
     </entity>
@@ -12,7 +10,6 @@
         <attribute name="foodCode" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="foodId" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
         <attribute name="frenchName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="groupNameId" optional="YES" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
         <relationship name="conversionFactors" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ConversionFactor" inverseName="foodName" inverseEntity="ConversionFactor" syncable="YES"/>
         <relationship name="groupName" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="GroupName" syncable="YES"/>
         <relationship name="nutritiveValues" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NutritiveValue" inverseName="foodName" inverseEntity="NutritiveValue" syncable="YES"/>
@@ -38,18 +35,16 @@
         <attribute name="unit" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="NutritiveValue" representedClassName="NutritiveValue" syncable="YES">
-        <attribute name="foodId" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
-        <attribute name="nutritiveNameId" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
         <attribute name="nutritiveValue" optional="YES" attributeType="Decimal" defaultValueString="0" syncable="YES"/>
         <relationship name="foodName" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="FoodName" inverseName="nutritiveValues" inverseEntity="FoodName" syncable="YES"/>
         <relationship name="nutritiveName" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="NutritiveName" syncable="YES"/>
     </entity>
     <elements>
-        <element name="ConversionFactor" positionX="160" positionY="192" width="128" height="120"/>
-        <element name="FoodName" positionX="160" positionY="192" width="128" height="165"/>
+        <element name="ConversionFactor" positionX="160" positionY="192" width="128" height="90"/>
+        <element name="FoodName" positionX="160" positionY="192" width="128" height="150"/>
         <element name="GroupName" positionX="160" positionY="192" width="128" height="120"/>
         <element name="Measure" positionX="160" positionY="192" width="128" height="90"/>
         <element name="NutritiveName" positionX="160" positionY="192" width="128" height="135"/>
-        <element name="NutritiveValue" positionX="-1638" positionY="-126" width="128" height="150"/>
+        <element name="NutritiveValue" positionX="-1638" positionY="-126" width="128" height="90"/>
     </elements>
 </model>

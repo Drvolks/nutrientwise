@@ -14,12 +14,16 @@
 #define kRenalProfileValues @"PROT,H2O,K,P,NA,MG"
 #define kDiabeteProfileValues @""
 #define kGenericProfileValues @"KCAL,FAT"
+#define kProfileSetting @"profile"
 
 @implementation ProfileHelper
 
+- (id) init {
+    return self;
+}
+
 - (NSArray *) nutritiveSymbolsForProfile:(NSString *)profile {
-    //NSString *stringResult = kGenericProfileValues;
-    NSString *stringResult = kRenalProfileValues;
+    NSString *stringResult = profile;
     
     if([profile isEqualToString:kRenalProfile]) {
         stringResult = kRenalProfileValues;
@@ -29,6 +33,28 @@
     
     NSArray *result = [stringResult componentsSeparatedByString:@","];
     return result;
+}
+
+- (NSString *) selectedProfile {
+    NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];
+    NSString *language = [settings objectForKey:kProfileSetting];
+    
+    return language;
+}
+
+- (void) setSelectedProfile:(NSString *) profile {
+    NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];
+    [settings setObject:profile forKey:kProfileSetting];
+    [settings synchronize];
+}
+
+- (NSArray *) supportedProfiles {
+    NSMutableArray *profiles = [[NSMutableArray alloc] initWithCapacity:3];
+    [profiles addObject:kGenericProfile];
+    [profiles addObject:kRenalProfile];
+    [profiles addObject:kDiabeteProfile];
+    
+    return profiles;
 }
 
 @end

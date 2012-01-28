@@ -10,14 +10,14 @@
 
 #define kLanguageSetting @"language"
 #define kFrench @"fr"
+#define kEnglish @"en"
 #define kFrenchNameColumn @"frenchName"
 #define kEnglishNameColumn @"englishName"
 
 @implementation LanguageHelper
 
 - (BOOL) french {
-    NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];
-    NSString *language = [settings objectForKey:kLanguageSetting];
+    NSString *language = [self language];
     
     if([language compare:kFrench] == NSOrderedSame) {
         return YES;
@@ -38,6 +38,27 @@
     // TODO implement this
     
     return key;
+}
+
+- (NSString *) language {
+    NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];
+    NSString *language = [settings objectForKey:kLanguageSetting];
+    
+    return language;
+}
+
+- (void) setLanguage:(NSString *)language {
+     NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];
+    [settings setObject:language forKey:kLanguageSetting];
+    [settings synchronize];
+}
+
+- (NSArray *) supportedLanguages {
+    NSMutableArray *supportedLanguages = [[NSMutableArray alloc] initWithCapacity:2];
+    [supportedLanguages addObject:kEnglish];
+    [supportedLanguages addObject:kFrench];
+    
+    return supportedLanguages;
 }
 
 @end

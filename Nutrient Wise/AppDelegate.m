@@ -10,6 +10,7 @@
 #import "SearchController.h"
 #import "Search.h"
 
+#define kDebug YES
 #define kMainNib @"TabBarController"
 #define kDatabase @"DATA.sqlite"
 #define kDatabaseFileName @"DATA"
@@ -22,6 +23,8 @@
 @synthesize window = _window;
 @synthesize rootController;
 @synthesize searchController;
+@synthesize languageHelper;
+@synthesize profileHelper;
 
 @synthesize managedObjectContext = __managedObjectContext;
 @synthesize managedObjectModel = __managedObjectModel;
@@ -29,6 +32,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [self setup];
+    
     [self setupTabBarController];
     [self pushManagedContextToViewControllers];
     
@@ -41,6 +46,30 @@
     [self.window addSubview:rootController.view];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+}
+
+- (void) setup {
+    languageHelper = [[LanguageHelper alloc] init];
+    profileHelper = [[ProfileHelper alloc] init];
+    
+    if([languageHelper language] == nil) {
+        NSString * language = [[NSLocale preferredLanguages] objectAtIndex:0];
+        
+        if(kDebug) {
+            NSLog(@"Setting the default language to %@", language);
+        }
+        
+        [languageHelper setLanguage:language];
+    }
+    
+    if([profileHelper selectedProfile] == nil) {
+        NSString *profile = [[profileHelper supportedProfiles] objectAtIndex:0];
+        if(kDebug) {
+            NSLog(@"Setting the default profile to %@", profile);
+        }
+        
+        [profileHelper setSelectedProfile:profile];
+    }
 }
 
 - (void) pushManagedContextToViewControllers {

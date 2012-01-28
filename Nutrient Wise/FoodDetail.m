@@ -135,7 +135,7 @@
 }
 
 - (NSArray *) nutritiveValueKeys {
-    return [profileHelper nutritiveSymbolsForProfile:@"TODO"];
+    return [profileHelper nutritiveSymbolsForProfile:[profileHelper selectedProfile]];
 }
 
 - (NSArray *) nutritiveValues:(NSArray *)keys {
@@ -155,12 +155,6 @@
     
     return result;
 }
-
-/*
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.nutritiveValues count];
-}
- */
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSUInteger section = [indexPath section];
@@ -191,7 +185,7 @@
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kRowIdentifierAll];
         }
         
-        cell.textLabel.text = @"All Values";
+        cell.textLabel.text = [languageHelper localizedString:@"All Nutritive Values"];
         
         return cell;
     }
@@ -227,10 +221,10 @@
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     switch (section) {
         case (0):
-            return @"Measure";
+            return [languageHelper localizedString:@"Selected Measure"];
             break;
         case (1):
-            return @"Values";
+            return [[languageHelper localizedString:@"Values for profile "] stringByAppendingString:[languageHelper localizedString:[profileHelper selectedProfile]]];
             break;
         case (3):
             // no label

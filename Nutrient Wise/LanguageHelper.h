@@ -13,5 +13,8 @@
 - (BOOL) french;
 - (NSString *) nameColumn;
 - (NSString *) localizedString:(NSString *)key;
+- (NSString *) language;
+- (void) setLanguage:(NSString *)language;
+- (NSArray *) supportedLanguages;
 
 @end

@@ -11,5 +11,8 @@
 @interface ProfileHelper : NSObject
 
 - (NSArray *) nutritiveSymbolsForProfile:(NSString *)profile;
+- (NSString *) selectedProfile;
+- (void) setSelectedProfile:(NSString *) profile;
+- (NSArray *) supportedProfiles;
 
 @end

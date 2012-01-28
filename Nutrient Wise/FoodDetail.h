@@ -17,10 +17,8 @@
 
 @interface FoodDetail : UIViewController  <UITableViewDelegate, UITableViewDataSource, MeasureSelectionDelegate>
 
-@property (strong, nonatomic) IBOutlet UILabel *foodName;
 @property (strong, nonatomic) IBOutlet UITableView *table;
-@property (strong, nonatomic) IBOutlet UIButton *favoriteButton;
-@property (strong, nonatomic) FoodName *food;
+@property (strong, nonatomic) FoodName *foodName;
 @property (strong, nonatomic) NSArray *nutritiveValues;
 @property (strong, nonatomic) LanguageHelper *languageHelper;
 @property (strong, nonatomic) ProfileHelper *profileHelper;

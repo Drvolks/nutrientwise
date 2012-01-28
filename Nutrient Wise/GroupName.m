@@ -1,8 +1,8 @@
 //
 //  GroupName.m
-//  Nutrient Wise
+//  NutrientWiseImporter
 //
-//  Created by Jean-François Dufour on 12-01-22.
+//  Created by Jean-François Dufour on 12-01-26.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 

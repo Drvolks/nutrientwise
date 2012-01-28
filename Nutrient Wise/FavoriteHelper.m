@@ -62,7 +62,8 @@
     
     NSMutableDictionary *favorites = [self favotiteIds:kFoodFavorites];
     
-    [favorites removeObjectForKey:[foodName valueForKey:kFoodIdColumn]];
+    NSNumber *foodId = [foodName valueForKey:kFoodIdColumn];
+    [favorites removeObjectForKey:[foodId stringValue]];
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:favorites];
     [pref setObject:data forKey:kFoodFavorites];
     
@@ -82,11 +83,6 @@
         }
         return YES;
     }
-    //for(NSNumber *favoriteId in favorites) {
-    //    if(idToSearch == favoriteId) {
-    //        return YES;
-    //    }
-    //}
     
     return NO;
 }

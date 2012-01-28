@@ -1,18 +1,15 @@
 //
 //  FoodName.m
-//  Nutrient Wise
+//  NutrientWiseImporter
 //
-//  Created by Jean-François Dufour on 12-01-22.
+//  Created by Jean-François Dufour on 12-01-26.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
 #import "FoodName.h"
 #import "ConversionFactor.h"
-#import "FoodSource.h"
 #import "GroupName.h"
 #import "NutritiveValue.h"
-#import "Refuse.h"
-#import "Yield.h"
 
 
 @implementation FoodName
@@ -20,14 +17,10 @@
 @dynamic englishName;
 @dynamic foodCode;
 @dynamic foodId;
-@dynamic foodSourceId;
 @dynamic frenchName;
 @dynamic groupNameId;
 @dynamic conversionFactors;
-@dynamic foodSource;
 @dynamic groupName;
 @dynamic nutritiveValues;
-@dynamic refuses;
-@dynamic yields;
 
 @end

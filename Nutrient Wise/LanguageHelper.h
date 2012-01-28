@@ -10,6 +10,8 @@
 
 @interface LanguageHelper : NSObject
 
+@property (strong, nonatomic) NSBundle *bundle;
+
 - (BOOL) french;
 - (NSString *) nameColumn;
 - (NSString *) localizedString:(NSString *)key;

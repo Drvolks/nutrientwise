@@ -98,8 +98,23 @@
     }
     
     if(selectedConversionFactor == nil) {
+        NSNumber *favoriteConversion = [favoriteHelper favoriteConversionMeasure:food];
         NSSet *conversionFactors = [food valueForKey:kConversionFactorsAttribute];
-        selectedConversionFactor = [[conversionFactors allObjects] objectAtIndex:0];
+        if(favoriteConversion != nil) {
+            for(ConversionFactor *conversionFactor in conversionFactors) {
+                Measure *measure = [conversionFactor valueForKey:kMeasureColumn];
+                NSNumber *measureId = [measure valueForKey:kMeasureIdColumn];
+                
+                if([measureId isEqualToNumber:favoriteConversion]) {
+                    selectedConversionFactor = conversionFactor;
+                }
+            }
+        }
+
+        if(selectedConversionFactor == nil) {
+            // pick any conversion
+            selectedConversionFactor = [[conversionFactors allObjects] objectAtIndex:0];
+        }
     }
 
     if(kDebug) {
@@ -207,7 +222,7 @@
 }
 
 - (IBAction)favoriteButtonPressed:(id)sender {
-    [favoriteHelper addToFavorite:self.food];
+    [favoriteHelper addFoodToFavorite:self.food];
     
     [self prepareDisplay];
 }
@@ -264,6 +279,9 @@
 
 - (void) conversionFactorSelected:(ConversionFactor *) conversionFactor {
     selectedConversionFactor = conversionFactor;
+    
+    [favoriteHelper addConversionToFavorite:conversionFactor :food];
+    
     [table reloadData];
 }
 

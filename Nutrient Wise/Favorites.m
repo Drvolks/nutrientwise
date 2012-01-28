@@ -60,7 +60,7 @@
 }
 
 - (void) loadFavorites {
-    NSArray *favoriteIds = [self.favoriteHelper favotiteIds];
+    NSArray *favoriteIds = [self.favoriteHelper favotiteFoodIds];
     NSMutableArray *favoriteEntities = [[NSMutableArray alloc] init];
     
     NSLog(@"ids = %@", favoriteIds);

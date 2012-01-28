@@ -8,14 +8,16 @@
 
 #import "FavoriteHelper.h"
 
-#define kFavorites @"favorites"
+#define kFoodFavorites @"favorites"
+#define kConversionFactorFavorites @"conversionFactors"
 #define kFoodIdColumn @"foodId"
+#define kMeasureIdColumn @"measureId"
 #define kDebug YES
 
 @implementation FavoriteHelper
 
 - (id) init {
-    NSString *userDefaultsValuesPath=[[NSBundle mainBundle] pathForResource:@"UserPreferences" ofType:@"plist"];
+    NSString *userDefaultsValuesPath=[[NSBundle mainBundle] pathForResource:@"NutientWisePref" ofType:@"plist"];
     NSDictionary *userDefaultsValuesDict=[NSDictionary dictionaryWithContentsOfFile:userDefaultsValuesPath];
     
     // set them in the standard user defaults
@@ -24,51 +26,102 @@
     return self;
 }
 
-- (void) addToFavorite:(FoodName *) foodName {
+- (void) addFoodToFavorite:(FoodName *) foodName {
     NSUserDefaults *pref = [NSUserDefaults standardUserDefaults];
     
-    NSMutableArray *favorites = [self favotiteIds];
+    NSMutableDictionary *favorites = [self favotiteIds:kFoodFavorites];
     
-    [favorites addObject:[foodName valueForKey:kFoodIdColumn]];
-    [pref setObject:favorites forKey:kFavorites];
+    NSNumber *foodId = [foodName valueForKey:kFoodIdColumn];
+    [favorites setObject:[foodName valueForKey:kFoodIdColumn] forKey:[foodId stringValue]];
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:favorites];
+    [pref setObject:data forKey:kFoodFavorites];
     
     if(kDebug) {
-        NSLog(@"New favorite added. This is the new list: %@", [pref objectForKey:kFavorites]);
+        NSLog(@"New favorite added. This is the new list: %@", [pref objectForKey:kFoodFavorites]);
     }
 }
 
-- (NSMutableArray *) favotiteIds {
+- (NSMutableDictionary *) favotiteIds:(NSString *) key {
     NSUserDefaults *pref = [NSUserDefaults standardUserDefaults];
-    NSArray *favorites = [pref objectForKey:kFavorites];
-    NSMutableArray *newFavorites = [[NSMutableArray alloc] initWithArray:favorites];
+    NSData *data = [pref objectForKey:key];
+    NSMutableDictionary *favotites = nil;
     
-    return newFavorites;
+    if(data != nil) {
+        favotites = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    }
+    
+    if(favotites == nil) {
+        favotites = [[NSMutableDictionary alloc] init];
+    }
+    
+    return favotites;
 }
 
 - (void) removeFavorite:(FoodName *) foodName {
     NSUserDefaults *pref = [NSUserDefaults standardUserDefaults];
     
-    NSMutableArray *favorites = [self favotiteIds];
+    NSMutableDictionary *favorites = [self favotiteIds:kFoodFavorites];
     
-    [favorites removeObject:[foodName valueForKey:kFoodIdColumn]];
-    [pref setObject:favorites forKey:kFavorites];
+    [favorites removeObjectForKey:[foodName valueForKey:kFoodIdColumn]];
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:favorites];
+    [pref setObject:data forKey:kFoodFavorites];
     
     if(kDebug) {
-        NSLog(@"Favorite removed. This is the new list: %@", [pref objectForKey:kFavorites]);
+        NSLog(@"Favorite removed. This is the new list: %@", [pref objectForKey:kFoodFavorites]);
     }   
 }
 
 - (BOOL) isFavorite:(FoodName *) foodName {
-    NSMutableArray *favorites = [self favotiteIds];
-    NSNumber *idToSearch = [foodName valueForKey:kFoodIdColumn];
-    
-    for(NSNumber *favoriteId in favorites) {
-        if(idToSearch == favoriteId) {
-            return YES;
+    NSMutableDictionary *favorites = [self favotiteIds:kFoodFavorites];
+
+    NSNumber *foodId = [foodName valueForKey:kFoodIdColumn];
+    NSNumber *result = [favorites valueForKey: [foodId stringValue]];
+    if(result != nil) {
+        if(kDebug) {
+            NSLog(@"Food is a favorite");
         }
+        return YES;
     }
+    //for(NSNumber *favoriteId in favorites) {
+    //    if(idToSearch == favoriteId) {
+    //        return YES;
+    //    }
+    //}
     
     return NO;
+}
+
+- (void) addConversionToFavorite:(ConversionFactor *)conversionFactor:(FoodName *)foodName {
+    NSUserDefaults *pref = [NSUserDefaults standardUserDefaults];
+    
+    NSMutableDictionary *favorites = [self favotiteIds:kConversionFactorFavorites];
+    
+    NSNumber *foodId = [foodName valueForKey:kFoodIdColumn];
+    [favorites setObject:[conversionFactor valueForKey:kMeasureIdColumn] forKey:[foodId stringValue]];
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:favorites];
+    [pref setObject:data forKey:kConversionFactorFavorites];
+    
+    if(kDebug) {
+        NSLog(@"New favorite conversion factor added. This is the new list: %@", [pref objectForKey:kConversionFactorFavorites]);
+    }
+
+}
+
+- (NSNumber *) favoriteConversionMeasure:(FoodName *) foodName {
+    NSMutableDictionary *favorites = [self favotiteIds:kConversionFactorFavorites];
+    
+    NSNumber *foodId = [foodName valueForKey:kFoodIdColumn];
+    NSNumber *result = [favorites valueForKey: [foodId stringValue]];
+    
+    if(kDebug) {
+        NSLog(@"Favorite conversion factor (measure) is %@", result);
+    }
+    
+    return result;
+}
+
+- (NSMutableDictionary *) favotiteFoodIds {
+    return [self favotiteIds:kFoodFavorites];
 }
 
 @end

@@ -1,0 +1,27 @@
+/* Localized versions of Info.plist keys */
+
+"Search" = "Search";
+"Favorites" = "Favorites";
+"Profile" = "Profile";
+"Settings" = "Settings";
+"Edit" = "Edit";
+"Done" = "Done";
+"My Profile" = "My Profile";
+"Language" = "Display Language";
+"Selected Measure" = "Selected Measure";
+"Values for profile " = "Nutrients for the profile ";
+"All Nutritive Values" = "All Nutritive Values";
+
+/* profiles */
+"rein" = "Renal Insufficiency";
+"generic" = "Generic";
+"diabete" = "Diabetes";
+
+/* description profiles */
+"rein Desc" = "Renal Insufficiency: TODO";
+"generic Desc" = "Generic: TODO";
+"diabete Desc" = "Diabetes: TODO";
+
+/* langues */
+"fr" = "Français";
+"en" = "English";

@@ -16,6 +16,8 @@
 
 @implementation LanguageHelper
 
+@synthesize bundle;
+
 - (BOOL) french {
     NSString *language = [self language];
     
@@ -35,9 +37,12 @@
 }
 
 - (NSString *) localizedString:(NSString *)key {
-    // TODO implement this
+    if(bundle == nil) {
+        NSString *path = [[ NSBundle mainBundle ] pathForResource:[self language] ofType:@"lproj" ];
+        bundle = [NSBundle bundleWithPath:path];
+    }
     
-    return key;
+    return [bundle localizedStringForKey:key value:key table:nil];
 }
 
 - (NSString *) language {
@@ -51,6 +56,9 @@
      NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];
     [settings setObject:language forKey:kLanguageSetting];
     [settings synchronize];
+    
+    NSString *path = [[ NSBundle mainBundle ] pathForResource:[self language] ofType:@"lproj" ];
+    bundle = [NSBundle bundleWithPath:path];
 }
 
 - (NSArray *) supportedLanguages {

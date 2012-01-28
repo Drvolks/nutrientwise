@@ -12,11 +12,11 @@
 
 #define kDebug YES
 #define kMainNib @"TabBarController"
-#define kDatabase @"DATA.sqlite"
-#define kDatabaseFileName @"DATA"
+#define kDatabase @"DATA_v1.1.sqlite"
+#define kDatabaseFileName @"DATA_v1.1"
 #define kDatabaseFileExt @"sqlite"
 #define kModelFileName @"Model"
-#define kModelFileExt @"momd"
+#define kModelFileExt @"mom"
 
 @implementation AppDelegate
 
@@ -75,8 +75,14 @@
 - (void) pushManagedContextToViewControllers {
     NSManagedObjectContext *context = [self managedObjectContext];
     
+    
+    
     NSArray *viewControllers = [rootController viewControllers];
     for (id viewController in viewControllers) {
+        // Translate the tab labels
+        UIViewController *controller = (UIViewController *) viewController;
+        controller.tabBarItem.title = [languageHelper localizedString:controller.tabBarItem.title];
+        
         if ([viewController respondsToSelector:@selector(setFinder:)]) {
             [viewController setFinder:[[Finder alloc] initWithContext:context]];
             
@@ -166,13 +172,30 @@
         return __persistentStoreCoordinator;
     }
     
-    NSString *storePath = [[self applicationDocumentsDirectory] stringByAppendingPathComponent: kDatabase];
+    NSString *documentDirectory = [self applicationDocumentsDirectory];
+    NSString *storePath = [documentDirectory stringByAppendingPathComponent: kDatabase];
 
     NSFileManager *fileManager = [NSFileManager defaultManager];
     // If the expected store doesn't exist, copy the default store.
     if (![fileManager fileExistsAtPath:storePath]) {
         NSString *defaultStorePath = [[NSBundle mainBundle] pathForResource:kDatabaseFileName ofType:kDatabaseFileExt];
         if (defaultStorePath) {
+            NSLog(@"A new version of the database will be copied to the Documents directory. Old file(s) will be removed");
+            
+            NSError *error = nil;
+            NSArray *directoryContents = [fileManager contentsOfDirectoryAtPath:documentDirectory error:&error];
+            if (error == nil) {
+                for (NSString *path in directoryContents) {
+                    NSString *fullPath = [documentDirectory stringByAppendingPathComponent:path];
+                    BOOL removeSuccess = [fileManager removeItemAtPath:fullPath error:&error];
+                    if (!removeSuccess) {
+                        NSLog(@"Error deleting %@", fullPath);
+                    }
+                }
+            } else {
+                NSLog(@"Error getting files in %@", documentDirectory);
+            }
+            
             [fileManager copyItemAtPath:defaultStorePath toPath:storePath error:NULL];
         }
     }

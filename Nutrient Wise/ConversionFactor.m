@@ -1,8 +1,8 @@
 //
 //  ConversionFactor.m
-//  Nutrient Wise
+//  NutrientWiseImporter
 //
-//  Created by drvolks on 12-01-12.
+//  Created by drvolks on 12-01-26.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 

@@ -1,18 +1,14 @@
 //
-//  FavoritesController.m
+//  SettingsController.m
 //  Nutrient Wise
 //
-//  Created by Jean-François Dufour on 12-01-23.
+//  Created by Jean-François Dufour on 12-01-28.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "FavoritesController.h"
+#import "SettingsController.h"
 
-#define kTitle @"Favorites"
-#define kEdit @"Edit"
-#define kDone @"Done"
-
-@implementation FavoritesController
+@implementation SettingsController
 
 @synthesize finder;
 @synthesize languageHelper;
@@ -36,22 +32,12 @@
 
 #pragma mark - View lifecycle
 
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView
-{
-}
-*/
-
-
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     languageHelper = [[LanguageHelper alloc] init];
 }
-
 
 - (void)viewDidUnload
 {

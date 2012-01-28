@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 #import "SearchController.h"
+#import "LanguageHelper.h"
+#import "ProfileHelper.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -18,9 +20,12 @@
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+@property (strong, nonatomic) LanguageHelper *languageHelper;
+@property (strong, nonatomic) ProfileHelper *profileHelper;
 
 - (NSString *)applicationDocumentsDirectory;
 - (void) pushManagedContextToViewControllers;
 - (void) setupTabBarController;
+- (void) setup;
 
 @end

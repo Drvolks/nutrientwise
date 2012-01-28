@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LanguageHelper.h"
+#import "Finder.h"
+#import "SettingsLanguage.h"
 
-@interface Settings : UIViewController
+@interface Settings : UIViewController <UITableViewDelegate, UITableViewDataSource, SettingsLanguageDelegate>
 
-@property (strong, nonatomic) IBOutlet UINavigationItem *navigationItem;
-@property (strong, nonatomic) IBOutlet UITextField *languageField;
+@property (strong, nonatomic) IBOutlet UITableView *table;
+@property (strong, nonatomic) LanguageHelper *languageHelper;
+@property (strong, nonatomic) Finder *finder;
 
 @end

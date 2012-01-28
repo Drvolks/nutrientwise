@@ -30,6 +30,12 @@
 		6E81DCA114D0D58200A680DE /* AllNutritiveValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81DC9F14D0D58100A680DE /* AllNutritiveValues.m */; };
 		6E81DCA214D0D58200A680DE /* AllNutritiveValues.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E81DCA014D0D58100A680DE /* AllNutritiveValues.xib */; };
 		6E81DCB514D46D6E00A680DE /* NutientValueCellHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81DCB414D46D6D00A680DE /* NutientValueCellHelper.m */; };
+		6E81DCBA14D4714000A680DE /* SettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81DCB814D4713F00A680DE /* SettingsController.m */; };
+		6E81DCBF14D4779F00A680DE /* SettingsLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81DCBD14D4779D00A680DE /* SettingsLanguage.m */; };
+		6E81DCC014D4779F00A680DE /* SettingsLanguage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E81DCBE14D4779D00A680DE /* SettingsLanguage.xib */; };
+		6E81DCC414D47B1E00A680DE /* ProfilesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81DCC214D47B1B00A680DE /* ProfilesController.m */; };
+		6E81DCC914D47BF700A680DE /* ProfileSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81DCC714D47BF500A680DE /* ProfileSelection.m */; };
+		6E81DCCA14D47BF700A680DE /* ProfileSelection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E81DCC814D47BF600A680DE /* ProfileSelection.xib */; };
 		6E87392714BFA8A10054A2E6 /* Measure.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87392614BFA8A10054A2E6 /* Measure.m */; };
 		6E87392D14BFA8A20054A2E6 /* NutritiveSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87392C14BFA8A20054A2E6 /* NutritiveSource.m */; };
 		6E87393014BFA8A30054A2E6 /* FoodSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87392F14BFA8A30054A2E6 /* FoodSource.m */; };
@@ -117,6 +123,16 @@
 		6E81DCA014D0D58100A680DE /* AllNutritiveValues.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AllNutritiveValues.xib; sourceTree = "<group>"; };
 		6E81DCB314D46D6D00A680DE /* NutientValueCellHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NutientValueCellHelper.h; sourceTree = "<group>"; };
 		6E81DCB414D46D6D00A680DE /* NutientValueCellHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NutientValueCellHelper.m; sourceTree = "<group>"; };
+		6E81DCB714D4713F00A680DE /* SettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsController.h; sourceTree = "<group>"; };
+		6E81DCB814D4713F00A680DE /* SettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsController.m; sourceTree = "<group>"; };
+		6E81DCBC14D4779C00A680DE /* SettingsLanguage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsLanguage.h; sourceTree = "<group>"; };
+		6E81DCBD14D4779D00A680DE /* SettingsLanguage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsLanguage.m; sourceTree = "<group>"; };
+		6E81DCBE14D4779D00A680DE /* SettingsLanguage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsLanguage.xib; sourceTree = "<group>"; };
+		6E81DCC114D47B1B00A680DE /* ProfilesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilesController.h; sourceTree = "<group>"; };
+		6E81DCC214D47B1B00A680DE /* ProfilesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfilesController.m; sourceTree = "<group>"; };
+		6E81DCC614D47BF400A680DE /* ProfileSelection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileSelection.h; sourceTree = "<group>"; };
+		6E81DCC714D47BF500A680DE /* ProfileSelection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileSelection.m; sourceTree = "<group>"; };
+		6E81DCC814D47BF600A680DE /* ProfileSelection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileSelection.xib; sourceTree = "<group>"; };
 		6E87392514BFA8A10054A2E6 /* Measure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Measure.h; sourceTree = "<group>"; };
 		6E87392614BFA8A10054A2E6 /* Measure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Measure.m; sourceTree = "<group>"; };
 		6E87392B14BFA8A20054A2E6 /* NutritiveSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NutritiveSource.h; sourceTree = "<group>"; };
@@ -309,9 +325,19 @@
 				6EAD166914CC7DF400D82BFD /* Profiles.h */,
 				6EAD166A14CC7DF400D82BFD /* Profiles.m */,
 				6EAD166B14CC7DF400D82BFD /* Profiles.xib */,
+				6E81DCC114D47B1B00A680DE /* ProfilesController.h */,
+				6E81DCC214D47B1B00A680DE /* ProfilesController.m */,
+				6E81DCC614D47BF400A680DE /* ProfileSelection.h */,
+				6E81DCC714D47BF500A680DE /* ProfileSelection.m */,
+				6E81DCC814D47BF600A680DE /* ProfileSelection.xib */,
 				6EAD166414CC7DE700D82BFD /* Settings.h */,
 				6EAD166514CC7DE700D82BFD /* Settings.m */,
 				6EAD166614CC7DE700D82BFD /* Settings.xib */,
+				6E81DCB714D4713F00A680DE /* SettingsController.h */,
+				6E81DCB814D4713F00A680DE /* SettingsController.m */,
+				6E81DCBC14D4779C00A680DE /* SettingsLanguage.h */,
+				6E81DCBD14D4779D00A680DE /* SettingsLanguage.m */,
+				6E81DCBE14D4779D00A680DE /* SettingsLanguage.xib */,
 				6EB9B30414BA0AEB007C9666 /* AppDelegate.h */,
 				6EB9B30514BA0AEB007C9666 /* AppDelegate.m */,
 				6E740AE814C7761E007A0C72 /* TabBarController.xib */,
@@ -465,6 +491,8 @@
 				6E81DC9514D0C54C00A680DE /* NutientValueCell.xib in Resources */,
 				6E81DC9D14D0CBB000A680DE /* MeasureSelection.xib in Resources */,
 				6E81DCA214D0D58200A680DE /* AllNutritiveValues.xib in Resources */,
+				6E81DCC014D4779F00A680DE /* SettingsLanguage.xib in Resources */,
+				6E81DCCA14D47BF700A680DE /* ProfileSelection.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,6 +562,10 @@
 				6E81DC9C14D0CBB000A680DE /* MeasureSelection.m in Sources */,
 				6E81DCA114D0D58200A680DE /* AllNutritiveValues.m in Sources */,
 				6E81DCB514D46D6E00A680DE /* NutientValueCellHelper.m in Sources */,
+				6E81DCBA14D4714000A680DE /* SettingsController.m in Sources */,
+				6E81DCBF14D4779F00A680DE /* SettingsLanguage.m in Sources */,
+				6E81DCC414D47B1E00A680DE /* ProfilesController.m in Sources */,
+				6E81DCC914D47BF700A680DE /* ProfileSelection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

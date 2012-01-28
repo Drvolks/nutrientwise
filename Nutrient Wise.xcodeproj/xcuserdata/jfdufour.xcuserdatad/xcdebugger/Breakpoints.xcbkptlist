@@ -135,12 +135,12 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Nutrient Wise/AppDelegate.m"
-         timestampString = "349049903.049089"
+         timestampString = "349471770.659788"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "143"
-         endingLineNumber = "143"
-         landmarkName = "-persistentStoreCoordinator"
+         startingLineNumber = "172"
+         endingLineNumber = "172"
+         landmarkName = "-setup"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -231,12 +231,12 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Nutrient Wise/AppDelegate.m"
-         timestampString = "349049929.240926"
+         timestampString = "349471770.659788"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "51"
-         endingLineNumber = "51"
-         landmarkName = "-pushManagedContextToViewControllers"
+         startingLineNumber = "80"
+         endingLineNumber = "80"
+         landmarkName = "-setup"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -245,12 +245,12 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Nutrient Wise/AppDelegate.m"
-         timestampString = "349049930.759459"
+         timestampString = "349471770.659788"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "53"
-         endingLineNumber = "53"
-         landmarkName = "-pushManagedContextToViewControllers"
+         startingLineNumber = "82"
+         endingLineNumber = "82"
+         landmarkName = "-setup"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -259,12 +259,12 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Nutrient Wise/AppDelegate.m"
-         timestampString = "349049932.85196"
+         timestampString = "349471770.659788"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "52"
-         endingLineNumber = "52"
-         landmarkName = "-pushManagedContextToViewControllers"
+         startingLineNumber = "81"
+         endingLineNumber = "81"
+         landmarkName = "-setup"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -363,6 +363,20 @@
          startingLineNumber = "99"
          endingLineNumber = "99"
          landmarkName = "-prepareDisplay"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "Nutrient Wise/Profiles.m"
+         timestampString = "349472163.648274"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "91"
+         endingLineNumber = "91"
+         landmarkName = "-tableView:didSelectRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

@@ -29,6 +29,7 @@
 		6E81DC9D14D0CBB000A680DE /* MeasureSelection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E81DC9B14D0CBAF00A680DE /* MeasureSelection.xib */; };
 		6E81DCA114D0D58200A680DE /* AllNutritiveValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81DC9F14D0D58100A680DE /* AllNutritiveValues.m */; };
 		6E81DCA214D0D58200A680DE /* AllNutritiveValues.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E81DCA014D0D58100A680DE /* AllNutritiveValues.xib */; };
+		6E81DCB514D46D6E00A680DE /* NutientValueCellHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81DCB414D46D6D00A680DE /* NutientValueCellHelper.m */; };
 		6E87392714BFA8A10054A2E6 /* Measure.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87392614BFA8A10054A2E6 /* Measure.m */; };
 		6E87392D14BFA8A20054A2E6 /* NutritiveSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87392C14BFA8A20054A2E6 /* NutritiveSource.m */; };
 		6E87393014BFA8A30054A2E6 /* FoodSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87392F14BFA8A30054A2E6 /* FoodSource.m */; };
@@ -114,6 +115,8 @@
 		6E81DC9E14D0D58000A680DE /* AllNutritiveValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllNutritiveValues.h; sourceTree = "<group>"; };
 		6E81DC9F14D0D58100A680DE /* AllNutritiveValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllNutritiveValues.m; sourceTree = "<group>"; };
 		6E81DCA014D0D58100A680DE /* AllNutritiveValues.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AllNutritiveValues.xib; sourceTree = "<group>"; };
+		6E81DCB314D46D6D00A680DE /* NutientValueCellHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NutientValueCellHelper.h; sourceTree = "<group>"; };
+		6E81DCB414D46D6D00A680DE /* NutientValueCellHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NutientValueCellHelper.m; sourceTree = "<group>"; };
 		6E87392514BFA8A10054A2E6 /* Measure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Measure.h; sourceTree = "<group>"; };
 		6E87392614BFA8A10054A2E6 /* Measure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Measure.m; sourceTree = "<group>"; };
 		6E87392B14BFA8A20054A2E6 /* NutritiveSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NutritiveSource.h; sourceTree = "<group>"; };
@@ -290,6 +293,8 @@
 				6E81DC9614D0C5EE00A680DE /* NutientValueCell.h */,
 				6E81DC9714D0C5EE00A680DE /* NutientValueCell.m */,
 				6E81DC9414D0C54C00A680DE /* NutientValueCell.xib */,
+				6E81DCB314D46D6D00A680DE /* NutientValueCellHelper.h */,
+				6E81DCB414D46D6D00A680DE /* NutientValueCellHelper.m */,
 				6E81DC9914D0CBAD00A680DE /* MeasureSelection.h */,
 				6E81DC9A14D0CBAE00A680DE /* MeasureSelection.m */,
 				6E81DC9B14D0CBAF00A680DE /* MeasureSelection.xib */,
@@ -528,6 +533,7 @@
 				6E81DC9814D0C5EF00A680DE /* NutientValueCell.m in Sources */,
 				6E81DC9C14D0CBB000A680DE /* MeasureSelection.m in Sources */,
 				6E81DCA114D0D58200A680DE /* AllNutritiveValues.m in Sources */,
+				6E81DCB514D46D6E00A680DE /* NutientValueCellHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,6 +14,8 @@
 		<string>dining_57.png</string>
 		<string>dining_57.png</string>
 		<string>dining_114.png</string>
+		<string>NutrientWise_57.png</string>
+		<string>NutrientWise_114.png</string>
 	</array>
 	<key>CFBundleIcons</key>
 	<dict>
@@ -25,6 +27,8 @@
 				<string>dining_57.png</string>
 				<string>dining_57.png</string>
 				<string>dining_114.png</string>
+				<string>NutrientWise_57.png</string>
+				<string>NutrientWise_114.png</string>
 			</array>
 			<key>UIPrerenderedIcon</key>
 			<false/>

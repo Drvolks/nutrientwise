@@ -2,7 +2,7 @@
 //  NutritiveName.h
 //  NutrientWiseImporter
 //
-//  Created by Jean-François Dufour on 12-01-28.
+//  Created by Jean-François Dufour on 12-01-29.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
@@ -14,7 +14,6 @@
 
 @property (nonatomic, retain) NSString * englishName;
 @property (nonatomic, retain) NSString * frenchName;
-@property (nonatomic, retain) NSNumber * nutritiveNameCode;
 @property (nonatomic, retain) NSNumber * nutritiveNameId;
 @property (nonatomic, retain) NSString * nutritiveSymbol;
 @property (nonatomic, retain) NSString * unit;

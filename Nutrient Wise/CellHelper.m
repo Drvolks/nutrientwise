@@ -39,13 +39,15 @@
     NSDecimalNumberHandler *roundingBehavior = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:NSRoundPlain scale:1 raiseOnExactness:FALSE raiseOnOverflow:TRUE raiseOnUnderflow:TRUE raiseOnDivideByZero:TRUE]; 
     
     NSDecimalNumber *value = [nutritiveValue valueForKey:kNutritiveValueColumn];
-    NSDecimalNumber *conversion = [conversionFactor valueForKey:kConversionFactorColumn];
-    if(kDebug) {
-        NSLog(@"Nutritive value is %@", value);
-        NSLog(@"Conversion factor is %@", conversion);
-    }
-    if(conversion != nil) {
-        value = [value decimalNumberByMultiplyingBy:conversion];
+    if(conversionFactor != nil) {
+        NSDecimalNumber *conversion = [conversionFactor valueForKey:kConversionFactorColumn];
+        if(kDebug) {
+            NSLog(@"Nutritive value is %@", value);
+            NSLog(@"Conversion factor is %@", conversion);
+        }
+        if(conversion != nil) {
+            value = [value decimalNumberByMultiplyingBy:conversion];
+        }
     }
     cell.value.text = [[value decimalNumberByRoundingAccordingToBehavior:roundingBehavior] stringValue];
     cell.measure.text = [nutritiveName valueForKey:kUnitColumn];

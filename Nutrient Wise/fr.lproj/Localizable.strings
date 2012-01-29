@@ -1,29 +1,35 @@
 /* Localized versions of Info.plist keys */
 
-"Search" = "Search";
-"Favorites" = "Favorites";
-"Profile" = "Profile";
-"Settings" = "Settings";
-"Edit" = "Edit";
-"Done" = "Done";
-"My Profile" = "My Profile";
-"Language" = "Display Language";
-"Selected Measure" = "Selected Measure";
-"Values for profile " = "Nutrients for the profile ";
-"All Nutritive Values" = "All Nutritive Values";
+"Search" = "Rechercher";
+"Favorites" = "Favoris";
+"Profile" = "Profil";
+"Settings" = "Réglages";
+"Edit" = "Éditer";
+"Done" = "Terminer";
+"My Profile" = "Mon Profil";
+"Language" = "Langue d'affichage";
+"Selected Measure" = "Mesure Sélectionnée";
+"Values for profile " = "Nutriments pour le profil ";
+"All Nutritive Values" = "Toutes les valeurs nutritives";
 "General Information" = "General Information";
-"100g" = "100g"
+"100g" = "100g";
 
 /* profiles */
-"rein" = "Renal Insufficiency";
-"generic" = "Generic";
-"diabete" = "Diabetes";
+"rein" = "Insuffisance Rénale";
+"generic" = "Generique";
+"diabete" = "Diabète";
 
 /* description profiles */
-"rein Desc" = "Renal Insufficiency: TODO";
-"generic Desc" = "Generic: TODO";
-"diabete Desc" = "Diabetes: TODO";
+"rein Desc" = "Insuffisance Rénale: TODO";
+"generic Desc" = "Generique: TODO";
+"diabete Desc" = "Diabète: TODO";
 
 /* langues */
 "fr" = "Français";
 "en" = "English";
+
+/* about */
+"About" = "À Propos";
+"About Us" = "Nutrient Wise est une création de Consultation Massawippi inc. Visitez notre site au http://www.consultationmassawippi.ca";
+"About Data" = "Adapté de : Fichier canadien sur les éléments nutritifs, Santé Canada, 2010 (version électronique accessible à l'adresse www.santecanada.gc.ca/fcen)";
+"About Tab Icons" = "Les icons de la barre de navigation sont fournis par Glyphish. Visitez leur site au http://glyphish.com/";

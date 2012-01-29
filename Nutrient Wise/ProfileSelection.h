@@ -16,7 +16,10 @@
 
 @interface ProfileSelection : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
+- (id) initWithProfile:(NSString *)pSelectedProfile;
+
 @property (strong, nonatomic) NSArray *profiles;
+@property (strong, nonatomic) NSString *selectedProfile;
 @property (strong, nonatomic) LanguageHelper *languageHelper;
 @property (nonatomic, assign) id  <ProfileSelectionDelegate> delegate;  
 @property (strong, nonatomic) ProfileHelper *profileHelper;

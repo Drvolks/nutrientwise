@@ -15,6 +15,12 @@
 @synthesize languages;
 @synthesize languageHelper;
 @synthesize delegate;
+@synthesize selectedLanguage;
+
+- (id)initWithLanguage:(NSString *) pSelectedLanguage {
+    selectedLanguage =pSelectedLanguage;
+    return self;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -65,6 +71,9 @@
     NSUInteger row = [indexPath row];
     NSString *language = [languages objectAtIndex:row];
     
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    
     [[self delegate] languageSelected:language];
     
     [self.navigationController popViewControllerAnimated:YES];
@@ -77,8 +86,16 @@
     if(cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kRowIdentifier];
     }
+    
+    NSString *currentLanguage = [languages objectAtIndex:row];
+    
+    if([selectedLanguage isEqualToString:currentLanguage]) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
         
-    cell.textLabel.text = [languageHelper localizedString:[languages objectAtIndex:row]];
+    cell.textLabel.text = [languageHelper localizedString:currentLanguage];
         
     return cell;
 }

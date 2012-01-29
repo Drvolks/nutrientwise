@@ -15,6 +15,9 @@
 
 @interface SettingsLanguage : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
+- (id)initWithLanguage:(NSString *) pSelectedLanguage;
+
+@property (strong, nonatomic) NSString *selectedLanguage;
 @property (strong, nonatomic) NSArray *languages;
 @property (strong, nonatomic) LanguageHelper *languageHelper;
 @property (nonatomic, assign) id  <SettingsLanguageDelegate> delegate;  

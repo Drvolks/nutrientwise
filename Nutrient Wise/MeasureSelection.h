@@ -17,9 +17,10 @@
 @interface MeasureSelection : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) NSArray *conversionFactors;
+@property (strong, nonatomic) ConversionFactor *selectedConversionFactor;
 @property (strong, nonatomic) LanguageHelper *languageHelper;
 @property (nonatomic, assign) id  <MeasureSelectionDelegate> delegate;  
 
-- (id) initWithConversionFactors:(NSArray *) pConversionFactors;
+- (id) initWithConversionFactors:(NSArray *) pConversionFactors:(ConversionFactor *)pSelectedConversionFactor;
 
 @end

@@ -7,11 +7,13 @@
 //
 
 #import "FavoriteHelper.h"
+#import "Measure.h"
 
 #define kFoodFavorites @"favorites"
 #define kConversionFactorFavorites @"conversionFactors"
 #define kFoodIdColumn @"foodId"
 #define kMeasureIdColumn @"measureId"
+#define kMeasureAttribute @"maesure"
 #define kDebug YES
 
 @implementation FavoriteHelper
@@ -92,8 +94,15 @@
     
     NSMutableDictionary *favorites = [self favotiteIds:kConversionFactorFavorites];
     
-    NSNumber *foodId = [foodName valueForKey:kFoodIdColumn];
-    [favorites setObject:[conversionFactor valueForKey:kMeasureIdColumn] forKey:[foodId stringValue]];
+    NSString *foodId = [[foodName valueForKey:kFoodIdColumn] stringValue];
+    
+    // remove old value
+    if([favorites objectForKey:foodId] != nil) {
+        [favorites removeObjectForKey:foodId];
+    }
+    
+    Measure *measure = [conversionFactor valueForKey:kMeasureAttribute];
+    [favorites setObject:[measure valueForKey:kMeasureIdColumn] forKey:foodId];
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:favorites];
     [pref setObject:data forKey:kConversionFactorFavorites];
     

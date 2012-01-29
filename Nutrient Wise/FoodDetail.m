@@ -13,6 +13,7 @@
 #import "NutientValueCell.h"
 #import "MeasureSelection.h"
 #import "AllNutritiveValues.h"
+#import "ArrayHelper.h"
 
 #define kDebug YES
 #define kTitle @"NutritiveValues"
@@ -35,6 +36,7 @@
 @synthesize nutritiveValues;
 @synthesize table;
 @synthesize languageHelper;
+@synthesize arrayHelper;
 @synthesize profileHelper;
 @synthesize favoriteHelper;
 @synthesize selectedConversionFactor;
@@ -73,11 +75,16 @@
     profileHelper = [[ProfileHelper alloc] init];
     favoriteHelper = [[FavoriteHelper alloc] init];
     cellHelper = [[CellHelper alloc] init];
+    arrayHelper = [[ArrayHelper alloc] init];
     
     self.title = [languageHelper localizedString:kTitle];
     
     NSArray *keys = [self nutritiveValueKeys];
     nutritiveValues = [self nutritiveValues:keys];
+    
+    //Sort Data
+    NSString *pkey = [@"nutritiveName." stringByAppendingString:[languageHelper nameColumn]];
+    nutritiveValues = [arrayHelper sort:nutritiveValues key:pkey ascending:YES];
     
     cellNibLoaded = NO;
     

@@ -10,6 +10,7 @@
 #import "NutientValueCell.h"
 #import "NutritiveName.h"
 #import "NutritiveValue.h"
+#import "ArrayHelper.h"
 
 #define kNutritiveValuesAttribute @"nutritiveValues"
 #define kRowIdentifier @"rowIdentifier"
@@ -24,13 +25,14 @@
 @synthesize nutritiveValues;
 @synthesize selectedConversionFactor;
 @synthesize languageHelper;
+@synthesize arrayHelper;
 @synthesize cellNibLoaded;
 @synthesize cellHelper;
 
 - (id) initWithFoodName:(FoodName *)food:(ConversionFactor *) conversionFactor {
     foodName = food;
     selectedConversionFactor = conversionFactor;
-    NSSet *nutritiveValueEntities = [foodName valueForKey:kNutritiveValuesAttribute];
+    NSSet *nutritiveValueEntities = [foodName valueForKey:kNutritiveValuesAttribute];    
     nutritiveValues = [nutritiveValueEntities allObjects];
     return self;
 }
@@ -59,9 +61,15 @@
     [super viewDidLoad];
     
     languageHelper = [[LanguageHelper alloc] init];
+    arrayHelper = [[ArrayHelper alloc] init];
+
     cellHelper = [[CellHelper alloc] init];
     
     cellNibLoaded = NO;
+    
+    //Sort Data
+    NSString *pkey = [@"nutritiveName." stringByAppendingString:[languageHelper nameColumn]];
+    nutritiveValues = [arrayHelper sort:nutritiveValues key:pkey ascending:YES];
 }
 
 - (void)viewDidUnload
@@ -72,6 +80,7 @@
     nutritiveValues = nil;
     selectedConversionFactor = nil;
     languageHelper = nil;
+    arrayHelper = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

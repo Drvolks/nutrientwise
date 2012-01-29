@@ -210,6 +210,14 @@
 		17F98E8214D4FFFF004644BF /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				6E81DCB314D46D6D00A680DE /* CellHelper.h */,
+				6E81DCB414D46D6D00A680DE /* CellHelper.m */,
+				6EAD167C14CCCE8800D82BFD /* LanguageHelper.h */,
+				6EAD167D14CCCE8800D82BFD /* LanguageHelper.m */,
+				6E528B9114CDA9FD00712D87 /* FavoriteHelper.h */,
+				6E528B9214CDA9FD00712D87 /* FavoriteHelper.m */,
+				6E528B8D14CDA01800712D87 /* ProfileHelper.h */,
+				6E528B8E14CDA01800712D87 /* ProfileHelper.m */,
 				17F98E8814D50123004644BF /* ArrayHelper.h */,
 				17F98E8914D50123004644BF /* ArrayHelper.m */,
 			);
@@ -344,14 +352,6 @@
 				6E81DC8014CE32D500A680DE /* About.h */,
 				6E81DC8114CE32D500A680DE /* About.m */,
 				6E81DC8214CE32D600A680DE /* About.xib */,
-				6E81DCB314D46D6D00A680DE /* CellHelper.h */,
-				6E81DCB414D46D6D00A680DE /* CellHelper.m */,
-				6EAD167C14CCCE8800D82BFD /* LanguageHelper.h */,
-				6EAD167D14CCCE8800D82BFD /* LanguageHelper.m */,
-				6E528B9114CDA9FD00712D87 /* FavoriteHelper.h */,
-				6E528B9214CDA9FD00712D87 /* FavoriteHelper.m */,
-				6E528B8D14CDA01800712D87 /* ProfileHelper.h */,
-				6E528B8E14CDA01800712D87 /* ProfileHelper.m */,
 				6EB9B30A14BA0AEB007C9666 /* massawippi_nutrientwiseFirstViewController.h */,
 				6EB9B30B14BA0AEB007C9666 /* massawippi_nutrientwiseFirstViewController.m */,
 				6E417F3914BE50B000F2A2AC /* Finder.h */,

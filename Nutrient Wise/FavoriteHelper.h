@@ -20,6 +20,5 @@
 - (BOOL) isFavorite:(FoodName *) foodName;
 - (void) addConversionToFavorite:(ConversionFactor *)conversionFactor:(FoodName *)foodName;
 - (NSNumber *) favoriteConversionMeasure:(FoodName *) foodName;
-- (NSMutableDictionary *) favoriteConversionFactorIds;
 
 @end

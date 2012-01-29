@@ -45,15 +45,19 @@
 		6E81DD1114D4B82800A680DE /* NutritiveValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81DD0914D4B82800A680DE /* NutritiveValue.m */; };
 		6E81DD1214D4B82800A680DE /* GroupName.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81DD0B14D4B82800A680DE /* GroupName.m */; };
 		6E81DD1314D4B82800A680DE /* Measure.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81DD0D14D4B82800A680DE /* Measure.m */; };
+		6E81DD4814D5BB3300A680DE /* Search.h in Sources */ = {isa = PBXBuildFile; fileRef = 6E740AEC14C77964007A0C72 /* Search.h */; };
+		6E81DD4914D5BB5000A680DE /* SearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD166F14CC7F6300D82BFD /* SearchController.m */; };
+		6E81DD4A14D5BB5E00A680DE /* SearchController.h in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD166E14CC7F6300D82BFD /* SearchController.h */; };
+		6E81DD4C14D5BCB600A680DE /* dining_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E81DD4B14D5BCB500A680DE /* dining_57.png */; };
+		6E81DD4E14D5BCBF00A680DE /* dining_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E81DD4D14D5BCBF00A680DE /* dining_114.png */; };
+		6E81DD5014D5BD4000A680DE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E81DD4F14D5BD4000A680DE /* Default@2x.png */; };
+		6E81DD5214D5BD4600A680DE /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E81DD5114D5BD4500A680DE /* Default.png */; };
 		6EAD166214CC7DD500D82BFD /* Favorites.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD166014CC7DD500D82BFD /* Favorites.m */; };
 		6EAD166314CC7DD500D82BFD /* Favorites.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EAD166114CC7DD500D82BFD /* Favorites.xib */; };
 		6EAD166714CC7DE700D82BFD /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD166514CC7DE700D82BFD /* Settings.m */; };
 		6EAD166814CC7DE700D82BFD /* Settings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EAD166614CC7DE700D82BFD /* Settings.xib */; };
 		6EAD166C14CC7DF500D82BFD /* Profiles.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD166A14CC7DF400D82BFD /* Profiles.m */; };
 		6EAD166D14CC7DF500D82BFD /* Profiles.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EAD166B14CC7DF400D82BFD /* Profiles.xib */; };
-		6EAD167014CC7F6300D82BFD /* SearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD166F14CC7F6300D82BFD /* SearchController.m */; };
-		6EAD167114CC81B800D82BFD /* Search.h in Sources */ = {isa = PBXBuildFile; fileRef = 6E740AEC14C77964007A0C72 /* Search.h */; };
-		6EAD167214CC81B800D82BFD /* SearchController.h in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD166E14CC7F6300D82BFD /* SearchController.h */; };
 		6EAD167814CC93CF00D82BFD /* FoodDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD167614CC93CE00D82BFD /* FoodDetail.m */; };
 		6EAD167914CC93CF00D82BFD /* FoodDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EAD167714CC93CF00D82BFD /* FoodDetail.xib */; };
 		6EAD167B14CC9D8C00D82BFD /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6EAD167A14CC9D8C00D82BFD /* Settings.bundle */; };
@@ -140,6 +144,10 @@
 		6E81DD0B14D4B82800A680DE /* GroupName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupName.m; sourceTree = "<group>"; };
 		6E81DD0C14D4B82800A680DE /* Measure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Measure.h; sourceTree = "<group>"; };
 		6E81DD0D14D4B82800A680DE /* Measure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Measure.m; sourceTree = "<group>"; };
+		6E81DD4B14D5BCB500A680DE /* dining_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dining_57.png; sourceTree = "<group>"; };
+		6E81DD4D14D5BCBF00A680DE /* dining_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dining_114.png; sourceTree = "<group>"; };
+		6E81DD4F14D5BD4000A680DE /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		6E81DD5114D5BD4500A680DE /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		6EAD165F14CC7DD400D82BFD /* Favorites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Favorites.h; sourceTree = "<group>"; };
 		6EAD166014CC7DD500D82BFD /* Favorites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Favorites.m; sourceTree = "<group>"; };
 		6EAD166114CC7DD500D82BFD /* Favorites.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Favorites.xib; sourceTree = "<group>"; };
@@ -238,6 +246,10 @@
 		6E81DC8514CE336800A680DE /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				6E81DD4D14D5BCBF00A680DE /* dining_114.png */,
+				6E81DD4B14D5BCB500A680DE /* dining_57.png */,
+				6E81DD5114D5BD4500A680DE /* Default.png */,
+				6E81DD4F14D5BD4000A680DE /* Default@2x.png */,
 				6E81DCE914D49F3B00A680DE /* 29-heart-red.png */,
 				6E81DC8A14CE33EC00A680DE /* 29-heart.png */,
 				6E81DC8C14CE340200A680DE /* 06-magnify.png */,
@@ -483,6 +495,10 @@
 				6E81DCEA14D49F3B00A680DE /* 29-heart-red.png in Resources */,
 				6E81DCF014D4A6CB00A680DE /* Localizable.strings in Resources */,
 				6E81DCF714D4B7A000A680DE /* DATA_v1.2.sqlite in Resources */,
+				6E81DD4C14D5BCB600A680DE /* dining_57.png in Resources */,
+				6E81DD4E14D5BCBF00A680DE /* dining_114.png in Resources */,
+				6E81DD5014D5BD4000A680DE /* Default@2x.png in Resources */,
+				6E81DD5214D5BD4600A680DE /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,8 +533,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EAD167114CC81B800D82BFD /* Search.h in Sources */,
-				6EAD167214CC81B800D82BFD /* SearchController.h in Sources */,
+				6E81DD4A14D5BB5E00A680DE /* SearchController.h in Sources */,
+				6E81DD4914D5BB5000A680DE /* SearchController.m in Sources */,
+				6E81DD4814D5BB3300A680DE /* Search.h in Sources */,
 				6EB9B30214BA0AEB007C9666 /* main.m in Sources */,
 				6EB9B30614BA0AEB007C9666 /* AppDelegate.m in Sources */,
 				6E417F3B14BE50B000F2A2AC /* Finder.m in Sources */,
@@ -526,7 +543,6 @@
 				6EAD166214CC7DD500D82BFD /* Favorites.m in Sources */,
 				6EAD166714CC7DE700D82BFD /* Settings.m in Sources */,
 				6EAD166C14CC7DF500D82BFD /* Profiles.m in Sources */,
-				6EAD167014CC7F6300D82BFD /* SearchController.m in Sources */,
 				6EAD167814CC93CF00D82BFD /* FoodDetail.m in Sources */,
 				6EAD167E14CCCE8900D82BFD /* LanguageHelper.m in Sources */,
 				6E528B8F14CDA01800712D87 /* ProfileHelper.m in Sources */,

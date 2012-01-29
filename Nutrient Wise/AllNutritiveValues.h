@@ -21,7 +21,7 @@
 @property (strong, nonatomic) ConversionFactor *selectedConversionFactor;
 @property (strong, nonatomic) LanguageHelper *languageHelper;
 @property (strong, nonatomic) ArrayHelper *arrayHelper;
-@property (nonatomic) BOOL *cellNibLoaded;
+@property (nonatomic) BOOL cellNibLoaded;
 @property (strong, nonatomic) CellHelper *cellHelper;
 @property (strong, nonatomic) NSMutableArray *keys;
 

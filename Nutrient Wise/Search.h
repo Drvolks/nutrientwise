@@ -1,5 +1,5 @@
 //
-//  SearchController.h
+//  Search.h
 //  Nutrient Wise
 //
 //  Created by drvolks on 12-01-18.

@@ -71,7 +71,7 @@
 
 - (NSString *) predicateWithNameColumn:(NSString *) searchTerm {
     NSString *predicate = @"";
-    BOOL *first = YES;
+    BOOL first = YES;
     
     NSArray *words = [searchTerm componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     for(NSString *word in words) {

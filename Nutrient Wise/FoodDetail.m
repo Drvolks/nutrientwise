@@ -108,7 +108,7 @@
     NSMutableArray *newValues = [[NSMutableArray alloc] init];
 
     for(NSString *key in allKeys) {
-        BOOL *found = NO;
+        BOOL found = NO;
         for(NSString *profileKey in profileKeys) {
             if([profileKey isEqualToString:key]) {
                 found = YES;

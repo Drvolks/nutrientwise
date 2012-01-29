@@ -12,8 +12,8 @@
 #define kRenalProfile @"rein"
 #define kDiabeteProfile @"diabete"
 #define kRenalProfileValues @"PROT,H2O,K,P,NA,MG"
-#define kDiabeteProfileValues @""
-#define kGenericProfileValues @"KCAL,FAT"
+#define kDiabeteProfileValues @"CARB,TDF,TSUG"
+#define kGenericProfileValues @"KCAL,FAT,TSAT,TRFA,CHOL,NA,CARB,TDF,TSUG,PROT"
 #define kProfileSetting @"profile"
 
 @implementation ProfileHelper

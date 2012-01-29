@@ -340,7 +340,7 @@
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:nil action:nil];
     [self.navigationItem setBackBarButtonItem:backButton];
     
-    if(section == 0) {
+    if(section == 0 && selectedConversionFactor != nil) {
         NSSet *conversionFactors = [foodName valueForKey:kConversionFactorsAttribute];
         MeasureSelection *measureSelectionView = [[MeasureSelection alloc] initWithConversionFactors:[conversionFactors allObjects]:selectedConversionFactor];
         [measureSelectionView setDelegate:self];

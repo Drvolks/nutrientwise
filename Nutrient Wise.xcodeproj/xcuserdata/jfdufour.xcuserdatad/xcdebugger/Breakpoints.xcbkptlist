@@ -79,21 +79,7 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Nutrient Wise/FoodDetail.m"
-         timestampString = "349479385.802572"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "79"
-         endingLineNumber = "79"
-         landmarkName = "-viewDidLoad"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "Nutrient Wise/FoodDetail.m"
-         timestampString = "349479385.802572"
+         timestampString = "349547562.472683"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "80"
@@ -107,11 +93,25 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Nutrient Wise/FoodDetail.m"
-         timestampString = "349480053.249407"
+         timestampString = "349547562.472683"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "150"
-         endingLineNumber = "150"
+         startingLineNumber = "83"
+         endingLineNumber = "83"
+         landmarkName = "-viewDidLoad"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "Nutrient Wise/FoodDetail.m"
+         timestampString = "349547708.675798"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "180"
+         endingLineNumber = "180"
          landmarkName = "-nutritiveValues:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -121,11 +121,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Nutrient Wise/FoodDetail.m"
-         timestampString = "349480053.249407"
+         timestampString = "349547708.675798"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "156"
-         endingLineNumber = "156"
+         startingLineNumber = "186"
+         endingLineNumber = "186"
          landmarkName = "-nutritiveValues:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -135,11 +135,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Nutrient Wise/AppDelegate.m"
-         timestampString = "349482930.91781"
+         timestampString = "349544974.056492"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "179"
-         endingLineNumber = "179"
+         startingLineNumber = "178"
+         endingLineNumber = "178"
          landmarkName = "-persistentStoreCoordinator"
          landmarkType = "5">
       </FileBreakpoint>
@@ -231,11 +231,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Nutrient Wise/AppDelegate.m"
-         timestampString = "349482930.91781"
+         timestampString = "349544974.056492"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "86"
-         endingLineNumber = "86"
+         startingLineNumber = "85"
+         endingLineNumber = "85"
          landmarkName = "-pushManagedContextToViewControllers"
          landmarkType = "5">
       </FileBreakpoint>
@@ -245,25 +245,25 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Nutrient Wise/AppDelegate.m"
-         timestampString = "349482930.91781"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "88"
-         endingLineNumber = "88"
-         landmarkName = "-pushManagedContextToViewControllers"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "Nutrient Wise/AppDelegate.m"
-         timestampString = "349482930.91781"
+         timestampString = "349544974.056492"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "87"
          endingLineNumber = "87"
+         landmarkName = "-pushManagedContextToViewControllers"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "Nutrient Wise/AppDelegate.m"
+         timestampString = "349544974.056492"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "86"
+         endingLineNumber = "86"
          landmarkName = "-pushManagedContextToViewControllers"
          landmarkType = "5">
       </FileBreakpoint>
@@ -301,11 +301,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Nutrient Wise/FoodDetail.m"
-         timestampString = "349480053.249407"
+         timestampString = "349547708.675798"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "97"
-         endingLineNumber = "97"
+         startingLineNumber = "127"
+         endingLineNumber = "127"
          landmarkName = "-prepareDisplay"
          landmarkType = "5">
       </FileBreakpoint>
@@ -357,11 +357,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Nutrient Wise/FoodDetail.m"
-         timestampString = "349480053.249407"
+         timestampString = "349547708.675798"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "106"
-         endingLineNumber = "106"
+         startingLineNumber = "136"
+         endingLineNumber = "136"
          landmarkName = "-prepareDisplay"
          landmarkType = "5">
       </FileBreakpoint>
@@ -385,11 +385,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Nutrient Wise/FoodDetail.m"
-         timestampString = "349479546.99209"
+         timestampString = "349547708.675798"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "88"
-         endingLineNumber = "88"
+         startingLineNumber = "118"
+         endingLineNumber = "118"
          landmarkName = "-prepareDisplay"
          landmarkType = "5">
       </FileBreakpoint>
@@ -455,11 +455,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Nutrient Wise/FoodDetail.m"
-         timestampString = "349487803.476506"
+         timestampString = "349548320.995578"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "275"
-         endingLineNumber = "275"
+         startingLineNumber = "343"
+         endingLineNumber = "343"
          landmarkName = "-conversionFactorSelected:"
          landmarkType = "5">
       </FileBreakpoint>

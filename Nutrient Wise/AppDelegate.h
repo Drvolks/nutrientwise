@@ -1,5 +1,4 @@
 //
-//  massawippi_nutrientwiseAppDelegate.h
 //  Nutrient Wise
 //
 //  Created by Jean-François Dufour on 12-01-08.

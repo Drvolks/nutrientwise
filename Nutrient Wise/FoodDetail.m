@@ -40,6 +40,7 @@
 @synthesize selectedConversionFactor;
 @synthesize cellNibLoaded;
 @synthesize cellHelper;
+@synthesize genericValues;
 
 - (id)initWithFood:(FoodName *)foodEntity {
     foodName = foodEntity;
@@ -76,12 +77,41 @@
     
     self.title = [languageHelper localizedString:kTitle];
     
-    NSArray *keys = [self nutritiveValueKeys];
+    NSArray *keys = [self nutritiveValueKeys:[profileHelper selectedProfile]];
     nutritiveValues = [self nutritiveValues:keys];
+
+    if(![profileHelper genericProfileSelected]) {
+        keys = [self nutritiveValueKeys:[profileHelper genericProfileKey]];
+        keys = [self cleanGenericValues:keys];
+        genericValues = [self nutritiveValues:keys];
+    } else {
+        genericValues = nil;
+    }
     
     cellNibLoaded = NO;
     
     [self prepareDisplay];
+}
+
+- (NSArray *) cleanGenericValues:(NSArray *) allKeys {
+    NSArray *profileKeys = [self nutritiveValueKeys:[profileHelper selectedProfile]];
+    NSMutableArray *newValues = [[NSMutableArray alloc] init];
+
+    for(NSString *key in allKeys) {
+        BOOL *found = NO;
+        for(NSString *profileKey in profileKeys) {
+            if([profileKey isEqualToString:key]) {
+                found = YES;
+                break;
+            }
+        }
+        
+        if(!found) {
+            [newValues addObject:key];
+        }
+    }
+    
+    return newValues;
 }
 
 - (void) prepareDisplay {
@@ -141,8 +171,8 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (NSArray *) nutritiveValueKeys {
-    return [profileHelper nutritiveSymbolsForProfile:[profileHelper selectedProfile]];
+- (NSArray *) nutritiveValueKeys:(NSString *) profile {
+    return [profileHelper nutritiveSymbolsForProfile:profile];
 }
 
 - (NSArray *) nutritiveValues:(NSArray *)keys {
@@ -166,6 +196,19 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSUInteger section = [indexPath section];
     
+    if(!cellNibLoaded) {
+        UINib *nib = [UINib nibWithNibName:@"NutientValueCell" bundle:nil];
+        [tableView registerNib:nib forCellReuseIdentifier:kRowIdentifierNutient];
+        cellNibLoaded = YES;
+    }
+    
+    int allSection = 2;
+    int genericSection = -1;
+    if(genericValues != nil) {
+        allSection = 3;
+        genericSection = 2;
+    }
+    
     if (section == 0) {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kRowIdentifierMeasure];
         if(cell == nil) {
@@ -179,15 +222,12 @@
         return cell;
     }
     else if(section == 1) {
-        if(!cellNibLoaded) {
-            UINib *nib = [UINib nibWithNibName:@"NutientValueCell" bundle:nil];
-            [tableView registerNib:nib forCellReuseIdentifier:kRowIdentifierNutient];
-            cellNibLoaded = YES;
-        }
-        
         return [cellHelper makeNutientValueCell:tableView :kRowIdentifierNutient :nutritiveValues :indexPath :selectedConversionFactor];
     } 
-    else if(section == 2) {
+    else if(section == genericSection) {
+        return [cellHelper makeNutientValueCell:tableView :kRowIdentifierNutient :genericValues :indexPath :selectedConversionFactor];
+    }
+    else if(section == allSection) {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kRowIdentifierAll];
         if(cell == nil) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kRowIdentifierAll];
@@ -214,41 +254,69 @@
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 3;
+    if(genericValues == nil) {
+        return 3;
+    } else {
+        return 4;
+    }
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    switch (section) {
-        case (0):
-            return 1;
-            break;
-        case (1):
-            return [self.nutritiveValues count];
-            break;
-        case (2):
-            return 1;
-            break;
+    int allSection = 2;
+    int genericSection = -1;
+    if(genericValues != nil) {
+        allSection = 3;
+        genericSection = 2;
     }
+    
+    if(section == 0) {
+        return 1;
+    } else if(section == 1) {
+        return [self.nutritiveValues count];
+    } else if (section == genericSection) {
+        return [self.genericValues count];
+    } else if (section == allSection) {
+        return 1;
+    }
+    
     return 0;
 }
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    switch (section) {
-        case (0):
-            return [languageHelper localizedString:@"Selected Measure"];
-            break;
-        case (1):
-            return [[languageHelper localizedString:@"Values for profile "] stringByAppendingString:[languageHelper localizedString:[profileHelper selectedProfile]]];
-            break;
-        case (3):
-            // no label
-            break;
+    int allSection = 2;
+    int genericSection = -1;
+    if(genericValues != nil) {
+        allSection = 3;
+        genericSection = 2;
     }
+    
+    if(section == 0) {
+         return [languageHelper localizedString:@"Selected Measure"];
+    } else if(section == 1) {
+        if(genericValues  == nil) {
+            return [languageHelper localizedString:@"General Information"];
+        }
+        else {
+            return [[languageHelper localizedString:@"Values for profile "] stringByAppendingString:[languageHelper localizedString:[profileHelper selectedProfile]]];
+        }
+    } else if (section == genericSection) {
+        return [languageHelper localizedString:@"General Information"];
+    } else if (section == allSection) {
+        return nil;
+    }
+    
     return nil;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSUInteger section = [indexPath section];
+    
+    int allSection = 2;
+    int genericSection = -1;
+    if(genericValues != nil) {
+        allSection = 3;
+        genericSection = 2;
+    }
     
     NSString *title = [foodName valueForKey:[languageHelper nameColumn]];
     if([title length] > 20) {
@@ -263,7 +331,7 @@
         [measureSelectionView setDelegate:self];
         [self.navigationController pushViewController:measureSelectionView animated:YES];
     }
-    else if(section == 2) {
+    else if(section == allSection) {
         AllNutritiveValues *allView = [[AllNutritiveValues alloc] initWithFoodName:foodName :selectedConversionFactor];
         [self.navigationController pushViewController:allView animated:YES];
         allView = nil;

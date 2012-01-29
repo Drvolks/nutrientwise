@@ -20,6 +20,7 @@
 @property (strong, nonatomic) IBOutlet UITableView *table;
 @property (strong, nonatomic) FoodName *foodName;
 @property (strong, nonatomic) NSArray *nutritiveValues;
+@property (strong, nonatomic) NSArray *genericValues;
 @property (strong, nonatomic) LanguageHelper *languageHelper;
 @property (strong, nonatomic) ProfileHelper *profileHelper;
 @property (strong, nonatomic) FavoriteHelper *favoriteHelper;
@@ -28,8 +29,9 @@
 @property (strong, nonatomic) CellHelper *cellHelper;
 
 - (id)initWithFood:(FoodName *)foodEntity;
-- (NSArray *) nutritiveValueKeys;
+- (NSArray *) nutritiveValueKeys:(NSString *) profile;
 - (NSArray *) nutritiveValues:(NSArray *)keys;
 - (void) prepareDisplay;
+- (NSArray *) cleanGenericValues:(NSArray *) allKeys;
 
 @end

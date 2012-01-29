@@ -14,5 +14,7 @@
 - (NSString *) selectedProfile;
 - (void) setSelectedProfile:(NSString *) profile;
 - (NSArray *) supportedProfiles;
+- (BOOL) genericProfileSelected; 
+- (NSString *) genericProfileKey;
 
 @end

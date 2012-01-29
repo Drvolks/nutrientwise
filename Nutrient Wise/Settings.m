@@ -8,8 +8,10 @@
 
 #import "Settings.h"
 #import "SettingsLanguage.h"
+#import "About.h"
 
 #define kRowIdentifierLanguage @"LanguageCell"
+#define kRowIdentifierAbout @"AboutCell"
 #define kTitle @"Settings"
 
 @implementation Settings
@@ -61,12 +63,15 @@
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 2;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     switch (section) {
         case (0):
+            return 1;
+            break;
+        case (1):
             return 1;
             break;
     }
@@ -77,6 +82,9 @@
     switch (section) {
         case (0):
             return [languageHelper localizedString:@"Language"];
+            break;
+        case (1):
+            return nil;
             break;
     }
     return nil;
@@ -89,6 +97,9 @@
         SettingsLanguage *languageView = [[SettingsLanguage alloc] initWithLanguage:[languageHelper language]];
         [languageView setDelegate:self];
         [self.navigationController pushViewController:languageView animated:YES];
+    } else if(section == 1) {
+        About *about = [[About alloc] init];
+        [self.navigationController pushViewController:about animated:YES];
     }
 }
 
@@ -103,6 +114,17 @@
         }
         
         cell.textLabel.text = [languageHelper localizedString:[languageHelper language]];
+        
+        return cell;
+    }
+    else if (section == 1) {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kRowIdentifierAbout];
+        if(cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kRowIdentifierAbout];
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        }
+        
+        cell.textLabel.text = [languageHelper localizedString:@"About"];
         
         return cell;
     }

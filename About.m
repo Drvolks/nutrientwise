@@ -8,7 +8,12 @@
 
 #import "About.h"
 
+#define kTitle @"About"
+
 @implementation About
+
+@synthesize about;
+@synthesize languageHelper;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,7 +37,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    languageHelper = [[LanguageHelper alloc] init];
+    
+    self.title = [languageHelper localizedString:kTitle];
+    
+    NSString *text = [languageHelper localizedString:@"About Us"];
+    text = [text stringByAppendingString:@"\n\n"];
+    text = [text stringByAppendingString:[languageHelper localizedString:@"About Data"]];
+    text = [text stringByAppendingString:@"\n\n"];
+    text = [text stringByAppendingString:[languageHelper localizedString:@"About Tab Icons"]];
+    about.text = text;
 }
 
 - (void)viewDidUnload

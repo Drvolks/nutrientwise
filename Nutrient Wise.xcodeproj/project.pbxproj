@@ -52,6 +52,7 @@
 		6E81DD4E14D5BCBF00A680DE /* dining_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E81DD4D14D5BCBF00A680DE /* dining_114.png */; };
 		6E81DD5014D5BD4000A680DE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E81DD4F14D5BD4000A680DE /* Default@2x.png */; };
 		6E81DD5214D5BD4600A680DE /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E81DD5114D5BD4500A680DE /* Default.png */; };
+		6E81DD5514D5C2A600A680DE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E81DD5314D5C2A600A680DE /* Localizable.strings */; };
 		6EAD166214CC7DD500D82BFD /* Favorites.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD166014CC7DD500D82BFD /* Favorites.m */; };
 		6EAD166314CC7DD500D82BFD /* Favorites.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EAD166114CC7DD500D82BFD /* Favorites.xib */; };
 		6EAD166714CC7DE700D82BFD /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD166514CC7DE700D82BFD /* Settings.m */; };
@@ -148,6 +149,7 @@
 		6E81DD4D14D5BCBF00A680DE /* dining_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dining_114.png; sourceTree = "<group>"; };
 		6E81DD4F14D5BD4000A680DE /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		6E81DD5114D5BD4500A680DE /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		6E81DD5414D5C2A600A680DE /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Localizable.strings; sourceTree = "<group>"; };
 		6EAD165F14CC7DD400D82BFD /* Favorites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Favorites.h; sourceTree = "<group>"; };
 		6EAD166014CC7DD500D82BFD /* Favorites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Favorites.m; sourceTree = "<group>"; };
 		6EAD166114CC7DD500D82BFD /* Favorites.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Favorites.xib; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 		6E81DCF214D4A72400A680DE /* fr.lproj */ = {
 			isa = PBXGroup;
 			children = (
+				6E81DD5314D5C2A600A680DE /* Localizable.strings */,
 			);
 			path = fr.lproj;
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 				6E81DD4E14D5BCBF00A680DE /* dining_114.png in Resources */,
 				6E81DD5014D5BD4000A680DE /* Default@2x.png in Resources */,
 				6E81DD5214D5BD4600A680DE /* Default.png in Resources */,
+				6E81DD5514D5C2A600A680DE /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,6 +595,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				6E81DCED14D4A6CB00A680DE /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		6E81DD5314D5C2A600A680DE /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6E81DD5414D5C2A600A680DE /* fr */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

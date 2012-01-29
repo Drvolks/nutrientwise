@@ -250,7 +250,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSUInteger section = [indexPath section];
     
-    NSString *title = [[[foodName valueForKey:[languageHelper nameColumn]] substringToIndex:20] stringByAppendingString:@"..."];
+    NSString *title = [foodName valueForKey:[languageHelper nameColumn]];
+    if([title length] > 20) {
+        title = [[title substringToIndex:20] stringByAppendingString:@"..."];
+    }
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:nil action:nil];
     [self.navigationItem setBackBarButtonItem:backButton];
     

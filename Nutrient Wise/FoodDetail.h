@@ -13,19 +13,19 @@
 #import "FavoriteHelper.h"
 #import "ConversionFactor.h"
 #import "MeasureSelection.h"
+#import "CellHelper.h"
 
 @interface FoodDetail : UIViewController  <UITableViewDelegate, UITableViewDataSource, MeasureSelectionDelegate>
 
-@property (strong, nonatomic) IBOutlet UILabel *foodName;
 @property (strong, nonatomic) IBOutlet UITableView *table;
-@property (strong, nonatomic) IBOutlet UIButton *favoriteButton;
-@property (strong, nonatomic) FoodName *food;
+@property (strong, nonatomic) FoodName *foodName;
 @property (strong, nonatomic) NSArray *nutritiveValues;
 @property (strong, nonatomic) LanguageHelper *languageHelper;
 @property (strong, nonatomic) ProfileHelper *profileHelper;
 @property (strong, nonatomic) FavoriteHelper *favoriteHelper;
 @property (strong, nonatomic) ConversionFactor *selectedConversionFactor;
 @property (nonatomic) BOOL *cellNibLoaded;
+@property (strong, nonatomic) CellHelper *cellHelper;
 
 - (id)initWithFood:(FoodName *)foodEntity;
 - (NSArray *) nutritiveValueKeys;

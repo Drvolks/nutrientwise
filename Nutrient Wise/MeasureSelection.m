@@ -12,16 +12,19 @@
 #import "FoodDetail.h"
 
 #define kRowIdentifier @"rowIdentifier"
-#define kMeasureColumn @"maesure"
+#define kMeasureAttribute @"maesure"
+#define kMeasureIdColumn @"measureId"
 
 @implementation MeasureSelection
 
 @synthesize conversionFactors;
+@synthesize selectedConversionFactor;
 @synthesize languageHelper;
 @synthesize delegate;
 
-- (id) initWithConversionFactors:(NSArray *) pConversionFactors {
-    self.conversionFactors = pConversionFactors;
+- (id) initWithConversionFactors:(NSArray *) pConversionFactors:(ConversionFactor *)pSelectedConversionFactor {
+    conversionFactors = pConversionFactors;
+    selectedConversionFactor = pSelectedConversionFactor;
     
     return self;
 }
@@ -67,6 +70,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSUInteger row = [indexPath row];
+    
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    
     ConversionFactor *conversionFactor = [conversionFactors objectAtIndex:row];
     
     [[self delegate] conversionFactorSelected:conversionFactor];
@@ -86,7 +93,16 @@
     
     NSUInteger row = [indexPath row];
     ConversionFactor *conversionFactor = [conversionFactors objectAtIndex:row];
-    Measure *measure = [conversionFactor valueForKey:kMeasureColumn];
+    Measure *measure = [conversionFactor valueForKey:kMeasureAttribute];
+    NSNumber *measureId = [measure valueForKey:kMeasureIdColumn];
+    
+    Measure *selectedMeasure = [selectedConversionFactor valueForKey:kMeasureAttribute];
+    NSNumber *selectedMeasureId = [selectedMeasure valueForKey:kMeasureIdColumn];
+    if([selectedMeasureId isEqualToNumber:measureId]) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
     
     cell.textLabel.text = [measure valueForKey:[languageHelper nameColumn]];
     

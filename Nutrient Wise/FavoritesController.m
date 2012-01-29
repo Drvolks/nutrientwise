@@ -49,15 +49,7 @@
 {
     [super viewDidLoad];
     
-    self.languageHelper = [[LanguageHelper alloc] init];
-    /*
-    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:[languageHelper localizedString:kEdit]
-                                                                    style:UIBarButtonItemStylePlain target:nil action:nil];
-    UINavigationItem *item = [[UINavigationItem alloc] initWithTitle:[languageHelper localizedString:kTitle]];
-    item.rightBarButtonItem = rightButton;
-    item.hidesBackButton = YES;
-    [self.navigationBar pushNavigationItem:item animated:NO];
-     */
+    languageHelper = [[LanguageHelper alloc] init];
 }
 
 

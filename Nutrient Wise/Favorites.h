@@ -10,6 +10,7 @@
 #import "FavoriteHelper.h"
 #import "Finder.h"
 #import "LanguageHelper.h"
+#import "CellHelper.h"
 
 @interface Favorites : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
@@ -18,6 +19,7 @@
 @property (strong, nonatomic) NSMutableArray *favorites;
 @property (strong, nonatomic) Finder *finder;
 @property (strong, nonatomic) LanguageHelper *languageHelper;
+@property (strong, nonatomic) CellHelper *cellHelper;
 
 - (IBAction)toggleEdit:(id)sender;
 - (void) loadFavorites;

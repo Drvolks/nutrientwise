@@ -18,5 +18,12 @@
     NSArray *sortDescriptors = [NSArray arrayWithObject:descriptor];
     return [array sortedArrayUsingDescriptors:sortDescriptors];
 }
+ 
+-(NSMutableArray *) sortMutableArray:(NSMutableArray *)array key:(NSString *)sortKey ascending:(BOOL)pAscending {
+    
+    NSArray *temp = [self sort:array key:sortKey ascending:pAscending];
+    array = [NSMutableArray arrayWithArray:temp];
+    return array;
+}
 
 @end

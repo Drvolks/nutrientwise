@@ -9,6 +9,7 @@
 #import "Favorites.h"
 #import "FoodName.h"
 #import "FoodDetail.h"
+#import "ArrayHelper.h"
 
 #define kRowIdentifier @"rowIdentifier"
 #define kTitle @"Favorites"
@@ -23,6 +24,7 @@
 @synthesize finder;
 @synthesize languageHelper;
 @synthesize cellHelper;
+@synthesize arrayHelper;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -50,6 +52,7 @@
     favoriteHelper = [[FavoriteHelper alloc] init];
     languageHelper = [[LanguageHelper alloc] init];
     cellHelper = [[CellHelper alloc] init];
+    arrayHelper = [[ArrayHelper alloc] init];
     
     self.navigationItem.title = [languageHelper localizedString:kTitle];
     [self.navigationItem.rightBarButtonItem setTitle:[languageHelper localizedString:kEdit]];
@@ -75,7 +78,8 @@
         }
     }
     
-    self.favorites = favoriteEntities;
+    //Sort Data
+    self.favorites = [arrayHelper sortMutableArray:favoriteEntities key:[languageHelper nameColumn] ascending:YES];
     
     [table reloadData];
 }

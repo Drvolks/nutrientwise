@@ -94,6 +94,16 @@
     [searchBar resignFirstResponder];
 }
 
+- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)bar { 
+    [bar setShowsCancelButton:YES animated:YES];
+    return YES;  
+}  
+
+- (BOOL)searchBarShouldEndEditing:(UISearchBar *)bar {  
+    [bar setShowsCancelButton:NO animated:YES];
+    return YES;
+} 
+
 - (void) searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
     if([searchText length] == 0) {
         [self resetSearch];
@@ -120,6 +130,8 @@
     [self.navigationController pushViewController:foodDetailView animated:YES];
     
     [searchBar resignFirstResponder];
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView

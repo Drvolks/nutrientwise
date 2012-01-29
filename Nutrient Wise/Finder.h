@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "FoodName.h"
 #import "Measure.h"
-#import "GroupName.h"
 #import "NutritiveName.h"
 #import "LanguageHelper.h"
 

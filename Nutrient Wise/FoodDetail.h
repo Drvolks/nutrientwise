@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "FoodName.h"
 #import "LanguageHelper.h"
+#import "ArrayHelper.h"
 #import "ProfileHelper.h"
 #import "FavoriteHelper.h"
 #import "ConversionFactor.h"
@@ -22,6 +23,7 @@
 @property (strong, nonatomic) NSArray *nutritiveValues;
 @property (strong, nonatomic) NSArray *genericValues;
 @property (strong, nonatomic) LanguageHelper *languageHelper;
+@property (strong, nonatomic) ArrayHelper *arrayHelper;
 @property (strong, nonatomic) ProfileHelper *profileHelper;
 @property (strong, nonatomic) FavoriteHelper *favoriteHelper;
 @property (strong, nonatomic) ConversionFactor *selectedConversionFactor;

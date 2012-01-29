@@ -89,7 +89,7 @@
     NSUInteger section = [indexPath section];
     
     if(section == 0) {
-        ProfileSelection *profileView = [[ProfileSelection alloc] init];
+        ProfileSelection *profileView = [[ProfileSelection alloc] initWithProfile:[profileHelper selectedProfile]];
         [profileView setDelegate:self];
         [self.navigationController pushViewController:profileView animated:YES];
     }
@@ -102,12 +102,15 @@
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kRowIdentifierProfile];
         if(cell == nil) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kRowIdentifierProfile];
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         }
         
         cell.textLabel.text = [languageHelper localizedString:[profileHelper selectedProfile]];
         
         return cell;
     }
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     return nil; 
 }

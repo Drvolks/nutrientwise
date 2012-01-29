@@ -16,6 +16,13 @@
 @synthesize languageHelper;
 @synthesize delegate;
 @synthesize profileHelper;
+@synthesize selectedProfile;
+
+- (id) initWithProfile:(NSString *)pSelectedProfile {
+    selectedProfile = pSelectedProfile;
+    
+    return self;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -67,6 +74,9 @@
     NSUInteger row = [indexPath row];
     NSString *profile = [profiles objectAtIndex:row];
     
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    
     [[self delegate] profileSelected:profile];
     
     [self.navigationController popViewControllerAnimated:YES];
@@ -80,7 +90,15 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kRowIdentifier];
     }
     
-    cell.textLabel.text = [languageHelper localizedString:[profiles objectAtIndex:row]];
+    NSString *currentProfile = [profiles objectAtIndex:row];
+    
+    if([currentProfile isEqualToString:selectedProfile]) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    
+    cell.textLabel.text = [languageHelper localizedString:currentProfile];
     
     return cell;
 }

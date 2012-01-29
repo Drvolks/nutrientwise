@@ -86,7 +86,7 @@
     NSUInteger section = [indexPath section];
     
     if(section == 0) {
-        SettingsLanguage *languageView = [[SettingsLanguage alloc] init];
+        SettingsLanguage *languageView = [[SettingsLanguage alloc] initWithLanguage:[languageHelper language]];
         [languageView setDelegate:self];
         [self.navigationController pushViewController:languageView animated:YES];
     }
@@ -99,12 +99,15 @@
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kRowIdentifierLanguage];
         if(cell == nil) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kRowIdentifierLanguage];
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         }
         
         cell.textLabel.text = [languageHelper localizedString:[languageHelper language]];
         
         return cell;
     }
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     return nil; 
 }

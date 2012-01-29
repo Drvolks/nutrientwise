@@ -25,7 +25,7 @@
 @synthesize selectedConversionFactor;
 @synthesize languageHelper;
 @synthesize cellNibLoaded;
-@synthesize nutientValueCellHelper;
+@synthesize cellHelper;
 
 - (id) initWithFoodName:(FoodName *)food:(ConversionFactor *) conversionFactor {
     foodName = food;
@@ -59,7 +59,7 @@
     [super viewDidLoad];
     
     languageHelper = [[LanguageHelper alloc] init];
-    nutientValueCellHelper = [[NutientValueCellHelper alloc] init];
+    cellHelper = [[CellHelper alloc] init];
     
     cellNibLoaded = NO;
 }
@@ -91,7 +91,7 @@
         cellNibLoaded = YES;
     }
     
-    return [nutientValueCellHelper makeCell:tableView :kRowIdentifier :nutritiveValues :indexPath :selectedConversionFactor];
+    return [cellHelper makeNutientValueCell:tableView :kRowIdentifier :nutritiveValues :indexPath :selectedConversionFactor];
 }
 
 @end

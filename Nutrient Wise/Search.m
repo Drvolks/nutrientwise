@@ -19,6 +19,7 @@
 @synthesize searchResults;
 @synthesize finder;
 @synthesize languageHelper;
+@synthesize cellHelper;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -43,7 +44,8 @@
 {
     [super viewDidLoad];
     
-    self.languageHelper = [[LanguageHelper alloc] init];
+    languageHelper = [[LanguageHelper alloc] init];
+    cellHelper = [[CellHelper alloc] init];
     
     self.title = [languageHelper localizedString:kTitle];
     
@@ -80,20 +82,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kRowIdentifier];
-    if(cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kRowIdentifier];
-        cell.textLabel.font = [UIFont systemFontOfSize:12];
-        cell.textLabel.numberOfLines = 2;
-        cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
-    }
-    
-    NSUInteger row = [indexPath row];
-    FoodName *foodName = [searchResults objectAtIndex:row];
-    
-    cell.textLabel.text = [foodName valueForKey:[languageHelper nameColumn]];
-
-    return cell; 
+    return [cellHelper makeFoodNameCell:tableView :kRowIdentifier :indexPath :searchResults];
 }
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {

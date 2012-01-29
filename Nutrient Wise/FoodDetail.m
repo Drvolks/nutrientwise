@@ -39,7 +39,7 @@
 @synthesize favoriteHelper;
 @synthesize selectedConversionFactor;
 @synthesize cellNibLoaded;
-@synthesize nutientValueCellHelper;
+@synthesize cellHelper;
 
 - (id)initWithFood:(FoodName *)foodEntity {
     foodName = foodEntity;
@@ -72,7 +72,7 @@
     languageHelper = [[LanguageHelper alloc] init];
     profileHelper = [[ProfileHelper alloc] init];
     favoriteHelper = [[FavoriteHelper alloc] init];
-    nutientValueCellHelper = [[NutientValueCellHelper alloc] init];
+    cellHelper = [[CellHelper alloc] init];
     
     self.title = [languageHelper localizedString:kTitle];
     
@@ -170,6 +170,7 @@
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kRowIdentifierMeasure];
         if(cell == nil) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kRowIdentifierMeasure];
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         }
         
         Measure *measure = [selectedConversionFactor valueForKey:kMeasureColumn];
@@ -184,12 +185,13 @@
             cellNibLoaded = YES;
         }
         
-        return [nutientValueCellHelper makeCell:tableView :kRowIdentifierNutient :nutritiveValues :indexPath :selectedConversionFactor];
+        return [cellHelper makeNutientValueCell:tableView :kRowIdentifierNutient :nutritiveValues :indexPath :selectedConversionFactor];
     } 
     else if(section == 2) {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kRowIdentifierAll];
         if(cell == nil) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kRowIdentifierAll];
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         }
         
         cell.textLabel.text = [languageHelper localizedString:@"All Nutritive Values"];
@@ -254,7 +256,7 @@
     
     if(section == 0) {
         NSSet *conversionFactors = [foodName valueForKey:kConversionFactorsAttribute];
-        MeasureSelection *measureSelectionView = [[MeasureSelection alloc] initWithConversionFactors:[conversionFactors allObjects]];
+        MeasureSelection *measureSelectionView = [[MeasureSelection alloc] initWithConversionFactors:[conversionFactors allObjects]:selectedConversionFactor];
         [measureSelectionView setDelegate:self];
         [self.navigationController pushViewController:measureSelectionView animated:YES];
     }
@@ -263,6 +265,8 @@
         [self.navigationController pushViewController:allView animated:YES];
         allView = nil;
     }
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (void) conversionFactorSelected:(ConversionFactor *) conversionFactor {

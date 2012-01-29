@@ -10,7 +10,7 @@
 #import "FoodName.h"
 #import "ConversionFactor.h"
 #import "LanguageHelper.h"
-#import "NutientValueCellHelper.h"
+#import "CellHelper.h"
 
 @interface AllNutritiveValues : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
@@ -19,7 +19,7 @@
 @property (strong, nonatomic) ConversionFactor *selectedConversionFactor;
 @property (strong, nonatomic) LanguageHelper *languageHelper;
 @property (nonatomic) BOOL *cellNibLoaded;
-@property (strong, nonatomic) NutientValueCellHelper *nutientValueCellHelper;
+@property (strong, nonatomic) CellHelper *cellHelper;
 
 - (id) initWithFoodName:(FoodName *) food:(ConversionFactor *) conversionFactor;
 

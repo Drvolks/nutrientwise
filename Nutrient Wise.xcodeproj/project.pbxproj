@@ -27,7 +27,7 @@
 		6E81DC9D14D0CBB000A680DE /* MeasureSelection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E81DC9B14D0CBAF00A680DE /* MeasureSelection.xib */; };
 		6E81DCA114D0D58200A680DE /* AllNutritiveValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81DC9F14D0D58100A680DE /* AllNutritiveValues.m */; };
 		6E81DCA214D0D58200A680DE /* AllNutritiveValues.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E81DCA014D0D58100A680DE /* AllNutritiveValues.xib */; };
-		6E81DCB514D46D6E00A680DE /* NutientValueCellHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81DCB414D46D6D00A680DE /* NutientValueCellHelper.m */; };
+		6E81DCB514D46D6E00A680DE /* CellHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81DCB414D46D6D00A680DE /* CellHelper.m */; };
 		6E81DCBA14D4714000A680DE /* SettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81DCB814D4713F00A680DE /* SettingsController.m */; };
 		6E81DCBF14D4779F00A680DE /* SettingsLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81DCBD14D4779D00A680DE /* SettingsLanguage.m */; };
 		6E81DCC014D4779F00A680DE /* SettingsLanguage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E81DCBE14D4779D00A680DE /* SettingsLanguage.xib */; };
@@ -112,8 +112,8 @@
 		6E81DC9E14D0D58000A680DE /* AllNutritiveValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllNutritiveValues.h; sourceTree = "<group>"; };
 		6E81DC9F14D0D58100A680DE /* AllNutritiveValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllNutritiveValues.m; sourceTree = "<group>"; };
 		6E81DCA014D0D58100A680DE /* AllNutritiveValues.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AllNutritiveValues.xib; sourceTree = "<group>"; };
-		6E81DCB314D46D6D00A680DE /* NutientValueCellHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NutientValueCellHelper.h; sourceTree = "<group>"; };
-		6E81DCB414D46D6D00A680DE /* NutientValueCellHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NutientValueCellHelper.m; sourceTree = "<group>"; };
+		6E81DCB314D46D6D00A680DE /* CellHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellHelper.h; sourceTree = "<group>"; };
+		6E81DCB414D46D6D00A680DE /* CellHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellHelper.m; sourceTree = "<group>"; };
 		6E81DCB714D4713F00A680DE /* SettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsController.h; sourceTree = "<group>"; };
 		6E81DCB814D4713F00A680DE /* SettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsController.m; sourceTree = "<group>"; };
 		6E81DCBC14D4779C00A680DE /* SettingsLanguage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsLanguage.h; sourceTree = "<group>"; };
@@ -298,8 +298,6 @@
 				6E81DC9614D0C5EE00A680DE /* NutientValueCell.h */,
 				6E81DC9714D0C5EE00A680DE /* NutientValueCell.m */,
 				6E81DC9414D0C54C00A680DE /* NutientValueCell.xib */,
-				6E81DCB314D46D6D00A680DE /* NutientValueCellHelper.h */,
-				6E81DCB414D46D6D00A680DE /* NutientValueCellHelper.m */,
 				6E81DC9914D0CBAD00A680DE /* MeasureSelection.h */,
 				6E81DC9A14D0CBAE00A680DE /* MeasureSelection.m */,
 				6E81DC9B14D0CBAF00A680DE /* MeasureSelection.xib */,
@@ -333,6 +331,8 @@
 				6E81DC8014CE32D500A680DE /* About.h */,
 				6E81DC8114CE32D500A680DE /* About.m */,
 				6E81DC8214CE32D600A680DE /* About.xib */,
+				6E81DCB314D46D6D00A680DE /* CellHelper.h */,
+				6E81DCB414D46D6D00A680DE /* CellHelper.m */,
 				6EAD167C14CCCE8800D82BFD /* LanguageHelper.h */,
 				6EAD167D14CCCE8800D82BFD /* LanguageHelper.m */,
 				6E528B9114CDA9FD00712D87 /* FavoriteHelper.h */,
@@ -539,7 +539,7 @@
 				6E81DC9814D0C5EF00A680DE /* NutientValueCell.m in Sources */,
 				6E81DC9C14D0CBB000A680DE /* MeasureSelection.m in Sources */,
 				6E81DCA114D0D58200A680DE /* AllNutritiveValues.m in Sources */,
-				6E81DCB514D46D6E00A680DE /* NutientValueCellHelper.m in Sources */,
+				6E81DCB514D46D6E00A680DE /* CellHelper.m in Sources */,
 				6E81DCBA14D4714000A680DE /* SettingsController.m in Sources */,
 				6E81DCBF14D4779F00A680DE /* SettingsLanguage.m in Sources */,
 				6E81DCC414D47B1E00A680DE /* ProfilesController.m in Sources */,

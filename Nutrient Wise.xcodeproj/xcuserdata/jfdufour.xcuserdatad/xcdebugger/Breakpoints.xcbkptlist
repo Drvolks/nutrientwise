@@ -163,11 +163,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Nutrient Wise/Favorites.m"
-         timestampString = "349055570.158129"
+         timestampString = "349488633.431072"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "55"
-         endingLineNumber = "55"
+         startingLineNumber = "57"
+         endingLineNumber = "57"
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
@@ -177,11 +177,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Nutrient Wise/Favorites.m"
-         timestampString = "349055570.158129"
+         timestampString = "349488633.431072"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "48"
-         endingLineNumber = "48"
+         startingLineNumber = "49"
+         endingLineNumber = "49"
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
@@ -191,11 +191,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Nutrient Wise/FavoriteHelper.m"
-         timestampString = "349462499.951605"
+         timestampString = "349485885.969366"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "11"
-         endingLineNumber = "11">
+         startingLineNumber = "12"
+         endingLineNumber = "12">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -203,11 +203,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Nutrient Wise/FavoriteHelper.m"
-         timestampString = "349464639.334562"
+         timestampString = "349485885.969366"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "20"
-         endingLineNumber = "20"
+         startingLineNumber = "22"
+         endingLineNumber = "22"
          landmarkName = "-init"
          landmarkType = "5">
       </FileBreakpoint>
@@ -217,11 +217,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Nutrient Wise/Favorites.m"
-         timestampString = "349055570.158129"
+         timestampString = "349488633.431072"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "64"
-         endingLineNumber = "64"
+         startingLineNumber = "66"
+         endingLineNumber = "66"
          landmarkName = "-loadFavorites"
          landmarkType = "5">
       </FileBreakpoint>
@@ -273,11 +273,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Nutrient Wise/Favorites.m"
-         timestampString = "349055570.158129"
+         timestampString = "349488633.431072"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "118"
-         endingLineNumber = "118"
+         startingLineNumber = "107"
+         endingLineNumber = "107"
          landmarkName = "-toggleEdit:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -315,11 +315,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Nutrient Wise/MeasureSelection.m"
-         timestampString = "349229856.845138"
+         timestampString = "349486480.4131"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "73"
-         endingLineNumber = "73"
+         startingLineNumber = "80"
+         endingLineNumber = "80"
          landmarkName = "-tableView:didSelectRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -343,11 +343,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Nutrient Wise/FavoriteHelper.m"
-         timestampString = "349479124.442048"
+         timestampString = "349485885.969366"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "76"
-         endingLineNumber = "76"
+         startingLineNumber = "78"
+         endingLineNumber = "78"
          landmarkName = "-isFavorite:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -405,6 +405,90 @@
          startingLineNumber = "40"
          endingLineNumber = "40"
          landmarkName = "-localizedString:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "Nutrient Wise/MeasureSelection.m"
+         timestampString = "349486480.4131"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "75"
+         endingLineNumber = "75"
+         landmarkName = "-tableView:didSelectRowAtIndexPath:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "Nutrient Wise/MeasureSelection.m"
+         timestampString = "349486480.4131"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "73"
+         endingLineNumber = "73"
+         landmarkName = "-tableView:didSelectRowAtIndexPath:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "Nutrient Wise/MeasureSelection.m"
+         timestampString = "349486480.4131"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "74"
+         endingLineNumber = "74"
+         landmarkName = "-tableView:didSelectRowAtIndexPath:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "Nutrient Wise/FoodDetail.m"
+         timestampString = "349487803.476506"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "275"
+         endingLineNumber = "275"
+         landmarkName = "-conversionFactorSelected:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "Nutrient Wise/FavoriteHelper.m"
+         timestampString = "349485885.969366"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "97"
+         endingLineNumber = "97"
+         landmarkName = "-addConversionToFavorite::"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "Nutrient Wise/MeasureSelection.m"
+         timestampString = "349486529.814258"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "101"
+         endingLineNumber = "101"
+         landmarkName = "-tableView:cellForRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

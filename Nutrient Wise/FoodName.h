@@ -2,23 +2,21 @@
 //  FoodName.h
 //  NutrientWiseImporter
 //
-//  Created by Jean-François Dufour on 12-01-28.
+//  Created by Jean-François Dufour on 12-01-29.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class ConversionFactor, GroupName, NutritiveValue;
+@class ConversionFactor, NutritiveValue;
 
 @interface FoodName : NSManagedObject
 
 @property (nonatomic, retain) NSString * englishName;
-@property (nonatomic, retain) NSNumber * foodCode;
 @property (nonatomic, retain) NSNumber * foodId;
 @property (nonatomic, retain) NSString * frenchName;
 @property (nonatomic, retain) NSSet *conversionFactors;
-@property (nonatomic, retain) GroupName *groupName;
 @property (nonatomic, retain) NSSet *nutritiveValues;
 @end
 

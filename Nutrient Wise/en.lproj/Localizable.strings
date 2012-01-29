@@ -12,6 +12,7 @@
 "Values for profile " = "Nutrients for the profile ";
 "All Nutritive Values" = "All Nutritive Values";
 "General Information" = "General Information";
+"100g" = "100g";
 
 /* profiles */
 "rein" = "Renal Insufficiency";
@@ -26,3 +27,9 @@
 /* langues */
 "fr" = "Français";
 "en" = "English";
+
+/* about */
+"About" = "About";
+"About Us" = "Nutrient Wise is a creation of Consultation Massawippi inc. Visit us at http://www.consultationmassawippi.ca";
+"About Data" = "Adapted from: Canadian Nutrient File, Health Canada, 2010 (electronic version at www.healthcanada.gc.ca/cnf)";
+"About Tab Icons" = "The tab icons are provided by Glyphish. Visit them at http://glyphish.com/";

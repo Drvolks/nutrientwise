@@ -161,7 +161,11 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return [keys objectAtIndex:section];
+    if([keys count] > 0) {
+        return [keys objectAtIndex:section];
+    }
+    
+    return nil;
 }
 
 @end

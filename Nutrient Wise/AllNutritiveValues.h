@@ -10,11 +10,8 @@
 #import "FoodName.h"
 #import "ConversionFactor.h"
 #import "LanguageHelper.h"
-<<<<<<< HEAD
 #import "ArrayHelper.h"
-=======
 #import "CellHelper.h"
->>>>>>> 2978de6146a4258e1a773264ca58e244346d0472
 
 @interface AllNutritiveValues : UIViewController <UITableViewDelegate, UITableViewDataSource>
 

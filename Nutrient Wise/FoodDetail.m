@@ -83,17 +83,20 @@
     NSArray *keys = [self nutritiveValueKeys:[profileHelper selectedProfile]];
     nutritiveValues = [self nutritiveValues:keys];
 
+    //Sort Data
+    NSString *pkey = [@"nutritiveName." stringByAppendingString:[languageHelper nameColumn]];
+    nutritiveValues = [arrayHelper sort:nutritiveValues key:pkey ascending:YES];
+    
     if(![profileHelper genericProfileSelected]) {
         keys = [self nutritiveValueKeys:[profileHelper genericProfileKey]];
         keys = [self cleanGenericValues:keys];
         genericValues = [self nutritiveValues:keys];
+        
+        pkey = [@"nutritiveName." stringByAppendingString:[languageHelper nameColumn]];
+        genericValues = [arrayHelper sort:genericValues key:pkey ascending:YES];
     } else {
         genericValues = nil;
     }
-    
-    //Sort Data
-    NSString *pkey = [@"nutritiveName." stringByAppendingString:[languageHelper nameColumn]];
-    nutritiveValues = [arrayHelper sort:nutritiveValues key:pkey ascending:YES];
     
     cellNibLoaded = NO;
     

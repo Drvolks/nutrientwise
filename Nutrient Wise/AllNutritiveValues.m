@@ -28,6 +28,8 @@
 @synthesize arrayHelper;
 @synthesize cellNibLoaded;
 @synthesize cellHelper;
+@synthesize keys;
+@synthesize nutritiveValuesIndex;
 
 - (id) initWithFoodName:(FoodName *)food:(ConversionFactor *) conversionFactor {
     foodName = food;
@@ -70,6 +72,42 @@
     //Sort Data
     NSString *pkey = [@"nutritiveName." stringByAppendingString:[languageHelper nameColumn]];
     nutritiveValues = [arrayHelper sort:nutritiveValues key:pkey ascending:YES];
+    
+    [self buildIndex];
+}
+
+- (void) generateKeys {
+    keys = [[NSMutableArray alloc] init];
+    
+    for(NutritiveValue *nutritiveValue in nutritiveValues) {
+        NutritiveName *nutrientName = [nutritiveValue valueForKey:kNutritiveNameColumn];
+        NSString *name = [nutrientName valueForKey:[languageHelper nameColumn]];
+        NSString *firstLetter = [[name substringToIndex:1] uppercaseString];
+        
+        if([keys valueForKey:firstLetter] == nil) {
+            [keys addObject:firstLetter];
+        }
+    }
+}
+
+- (void) buildIndex {
+    nutritiveValuesIndex = [[NSMutableDictionary alloc] init];
+    keys = [[NSMutableArray alloc] init];
+    
+    for(NutritiveValue *nutritiveValue in nutritiveValues) {
+        NutritiveName *nutrientName = [nutritiveValue valueForKey:kNutritiveNameColumn];
+        NSString *name = [nutrientName valueForKey:[languageHelper nameColumn]];
+        NSString *firstLetter = [[name substringToIndex:1] uppercaseString];
+        
+        NSMutableArray *valuesInLetter = [nutritiveValuesIndex objectForKey:firstLetter];
+        if(valuesInLetter == nil) {
+            valuesInLetter = [[NSMutableArray alloc] init];
+            [keys addObject:firstLetter];
+        }
+        
+        [valuesInLetter addObject:nutritiveValue];
+        [nutritiveValuesIndex setObject:valuesInLetter forKey:firstLetter];
+    }
 }
 
 - (void)viewDidUnload
@@ -90,7 +128,14 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [nutritiveValues count];
+    if([keys count] == 0) {
+        return 0;
+    }
+    
+    NSString *key = [keys objectAtIndex:section];
+    NSArray *nutientInSection = [nutritiveValuesIndex objectForKey:key];
+    
+    return [nutientInSection count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {  
@@ -100,7 +145,23 @@
         cellNibLoaded = YES;
     }
     
-    return [cellHelper makeNutientValueCell:tableView :kRowIdentifier :nutritiveValues :indexPath :selectedConversionFactor];
+    NSUInteger section = [indexPath section];
+    NSString *key = [keys objectAtIndex:section];
+    NSArray *nutientInSection = [nutritiveValuesIndex objectForKey:key];
+    
+    return [cellHelper makeNutientValueCell:tableView :kRowIdentifier :nutientInSection :indexPath :selectedConversionFactor];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return ([keys count] > 0) ? [keys count] : 1;
+}
+
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+    return keys;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return [keys objectAtIndex:section];
 }
 
 @end

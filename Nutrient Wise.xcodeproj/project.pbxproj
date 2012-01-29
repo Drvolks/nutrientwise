@@ -45,7 +45,7 @@
 		6E81DD5014D5BD4000A680DE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E81DD4F14D5BD4000A680DE /* Default@2x.png */; };
 		6E81DD5214D5BD4600A680DE /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E81DD5114D5BD4500A680DE /* Default.png */; };
 		6E81DD5814D5C33600A680DE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E81DD5614D5C33600A680DE /* Localizable.strings */; };
-		6E81DD7114D5CE8B00A680DE /* DATA._v1.3sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 6E81DD7014D5CE8B00A680DE /* DATA._v1.3sqlite */; };
+		6E81DD7114D5CE8B00A680DE /* DATA_v1.3.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 6E81DD7014D5CE8B00A680DE /* DATA_v1.3.sqlite */; };
 		6E81DD7714D5CEDD00A680DE /* Model.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 6E81DD7614D5CEDD00A680DE /* Model.xcdatamodel */; };
 		6E81DD8214D5CEF000A680DE /* Measure.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81DD7914D5CEF000A680DE /* Measure.m */; };
 		6E81DD8314D5CEF000A680DE /* NutritiveValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81DD7B14D5CEF000A680DE /* NutritiveValue.m */; };
@@ -135,7 +135,7 @@
 		6E81DD4F14D5BD4000A680DE /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		6E81DD5114D5BD4500A680DE /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		6E81DD5714D5C33600A680DE /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Localizable.strings; sourceTree = "<group>"; };
-		6E81DD7014D5CE8B00A680DE /* DATA._v1.3sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = DATA._v1.3sqlite; sourceTree = "<group>"; };
+		6E81DD7014D5CE8B00A680DE /* DATA_v1.3.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = DATA_v1.3.sqlite; sourceTree = "<group>"; };
 		6E81DD7614D5CEDD00A680DE /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		6E81DD7814D5CEF000A680DE /* Measure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Measure.h; sourceTree = "<group>"; };
 		6E81DD7914D5CEF000A680DE /* Measure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Measure.m; sourceTree = "<group>"; };
@@ -397,7 +397,7 @@
 				6E81DC8514CE336800A680DE /* Icons */,
 				6EAD167A14CC9D8C00D82BFD /* Settings.bundle */,
 				6E81DD7614D5CEDD00A680DE /* Model.xcdatamodel */,
-				6E81DD7014D5CE8B00A680DE /* DATA._v1.3sqlite */,
+				6E81DD7014D5CE8B00A680DE /* DATA_v1.3.sqlite */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -497,7 +497,7 @@
 				6E81DD5014D5BD4000A680DE /* Default@2x.png in Resources */,
 				6E81DD5214D5BD4600A680DE /* Default.png in Resources */,
 				6E81DD5814D5C33600A680DE /* Localizable.strings in Resources */,
-				6E81DD7114D5CE8B00A680DE /* DATA._v1.3sqlite in Resources */,
+				6E81DD7114D5CE8B00A680DE /* DATA_v1.3.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

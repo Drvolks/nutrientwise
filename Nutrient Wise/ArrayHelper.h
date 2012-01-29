@@ -13,5 +13,6 @@
 
 
 -(NSArray *) sort:(NSArray *)array key:(NSString *)sortKey ascending:(BOOL)pAscending;
+-(NSMutableArray *) sortMutableArray:(NSMutableArray *)array key:(NSString *)sortKey ascending:(BOOL)pAscending;
 
 @end

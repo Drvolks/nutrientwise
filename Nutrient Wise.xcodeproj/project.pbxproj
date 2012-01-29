@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1763B33014D4AC09001B7F14 /* ArrayHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1763B32F14D4AC09001B7F14 /* ArrayHelper.m */; };
+		17F98E8A14D50123004644BF /* ArrayHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F98E8914D50123004644BF /* ArrayHelper.m */; };
 		6E3E404414BA535E002048B8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E3E404314BA535E002048B8 /* CoreData.framework */; };
 		6E417F3B14BE50B000F2A2AC /* Finder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E417F3A14BE50B000F2A2AC /* Finder.m */; };
 		6E528B8F14CDA01800712D87 /* ProfileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E528B8E14CDA01800712D87 /* ProfileHelper.m */; };
@@ -84,8 +84,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1763B32E14D4AC09001B7F14 /* ArrayHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayHelper.h; sourceTree = "<group>"; };
-		1763B32F14D4AC09001B7F14 /* ArrayHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayHelper.m; sourceTree = "<group>"; };
+		17F98E8814D50123004644BF /* ArrayHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayHelper.h; sourceTree = "<group>"; };
+		17F98E8914D50123004644BF /* ArrayHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayHelper.m; sourceTree = "<group>"; };
 		6E3E404314BA535E002048B8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		6E417F3914BE50B000F2A2AC /* Finder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finder.h; sourceTree = "<group>"; };
 		6E417F3A14BE50B000F2A2AC /* Finder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finder.m; sourceTree = "<group>"; };
@@ -207,11 +207,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1763B32C14D4AB73001B7F14 /* Helpers */ = {
+		17F98E8214D4FFFF004644BF /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				1763B32E14D4AC09001B7F14 /* ArrayHelper.h */,
-				1763B32F14D4AC09001B7F14 /* ArrayHelper.m */,
+				17F98E8814D50123004644BF /* ArrayHelper.h */,
+				17F98E8914D50123004644BF /* ArrayHelper.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -298,7 +298,7 @@
 		6EB9B2FB14BA0AEB007C9666 /* Nutrient Wise */ = {
 			isa = PBXGroup;
 			children = (
-				1763B32C14D4AB73001B7F14 /* Helpers */,
+				17F98E8214D4FFFF004644BF /* Helpers */,
 				6E417F6114BE584300F2A2AC /* Model */,
 				6E740AEC14C77964007A0C72 /* Search.h */,
 				6E740AED14C77964007A0C72 /* Search.m */,
@@ -552,9 +552,6 @@
 				6E81DC9814D0C5EF00A680DE /* NutientValueCell.m in Sources */,
 				6E81DC9C14D0CBB000A680DE /* MeasureSelection.m in Sources */,
 				6E81DCA114D0D58200A680DE /* AllNutritiveValues.m in Sources */,
-<<<<<<< HEAD
-				1763B33014D4AC09001B7F14 /* ArrayHelper.m in Sources */,
-=======
 				6E81DCB514D46D6E00A680DE /* CellHelper.m in Sources */,
 				6E81DCBA14D4714000A680DE /* SettingsController.m in Sources */,
 				6E81DCBF14D4779F00A680DE /* SettingsLanguage.m in Sources */,
@@ -567,7 +564,7 @@
 				6E81DD1114D4B82800A680DE /* NutritiveValue.m in Sources */,
 				6E81DD1214D4B82800A680DE /* GroupName.m in Sources */,
 				6E81DD1314D4B82800A680DE /* Measure.m in Sources */,
->>>>>>> 2978de6146a4258e1a773264ca58e244346d0472
+				17F98E8A14D50123004644BF /* ArrayHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,7 +635,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				SDKROOT = iphoneos5.0;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -657,7 +654,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				SDKROOT = iphoneos5.0;
+				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

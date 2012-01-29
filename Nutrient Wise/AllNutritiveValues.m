@@ -61,11 +61,9 @@
     [super viewDidLoad];
     
     languageHelper = [[LanguageHelper alloc] init];
-<<<<<<< HEAD
     arrayHelper = [[ArrayHelper alloc] init];
-=======
+
     cellHelper = [[CellHelper alloc] init];
->>>>>>> 2978de6146a4258e1a773264ca58e244346d0472
     
     cellNibLoaded = NO;
     

@@ -175,6 +175,7 @@
     NSString *storePath = [documentDirectory stringByAppendingPathComponent: kDatabase];
 
     NSFileManager *fileManager = [NSFileManager defaultManager];
+
     // If the expected store doesn't exist, copy the default store.
     if (![fileManager fileExistsAtPath:storePath]) {
         NSString *defaultStorePath = [[NSBundle mainBundle] pathForResource:kDatabaseFileName ofType:kDatabaseFileExt];

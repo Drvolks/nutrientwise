@@ -17,12 +17,15 @@
 
 @property (strong, nonatomic) FoodName *foodName;
 @property (strong, nonatomic) NSArray *nutritiveValues;
+@property (strong, nonatomic) NSMutableDictionary *nutritiveValuesIndex;
 @property (strong, nonatomic) ConversionFactor *selectedConversionFactor;
 @property (strong, nonatomic) LanguageHelper *languageHelper;
 @property (strong, nonatomic) ArrayHelper *arrayHelper;
 @property (nonatomic) BOOL *cellNibLoaded;
 @property (strong, nonatomic) CellHelper *cellHelper;
+@property (strong, nonatomic) NSMutableArray *keys;
 
 - (id) initWithFoodName:(FoodName *) food:(ConversionFactor *) conversionFactor;
+- (void) buildIndex;
 
 @end

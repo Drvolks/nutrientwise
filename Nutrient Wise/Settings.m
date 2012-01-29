@@ -7,11 +7,16 @@
 //
 
 #import "Settings.h"
+#import "SettingsLanguage.h"
+
+#define kRowIdentifierLanguage @"LanguageCell"
+#define kTitle @"Settings"
 
 @implementation Settings
 
-@synthesize navigationItem;
-@synthesize languageField;
+@synthesize languageHelper;
+@synthesize finder;
+@synthesize table;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,11 +42,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.navigationItem.title = @"Settings";
+    languageHelper = [[LanguageHelper alloc] init];
     
-    NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];
-    NSString *language = [settings objectForKey:@"language"];
-    languageField.text = language;
+    self.navigationItem.title = [languageHelper localizedString:kTitle];
 }
 
 - (void)viewDidUnload
@@ -55,6 +58,63 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    switch (section) {
+        case (0):
+            return 1;
+            break;
+    }
+    return 0;
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    switch (section) {
+        case (0):
+            return [languageHelper localizedString:@"Language"];
+            break;
+    }
+    return nil;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSUInteger section = [indexPath section];
+    
+    if(section == 0) {
+        SettingsLanguage *languageView = [[SettingsLanguage alloc] initWithLanguage:[languageHelper language]];
+        [languageView setDelegate:self];
+        [self.navigationController pushViewController:languageView animated:YES];
+    }
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSUInteger section = [indexPath section];
+    
+    if (section == 0) {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kRowIdentifierLanguage];
+        if(cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kRowIdentifierLanguage];
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        }
+        
+        cell.textLabel.text = [languageHelper localizedString:[languageHelper language]];
+        
+        return cell;
+    }
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    return nil; 
+}
+
+- (void) languageSelected:(NSString *) language {
+    [languageHelper setLanguage:language];
+    [table reloadData];
 }
 
 @end

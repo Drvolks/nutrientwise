@@ -1,8 +1,8 @@
 //
 //  Measure.m
-//  Nutrient Wise
+//  NutrientWiseImporter
 //
-//  Created by Jean-François Dufour on 12-01-12.
+//  Created by Jean-François Dufour on 12-01-28.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 

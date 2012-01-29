@@ -1,8 +1,8 @@
 //
 //  ConversionFactor.h
-//  Nutrient Wise
+//  NutrientWiseImporter
 //
-//  Created by Jean-François Dufour on 12-01-12.
+//  Created by Jean-François Dufour on 12-01-28.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
@@ -14,8 +14,6 @@
 @interface ConversionFactor : NSManagedObject
 
 @property (nonatomic, retain) NSDecimalNumber * conversionFactor;
-@property (nonatomic, retain) NSNumber * foodId;
-@property (nonatomic, retain) NSNumber * measureId;
 @property (nonatomic, retain) FoodName *foodName;
 @property (nonatomic, retain) Measure *maesure;
 

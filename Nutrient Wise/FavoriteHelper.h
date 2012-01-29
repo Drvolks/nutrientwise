@@ -8,12 +8,18 @@
 
 #import <Foundation/Foundation.h>
 #import "FoodName.h"
+#import "ConversionFactor.h"
 
 @interface FavoriteHelper : NSObject
 
-- (void) addToFavorite:(FoodName *) foodName;
-- (NSMutableArray *) favotiteIds;
+- (id) init;
+- (void) addFoodToFavorite:(FoodName *) foodName;
+- (NSMutableDictionary *) favotiteIds:(NSString *) key;
+- (NSMutableDictionary *) favotiteFoodIds;
 - (void) removeFavorite:(FoodName *) foodName;
 - (BOOL) isFavorite:(FoodName *) foodName;
+- (void) addConversionToFavorite:(ConversionFactor *)conversionFactor:(FoodName *)foodName;
+- (NSNumber *) favoriteConversionMeasure:(FoodName *) foodName;
+- (NSMutableDictionary *) favotiteConversionFactorIds;
 
 @end

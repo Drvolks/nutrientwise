@@ -22,6 +22,7 @@
 @synthesize favorites;
 @synthesize finder;
 @synthesize languageHelper;
+@synthesize cellHelper;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -46,8 +47,9 @@
 {
     [super viewDidLoad];
     
-    self.favoriteHelper = [[FavoriteHelper alloc] init];
-    self.languageHelper = [[LanguageHelper alloc] init];
+    favoriteHelper = [[FavoriteHelper alloc] init];
+    languageHelper = [[LanguageHelper alloc] init];
+    cellHelper = [[CellHelper alloc] init];
     
     self.navigationItem.title = [languageHelper localizedString:kTitle];
     [self.navigationItem.rightBarButtonItem setTitle:[languageHelper localizedString:kEdit]];
@@ -60,7 +62,7 @@
 }
 
 - (void) loadFavorites {
-    NSArray *favoriteIds = [self.favoriteHelper favotiteIds];
+    NSArray *favoriteIds = [self.favoriteHelper favotiteFoodIds];
     NSMutableArray *favoriteEntities = [[NSMutableArray alloc] init];
     
     NSLog(@"ids = %@", favoriteIds);
@@ -96,20 +98,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kRowIdentifier];
-    if(cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kRowIdentifier];
-        cell.textLabel.font = [UIFont systemFontOfSize:12];
-        cell.textLabel.numberOfLines = 2;
-        cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
-    }
-    
-    NSUInteger row = [indexPath row];
-    FoodName *foodName = [favorites objectAtIndex:row];
-    
-    cell.textLabel.text = [foodName valueForKey:[languageHelper nameColumn]];
-    
-    return cell; 
+    return [cellHelper makeFoodNameCell:tableView :kRowIdentifier :indexPath :favorites];
 }
 
 - (IBAction)toggleEdit:(id)sender {

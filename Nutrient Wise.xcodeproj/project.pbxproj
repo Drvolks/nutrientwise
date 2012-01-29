@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1763B33014D4AC09001B7F14 /* ArrayHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1763B32F14D4AC09001B7F14 /* ArrayHelper.m */; };
 		6E3E404414BA535E002048B8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E3E404314BA535E002048B8 /* CoreData.framework */; };
 		6E417F3B14BE50B000F2A2AC /* Finder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E417F3A14BE50B000F2A2AC /* Finder.m */; };
 		6E421ACD14CC757F002C21B0 /* FoodName.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E421ACC14CC757F002C21B0 /* FoodName.m */; };
@@ -81,6 +82,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1763B32E14D4AC09001B7F14 /* ArrayHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayHelper.h; sourceTree = "<group>"; };
+		1763B32F14D4AC09001B7F14 /* ArrayHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayHelper.m; sourceTree = "<group>"; };
 		6E3E404314BA535E002048B8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		6E417F3914BE50B000F2A2AC /* Finder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finder.h; sourceTree = "<group>"; };
 		6E417F3A14BE50B000F2A2AC /* Finder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finder.m; sourceTree = "<group>"; };
@@ -201,6 +204,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1763B32C14D4AB73001B7F14 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1763B32E14D4AC09001B7F14 /* ArrayHelper.h */,
+				1763B32F14D4AC09001B7F14 /* ArrayHelper.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		6E417F6114BE584300F2A2AC /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -278,6 +290,7 @@
 		6EB9B2FB14BA0AEB007C9666 /* Nutrient Wise */ = {
 			isa = PBXGroup;
 			children = (
+				1763B32C14D4AB73001B7F14 /* Helpers */,
 				6E417F6114BE584300F2A2AC /* Model */,
 				6E740AEC14C77964007A0C72 /* Search.h */,
 				6E740AED14C77964007A0C72 /* Search.m */,
@@ -528,6 +541,7 @@
 				6E81DC9814D0C5EF00A680DE /* NutientValueCell.m in Sources */,
 				6E81DC9C14D0CBB000A680DE /* MeasureSelection.m in Sources */,
 				6E81DCA114D0D58200A680DE /* AllNutritiveValues.m in Sources */,
+				1763B33014D4AC09001B7F14 /* ArrayHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

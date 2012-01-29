@@ -157,7 +157,7 @@
             }
         }
 
-        if(selectedConversionFactor == nil) {
+        if(selectedConversionFactor == nil && [conversionFactors count] > 0) {
             // pick any conversion
             selectedConversionFactor = [[conversionFactors allObjects] objectAtIndex:0];
         }
@@ -223,12 +223,17 @@
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kRowIdentifierMeasure];
         if(cell == nil) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kRowIdentifierMeasure];
-            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         }
         
-        Measure *measure = [selectedConversionFactor valueForKey:kMeasureColumn];
-        cell.textLabel.text = [measure valueForKey:[languageHelper nameColumn]];
-        
+        if(selectedConversionFactor != nil) {
+            Measure *measure = [selectedConversionFactor valueForKey:kMeasureColumn];
+            cell.textLabel.text = [measure valueForKey:[languageHelper nameColumn]];
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        }
+        else {
+            cell.textLabel.text = [languageHelper localizedString:@"100g"];
+            cell.accessoryType = UITableViewCellAccessoryNone;
+        }
         return cell;
     }
     else if(section == 1) {

@@ -1,5 +1,4 @@
 //
-//  REDACTED_nutrientwiseAppDelegate.m
 //  Nutrient Wise
 //
 //  Created by drvolks on 12-01-08.

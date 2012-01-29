@@ -23,7 +23,7 @@
 }
 
 - (NSArray *) nutritiveSymbolsForProfile:(NSString *)profile {
-    NSString *stringResult = profile;
+    NSString *stringResult = kGenericProfileValues;
     
     if([profile isEqualToString:kRenalProfile]) {
         stringResult = kRenalProfileValues;
@@ -55,6 +55,15 @@
     [profiles addObject:kDiabeteProfile];
     
     return profiles;
+}
+
+- (BOOL) genericProfileSelected {
+    NSString *profile = [self selectedProfile];
+    return [kGenericProfile isEqualToString:profile];
+}
+
+- (NSString *) genericProfileKey {
+    return kGenericProfile;
 }
 
 @end

@@ -9,6 +9,7 @@
 #import "Settings.h"
 #import "SettingsLanguage.h"
 #import "About.h"
+#import "AppDelegate.h"
 
 #define kRowIdentifierLanguage @"LanguageCell"
 #define kRowIdentifierAbout @"AboutCell"
@@ -44,9 +45,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    languageHelper = [[LanguageHelper alloc] init];
+    languageHelper = [LanguageHelper sharedInstance];
     
-    self.navigationItem.title = [languageHelper localizedString:kTitle];
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [appDelegate registerLanguageDelegate:self];
+    
+    [self languageChanged];
 }
 
 - (void)viewDidUnload
@@ -136,7 +140,17 @@
 
 - (void) languageSelected:(NSString *) language {
     [languageHelper setLanguage:language];
+    
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [appDelegate fireLanguageChanged];
+    
     [table reloadData];
+}
+
+- (void) languageChanged {
+    self.navigationItem.title = [languageHelper localizedString:kTitle];
+    self.title = [languageHelper localizedString:kTitle];
+    self.tabBarItem.title = [languageHelper localizedString:kTitle];
 }
 
 @end

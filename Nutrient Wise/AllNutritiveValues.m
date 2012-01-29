@@ -62,7 +62,7 @@
 {
     [super viewDidLoad];
     
-    languageHelper = [[LanguageHelper alloc] init];
+    languageHelper = [LanguageHelper sharedInstance];
     arrayHelper = [[ArrayHelper alloc] init];
 
     cellHelper = [[CellHelper alloc] init];

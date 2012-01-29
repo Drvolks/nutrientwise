@@ -8,6 +8,7 @@
 
 #import "Search.h"
 #import "FoodDetail.h"
+#import "AppDelegate.h"
 
 #define kTitle @"Search"
 #define kRowIdentifier @"rowIdentifier"
@@ -20,6 +21,10 @@
 @synthesize finder;
 @synthesize languageHelper;
 @synthesize cellHelper;
+
+- (id) init {
+    return self;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -44,13 +49,13 @@
 {
     [super viewDidLoad];
     
-    languageHelper = [[LanguageHelper alloc] init];
+    languageHelper = [LanguageHelper sharedInstance];
     cellHelper = [[CellHelper alloc] init];
     
-    self.title = [languageHelper localizedString:kTitle];
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [appDelegate registerLanguageDelegate:self];
     
-    [self resetSearch];
-
+    [self languageChanged];
 }
 
 - (void)viewDidUnload
@@ -137,6 +142,13 @@
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     [searchBar resignFirstResponder];
+}
+
+- (void) languageChanged {
+    self.title = [languageHelper localizedString:kTitle];
+    self.tabBarItem.title = [languageHelper localizedString:kTitle];
+    
+    [self resetSearch];
 }
 
 @end

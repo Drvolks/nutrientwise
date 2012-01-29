@@ -11,7 +11,7 @@
 #import "LanguageHelper.h"
 #import "CellHelper.h"
 
-@interface Search : UIViewController <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
+@interface Search : UIViewController <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, ChangeLanguage>
 
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (strong, nonatomic) IBOutlet UITableView *resultTable;

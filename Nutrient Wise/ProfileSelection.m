@@ -47,7 +47,7 @@
 {
     [super viewDidLoad];
     
-    languageHelper = [[LanguageHelper alloc] init];
+    languageHelper = [LanguageHelper sharedInstance];
     profileHelper = [[ProfileHelper alloc] init];
     
     profiles = [profileHelper supportedProfiles];

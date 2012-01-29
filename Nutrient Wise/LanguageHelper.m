@@ -18,6 +18,16 @@
 
 @synthesize bundle;
 
+static LanguageHelper *instance = nil;
+
++ (id) sharedInstance {
+    if (instance == nil) {
+        instance = [[super allocWithZone:NULL] init];
+    }
+    
+    return instance;
+}
+
 - (BOOL) french {
     NSString *language = [self language];
     
@@ -42,7 +52,7 @@
         bundle = [NSBundle bundleWithPath:path];
     }
     
-    return [bundle localizedStringForKey:key value:key table:nil];
+    return [bundle localizedStringForKey:key value:@"" table:nil];
 }
 
 - (NSString *) language {

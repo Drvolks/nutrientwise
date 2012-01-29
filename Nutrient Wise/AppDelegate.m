@@ -24,6 +24,7 @@
 @synthesize searchController;
 @synthesize languageHelper;
 @synthesize profileHelper;
+@synthesize languageDelegates;
 
 @synthesize managedObjectContext = __managedObjectContext;
 @synthesize managedObjectModel = __managedObjectModel;
@@ -48,8 +49,9 @@
 }
 
 - (void) setup {
-    languageHelper = [[LanguageHelper alloc] init];
+    languageHelper = [LanguageHelper sharedInstance];
     profileHelper = [[ProfileHelper alloc] init];
+    languageDelegates = [[NSMutableArray alloc] init];
     
     if([languageHelper language] == nil) {
         NSString * language = [[NSLocale preferredLanguages] objectAtIndex:0];
@@ -79,9 +81,6 @@
     NSArray *viewControllers = [rootController viewControllers];
     for (id viewController in viewControllers) {
         // Translate the tab labels
-        UIViewController *controller = (UIViewController *) viewController;
-        controller.tabBarItem.title = [languageHelper localizedString:controller.tabBarItem.title];
-        
         if ([viewController respondsToSelector:@selector(setFinder:)]) {
             [viewController setFinder:[[Finder alloc] initWithContext:context]];
             
@@ -223,5 +222,18 @@
     return basePath;
 }
 
+- (void) fireLanguageChanged {
+    for(id delegate in languageDelegates) {
+        [delegate languageChanged];
+    }
+    
+    for(UITabBarItem *item in rootController.tabBar.items) {
+        // change their names
+    }
+}
+
+- (void) registerLanguageDelegate:(id)delegate {
+    [languageDelegates addObject:delegate];
+}
 
 @end

@@ -21,10 +21,13 @@
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (strong, nonatomic) LanguageHelper *languageHelper;
 @property (strong, nonatomic) ProfileHelper *profileHelper;
+@property (strong, nonatomic) NSMutableArray *languageDelegates;
 
 - (NSString *)applicationDocumentsDirectory;
 - (void) pushManagedContextToViewControllers;
 - (void) setupTabBarController;
 - (void) setup;
+- (void) fireLanguageChanged;
+- (void) registerLanguageDelegate:(id)delegate;
 
 @end

@@ -19,7 +19,7 @@
 - (id)initWithContext:(NSManagedObjectContext *)mObjectContext {
     self.managedObjectContext = mObjectContext;
 
-    self.languageHelper = [[LanguageHelper alloc] init];
+    self.languageHelper = [LanguageHelper sharedInstance];
     
     return self;
 }

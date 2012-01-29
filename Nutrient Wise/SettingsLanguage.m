@@ -16,6 +16,7 @@
 @synthesize languageHelper;
 @synthesize delegate;
 @synthesize selectedLanguage;
+@synthesize finder;
 
 - (id)initWithLanguage:(NSString *) pSelectedLanguage {
     selectedLanguage =pSelectedLanguage;
@@ -45,7 +46,7 @@
 {
     [super viewDidLoad];
    
-    languageHelper = [[LanguageHelper alloc] init];
+    languageHelper = [LanguageHelper sharedInstance];
     
     languages = [languageHelper supportedLanguages];
 }

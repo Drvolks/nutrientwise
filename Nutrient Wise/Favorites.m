@@ -10,6 +10,7 @@
 #import "FoodName.h"
 #import "FoodDetail.h"
 #import "ArrayHelper.h"
+#import "AppDelegate.h"
 
 #define kRowIdentifier @"rowIdentifier"
 #define kTitle @"Favorites"
@@ -50,12 +51,14 @@
     [super viewDidLoad];
     
     favoriteHelper = [[FavoriteHelper alloc] init];
-    languageHelper = [[LanguageHelper alloc] init];
+    languageHelper = [LanguageHelper sharedInstance];
     cellHelper = [[CellHelper alloc] init];
     arrayHelper = [[ArrayHelper alloc] init];
     
-    self.navigationItem.title = [languageHelper localizedString:kTitle];
-    [self.navigationItem.rightBarButtonItem setTitle:[languageHelper localizedString:kEdit]];
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [appDelegate registerLanguageDelegate:self];
+    
+    [self languageChanged];
     
 }
 
@@ -131,6 +134,14 @@
     
     FoodDetail *foodDetailView = [[FoodDetail alloc] initWithFood:foodName];
     [self.navigationController pushViewController:foodDetailView animated:YES];
+}
+
+- (void) languageChanged {
+    self.navigationItem.title = [languageHelper localizedString:kTitle];
+    [self.navigationItem.rightBarButtonItem setTitle:[languageHelper localizedString:kEdit]];
+    
+    self.title = [languageHelper localizedString:kTitle];
+    self.tabBarItem.title = [languageHelper localizedString:kTitle];
 }
 
 @end

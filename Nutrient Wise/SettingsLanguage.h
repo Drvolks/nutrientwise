@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "LanguageHelper.h"
+#import "Finder.h"
 
 @protocol SettingsLanguageDelegate <NSObject>
 - (void) languageSelected:(NSString *) language;
@@ -21,5 +22,6 @@
 @property (strong, nonatomic) NSArray *languages;
 @property (strong, nonatomic) LanguageHelper *languageHelper;
 @property (nonatomic, assign) id  <SettingsLanguageDelegate> delegate;  
+@property (strong, nonatomic) Finder *finder;
 
 @end

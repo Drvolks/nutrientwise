@@ -11,7 +11,7 @@
 #import "Finder.h"
 #import "SettingsLanguage.h"
 
-@interface Settings : UIViewController <UITableViewDelegate, UITableViewDataSource, SettingsLanguageDelegate>
+@interface Settings : UIViewController <UITableViewDelegate, UITableViewDataSource, SettingsLanguageDelegate, ChangeLanguage>
 
 @property (strong, nonatomic) IBOutlet UITableView *table;
 @property (strong, nonatomic) LanguageHelper *languageHelper;

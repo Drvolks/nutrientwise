@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol ChangeLanguage <NSObject>
+- (void) languageChanged;
+@end
+
 @interface LanguageHelper : NSObject
 
 @property (strong, nonatomic) NSBundle *bundle;
@@ -18,5 +22,6 @@
 - (NSString *) language;
 - (void) setLanguage:(NSString *)language;
 - (NSArray *) supportedLanguages;
++ (id) sharedInstance;
 
 @end

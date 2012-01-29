@@ -12,7 +12,7 @@
 #import "ProfileSelection.h"
 #import "ProfileHelper.h"
 
-@interface Profiles : UIViewController <UITableViewDelegate, UITableViewDataSource, ProfileSelectionDelegate>
+@interface Profiles : UIViewController <UITableViewDelegate, UITableViewDataSource, ProfileSelectionDelegate, ChangeLanguage>
 
 @property (strong, nonatomic) IBOutlet UITableView *table;
 @property (strong, nonatomic) IBOutlet UILabel *profileInformation;

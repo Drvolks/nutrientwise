@@ -13,7 +13,7 @@
 #import "CellHelper.h"
 #import "ArrayHelper.h"
 
-@interface Favorites : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface Favorites : UIViewController <UITableViewDelegate, UITableViewDataSource, ChangeLanguage>
 
 @property (strong, nonatomic) IBOutlet UITableView *table;
 @property (strong, nonatomic) FavoriteHelper *favoriteHelper;

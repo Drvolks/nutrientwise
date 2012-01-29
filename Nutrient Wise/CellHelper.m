@@ -21,7 +21,7 @@
 @synthesize languageHelper;
 
 - (id) init {
-    languageHelper = [[LanguageHelper alloc] init];
+    languageHelper = [LanguageHelper sharedInstance];
     
     return self;
 }

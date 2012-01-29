@@ -7,6 +7,7 @@
 //
 
 #import "Profiles.h"
+#import "AppDelegate.h"
 
 #define kTitle @"Profile"
 #define kRowIdentifierProfile @"ProfileRow"
@@ -42,10 +43,13 @@
 {
     [super viewDidLoad];
     
-    languageHelper = [[LanguageHelper alloc] init];
+    languageHelper = [LanguageHelper sharedInstance];
     profileHelper = [[ProfileHelper alloc] init];
     
-    self.navigationItem.title = [languageHelper localizedString:kTitle];
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [appDelegate registerLanguageDelegate:self];
+    
+    [self languageChanged];
     
     [self displayProfileInformation];
 }
@@ -134,6 +138,12 @@
     profileInformation.frame = CGRectMake(profileInformation.frame.origin.x, profileInformation.frame.origin.y, theStringSize.width, theStringSize.height);
     
     profileInformation.text = text;
+}
+
+- (void) languageChanged {
+    self.navigationItem.title = [languageHelper localizedString:kTitle];
+    self.title = [languageHelper localizedString:kTitle];
+    self.tabBarItem.title = [languageHelper localizedString:kTitle];
 }
 
 @end

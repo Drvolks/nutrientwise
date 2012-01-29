@@ -49,7 +49,7 @@
 {
     [super viewDidLoad];
     
-    languageHelper = [[LanguageHelper alloc] init];
+    languageHelper = [LanguageHelper sharedInstance];
 }
 
 

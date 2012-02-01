@@ -26,8 +26,8 @@
 #define kMeasureColumn @"maesure"
 #define kMeasureIdColumn @"measureId"
 #define kNutritiveNameColumn @"nutritiveName"
-#define kImageNotFavorite @"29-heart.png"
-#define kImageFavorite @"29-heart-red.png"
+#define kImageNotFavorite @"favorite_add.png"
+#define kImageFavorite @"favorite_remove.png"
 #define kMeasureShouldStartWith @"1 "
 #define kSortPrefix @"nutritiveName."
 #define kSelectedMeasureSectionTitle @"Selected Measure"
@@ -150,7 +150,7 @@
         image = kImageFavorite;                
     }
     
-    UIBarButtonItem *favoriteButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:image] style:UIBarButtonItemStyleBordered target:self action:@selector(favoriteButtonPressed:)];  
+    UIBarButtonItem *favoriteButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:image] style:UIBarButtonItemStylePlain target:self action:@selector(favoriteButtonPressed:)];  
     self.navigationItem.rightBarButtonItem = favoriteButton;
     
     if(selectedConversionFactor == nil) {

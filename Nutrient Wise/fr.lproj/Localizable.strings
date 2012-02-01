@@ -13,6 +13,9 @@
 "All Nutritive Values" = "Toutes les valeurs nutritives";
 "General Information" = "Information générale";
 "100g" = "100g";
+"firstViewTitle" = "Première utilisation";
+"firstViewText" = "Vous pouvez choisir d'afficher les valeurs nutritive les plus importantes pour vous en visitant l'onglet Profil.";
+"firstViewButton" = "Ok";
 
 /* profiles */
 "rein" = "Insuffisance Rénale";
@@ -32,4 +35,4 @@
 "About" = "À Propos";
 "About Us" = "Nutrient Wise est une création de Consultation Massawippi inc. Visitez notre site au http://nutrientwise.consultationmassawippi.ca";
 "About Data" = "Les données sont adapté de : Fichier canadien sur les éléments nutritifs, Santé Canada, 2010 (version électronique accessible à l'adresse www.santecanada.gc.ca/fcen)";
-"About Tab Icons" = "Les icons de la barre de navigation sont fournis par Glyphish. Visitez leur site au http://glyphish.com/";
+"About Tab Icons" = "Les icons ont été créés par The Working Group. Visitez leur site au http://blog.twg.ca";

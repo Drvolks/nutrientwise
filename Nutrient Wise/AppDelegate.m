@@ -24,6 +24,9 @@
 #define kFavoriteTab 1
 #define kProfileTab 2
 #define kSettingsTab 3
+#define kFirstViewTitle @"firstViewTitle"
+#define kfirstViewText @"firstViewText"
+#define kFirstViewButton @"firstViewButton"
 
 @implementation AppDelegate
 
@@ -73,13 +76,21 @@
         [languageHelper setLanguage:language];
     }
     
+    BOOL firstView = NO;
     if([profileHelper selectedProfile] == nil) {
         NSString *profile = [[profileHelper supportedProfiles] objectAtIndex:0];
         if(kDebug) {
             NSLog(@"Setting the default profile to %@", profile);
         }
         
+        firstView = YES;
+        
         [profileHelper setSelectedProfile:profile];
+    }
+    
+    if(firstView) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[languageHelper localizedString:kFirstViewTitle] message:[languageHelper localizedString:kfirstViewText] delegate:self cancelButtonTitle:[languageHelper localizedString:kFirstViewButton] otherButtonTitles:nil, nil];
+        [alert show];
     }
 }
 

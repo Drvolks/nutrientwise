@@ -11,8 +11,7 @@
 
 #define kTitle @"About"
 #define kAboutUs @"About Us"
-#define kAboutData @"About Data"
-#define kAboutTabIcons @"About Tab Icons"
+#define kAboutMore @"About More"
 #define kSpaces @"\n\n"
 
 @implementation About
@@ -72,9 +71,7 @@
     
     NSString *text = [languageHelper localizedString:kAboutUs];
     text = [text stringByAppendingString:kSpaces];
-    text = [text stringByAppendingString:[languageHelper localizedString:kAboutData]];
-    text = [text stringByAppendingString:kSpaces];
-    text = [text stringByAppendingString:[languageHelper localizedString:kAboutTabIcons]];
+    text = [text stringByAppendingString:[languageHelper localizedString:kAboutMore]];
     about.text = text;
 }
 

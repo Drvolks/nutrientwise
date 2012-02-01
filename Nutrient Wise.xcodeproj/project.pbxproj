@@ -79,6 +79,7 @@
 		6EF19C5114D9F369002790E7 /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EF19C5014D9F368002790E7 /* gear.png */; };
 		6EF19C5414DA01AB002790E7 /* HeaderCM@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EF19C5214DA01AB002790E7 /* HeaderCM@2x.png */; };
 		6EF19C5514DA01AB002790E7 /* HeaderCM.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EF19C5314DA01AB002790E7 /* HeaderCM.png */; };
+		6EF19C5914DA05B5002790E7 /* MKiCloudSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EF19C5814DA05B5002790E7 /* MKiCloudSync.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -192,6 +193,9 @@
 		6EF19C5014D9F368002790E7 /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear.png; sourceTree = "<group>"; };
 		6EF19C5214DA01AB002790E7 /* HeaderCM@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HeaderCM@2x.png"; sourceTree = "<group>"; };
 		6EF19C5314DA01AB002790E7 /* HeaderCM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HeaderCM.png; sourceTree = "<group>"; };
+		6EF19C5714DA05B5002790E7 /* MKiCloudSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKiCloudSync.h; sourceTree = "<group>"; };
+		6EF19C5814DA05B5002790E7 /* MKiCloudSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKiCloudSync.m; sourceTree = "<group>"; };
+		6EF19C5A14DA0610002790E7 /* Nutrient Wise.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Nutrient Wise.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,6 +301,7 @@
 		6EB9B2E614BA0AEB007C9666 = {
 			isa = PBXGroup;
 			children = (
+				6EF19C5614DA059C002790E7 /* external */,
 				6EB9B35914BA1777007C9666 /* Resources */,
 				6EB9B2FB14BA0AEB007C9666 /* Nutrient Wise */,
 				6EB9B32414BA0AEB007C9666 /* Nutrient WiseTests */,
@@ -329,6 +334,7 @@
 		6EB9B2FB14BA0AEB007C9666 /* Nutrient Wise */ = {
 			isa = PBXGroup;
 			children = (
+				6EF19C5A14DA0610002790E7 /* Nutrient Wise.entitlements */,
 				17F98E8214D4FFFF004644BF /* Helpers */,
 				6E417F6114BE584300F2A2AC /* Model */,
 				6E740AEC14C77964007A0C72 /* Search.h */,
@@ -419,6 +425,15 @@
 				6EF19C1E14D8AC49002790E7 /* DATA_v1.4.sqlite */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		6EF19C5614DA059C002790E7 /* external */ = {
+			isa = PBXGroup;
+			children = (
+				6EF19C5714DA05B5002790E7 /* MKiCloudSync.h */,
+				6EF19C5814DA05B5002790E7 /* MKiCloudSync.m */,
+			);
+			name = external;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -589,6 +604,7 @@
 				6E81DD8414D5CEF000A680DE /* ConversionFactor.m in Sources */,
 				6E81DD8514D5CEF000A680DE /* FoodName.m in Sources */,
 				6E81DD8614D5CEF000A680DE /* NutritiveName.m in Sources */,
+				6EF19C5914DA05B5002790E7 /* MKiCloudSync.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -686,6 +702,7 @@
 		6EB9B33014BA0AEB007C9666 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Nutrient Wise/Nutrient Wise.entitlements";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
 				INFOPLIST_FILE = "Nutrient Wise/Nutrient Wise-Info.plist";
@@ -698,6 +715,7 @@
 		6EB9B33114BA0AEB007C9666 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Nutrient Wise/Nutrient Wise.entitlements";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
 				INFOPLIST_FILE = "Nutrient Wise/Nutrient Wise-Info.plist";

@@ -33,6 +33,5 @@
 
 /* about */
 "About" = "À Propos";
-"About Us" = "Nutrient Wise est une création de Consultation Massawippi inc. Visitez notre site au http://nutrientwise.consultationmassawippi.ca";
-"About Data" = "Les données sont adapté de : Fichier canadien sur les éléments nutritifs, Santé Canada, 2010 (version électronique accessible à l'adresse www.santecanada.gc.ca/fcen)";
-"About Tab Icons" = "Les icons ont été créés par The Working Group. Visitez leur site au http://blog.twg.ca";
+"About Us" = "Nutrient Wise est une création de Consultation Massawippi inc. Visitez notre site au nutrientwise.consultationmassawippi.ca";
+"About More" = "Les données sont adapté de : Fichier canadien sur les éléments nutritifs, Santé Canada, 2010 (version électronique accessible à l'adresse www.santecanada.gc.ca/fcen)\n\nLes icons ont été créés par The Working Group. Visitez leur site au blog.twg.ca\n\nLa synchronization iCloud a été crée par Mugunth Kumar. Visitez son blog au blog.mugunthkumar.com";

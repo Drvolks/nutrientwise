@@ -8,6 +8,7 @@
 #import "AppDelegate.h"
 #import "SearchController.h"
 #import "Search.h"
+#import "MKiCloudSync.h"
 
 #define kDebug NO
 #define kMainNib @"TabBarController"
@@ -47,6 +48,8 @@
     
     [self setupTabBarController];
     [self pushManagedContextToViewControllers];
+    
+    [MKiCloudSync start];
     
     return YES;
 } 

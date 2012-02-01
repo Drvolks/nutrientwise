@@ -7,8 +7,13 @@
 //
 
 #import "About.h"
+#import "AppDelegate.h"
 
 #define kTitle @"About"
+#define kAboutUs @"About Us"
+#define kAboutData @"About Data"
+#define kAboutTabIcons @"About Tab Icons"
+#define kSpaces @"\n\n"
 
 @implementation About
 
@@ -38,29 +43,39 @@
 {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor underPageBackgroundColor];
+    
     languageHelper = [LanguageHelper sharedInstance];
     
-    self.title = [languageHelper localizedString:kTitle];
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [appDelegate registerLanguageDelegate:self];
     
-    NSString *text = [languageHelper localizedString:@"About Us"];
-    text = [text stringByAppendingString:@"\n\n"];
-    text = [text stringByAppendingString:[languageHelper localizedString:@"About Data"]];
-    text = [text stringByAppendingString:@"\n\n"];
-    text = [text stringByAppendingString:[languageHelper localizedString:@"About Tab Icons"]];
-    about.text = text;
+    [self languageChanged];
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+    
+    languageHelper = nil;
+    about = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void) languageChanged {
+    self.title = [languageHelper localizedString:kTitle];
+    
+    NSString *text = [languageHelper localizedString:kAboutUs];
+    text = [text stringByAppendingString:kSpaces];
+    text = [text stringByAppendingString:[languageHelper localizedString:kAboutData]];
+    text = [text stringByAppendingString:kSpaces];
+    text = [text stringByAppendingString:[languageHelper localizedString:kAboutTabIcons]];
+    about.text = text;
 }
 
 @end

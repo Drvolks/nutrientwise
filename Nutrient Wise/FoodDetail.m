@@ -10,12 +10,11 @@
 #import "NutritiveValue.h"
 #import "NutritiveName.h"
 #import "Measure.h"
-#import "NutientValueCell.h"
 #import "MeasureSelection.h"
 #import "AllNutritiveValues.h"
 #import "ArrayHelper.h"
 
-#define kDebug YES
+#define kDebug NO
 #define kTitle @"NutritiveValues"
 #define kNutritiveSymbolColumn @"nutritiveSymbol"
 #define kNutritiveValuesAttribute @"nutritiveValues"
@@ -29,6 +28,18 @@
 #define kNutritiveNameColumn @"nutritiveName"
 #define kImageNotFavorite @"29-heart.png"
 #define kImageFavorite @"29-heart-red.png"
+#define kMeasureShouldStartWith @"1 "
+#define kSortPrefix @"nutritiveName."
+#define kSelectedMeasureSectionTitle @"Selected Measure"
+#define kGeneralInformationSectionTitle @"General Information"
+#define kProfileSectionTitle @"Values for profile "
+#define kAllNutritiveValueCellTitle @"All Nutritive Values"
+#define kDefaultNoMeasure @"100g"
+#define kBackButtonSuffix @"..."
+#define kMeasureSection 0
+#define kFirstNutritiveValuesSection 1
+#define kNumberOfSectionGeneric 4
+#define kNumberOfSectionNonGeneric 3
 
 @implementation FoodDetail
 
@@ -40,7 +51,6 @@
 @synthesize profileHelper;
 @synthesize favoriteHelper;
 @synthesize selectedConversionFactor;
-@synthesize cellNibLoaded;
 @synthesize cellHelper;
 @synthesize genericValues;
 
@@ -71,12 +81,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor underPageBackgroundColor];
  
     languageHelper = [LanguageHelper sharedInstance];
-    profileHelper = [[ProfileHelper alloc] init];
-    favoriteHelper = [[FavoriteHelper alloc] init];
-    cellHelper = [[CellHelper alloc] init];
-    arrayHelper = [[ArrayHelper alloc] init];
+    profileHelper = [ProfileHelper sharedInstance];
+    favoriteHelper = [FavoriteHelper sharedInstance];
+    cellHelper = [CellHelper sharedInstance];
+    arrayHelper = [ArrayHelper sharedInstance];
     
     self.title = [languageHelper localizedString:kTitle];
     
@@ -84,7 +96,7 @@
     nutritiveValues = [self nutritiveValues:keys];
 
     //Sort Data
-    NSString *pkey = [@"nutritiveName." stringByAppendingString:[languageHelper nameColumn]];
+    NSString *pkey = [kSortPrefix stringByAppendingString:[languageHelper nameColumn]];
     nutritiveValues = [arrayHelper sort:nutritiveValues key:pkey ascending:YES];
     
     if(![profileHelper genericProfileSelected]) {
@@ -92,13 +104,11 @@
         keys = [self cleanGenericValues:keys];
         genericValues = [self nutritiveValues:keys];
         
-        pkey = [@"nutritiveName." stringByAppendingString:[languageHelper nameColumn]];
+        pkey = [kSortPrefix stringByAppendingString:[languageHelper nameColumn]];
         genericValues = [arrayHelper sort:genericValues key:pkey ascending:YES];
     } else {
         genericValues = nil;
     }
-    
-    cellNibLoaded = NO;
     
     [self prepareDisplay];
 }
@@ -159,7 +169,7 @@
 
         if(selectedConversionFactor == nil && [conversionFactors count] > 0) {
             // pick any conversion
-            selectedConversionFactor = [[conversionFactors allObjects] objectAtIndex:0];
+            selectedConversionFactor = [self pickAConversionFactor:conversionFactors];
         }
     }
 
@@ -168,11 +178,36 @@
     }
 }
 
+- (ConversionFactor *) pickAConversionFactor:(NSSet *)conversionFactors {
+    for(ConversionFactor *conversionFactor in conversionFactors) {
+        Measure *measure = [conversionFactor valueForKey:kMeasureColumn];
+        NSString *name = [measure valueForKey:[languageHelper nameColumn]];
+        
+        if(name != nil && [name length] > 3) {
+            NSString *begin = [name substringToIndex:2];
+            if([begin isEqualToString:kMeasureShouldStartWith]) {
+                return conversionFactor;
+            }
+        }
+    }
+               
+    return [[conversionFactors allObjects] objectAtIndex:0];
+}
+
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+    
+    foodName = nil;
+    nutritiveValues = nil;
+    languageHelper = nil;
+    arrayHelper = nil;
+    profileHelper = nil;
+    favoriteHelper = nil;
+    selectedConversionFactor = nil;
+    cellHelper = nil;
+    genericValues = nil;
+    table = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -206,12 +241,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSUInteger section = [indexPath section];
     
-    if(!cellNibLoaded) {
-        UINib *nib = [UINib nibWithNibName:@"NutientValueCell" bundle:nil];
-        [tableView registerNib:nib forCellReuseIdentifier:kRowIdentifierNutient];
-        cellNibLoaded = YES;
-    }
-    
     int allSection = 2;
     int genericSection = -1;
     if(genericValues != nil) {
@@ -219,7 +248,7 @@
         genericSection = 2;
     }
     
-    if (section == 0) {
+    if (section == kMeasureSection) {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kRowIdentifierMeasure];
         if(cell == nil) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kRowIdentifierMeasure];
@@ -231,12 +260,12 @@
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         }
         else {
-            cell.textLabel.text = [languageHelper localizedString:@"100g"];
+            cell.textLabel.text = [languageHelper localizedString:kDefaultNoMeasure];
             cell.accessoryType = UITableViewCellAccessoryNone;
         }
         return cell;
     }
-    else if(section == 1) {
+    else if(section == kFirstNutritiveValuesSection) {
         return [cellHelper makeNutientValueCell:tableView :kRowIdentifierNutient :nutritiveValues :indexPath :selectedConversionFactor];
     } 
     else if(section == genericSection) {
@@ -249,7 +278,7 @@
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         }
         
-        cell.textLabel.text = [languageHelper localizedString:@"All Nutritive Values"];
+        cell.textLabel.text = [languageHelper localizedString:kAllNutritiveValueCellTitle];
         
         return cell;
     }
@@ -270,9 +299,9 @@
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     if(genericValues == nil) {
-        return 3;
+        return kNumberOfSectionNonGeneric;
     } else {
-        return 4;
+        return kNumberOfSectionGeneric;
     }
 }
 
@@ -284,9 +313,9 @@
         genericSection = 2;
     }
     
-    if(section == 0) {
+    if(section == kMeasureSection) {
         return 1;
-    } else if(section == 1) {
+    } else if(section == kFirstNutritiveValuesSection) {
         return [self.nutritiveValues count];
     } else if (section == genericSection) {
         return [self.genericValues count];
@@ -305,17 +334,17 @@
         genericSection = 2;
     }
     
-    if(section == 0) {
-         return [languageHelper localizedString:@"Selected Measure"];
-    } else if(section == 1) {
+    if(section == kMeasureSection) {
+         return [languageHelper localizedString:kSelectedMeasureSectionTitle];
+    } else if(section == kFirstNutritiveValuesSection) {
         if(genericValues  == nil) {
-            return [languageHelper localizedString:@"General Information"];
+            return [languageHelper localizedString:kGeneralInformationSectionTitle];
         }
         else {
-            return [[languageHelper localizedString:@"Values for profile "] stringByAppendingString:[languageHelper localizedString:[profileHelper selectedProfile]]];
+            return [[languageHelper localizedString:kProfileSectionTitle] stringByAppendingString:[languageHelper localizedString:[profileHelper selectedProfile]]];
         }
     } else if (section == genericSection) {
-        return [languageHelper localizedString:@"General Information"];
+        return [languageHelper localizedString:kSelectedMeasureSectionTitle];
     } else if (section == allSection) {
         return nil;
     }
@@ -335,12 +364,12 @@
     
     NSString *title = [foodName valueForKey:[languageHelper nameColumn]];
     if([title length] > 20) {
-        title = [[title substringToIndex:20] stringByAppendingString:@"..."];
+        title = [[title substringToIndex:20] stringByAppendingString:kBackButtonSuffix];
     }
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:nil action:nil];
     [self.navigationItem setBackBarButtonItem:backButton];
     
-    if(section == 0 && selectedConversionFactor != nil) {
+    if(section == kMeasureSection && selectedConversionFactor != nil) {
         NSSet *conversionFactors = [foodName valueForKey:kConversionFactorsAttribute];
         MeasureSelection *measureSelectionView = [[MeasureSelection alloc] initWithConversionFactors:[conversionFactors allObjects]:selectedConversionFactor];
         [measureSelectionView setDelegate:self];

@@ -48,7 +48,7 @@
     [super viewDidLoad];
     
     languageHelper = [LanguageHelper sharedInstance];
-    profileHelper = [[ProfileHelper alloc] init];
+    profileHelper = [ProfileHelper sharedInstance];
     
     profiles = [profileHelper supportedProfiles];
 }
@@ -56,8 +56,12 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+    
+    profiles = nil;
+    languageHelper = nil;
+    delegate = nil;
+    profileHelper = nil;
+    selectedProfile = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

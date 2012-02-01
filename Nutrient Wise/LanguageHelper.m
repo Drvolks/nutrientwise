@@ -13,6 +13,8 @@
 #define kEnglish @"en"
 #define kFrenchNameColumn @"frenchName"
 #define kEnglishNameColumn @"englishName"
+#define kBundleExt @"lproj"
+#define kDefaultValue @""
 
 @implementation LanguageHelper
 
@@ -48,11 +50,11 @@ static LanguageHelper *instance = nil;
 
 - (NSString *) localizedString:(NSString *)key {
     if(bundle == nil) {
-        NSString *path = [[ NSBundle mainBundle ] pathForResource:[self language] ofType:@"lproj" ];
+        NSString *path = [[ NSBundle mainBundle ] pathForResource:[self language] ofType:kBundleExt ];
         bundle = [NSBundle bundleWithPath:path];
     }
     
-    return [bundle localizedStringForKey:key value:@"" table:nil];
+    return [bundle localizedStringForKey:key value:kDefaultValue table:nil];
 }
 
 - (NSString *) language {
@@ -67,7 +69,7 @@ static LanguageHelper *instance = nil;
     [settings setObject:language forKey:kLanguageSetting];
     [settings synchronize];
     
-    NSString *path = [[ NSBundle mainBundle ] pathForResource:[self language] ofType:@"lproj" ];
+    NSString *path = [[ NSBundle mainBundle ] pathForResource:[self language] ofType:kBundleExt ];
     bundle = [NSBundle bundleWithPath:path];
 }
 

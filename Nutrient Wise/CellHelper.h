@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NutientValueCell.h"
 #import "LanguageHelper.h"
 #import "ConversionFactor.h"
 #import "FoodName.h"
@@ -16,7 +15,8 @@
 
 @property (strong, nonatomic) LanguageHelper *languageHelper;
 
-- (NutientValueCell *) makeNutientValueCell:(UITableView *) table:(NSString *) rowIdentifier:(NSArray *) nutritiveValues:(NSIndexPath *) indexPath:(ConversionFactor *) conversionFactor;
++ (id) sharedInstance;
+- (UITableViewCell *) makeNutientValueCell:(UITableView *) table:(NSString *) rowIdentifier:(NSArray *) nutritiveValues:(NSIndexPath *) indexPath:(ConversionFactor *) conversionFactor;
 - (UITableViewCell *) makeFoodNameCell:(UITableView *) table:(NSString *)rowIdentifier:(NSIndexPath *)indexPath:(NSArray *) searchResults;
 
 @end

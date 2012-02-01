@@ -54,8 +54,12 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+    
+    languages = nil;
+    languageHelper = nil;
+    delegate = nil;
+    selectedLanguage = nil;
+    finder = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

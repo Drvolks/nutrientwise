@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "LanguageHelper.h"
 
-@interface About : UIViewController
+@interface About : UIViewController <ChangeLanguage>
 
 @property (strong, nonatomic) IBOutlet UITextView *about;
 @property (strong, nonatomic) LanguageHelper *languageHelper;

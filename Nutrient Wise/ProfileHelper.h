@@ -10,6 +10,7 @@
 
 @interface ProfileHelper : NSObject
 
++ (id) sharedInstance;
 - (NSArray *) nutritiveSymbolsForProfile:(NSString *)profile;
 - (NSString *) selectedProfile;
 - (void) setSelectedProfile:(NSString *) profile;

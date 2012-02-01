@@ -7,7 +7,6 @@
 //
 
 #import "AllNutritiveValues.h"
-#import "NutientValueCell.h"
 #import "NutritiveName.h"
 #import "NutritiveValue.h"
 #import "ArrayHelper.h"
@@ -18,6 +17,7 @@
 #define kConversionFactorColumn @"conversionFactor"
 #define kNutritiveValueColumn @"nutritiveValue"
 #define kNutritiveNameColumn @"nutritiveName"
+#define kSortAttribute @"nutritiveName."
 
 @implementation AllNutritiveValues
 
@@ -26,7 +26,6 @@
 @synthesize selectedConversionFactor;
 @synthesize languageHelper;
 @synthesize arrayHelper;
-@synthesize cellNibLoaded;
 @synthesize cellHelper;
 @synthesize keys;
 @synthesize nutritiveValuesIndex;
@@ -63,14 +62,12 @@
     [super viewDidLoad];
     
     languageHelper = [LanguageHelper sharedInstance];
-    arrayHelper = [[ArrayHelper alloc] init];
+    arrayHelper = [ArrayHelper sharedInstance];
 
-    cellHelper = [[CellHelper alloc] init];
-    
-    cellNibLoaded = NO;
+    cellHelper = [CellHelper sharedInstance];
     
     //Sort Data
-    NSString *pkey = [@"nutritiveName." stringByAppendingString:[languageHelper nameColumn]];
+    NSString *pkey = [kSortAttribute stringByAppendingString:[languageHelper nameColumn]];
     nutritiveValues = [arrayHelper sort:nutritiveValues key:pkey ascending:YES];
     
     [self buildIndex];
@@ -119,6 +116,9 @@
     selectedConversionFactor = nil;
     languageHelper = nil;
     arrayHelper = nil;
+    cellHelper = nil;
+    keys = nil;
+    nutritiveValuesIndex = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -138,13 +138,7 @@
     return [nutientInSection count];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {  
-    if(!cellNibLoaded) {
-        UINib *nib = [UINib nibWithNibName:@"NutientValueCell" bundle:nil];
-        [tableView registerNib:nib forCellReuseIdentifier:kRowIdentifier];
-        cellNibLoaded = YES;
-    }
-    
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {      
     NSUInteger section = [indexPath section];
     NSString *key = [keys objectAtIndex:section];
     NSArray *nutientInSection = [nutritiveValuesIndex objectForKey:key];
@@ -166,6 +160,10 @@
     }
     
     return nil;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

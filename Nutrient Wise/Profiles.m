@@ -11,6 +11,9 @@
 
 #define kTitle @"Profile"
 #define kRowIdentifierProfile @"ProfileRow"
+#define kProfileSection 0
+#define kNumberOfSections 1
+#define kProfileKeySuffix @" Desc"
 
 @implementation Profiles
 
@@ -43,22 +46,26 @@
 {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor underPageBackgroundColor];
+    
     languageHelper = [LanguageHelper sharedInstance];
-    profileHelper = [[ProfileHelper alloc] init];
+    profileHelper = [ProfileHelper sharedInstance];
     
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [appDelegate registerLanguageDelegate:self];
     
     [self languageChanged];
-    
-    [self displayProfileInformation];
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+    
+    finder = nil;
+    languageHelper = nil;
+    table = nil;
+    profileHelper = nil;
+    profileInformation = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -68,12 +75,12 @@
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return kNumberOfSections;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     switch (section) {
-        case (0):
+        case kProfileSection:
             return 1;
             break;
     }
@@ -92,17 +99,19 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSUInteger section = [indexPath section];
     
-    if(section == 0) {
+    if(section == kProfileSection) {
         ProfileSelection *profileView = [[ProfileSelection alloc] initWithProfile:[profileHelper selectedProfile]];
         [profileView setDelegate:self];
         [self.navigationController pushViewController:profileView animated:YES];
     }
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSUInteger section = [indexPath section];
     
-    if (section == 0) {
+    if (section == kProfileSection) {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kRowIdentifierProfile];
         if(cell == nil) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kRowIdentifierProfile];
@@ -129,13 +138,9 @@
 
 - (void) displayProfileInformation {
     NSString *profile = [profileHelper selectedProfile];
-    NSString *profileDesc = [profile stringByAppendingString:@" Desc"];
+    NSString *profileDesc = [profile stringByAppendingString:kProfileKeySuffix];
     
     NSString *text = [languageHelper localizedString:profileDesc];
-    
-    CGSize labelSize = CGSizeMake(250, 50);
-    CGSize theStringSize = [text sizeWithFont:profileInformation.font constrainedToSize:labelSize lineBreakMode:profileInformation.lineBreakMode];
-    profileInformation.frame = CGRectMake(profileInformation.frame.origin.x, profileInformation.frame.origin.y, theStringSize.width, theStringSize.height);
     
     profileInformation.text = text;
 }
@@ -143,7 +148,8 @@
 - (void) languageChanged {
     self.navigationItem.title = [languageHelper localizedString:kTitle];
     self.title = [languageHelper localizedString:kTitle];
-    self.tabBarItem.title = [languageHelper localizedString:kTitle];
+    
+    [self displayProfileInformation];
 }
 
 @end

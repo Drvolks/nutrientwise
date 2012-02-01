@@ -12,6 +12,7 @@
 
 @interface FavoriteHelper : NSObject
 
++ (id) sharedInstance;
 - (id) init;
 - (void) addFoodToFavorite:(FoodName *) foodName;
 - (NSMutableDictionary *) favotiteIds:(NSString *) key;

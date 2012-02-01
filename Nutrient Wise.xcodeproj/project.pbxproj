@@ -22,8 +22,6 @@
 		6E81DC8B14CE33EC00A680DE /* 29-heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E81DC8A14CE33EC00A680DE /* 29-heart.png */; };
 		6E81DC8D14CE340200A680DE /* 06-magnify.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E81DC8C14CE340200A680DE /* 06-magnify.png */; };
 		6E81DC8F14CE341F00A680DE /* 44-shoebox.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E81DC8E14CE341F00A680DE /* 44-shoebox.png */; };
-		6E81DC9514D0C54C00A680DE /* NutientValueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E81DC9414D0C54C00A680DE /* NutientValueCell.xib */; };
-		6E81DC9814D0C5EF00A680DE /* NutientValueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81DC9714D0C5EE00A680DE /* NutientValueCell.m */; };
 		6E81DC9C14D0CBB000A680DE /* MeasureSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81DC9A14D0CBAE00A680DE /* MeasureSelection.m */; };
 		6E81DC9D14D0CBB000A680DE /* MeasureSelection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E81DC9B14D0CBAF00A680DE /* MeasureSelection.xib */; };
 		6E81DCA114D0D58200A680DE /* AllNutritiveValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81DC9F14D0D58100A680DE /* AllNutritiveValues.m */; };
@@ -45,7 +43,6 @@
 		6E81DD5014D5BD4000A680DE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E81DD4F14D5BD4000A680DE /* Default@2x.png */; };
 		6E81DD5214D5BD4600A680DE /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E81DD5114D5BD4500A680DE /* Default.png */; };
 		6E81DD5814D5C33600A680DE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E81DD5614D5C33600A680DE /* Localizable.strings */; };
-		6E81DD7114D5CE8B00A680DE /* DATA_v1.3.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 6E81DD7014D5CE8B00A680DE /* DATA_v1.3.sqlite */; };
 		6E81DD7714D5CEDD00A680DE /* Model.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 6E81DD7614D5CEDD00A680DE /* Model.xcdatamodel */; };
 		6E81DD8214D5CEF000A680DE /* Measure.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81DD7914D5CEF000A680DE /* Measure.m */; };
 		6E81DD8314D5CEF000A680DE /* NutritiveValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81DD7B14D5CEF000A680DE /* NutritiveValue.m */; };
@@ -72,6 +69,7 @@
 		6EB9B32114BA0AEB007C9666 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB9B2F714BA0AEB007C9666 /* Foundation.framework */; };
 		6EB9B32914BA0AEB007C9666 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EB9B32714BA0AEB007C9666 /* InfoPlist.strings */; };
 		6EB9B32C14BA0AEB007C9666 /* Nutrient_WiseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB9B32B14BA0AEB007C9666 /* Nutrient_WiseTests.m */; };
+		6EF19C1F14D8AC49002790E7 /* DATA_v1.4.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 6EF19C1E14D8AC49002790E7 /* DATA_v1.4.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,9 +105,6 @@
 		6E81DC8A14CE33EC00A680DE /* 29-heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "29-heart.png"; sourceTree = "<group>"; };
 		6E81DC8C14CE340200A680DE /* 06-magnify.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "06-magnify.png"; sourceTree = "<group>"; };
 		6E81DC8E14CE341F00A680DE /* 44-shoebox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "44-shoebox.png"; sourceTree = "<group>"; };
-		6E81DC9414D0C54C00A680DE /* NutientValueCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NutientValueCell.xib; sourceTree = "<group>"; };
-		6E81DC9614D0C5EE00A680DE /* NutientValueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NutientValueCell.h; sourceTree = "<group>"; };
-		6E81DC9714D0C5EE00A680DE /* NutientValueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NutientValueCell.m; sourceTree = "<group>"; };
 		6E81DC9914D0CBAD00A680DE /* MeasureSelection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasureSelection.h; sourceTree = "<group>"; };
 		6E81DC9A14D0CBAE00A680DE /* MeasureSelection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasureSelection.m; sourceTree = "<group>"; };
 		6E81DC9B14D0CBAF00A680DE /* MeasureSelection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeasureSelection.xib; sourceTree = "<group>"; };
@@ -135,7 +130,6 @@
 		6E81DD4F14D5BD4000A680DE /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		6E81DD5114D5BD4500A680DE /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		6E81DD5714D5C33600A680DE /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Localizable.strings; sourceTree = "<group>"; };
-		6E81DD7014D5CE8B00A680DE /* DATA_v1.3.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = DATA_v1.3.sqlite; sourceTree = "<group>"; };
 		6E81DD7614D5CEDD00A680DE /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		6E81DD7814D5CEF000A680DE /* Measure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Measure.h; sourceTree = "<group>"; };
 		6E81DD7914D5CEF000A680DE /* Measure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Measure.m; sourceTree = "<group>"; };
@@ -179,6 +173,7 @@
 		6EB9B32814BA0AEB007C9666 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6EB9B32A14BA0AEB007C9666 /* Nutrient_WiseTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Nutrient_WiseTests.h; sourceTree = "<group>"; };
 		6EB9B32B14BA0AEB007C9666 /* Nutrient_WiseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Nutrient_WiseTests.m; sourceTree = "<group>"; };
+		6EF19C1E14D8AC49002790E7 /* DATA_v1.4.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = DATA_v1.4.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -317,9 +312,6 @@
 				6EAD167514CC93CE00D82BFD /* FoodDetail.h */,
 				6EAD167614CC93CE00D82BFD /* FoodDetail.m */,
 				6EAD167714CC93CF00D82BFD /* FoodDetail.xib */,
-				6E81DC9614D0C5EE00A680DE /* NutientValueCell.h */,
-				6E81DC9714D0C5EE00A680DE /* NutientValueCell.m */,
-				6E81DC9414D0C54C00A680DE /* NutientValueCell.xib */,
 				6E81DC9914D0CBAD00A680DE /* MeasureSelection.h */,
 				6E81DC9A14D0CBAE00A680DE /* MeasureSelection.m */,
 				6E81DC9B14D0CBAF00A680DE /* MeasureSelection.xib */,
@@ -397,7 +389,7 @@
 				6E81DC8514CE336800A680DE /* Icons */,
 				6EAD167A14CC9D8C00D82BFD /* Settings.bundle */,
 				6E81DD7614D5CEDD00A680DE /* Model.xcdatamodel */,
-				6E81DD7014D5CE8B00A680DE /* DATA_v1.3.sqlite */,
+				6EF19C1E14D8AC49002790E7 /* DATA_v1.4.sqlite */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -485,7 +477,6 @@
 				6E81DC8B14CE33EC00A680DE /* 29-heart.png in Resources */,
 				6E81DC8D14CE340200A680DE /* 06-magnify.png in Resources */,
 				6E81DC8F14CE341F00A680DE /* 44-shoebox.png in Resources */,
-				6E81DC9514D0C54C00A680DE /* NutientValueCell.xib in Resources */,
 				6E81DC9D14D0CBB000A680DE /* MeasureSelection.xib in Resources */,
 				6E81DCA214D0D58200A680DE /* AllNutritiveValues.xib in Resources */,
 				6E81DCC014D4779F00A680DE /* SettingsLanguage.xib in Resources */,
@@ -497,7 +488,7 @@
 				6E81DD5014D5BD4000A680DE /* Default@2x.png in Resources */,
 				6E81DD5214D5BD4600A680DE /* Default.png in Resources */,
 				6E81DD5814D5C33600A680DE /* Localizable.strings in Resources */,
-				6E81DD7114D5CE8B00A680DE /* DATA_v1.3.sqlite in Resources */,
+				6EF19C1F14D8AC49002790E7 /* DATA_v1.4.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,7 +539,6 @@
 				6E528B9314CDA9FD00712D87 /* FavoriteHelper.m in Sources */,
 				6E81DC7D14CE1F4A00A680DE /* FavoritesController.m in Sources */,
 				6E81DC8314CE32D600A680DE /* About.m in Sources */,
-				6E81DC9814D0C5EF00A680DE /* NutientValueCell.m in Sources */,
 				6E81DC9C14D0CBB000A680DE /* MeasureSelection.m in Sources */,
 				6E81DCA114D0D58200A680DE /* AllNutritiveValues.m in Sources */,
 				6E81DCB514D46D6E00A680DE /* CellHelper.m in Sources */,

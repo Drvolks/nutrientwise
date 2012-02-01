@@ -12,6 +12,7 @@
 
 #define kTitle @"Search"
 #define kRowIdentifier @"rowIdentifier"
+#define kClearSearchBar @""
 
 @implementation Search
 
@@ -50,7 +51,7 @@
     [super viewDidLoad];
     
     languageHelper = [LanguageHelper sharedInstance];
-    cellHelper = [[CellHelper alloc] init];
+    cellHelper = [CellHelper sharedInstance];
     
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [appDelegate registerLanguageDelegate:self];
@@ -61,8 +62,13 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+    
+    languageHelper = nil;
+    cellHelper = nil;
+    searchBar = nil;
+    resultTable = nil;
+    searchResults = nil;
+    finder = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -120,7 +126,7 @@
 }
 
 - (void) searchBarCancelButtonClicked:(UISearchBar *)bar {
-    searchBar.text = @"";
+    searchBar.text = kClearSearchBar;
     [self resetSearch];
     [resultTable reloadData];
 
@@ -146,7 +152,6 @@
 
 - (void) languageChanged {
     self.title = [languageHelper localizedString:kTitle];
-    self.tabBarItem.title = [languageHelper localizedString:kTitle];
     
     [self resetSearch];
 }

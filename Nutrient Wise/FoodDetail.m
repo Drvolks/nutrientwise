@@ -344,7 +344,7 @@
             return [[languageHelper localizedString:kProfileSectionTitle] stringByAppendingString:[languageHelper localizedString:[profileHelper selectedProfile]]];
         }
     } else if (section == genericSection) {
-        return [languageHelper localizedString:kSelectedMeasureSectionTitle];
+        return [languageHelper localizedString:kGeneralInformationSectionTitle];
     } else if (section == allSection) {
         return nil;
     }

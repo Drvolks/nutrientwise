@@ -29,5 +29,6 @@
 - (void) setup;
 - (void) fireLanguageChanged;
 - (void) registerLanguageDelegate:(id)delegate;
+- (void) setTabLabels;
 
 @end

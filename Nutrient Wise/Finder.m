@@ -8,8 +8,12 @@
 
 #import "Finder.h"
 
-#define kDebug YES
+#define kDebug NO
 #define kFoodNameEntity @"FoodName"
+#define kSearchByFoodId @"(foodId = %@)"
+#define kSearchByFoodIds @"(foodId in %@)"
+#define kAnd @" && "
+#define kContains @" contains[cd] '%@'"
 
 @implementation Finder
 
@@ -26,17 +30,21 @@
 
 - (FoodName *) getFoodName:(NSNumber *) foodId
 {
-    NSLog(@"Find FoodName for id %@\n", foodId);
+    if(kDebug) {
+        NSLog(@"Find FoodName for id %@\n", foodId);
+    }
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entityDescription = [NSEntityDescription entityForName:kFoodNameEntity inManagedObjectContext:managedObjectContext];
     [fetchRequest setEntity:entityDescription];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(foodId = %@)", foodId];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:kSearchByFoodId, foodId];
     [fetchRequest setPredicate:predicate];
     
     NSError *error;
     NSArray *result = [managedObjectContext executeFetchRequest:fetchRequest error:&error];
-    NSLog(@"Number of result %d", [result count]);
+    if(kDebug) {
+        NSLog(@"Number of result %d", [result count]);
+    }
     if(result != nil && [result count] > 0) {
         return [result objectAtIndex:0];
     }
@@ -61,7 +69,7 @@
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entityDescription = [NSEntityDescription entityForName:kFoodNameEntity inManagedObjectContext:managedObjectContext];
     [fetchRequest setEntity:entityDescription];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(foodId in %@)", foodIds];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:kSearchByFoodIds, foodIds];
     [fetchRequest setPredicate:predicate];
     
     NSError *error;
@@ -77,12 +85,12 @@
     for(NSString *word in words) {
         if([word length] > 0) {
             if(!first) {
-                predicate = [predicate stringByAppendingString:@" && "];
+                predicate = [predicate stringByAppendingString:kAnd];
             } else {
                 first = NO;
             }
             predicate = [predicate stringByAppendingString:[languageHelper nameColumn]];
-            predicate = [predicate stringByAppendingFormat:@" contains[cd] '%@'", word];
+            predicate = [predicate stringByAppendingFormat:kContains, word];
         }
     }
         

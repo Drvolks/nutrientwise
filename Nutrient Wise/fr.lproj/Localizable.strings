@@ -11,7 +11,7 @@
 "Selected Measure" = "Mesure Sélectionnée";
 "Values for profile " = "Nutriments pour le profil ";
 "All Nutritive Values" = "Toutes les valeurs nutritives";
-"General Information" = "General Information";
+"General Information" = "Information générale";
 "100g" = "100g";
 
 /* profiles */
@@ -20,9 +20,9 @@
 "diabete" = "Diabète";
 
 /* description profiles */
-"rein Desc" = "Insuffisance Rénale: TODO";
-"generic Desc" = "Generique: TODO";
-"diabete Desc" = "Diabète: TODO";
+"rein Desc" = "Le profil d'insuffisance rénale affiche les valeurs nutritive généralement les plus importantes à surveiller pour une personne soufrant d'insuffisance rénale:\n\n    - L'eau,\n    - Le magnésium,\n    - Le phosphore,\n    - Le potassium\n    - Les protéines,\n    - Et le sodium\n\nLes valeurs nutritives du profil générique sont affichées dans une section distinte pour un coup d'oeil rapide et l'ensemble des valeurs nutritive sont aussi accessibles en un simple touché.\n\nToujours consulter un docteur afin de connaître ce qui est important pour votre situation personnelle.";
+"generic Desc" = "Le profil générique affiche les valeurs nutritives les plus communes, tel que nous les retrouvons sur la fiche nutritive des emballages alimentaire.\n\L'ensemble des valeurs nutritive sont aussi accessibles en un simple touché.";
+"diabete Desc" = "Le profil diabète affiche les valeurs nutritive généralement les plus importantes à surveiller pour une personne diabétique:\n\n    - Les fibres alimentaires,\n    - Les glucides\n    - Et les sucres\n\nLes valeurs nutritives du profil générique sont affichées dans une section distinte pour un coup d'oeil rapide et l'ensemble des valeurs nutritive sont aussi accessibles en un simple touché\n\nToujours consulter un docteur afin de connaître ce qui est important pour votre situation personnelle.";
 
 /* langues */
 "fr" = "Français";
@@ -30,6 +30,6 @@
 
 /* about */
 "About" = "À Propos";
-"About Us" = "Nutrient Wise est une création de Consultation Massawippi inc. Visitez notre site au http://www.consultationmassawippi.ca";
-"About Data" = "Adapté de : Fichier canadien sur les éléments nutritifs, Santé Canada, 2010 (version électronique accessible à l'adresse www.santecanada.gc.ca/fcen)";
+"About Us" = "Nutrient Wise est une création de Consultation Massawippi inc. Visitez notre site au http://nutrientwise.consultationmassawippi.ca";
+"About Data" = "Les données sont adapté de : Fichier canadien sur les éléments nutritifs, Santé Canada, 2010 (version électronique accessible à l'adresse www.santecanada.gc.ca/fcen)";
 "About Tab Icons" = "Les icons de la barre de navigation sont fournis par Glyphish. Visitez leur site au http://glyphish.com/";

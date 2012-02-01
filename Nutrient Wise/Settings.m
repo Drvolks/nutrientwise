@@ -14,6 +14,11 @@
 #define kRowIdentifierLanguage @"LanguageCell"
 #define kRowIdentifierAbout @"AboutCell"
 #define kTitle @"Settings"
+#define kAboutTitle @"About"
+#define kLanguageTitle @"Language"
+#define kLanguageSection 0
+#define kAboutSection 1
+#define kNumberOfSection 2
 
 @implementation Settings
 
@@ -43,7 +48,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    self.view.backgroundColor = [UIColor underPageBackgroundColor];
     
     languageHelper = [LanguageHelper sharedInstance];
     
@@ -56,8 +62,10 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+    
+    languageHelper = nil;
+    finder = nil;
+    table = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -67,15 +75,15 @@
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return kNumberOfSection;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     switch (section) {
-        case (0):
+        case kLanguageSection:
             return 1;
             break;
-        case (1):
+        case kAboutSection:
             return 1;
             break;
     }
@@ -84,8 +92,8 @@
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     switch (section) {
-        case (0):
-            return [languageHelper localizedString:@"Language"];
+        case kLanguageSection:
+            return [languageHelper localizedString:kLanguageTitle];
             break;
         case (1):
             return nil;
@@ -96,21 +104,23 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSUInteger section = [indexPath section];
-    
-    if(section == 0) {
+
+    if(section == kLanguageSection) {
         SettingsLanguage *languageView = [[SettingsLanguage alloc] initWithLanguage:[languageHelper language]];
         [languageView setDelegate:self];
         [self.navigationController pushViewController:languageView animated:YES];
-    } else if(section == 1) {
+    } else if(section == kAboutSection) {
         About *about = [[About alloc] init];
         [self.navigationController pushViewController:about animated:YES];
     }
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSUInteger section = [indexPath section];
     
-    if (section == 0) {
+    if (section == kLanguageSection) {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kRowIdentifierLanguage];
         if(cell == nil) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kRowIdentifierLanguage];
@@ -121,14 +131,14 @@
         
         return cell;
     }
-    else if (section == 1) {
+    else if (section == kAboutSection) {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kRowIdentifierAbout];
         if(cell == nil) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kRowIdentifierAbout];
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         }
         
-        cell.textLabel.text = [languageHelper localizedString:@"About"];
+        cell.textLabel.text = [languageHelper localizedString:kAboutTitle];
         
         return cell;
     }
@@ -150,7 +160,6 @@
 - (void) languageChanged {
     self.navigationItem.title = [languageHelper localizedString:kTitle];
     self.title = [languageHelper localizedString:kTitle];
-    self.tabBarItem.title = [languageHelper localizedString:kTitle];
 }
 
 @end

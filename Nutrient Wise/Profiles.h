@@ -15,7 +15,7 @@
 @interface Profiles : UIViewController <UITableViewDelegate, UITableViewDataSource, ProfileSelectionDelegate, ChangeLanguage>
 
 @property (strong, nonatomic) IBOutlet UITableView *table;
-@property (strong, nonatomic) IBOutlet UILabel *profileInformation;
+@property (strong, nonatomic) IBOutlet UITextView *profileInformation;
 @property (strong, nonatomic) LanguageHelper *languageHelper;
 @property (strong, nonatomic) ProfileHelper *profileHelper;
 @property (strong, nonatomic) Finder *finder;

@@ -10,7 +10,6 @@
 
 @implementation ProfilesController
 
-@synthesize languageHelper;
 @synthesize finder;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -35,15 +34,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    languageHelper =[LanguageHelper sharedInstance];
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+    
+    finder = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

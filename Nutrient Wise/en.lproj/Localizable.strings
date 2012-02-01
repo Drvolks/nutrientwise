@@ -20,9 +20,9 @@
 "diabete" = "Diabetes";
 
 /* description profiles */
-"rein Desc" = "Renal Insufficiency: TODO";
-"generic Desc" = "Generic: TODO";
-"diabete Desc" = "Diabetes: TODO";
+"rein Desc" = "The renal insufficiency profile displays the nutritive values that usually matters for a person suffering from renal insufficiency:\n\n    - The magnesium,\n    - The moisture,\n    - The phosphorus,\n    - The potassium,\n    - The proteins,\n    - And the sodium\n\nThe nutritive values from the generic profile are displayed on a separate section for a quick look and, also, all the available nutritive values are just a touch away.\n\nAlways consult a doctor to know what's important to your situation.";
+"generic Desc" = "The generic profile displays the most common nutritive values, as they are seen on the nutritive facts of the food packagings.\n\nAlso, all the available nutritive values are just a touch away.";
+"diabete Desc" = "The diabetes profile displays the nutritive values that usually matters for a person suffering from diabetes:\n\n    - The carbohydrates,\n    - The fibers,\n    - And the sugars\n\nThe nutritive values from the generic profile are displayed on a separate section for a quick look and, also, all the available nutritive values are just a touch away.\n\nAlways consult a doctor to know what's important to your situation.";
 
 /* langues */
 "fr" = "Français";
@@ -30,6 +30,6 @@
 
 /* about */
 "About" = "About";
-"About Us" = "Nutrient Wise is a creation of Consultation Massawippi inc. Visit us at http://www.consultationmassawippi.ca";
-"About Data" = "Adapted from: Canadian Nutrient File, Health Canada, 2010 (electronic version at www.healthcanada.gc.ca/cnf)";
+"About Us" = "Nutrient Wise is a creation of Consultation Massawippi inc. Visit us at http://nutrientwise.massawippiconsulting.ca";
+"About Data" = "The data is adapted from: Canadian Nutrient File, Health Canada, 2010 (electronic version at www.healthcanada.gc.ca/cnf)";
 "About Tab Icons" = "The tab icons are provided by Glyphish. Visit them at http://glyphish.com/";

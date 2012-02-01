@@ -13,6 +13,5 @@
 @interface ProfilesController : UINavigationController
 
 @property (strong, nonatomic) Finder *finder;
-@property (strong, nonatomic) LanguageHelper *languageHelper;
 
 @end

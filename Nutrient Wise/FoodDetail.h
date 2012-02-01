@@ -27,7 +27,6 @@
 @property (strong, nonatomic) ProfileHelper *profileHelper;
 @property (strong, nonatomic) FavoriteHelper *favoriteHelper;
 @property (strong, nonatomic) ConversionFactor *selectedConversionFactor;
-@property (nonatomic) BOOL cellNibLoaded;
 @property (strong, nonatomic) CellHelper *cellHelper;
 
 - (id)initWithFood:(FoodName *)foodEntity;
@@ -35,5 +34,6 @@
 - (NSArray *) nutritiveValues:(NSArray *)keys;
 - (void) prepareDisplay;
 - (NSArray *) cleanGenericValues:(NSArray *) allKeys;
+- (ConversionFactor *) pickAConversionFactor:(NSSet *)conversionFactors;
 
 @end

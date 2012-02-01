@@ -12,6 +12,7 @@
 #import "ArrayHelper.h"
 #import "AppDelegate.h"
 
+#define kDebug NO
 #define kRowIdentifier @"rowIdentifier"
 #define kTitle @"Favorites"
 #define kEdit @"Edit"
@@ -50,10 +51,10 @@
 {
     [super viewDidLoad];
     
-    favoriteHelper = [[FavoriteHelper alloc] init];
+    favoriteHelper = [FavoriteHelper sharedInstance];
     languageHelper = [LanguageHelper sharedInstance];
-    cellHelper = [[CellHelper alloc] init];
-    arrayHelper = [[ArrayHelper alloc] init];
+    cellHelper = [CellHelper sharedInstance];
+    arrayHelper = [ArrayHelper sharedInstance];
     
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [appDelegate registerLanguageDelegate:self];
@@ -71,10 +72,14 @@
     NSArray *favoriteIds = [[self.favoriteHelper favotiteFoodIds] allValues];
     NSMutableArray *favoriteEntities = [[NSMutableArray alloc] init];
     
-    NSLog(@"ids = %@", favoriteIds);
+    if(kDebug) {
+        NSLog(@"ids = %@", favoriteIds);
+    }
     
     for(NSNumber *favorite in favoriteIds) {
-        NSLog(@"search for %@", favorite);
+        if(kDebug) {
+            NSLog(@"search for %@", favorite);
+        }
         FoodName *food = [finder getFoodName:favorite];
         if(food) {
             [favoriteEntities addObject:food];
@@ -90,8 +95,14 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+    
+    favoriteHelper = nil;
+    table = nil;
+    favorites = nil;
+    finder = nil;
+    languageHelper = nil;
+    cellHelper = nil;
+    arrayHelper = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -141,7 +152,6 @@
     [self.navigationItem.rightBarButtonItem setTitle:[languageHelper localizedString:kEdit]];
     
     self.title = [languageHelper localizedString:kTitle];
-    self.tabBarItem.title = [languageHelper localizedString:kTitle];
 }
 
 @end

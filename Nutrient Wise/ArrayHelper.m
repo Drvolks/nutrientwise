@@ -10,6 +10,15 @@
 
 @implementation ArrayHelper
 
+static ArrayHelper *instance = nil;
+
++ (id) sharedInstance {
+    if(instance == nil) {
+        instance = [[super allocWithZone:NULL] init];
+    }
+    
+    return instance;
+}
 
 -(NSArray *) sort:(NSArray *)array key:(NSString *)sortKey ascending:(BOOL)pAscending {
     

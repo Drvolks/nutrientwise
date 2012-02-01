@@ -15,11 +15,18 @@
 #define kDiabeteProfileValues @"CARB,TDF,TSUG"
 #define kGenericProfileValues @"KCAL,FAT,TSAT,TRFA,CHOL,NA,CARB,TDF,TSUG,PROT"
 #define kProfileSetting @"profile"
+#define kSeparator @","
 
 @implementation ProfileHelper
 
-- (id) init {
-    return self;
+static ProfileHelper *instance = nil;
+
++ (id) sharedInstance {
+    if(instance == nil) {
+        instance = [[super allocWithZone:NULL] init];
+    }
+    
+    return instance;
 }
 
 - (NSArray *) nutritiveSymbolsForProfile:(NSString *)profile {
@@ -31,7 +38,7 @@
         stringResult = kDiabeteProfileValues;
     }
     
-    NSArray *result = [stringResult componentsSeparatedByString:@","];
+    NSArray *result = [stringResult componentsSeparatedByString:kSeparator];
     return result;
 }
 

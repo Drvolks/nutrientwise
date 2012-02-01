@@ -9,17 +9,29 @@
 #import "FavoriteHelper.h"
 #import "Measure.h"
 
+#define kDebug NO
 #define kFoodFavorites @"favorites"
 #define kConversionFactorFavorites @"conversionFactors"
 #define kFoodIdColumn @"foodId"
 #define kMeasureIdColumn @"measureId"
 #define kMeasureAttribute @"maesure"
-#define kDebug YES
+#define kPreferenceName @"NutientWisePref"
+#define kPreferenceExt @"plist"
 
 @implementation FavoriteHelper
 
+static FavoriteHelper *instance = nil;
+
++ (id) sharedInstance {
+    if(instance == nil) {
+        instance = [[self allocWithZone:NULL] init];
+    }
+    
+    return instance;
+}
+
 - (id) init {
-    NSString *userDefaultsValuesPath=[[NSBundle mainBundle] pathForResource:@"NutientWisePref" ofType:@"plist"];
+    NSString *userDefaultsValuesPath=[[NSBundle mainBundle] pathForResource:kPreferenceName ofType:kPreferenceExt];
     NSDictionary *userDefaultsValuesDict=[NSDictionary dictionaryWithContentsOfFile:userDefaultsValuesPath];
     
     // set them in the standard user defaults

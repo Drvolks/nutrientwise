@@ -9,13 +9,21 @@
 #import "SearchController.h"
 #import "Search.h"
 
-#define kDebug YES
+#define kDebug NO
 #define kMainNib @"TabBarController"
-#define kDatabase @"DATA_v1.3.sqlite"
-#define kDatabaseFileName @"DATA_v1.3"
+#define kDatabase @"DATA_v1.4.sqlite"
+#define kDatabaseFileName @"DATA_v1.4"
 #define kDatabaseFileExt @"sqlite"
 #define kModelFileName @"Model"
 #define kModelFileExt @"mom"
+#define kSearchTitle @"Search"
+#define kFavoriteTitle @"Favorites"
+#define kProfileTitle @"Profile"
+#define kSettingsTitle @"Settings"
+#define kSearchTab 0
+#define kFavoriteTab 1
+#define kProfileTab 2
+#define kSettingsTab 3
 
 @implementation AppDelegate
 
@@ -46,11 +54,13 @@
     [self.window addSubview:rootController.view];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    [self setTabLabels];
 }
 
 - (void) setup {
     languageHelper = [LanguageHelper sharedInstance];
-    profileHelper = [[ProfileHelper alloc] init];
+    profileHelper = [ProfileHelper sharedInstance];
     languageDelegates = [[NSMutableArray alloc] init];
     
     if([languageHelper language] == nil) {
@@ -227,8 +237,28 @@
         [delegate languageChanged];
     }
     
+    [self setTabLabels];
+}
+
+- (void) setTabLabels {
     for(UITabBarItem *item in rootController.tabBar.items) {
-        // change their names
+        switch (item.tag) {
+            case kSearchTab:
+                item.title = [languageHelper localizedString:kSearchTitle];
+                break;
+            case kFavoriteTab:
+                item.title = [languageHelper localizedString:kFavoriteTitle];
+                break;
+            case kProfileTab:
+                item.title = [languageHelper localizedString:kProfileTitle];
+                break;
+            case kSettingsTab:
+                item.title = [languageHelper localizedString:kSettingsTitle];
+                break;
+                
+            default:
+                break;
+        }
     }
 }
 

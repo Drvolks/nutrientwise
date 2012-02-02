@@ -11,9 +11,11 @@
 #define kGenericProfile @"generic"
 #define kRenalProfile @"rein"
 #define kDiabeteProfile @"diabete"
+#define kLipideProfile @"lipide"
 #define kRenalProfileValues @"PROT,H2O,K,P,NA,MG"
-#define kDiabeteProfileValues @"CARB,TDF,TSUG"
+#define kDiabeteProfileValues @"TDF,TSUG,STAR"
 #define kGenericProfileValues @"KCAL,FAT,TSAT,TRFA,CHOL,NA,CARB,TDF,TSUG,PROT"
+#define kLipideProfileValues @"CHOL,TRFA,MUFA,PUFA,TSAT,FAT"
 #define kProfileSetting @"profile"
 #define kSeparator @","
 
@@ -36,6 +38,8 @@ static ProfileHelper *instance = nil;
         stringResult = kRenalProfileValues;
     } else if([profile isEqualToString:kDiabeteProfile]) {
         stringResult = kDiabeteProfileValues;
+    } else if([profile isEqualToString:kLipideProfile]) {
+        stringResult = kLipideProfileValues;
     }
     
     NSArray *result = [stringResult componentsSeparatedByString:kSeparator];
@@ -60,6 +64,7 @@ static ProfileHelper *instance = nil;
     [profiles addObject:kGenericProfile];
     [profiles addObject:kRenalProfile];
     [profiles addObject:kDiabeteProfile];
+    [profiles addObject:kLipideProfile];
     
     return profiles;
 }

@@ -153,7 +153,9 @@
 - (void) languageChanged {
     self.title = [languageHelper localizedString:kTitle];
     
+    searchBar.text = kClearSearchBar;
     [self resetSearch];
+    [resultTable reloadData];
 }
 
 @end

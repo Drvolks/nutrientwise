@@ -10,9 +10,8 @@
 #import "AppDelegate.h"
 
 #define kTitle @"About"
-#define kAboutUs @"About Us"
-#define kAboutMore @"About More"
-#define kSpaces @"\n\n"
+#define kAboutHtmlFile @"about-"
+#define kHtmlExt @"html"
 
 @implementation About
 
@@ -69,10 +68,23 @@
 - (void) languageChanged {
     self.title = [languageHelper localizedString:kTitle];
     
-    NSString *text = [languageHelper localizedString:kAboutUs];
-    text = [text stringByAppendingString:kSpaces];
-    text = [text stringByAppendingString:[languageHelper localizedString:kAboutMore]];
-    about.text = text;
+    NSString *htmlFile = [[NSBundle mainBundle] pathForResource:[kAboutHtmlFile stringByAppendingString:[languageHelper language]] ofType:kHtmlExt inDirectory:nil];
+
+    
+    NSString* htmlString = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
+    [about loadHTMLString:htmlString baseURL:nil];
+    
+    about.backgroundColor = [UIColor clearColor];
+    [about setOpaque:NO];
+}
+
+-(BOOL) webView:(UIWebView *)inWeb shouldStartLoadWithRequest:(NSURLRequest *)inRequest navigationType:(UIWebViewNavigationType)inType {
+    if ( inType == UIWebViewNavigationTypeLinkClicked ) {
+        [[UIApplication sharedApplication] openURL:[inRequest URL]];
+        return NO;
+    }
+    
+    return YES;
 }
 
 @end

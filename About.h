@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "LanguageHelper.h"
 
-@interface About : UIViewController <ChangeLanguage>
+@interface About : UIViewController <ChangeLanguage, UIWebViewDelegate>
 
-@property (strong, nonatomic) IBOutlet UITextView *about;
+@property (strong, nonatomic) IBOutlet UIWebView *about;
 @property (strong, nonatomic) LanguageHelper *languageHelper;
 
 @end

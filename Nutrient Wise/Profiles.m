@@ -150,6 +150,8 @@
     self.title = [languageHelper localizedString:kTitle];
     
     [self displayProfileInformation];
+    
+    [table reloadData];
 }
 
 @end

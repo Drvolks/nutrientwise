@@ -9,6 +9,7 @@
 #import "ProfileSelection.h"
 
 #define kRowIdentifier @"rowIdentifier"
+#define kSortKey @""
 
 @implementation ProfileSelection
 
@@ -17,6 +18,7 @@
 @synthesize delegate;
 @synthesize profileHelper;
 @synthesize selectedProfile;
+@synthesize arrayHelper;
 
 - (id) initWithProfile:(NSString *)pSelectedProfile {
     selectedProfile = pSelectedProfile;
@@ -49,8 +51,11 @@
     
     languageHelper = [LanguageHelper sharedInstance];
     profileHelper = [ProfileHelper sharedInstance];
+    arrayHelper = [ArrayHelper sharedInstance];
     
     profiles = [profileHelper supportedProfiles];
+    
+    profiles = [profiles sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
 }
 
 - (void)viewDidUnload

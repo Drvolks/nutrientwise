@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "LanguageHelper.h"
 #import "ProfileHelper.h"
+#import "ArrayHelper.h"
 
 @protocol ProfileSelectionDelegate <NSObject>
 - (void) profileSelected:(NSString *) profile;
@@ -23,5 +24,6 @@
 @property (strong, nonatomic) LanguageHelper *languageHelper;
 @property (nonatomic, assign) id  <ProfileSelectionDelegate> delegate;  
 @property (strong, nonatomic) ProfileHelper *profileHelper;
+@property (strong, nonatomic) ArrayHelper *arrayHelper;
 
 @end

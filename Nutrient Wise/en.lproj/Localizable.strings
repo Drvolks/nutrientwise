@@ -18,14 +18,16 @@
 "firstViewButton" = "Ok";
 
 /* profiles */
-"rein" = "Renal Insufficiency";
+"rein" = "Kidney Disease";
 "generic" = "Generic";
 "diabete" = "Diabetes";
+"lipide" = "Lipids";
 
 /* description profiles */
-"rein Desc" = "The renal insufficiency profile displays the nutritive values that usually matters for a person suffering from renal insufficiency:\n\n    - The magnesium,\n    - The moisture,\n    - The phosphorus,\n    - The potassium,\n    - The proteins,\n    - And the sodium\n\nThe nutritive values from the generic profile are displayed on a separate section for a quick look and, also, all the available nutritive values are just a touch away.\n\nAlways consult a doctor to know what's important to your situation.";
+"rein Desc" = "The kidney disease profile displays the nutritive values that usually matters for a person suffering from chronic kidney disease:\n\n    - The magnesium,\n    - The moisture,\n    - The phosphorus,\n    - The potassium,\n    - The proteins,\n    - And the sodium\n\nThe nutritive values from the generic profile are displayed on a separate section for a quick look. All the available nutritive values are just a touch away.\n\nIt's important to consult a doctor to determine the diet that is the most appropriate to your situation.";
 "generic Desc" = "The generic profile displays the most common nutritive values, as they are seen on the nutritive facts of the food packagings.\n\nAlso, all the available nutritive values are just a touch away.";
-"diabete Desc" = "The diabetes profile displays the nutritive values that usually matters for a person suffering from diabetes:\n\n    - The carbohydrates,\n    - The fibers,\n    - And the sugars\n\nThe nutritive values from the generic profile are displayed on a separate section for a quick look and, also, all the available nutritive values are just a touch away.\n\nAlways consult a doctor to know what's important to your situation.";
+"diabete Desc" = "The diabetes profile displays the nutritive values that usually matters for a person suffering from diabetes:\n\n    - The carbohydrates,\n    - The starch,\n    - And the sugars\n\nThe nutritive values from the generic profile are displayed on a separate section for a quick look. All the available nutritive values are just a touch away.\n\nIt's important to consult a doctor to determine the diet that is the most appropriate to your situation.";
+"lipide Desc" = "The lipids profile displays the nutritive values that usually matters for a person who wants to control his weight or needs to watch his cholesterol:\n\n    - The cholesterol,\n    - The total fat (lipids),\n    - The monounsaturated fat,\n    - The polyunsaturated fat,\n    - The saturated fat,\n    - And the trans fat\n\nThe nutritive values from the generic profile are displayed on a separate section for a quick look. All the available nutritive values are just a touch away.\n\nIt's important to consult a doctor to determine the diet that is the most appropriate to your situation.";
 
 /* langues */
 "fr" = "Français";
@@ -33,5 +35,3 @@
 
 /* about */
 "About" = "About";
-"About Us" = "Nutrient Wise is a creation of Consultation Massawippi inc. Visit us at nutrientwise.massawippiconsulting.ca";
-"About More" = "The data is adapted from: Canadian Nutrient File, Health Canada, 2010 (electronic version at www.healthcanada.gc.ca/cnf)\n\nThe icons were created by The Working Group. Visit them at blog.twg.ca\n\nThe iCloud synchrinization was created by Mugunth Kumar. Visit his blog at blog.mugunthkumar.com";

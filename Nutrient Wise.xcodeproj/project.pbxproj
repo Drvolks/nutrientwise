@@ -52,7 +52,6 @@
 		6EAD166D14CC7DF500D82BFD /* Profiles.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EAD166B14CC7DF400D82BFD /* Profiles.xib */; };
 		6EAD167814CC93CF00D82BFD /* FoodDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD167614CC93CE00D82BFD /* FoodDetail.m */; };
 		6EAD167914CC93CF00D82BFD /* FoodDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EAD167714CC93CF00D82BFD /* FoodDetail.xib */; };
-		6EAD167B14CC9D8C00D82BFD /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6EAD167A14CC9D8C00D82BFD /* Settings.bundle */; };
 		6EAD167E14CCCE8900D82BFD /* LanguageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD167D14CCCE8800D82BFD /* LanguageHelper.m */; };
 		6EB9B2F614BA0AEB007C9666 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB9B2F514BA0AEB007C9666 /* UIKit.framework */; };
 		6EB9B2F814BA0AEB007C9666 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB9B2F714BA0AEB007C9666 /* Foundation.framework */; };
@@ -80,6 +79,8 @@
 		6EF19C5414DA01AB002790E7 /* HeaderCM@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EF19C5214DA01AB002790E7 /* HeaderCM@2x.png */; };
 		6EF19C5514DA01AB002790E7 /* HeaderCM.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EF19C5314DA01AB002790E7 /* HeaderCM.png */; };
 		6EF19C5914DA05B5002790E7 /* MKiCloudSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EF19C5814DA05B5002790E7 /* MKiCloudSync.m */; };
+		6EF19C6114DB46CF002790E7 /* about-fr.html in Resources */ = {isa = PBXBuildFile; fileRef = 6EF19C6014DB46CF002790E7 /* about-fr.html */; };
+		6EF19C6314DB4A23002790E7 /* about-en.html in Resources */ = {isa = PBXBuildFile; fileRef = 6EF19C6214DB4A23002790E7 /* about-en.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,7 +161,6 @@
 		6EAD167514CC93CE00D82BFD /* FoodDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodDetail.h; sourceTree = "<group>"; };
 		6EAD167614CC93CE00D82BFD /* FoodDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodDetail.m; sourceTree = "<group>"; };
 		6EAD167714CC93CF00D82BFD /* FoodDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodDetail.xib; sourceTree = "<group>"; };
-		6EAD167A14CC9D8C00D82BFD /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		6EAD167C14CCCE8800D82BFD /* LanguageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageHelper.h; sourceTree = "<group>"; };
 		6EAD167D14CCCE8800D82BFD /* LanguageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageHelper.m; sourceTree = "<group>"; };
 		6EB9B2F114BA0AEB007C9666 /* Nutrient Wise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nutrient Wise.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,6 +196,8 @@
 		6EF19C5714DA05B5002790E7 /* MKiCloudSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKiCloudSync.h; sourceTree = "<group>"; };
 		6EF19C5814DA05B5002790E7 /* MKiCloudSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKiCloudSync.m; sourceTree = "<group>"; };
 		6EF19C5F14DAAD25002790E7 /* Nutrient Wise.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Nutrient Wise.entitlements"; sourceTree = "<group>"; };
+		6EF19C6014DB46CF002790E7 /* about-fr.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "about-fr.html"; sourceTree = "<group>"; };
+		6EF19C6214DB4A23002790E7 /* about-en.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "about-en.html"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -392,6 +394,8 @@
 				6E81DCEB14D4A6CB00A680DE /* en.lproj */,
 				6EB9B2FD14BA0AEB007C9666 /* Nutrient Wise-Info.plist */,
 				6EB9B30114BA0AEB007C9666 /* main.m */,
+				6EF19C6014DB46CF002790E7 /* about-fr.html */,
+				6EF19C6214DB4A23002790E7 /* about-en.html */,
 				6EB9B30314BA0AEB007C9666 /* Nutrient Wise-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -420,7 +424,6 @@
 			isa = PBXGroup;
 			children = (
 				6E81DC8514CE336800A680DE /* Icons */,
-				6EAD167A14CC9D8C00D82BFD /* Settings.bundle */,
 				6E81DD7614D5CEDD00A680DE /* Model.xcdatamodel */,
 				6EF19C1E14D8AC49002790E7 /* DATA_v1.4.sqlite */,
 			);
@@ -513,7 +516,6 @@
 				6EAD166814CC7DE700D82BFD /* Settings.xib in Resources */,
 				6EAD166D14CC7DF500D82BFD /* Profiles.xib in Resources */,
 				6EAD167914CC93CF00D82BFD /* FoodDetail.xib in Resources */,
-				6EAD167B14CC9D8C00D82BFD /* Settings.bundle in Resources */,
 				6E81DC8414CE32D600A680DE /* About.xib in Resources */,
 				6E81DC9D14D0CBB000A680DE /* MeasureSelection.xib in Resources */,
 				6E81DCA214D0D58200A680DE /* AllNutritiveValues.xib in Resources */,
@@ -540,6 +542,8 @@
 				6EF19C5114D9F369002790E7 /* gear.png in Resources */,
 				6EF19C5414DA01AB002790E7 /* HeaderCM@2x.png in Resources */,
 				6EF19C5514DA01AB002790E7 /* HeaderCM.png in Resources */,
+				6EF19C6114DB46CF002790E7 /* about-fr.html in Resources */,
+				6EF19C6314DB4A23002790E7 /* about-en.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

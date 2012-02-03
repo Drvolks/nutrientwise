@@ -90,7 +90,8 @@
                 first = NO;
             }
             predicate = [predicate stringByAppendingString:[languageHelper nameColumn]];
-            predicate = [predicate stringByAppendingFormat:kContains, word];
+            NSString *filteredWord = [word stringByReplacingOccurrencesOfString:@"'" withString:@"\\'"];
+            predicate = [predicate stringByAppendingFormat:kContains, filteredWord];
         }
     }
         

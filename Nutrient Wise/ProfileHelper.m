@@ -13,7 +13,7 @@
 #define kDiabeteProfile @"diabete"
 #define kLipideProfile @"lipide"
 #define kRenalProfileValues @"PROT,H2O,K,P,NA,MG"
-#define kDiabeteProfileValues @"TDF,TSUG,STAR"
+#define kDiabeteProfileValues @"CARB,TSUG,STAR"
 #define kGenericProfileValues @"KCAL,FAT,TSAT,TRFA,CHOL,NA,CARB,TDF,TSUG,PROT"
 #define kLipideProfileValues @"CHOL,TRFA,MUFA,PUFA,TSAT,FAT"
 #define kProfileSetting @"profile"

@@ -44,10 +44,10 @@ static CellHelper *instance = nil;
     NutritiveValue *nutritiveValue = [nutritiveValues objectAtIndex:row];
     NutritiveName *nutritiveName = [nutritiveValue valueForKey:kNutritiveNameColumn];
     
+    NSString *name = [nutritiveName valueForKey:[languageHelper nameColumn]];
+    
     cell.textLabel.font = [UIFont systemFontOfSize:12];
-    //cell.textLabel.numberOfLines = 2;
-    //cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
-    cell.textLabel.text = [nutritiveName valueForKey:[languageHelper nameColumn]];
+    cell.textLabel.text = name;
     
     NSDecimalNumberHandler *roundingBehavior = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:NSRoundPlain scale:1 raiseOnExactness:FALSE raiseOnOverflow:TRUE raiseOnUnderflow:TRUE raiseOnDivideByZero:TRUE]; 
     
@@ -55,6 +55,7 @@ static CellHelper *instance = nil;
     if(conversionFactor != nil) {
         NSDecimalNumber *conversion = [conversionFactor valueForKey:kConversionFactorColumn];
         if(kDebug) {
+             NSLog(@"Nutriment %@", name);
             NSLog(@"Nutritive value is %@", value);
             NSLog(@"Conversion factor is %@", conversion);
         }

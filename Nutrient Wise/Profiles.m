@@ -14,6 +14,9 @@
 #define kProfileSection 0
 #define kNumberOfSections 1
 #define kProfileKeySuffix @" Desc"
+#define kFooter @"Profile Footer"
+#define kMyProfile @"My Profile"
+#define kSpacer @"\n\n"
 
 @implementation Profiles
 
@@ -90,7 +93,7 @@
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     switch (section) {
         case (0):
-            return [languageHelper localizedString:@"My Profile"];
+            return [languageHelper localizedString:kMyProfile];
             break;
     }
     return nil;
@@ -118,7 +121,8 @@
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         }
         
-        cell.textLabel.text = [languageHelper localizedString:[profileHelper selectedProfile]];
+        NSString *text = [languageHelper localizedString:[profileHelper selectedProfile]];
+        cell.textLabel.text = text;
         
         return cell;
     }
@@ -141,6 +145,8 @@
     NSString *profileDesc = [profile stringByAppendingString:kProfileKeySuffix];
     
     NSString *text = [languageHelper localizedString:profileDesc];
+    text = [text stringByAppendingString:kSpacer];
+    text = [text stringByAppendingString:[languageHelper localizedString:kFooter]];
     
     profileInformation.text = text;
 }

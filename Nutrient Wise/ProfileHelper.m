@@ -12,10 +12,14 @@
 #define kRenalProfile @"rein"
 #define kDiabeteProfile @"diabete"
 #define kLipideProfile @"lipide"
+#define kHypertensionProfile @"hypertension"
+#define kEnceinteProfile @"enceinte"
 #define kRenalProfileValues @"PROT,H2O,K,P,NA,MG"
 #define kDiabeteProfileValues @"CARB,TSUG,STAR"
 #define kGenericProfileValues @"KCAL,FAT,TSAT,TRFA,CHOL,NA,CARB,TDF,TSUG,PROT"
 #define kLipideProfileValues @"CHOL,TRFA,MUFA,PUFA,TSAT,FAT"
+#define kHypertensionProfileValues @"NA"
+#define kEnceinteProfileValues @"PROT,FE,CA,TDF"
 #define kProfileSetting @"profile"
 #define kSeparator @","
 
@@ -40,6 +44,10 @@ static ProfileHelper *instance = nil;
         stringResult = kDiabeteProfileValues;
     } else if([profile isEqualToString:kLipideProfile]) {
         stringResult = kLipideProfileValues;
+    } else if([profile isEqualToString:kHypertensionProfile]) {
+        stringResult = kHypertensionProfileValues;
+    } else if([profile isEqualToString:kEnceinteProfile]) {
+        stringResult = kEnceinteProfileValues;
     }
     
     NSArray *result = [stringResult componentsSeparatedByString:kSeparator];
@@ -65,6 +73,8 @@ static ProfileHelper *instance = nil;
     [profiles addObject:kRenalProfile];
     [profiles addObject:kDiabeteProfile];
     [profiles addObject:kLipideProfile];
+    [profiles addObject:kHypertensionProfile];
+    [profiles addObject:kEnceinteProfile];
     
     return profiles;
 }

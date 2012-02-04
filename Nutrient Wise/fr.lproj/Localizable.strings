@@ -22,12 +22,17 @@
 "generic" = "Generique";
 "diabete" = "Diabète";
 "lipide" = "Lipides";
+"hypertension" = "Hypertension";
+"enceinte" = "Femme enceinte";
 
 /* description profiles */
-"rein Desc" = "Le profil d'insuffisance rénale affiche les valeurs nutritives généralement les plus importantes à surveiller pour une personne soufrant d'insuffisance rénale chronique:\n\n    - L'eau,\n    - Le magnésium,\n    - Le phosphore,\n    - Le potassium\n    - Les protéines,\n    - Et le sodium\n\nLes valeurs nutritives du profil générique sont affichées dans une section distinte pour un coup d'oeil rapide. L'ensemble des valeurs nutritives sont aussi accessibles en un simple touché.\n\nIl est important de consulter votre médecin afin de déterminer la diète la mieux adaptée à vos besoins.";
+"rein Desc" = "Le profil d'insuffisance rénale affiche les valeurs nutritives généralement les plus importantes à surveiller pour une personne soufrant d'insuffisance rénale chronique:\n\n    - L'eau,\n    - Le magnésium,\n    - Le phosphore,\n    - Le potassium\n    - Les protéines,\n    - Et le sodium";
 "generic Desc" = "Le profil générique affiche les valeurs nutritives les plus communes telles que nous les retrouvons sur la fiche nutritive des emballages alimentaires.\n\L'ensemble des valeurs nutritives sont aussi accessibles en un simple touché.";
-"diabete Desc" = "Le profil diabète affiche les valeurs nutritives généralement les plus importantes à surveiller pour une personne diabétique:\n\n    - Les glucides\n    - L'amidon,\n    - Et les sucres\n\nLes valeurs nutritives du profil générique sont affichées dans une section distinte pour un coup d'oeil rapide. L'ensemble des valeurs nutritives sont aussi accessibles en un simple touché\n\nIl est important de consulter votre médecin afin de déterminer la diète la mieux adaptée à vos besoins.";
-"lipide Desc" = "Le profil lipides affiche les valeurs nutritives généralements les plus importantes pour les personnes qui désirent controller leur poids ou surveiller leur cholestérol:\n\n    - Le cholestérol,\n    - Les gras trans,\n    - Les gras monoinsaturés,\n    - Les gras polyinsaturés,\n    - Les gras saturés,\n    - Et les lipides totaux\n\nLes valeurs nutritives du profil générique sont affichées dans une section distinte pour un coup d'oeil rapide. L'ensemble des valeurs nutritives sont aussi accessibles en un simple touché.\n\nIl est important de consulter votre médecin afin de déterminer la diète la mieux adaptée à vos besoins.";
+"diabete Desc" = "Le profil diabète affiche les valeurs nutritives généralement les plus importantes à surveiller pour une personne diabétique:\n\n    - Les glucides\n    - L'amidon,\n    - Et les sucres";
+"lipide Desc" = "Le profil des lipides affiche les valeurs nutritives généralement les plus importantes pour une personne qui désire controller son poids ou surveiller son cholestérol:\n\n    - Le cholestérol,\n    - Les gras trans,\n    - Les gras monoinsaturés,\n    - Les gras polyinsaturés,\n    - Les gras saturés,\n    - Et les lipides totaux";
+"hypertension Desc" = "Le profil d'hypertension affiche les valeurs nutritives généralement les plus importantes à surveiller pour une personne souffrant d'hypertension:\n\n    - Le sodium";
+"enceinte Desc" = "Le profil femme enceinte affiche les valeurs nutritives généralement les plus importantes à surveiller pour une femme enceinte:\n\n    - Les protéines,\n    - Le fer,\n    - Le calcium,\n    - Et les fibres";
+"Profile Footer" = "Les valeurs nutritives du profil générique sont affichées dans une section distinte pour un coup d'oeil rapide. L'ensemble des valeurs nutritives sont aussi accessibles en un simple touché.\n\nIl est important de consulter votre médecin afin de déterminer la diète la mieux adaptée à vos besoins.";
 
 /* langues */
 "fr" = "Français";

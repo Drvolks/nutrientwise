@@ -264,8 +264,6 @@
 		6E81DC8514CE336800A680DE /* Icons */ = {
 			isa = PBXGroup;
 			children = (
-				6E81DD4D14D5BCBF00A680DE /* NutrientWise_114.png */,
-				6E81DD4B14D5BCB500A680DE /* NutrientWise_57.png */,
 				6EF19C3814D9EEA9002790E7 /* favorite_remove.png */,
 				6EF19C3914D9EEA9002790E7 /* favorite_add.png */,
 				6EE9EB3B14DCAFA800F8ABC5 /* iTunesArtwork */,
@@ -306,6 +304,8 @@
 		6EB9B2E614BA0AEB007C9666 = {
 			isa = PBXGroup;
 			children = (
+				6E81DD4D14D5BCBF00A680DE /* NutrientWise_114.png */,
+				6E81DD4B14D5BCB500A680DE /* NutrientWise_57.png */,
 				6EF19C5614DA059C002790E7 /* external */,
 				6EB9B35914BA1777007C9666 /* Resources */,
 				6EB9B2FB14BA0AEB007C9666 /* Nutrient Wise */,
@@ -714,6 +714,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Nutrient Wise/Nutrient Wise.entitlements";
+				COMPRESS_PNG_FILES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
 				INFOPLIST_FILE = "Nutrient Wise/Nutrient Wise-Info.plist";
@@ -727,6 +728,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Nutrient Wise/Nutrient Wise.entitlements";
+				COMPRESS_PNG_FILES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
 				INFOPLIST_FILE = "Nutrient Wise/Nutrient Wise-Info.plist";
@@ -798,6 +800,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Nutrient Wise/Nutrient Wise.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jean-Francois Dufour";
+				COMPRESS_PNG_FILES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
 				INFOPLIST_FILE = "Nutrient Wise/Nutrient Wise-Info.plist";

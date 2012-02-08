@@ -10,10 +10,6 @@
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFiles</key>
 	<array>
-		<string>dining_114.png</string>
-		<string>dining_57.png</string>
-		<string>dining_57.png</string>
-		<string>dining_114.png</string>
 		<string>NutrientWise_57.png</string>
 		<string>NutrientWise_114.png</string>
 	</array>
@@ -23,10 +19,6 @@
 		<dict>
 			<key>CFBundleIconFiles</key>
 			<array>
-				<string>dining_114.png</string>
-				<string>dining_57.png</string>
-				<string>dining_57.png</string>
-				<string>dining_114.png</string>
 				<string>NutrientWise_57.png</string>
 				<string>NutrientWise_114.png</string>
 			</array>

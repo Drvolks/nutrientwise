@@ -75,7 +75,7 @@ static CellHelper *instance = nil;
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:rowIdentifier];
         cell.textLabel.font = [UIFont systemFontOfSize:12];
         cell.textLabel.numberOfLines = 2;
-        cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
+        cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     

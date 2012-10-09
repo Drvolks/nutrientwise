@@ -12,6 +12,7 @@
 		6E417F3B14BE50B000F2A2AC /* Finder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E417F3A14BE50B000F2A2AC /* Finder.m */; };
 		6E528B8F14CDA01800712D87 /* ProfileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E528B8E14CDA01800712D87 /* ProfileHelper.m */; };
 		6E528B9314CDA9FD00712D87 /* FavoriteHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E528B9214CDA9FD00712D87 /* FavoriteHelper.m */; };
+		6E6F3FAE1624D43300457BE9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E6F3FAD1624D43300457BE9 /* Default-568h@2x.png */; };
 		6E740AEA14C7761E007A0C72 /* TabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E740AE814C7761E007A0C72 /* TabBarController.xib */; };
 		6E740AEF14C77964007A0C72 /* Search.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E740AED14C77964007A0C72 /* Search.m */; };
 		6E740AF014C77964007A0C72 /* Search.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E740AEE14C77964007A0C72 /* Search.xib */; };
@@ -104,6 +105,7 @@
 		6E528B8E14CDA01800712D87 /* ProfileHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileHelper.m; sourceTree = "<group>"; };
 		6E528B9114CDA9FD00712D87 /* FavoriteHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteHelper.h; sourceTree = "<group>"; };
 		6E528B9214CDA9FD00712D87 /* FavoriteHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteHelper.m; sourceTree = "<group>"; };
+		6E6F3FAD1624D43300457BE9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		6E740AE814C7761E007A0C72 /* TabBarController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabBarController.xib; sourceTree = "<group>"; };
 		6E740AEC14C77964007A0C72 /* Search.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Search.h; sourceTree = "<group>"; };
 		6E740AED14C77964007A0C72 /* Search.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Search.m; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 		6EB9B2E614BA0AEB007C9666 = {
 			isa = PBXGroup;
 			children = (
+				6E6F3FAD1624D43300457BE9 /* Default-568h@2x.png */,
 				6E81DD4D14D5BCBF00A680DE /* NutrientWise_114.png */,
 				6E81DD4B14D5BCB500A680DE /* NutrientWise_57.png */,
 				6EF19C5614DA059C002790E7 /* external */,
@@ -548,6 +551,7 @@
 				6EF19C6314DB4A23002790E7 /* about-en.html in Resources */,
 				6EE9EB3414DC786A00F8ABC5 /* DATA_v1.5.sqlite in Resources */,
 				6EE9EB3C14DCAFA800F8ABC5 /* iTunesArtwork in Resources */,
+				6E6F3FAE1624D43300457BE9 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -668,7 +672,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jean-Francois Dufour (7XPDQ77MET)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jean-Francois Dufour (7XPDQ77MET)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -684,7 +689,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "Nutrient Wise";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "AB14DD42-80EF-4338-A0DF-49E470FACD43";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "AB14DD42-80EF-4338-A0DF-49E470FACD43";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -695,6 +701,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -705,6 +712,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PRODUCT_NAME = "Nutrient Wise";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -714,12 +722,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Nutrient Wise/Nutrient Wise.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jean-Francois Dufour (7XPDQ77MET)";
 				COMPRESS_PNG_FILES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
 				INFOPLIST_FILE = "Nutrient Wise/Nutrient Wise-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "Nutrient Wise";
+				PROVISIONING_PROFILE = "AB14DD42-80EF-4338-A0DF-49E470FACD43";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -728,12 +738,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Nutrient Wise/Nutrient Wise.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COMPRESS_PNG_FILES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
 				INFOPLIST_FILE = "Nutrient Wise/Nutrient Wise-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "Nutrient Wise";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -778,7 +790,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Jean-Francois Dufour";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jean-Francois Dufour";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -789,6 +801,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PRODUCT_NAME = "Nutrient Wise";
+				PROVISIONING_PROFILE = "A6E24E4B-EBA4-4D99-9B78-1BD4254CF786";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0DE291F3-0C9E-49E0-AE9F-15178B5BF884";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -799,6 +812,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Nutrient Wise/Nutrient Wise.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jean-Francois Dufour";
 				COMPRESS_PNG_FILES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -806,6 +820,7 @@
 				INFOPLIST_FILE = "Nutrient Wise/Nutrient Wise-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "Nutrient Wise";
+				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A6E24E4B-EBA4-4D99-9B78-1BD4254CF786";
 				WRAPPER_EXTENSION = app;
 			};

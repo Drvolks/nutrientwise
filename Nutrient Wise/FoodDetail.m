@@ -138,7 +138,7 @@
     UILabel *navigationLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 180, 30)];
     navigationLabel.text = [foodName valueForKey:[languageHelper nameColumn]];
     navigationLabel.font = [UIFont systemFontOfSize:12];
-    navigationLabel.lineBreakMode = UILineBreakModeWordWrap;
+    navigationLabel.lineBreakMode = NSLineBreakByWordWrapping;
     navigationLabel.numberOfLines = 2;
     [navigationLabel setBackgroundColor:[UIColor clearColor]];
 	[navigationLabel setTextColor:[UIColor whiteColor]];

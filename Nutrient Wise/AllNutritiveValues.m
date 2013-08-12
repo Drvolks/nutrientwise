@@ -30,7 +30,8 @@
 @synthesize keys;
 @synthesize nutritiveValuesIndex;
 
-- (id) initWithFoodName:(FoodName *)food:(ConversionFactor *) conversionFactor {
+- (id) initWithFoodName:(FoodName *)food
+                       conversionFactor:(ConversionFactor *) conversionFactor {
     foodName = food;
     selectedConversionFactor = conversionFactor;
     NSSet *nutritiveValueEntities = [foodName valueForKey:kNutritiveValuesAttribute];    
@@ -143,7 +144,7 @@
     NSString *key = [keys objectAtIndex:section];
     NSArray *nutientInSection = [nutritiveValuesIndex objectForKey:key];
     
-    return [cellHelper makeNutientValueCell:tableView :kRowIdentifier :nutientInSection :indexPath :selectedConversionFactor];
+    return [cellHelper makeNutientValueCell:tableView rowIdentifier:kRowIdentifier nutritiveValues:nutientInSection indexPath:indexPath conversionFactor:selectedConversionFactor];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

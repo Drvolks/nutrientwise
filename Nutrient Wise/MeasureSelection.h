@@ -21,6 +21,7 @@
 @property (strong, nonatomic) LanguageHelper *languageHelper;
 @property (nonatomic, assign) id  <MeasureSelectionDelegate> delegate;  
 
-- (id) initWithConversionFactors:(NSArray *) pConversionFactors:(ConversionFactor *)pSelectedConversionFactor;
+- (id) initWithConversionFactors:(NSArray *) pConversionFactors
+                                selectedConversionFactor:(ConversionFactor *)pSelectedConversionFactor;
 
 @end

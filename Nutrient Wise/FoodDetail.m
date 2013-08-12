@@ -140,8 +140,8 @@
     navigationLabel.font = [UIFont systemFontOfSize:12];
     navigationLabel.lineBreakMode = NSLineBreakByWordWrapping;
     navigationLabel.numberOfLines = 2;
-    [navigationLabel setBackgroundColor:[UIColor clearColor]];
-	[navigationLabel setTextColor:[UIColor whiteColor]];
+    //[navigationLabel setBackgroundColor:[UIColor clearColor]];
+	//[navigationLabel setTextColor:[UIColor whiteColor]];
     self.navigationItem.titleView = navigationLabel;
     
     BOOL isFavorite = [favoriteHelper isFavorite:foodName];
@@ -266,10 +266,10 @@
         return cell;
     }
     else if(section == kFirstNutritiveValuesSection) {
-        return [cellHelper makeNutientValueCell:tableView :kRowIdentifierNutient :nutritiveValues :indexPath :selectedConversionFactor];
+        return [cellHelper makeNutientValueCell:tableView rowIdentifier:kRowIdentifierNutient nutritiveValues:nutritiveValues indexPath:indexPath conversionFactor:selectedConversionFactor];
     } 
     else if(section == genericSection) {
-        return [cellHelper makeNutientValueCell:tableView :kRowIdentifierNutient :genericValues :indexPath :selectedConversionFactor];
+        return [cellHelper makeNutientValueCell:tableView rowIdentifier:kRowIdentifierNutient nutritiveValues:genericValues indexPath:indexPath conversionFactor:selectedConversionFactor];
     }
     else if(section == allSection) {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kRowIdentifierAll];
@@ -371,12 +371,12 @@
     
     if(section == kMeasureSection && selectedConversionFactor != nil) {
         NSSet *conversionFactors = [foodName valueForKey:kConversionFactorsAttribute];
-        MeasureSelection *measureSelectionView = [[MeasureSelection alloc] initWithConversionFactors:[conversionFactors allObjects]:selectedConversionFactor];
+        MeasureSelection *measureSelectionView = [[MeasureSelection alloc] initWithConversionFactors :[conversionFactors allObjects]selectedConversionFactor:selectedConversionFactor];
         [measureSelectionView setDelegate:self];
         [self.navigationController pushViewController:measureSelectionView animated:YES];
     }
     else if(section == allSection) {
-        AllNutritiveValues *allView = [[AllNutritiveValues alloc] initWithFoodName:foodName :selectedConversionFactor];
+        AllNutritiveValues *allView = [[AllNutritiveValues alloc] initWithFoodName:foodName conversionFactor:selectedConversionFactor];
         [self.navigationController pushViewController:allView animated:YES];
         allView = nil;
     }
@@ -387,7 +387,7 @@
 - (void) conversionFactorSelected:(ConversionFactor *) conversionFactor {
     selectedConversionFactor = conversionFactor;
     
-    [favoriteHelper addConversionToFavorite:conversionFactor :foodName];
+    [favoriteHelper addConversionToFavorite:conversionFactor foodName:foodName];
     
     [table reloadData];
 }

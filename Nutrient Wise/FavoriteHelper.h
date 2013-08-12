@@ -19,7 +19,8 @@
 - (NSMutableDictionary *) favotiteFoodIds;
 - (void) removeFavorite:(FoodName *) foodName;
 - (BOOL) isFavorite:(FoodName *) foodName;
-- (void) addConversionToFavorite:(ConversionFactor *)conversionFactor:(FoodName *)foodName;
+- (void) addConversionToFavorite:(ConversionFactor *)conversionFactor
+                                foodName:(FoodName *)foodName;
 - (NSNumber *) favoriteConversionMeasure:(FoodName *) foodName;
 
 @end

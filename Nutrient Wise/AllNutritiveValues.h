@@ -24,7 +24,8 @@
 @property (strong, nonatomic) CellHelper *cellHelper;
 @property (strong, nonatomic) NSMutableArray *keys;
 
-- (id) initWithFoodName:(FoodName *) food:(ConversionFactor *) conversionFactor;
+- (id) initWithFoodName:(FoodName *) food
+                       conversionFactor:(ConversionFactor *) conversionFactor;
 - (void) buildIndex;
 
 @end

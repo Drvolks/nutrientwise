@@ -101,7 +101,8 @@ static FavoriteHelper *instance = nil;
     return NO;
 }
 
-- (void) addConversionToFavorite:(ConversionFactor *)conversionFactor:(FoodName *)foodName {
+- (void) addConversionToFavorite:(ConversionFactor *)conversionFactor
+                                foodName:(FoodName *)foodName {
     NSUserDefaults *pref = [NSUserDefaults standardUserDefaults];
     
     NSMutableDictionary *favorites = [self favotiteIds:kConversionFactorFavorites];

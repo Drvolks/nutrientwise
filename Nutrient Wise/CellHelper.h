@@ -16,7 +16,14 @@
 @property (strong, nonatomic) LanguageHelper *languageHelper;
 
 + (id) sharedInstance;
-- (UITableViewCell *) makeNutientValueCell:(UITableView *) table:(NSString *) rowIdentifier:(NSArray *) nutritiveValues:(NSIndexPath *) indexPath:(ConversionFactor *) conversionFactor;
-- (UITableViewCell *) makeFoodNameCell:(UITableView *) table:(NSString *)rowIdentifier:(NSIndexPath *)indexPath:(NSArray *) searchResults;
+- (UITableViewCell *) makeNutientValueCell:(UITableView *) table
+                             rowIdentifier:(NSString *) rowIdentifier
+                             nutritiveValues:(NSArray *) nutritiveValues
+                             indexPath:(NSIndexPath *) indexPath
+                             conversionFactor:(ConversionFactor *) conversionFactor;
+- (UITableViewCell *) makeFoodNameCell:(UITableView *) table
+                             rowIdentifier:(NSString *)rowIdentifier
+                             indexPath:(NSIndexPath *)indexPath
+                             searchResults:(NSArray *) searchResults;
 
 @end

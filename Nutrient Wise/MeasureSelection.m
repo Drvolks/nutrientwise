@@ -22,7 +22,8 @@
 @synthesize languageHelper;
 @synthesize delegate;
 
-- (id) initWithConversionFactors:(NSArray *) pConversionFactors:(ConversionFactor *)pSelectedConversionFactor {
+- (id) initWithConversionFactors:(NSArray *) pConversionFactors
+        selectedConversionFactor:(ConversionFactor *)pSelectedConversionFactor {
     conversionFactors = pConversionFactors;
     selectedConversionFactor = pSelectedConversionFactor;
     

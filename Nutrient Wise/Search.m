@@ -93,7 +93,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {    
-    return [cellHelper makeFoodNameCell:tableView :kRowIdentifier :indexPath :searchResults];
+    return [cellHelper makeFoodNameCell:tableView rowIdentifier:kRowIdentifier indexPath:indexPath searchResults:searchResults];
 }
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -116,7 +116,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [cellHelper makeFoodNameCell:tableView :kRowIdentifier :indexPath :favorites];
+    return [cellHelper makeFoodNameCell:tableView rowIdentifier:kRowIdentifier indexPath:indexPath searchResults:favorites];
 }
 
 - (IBAction)toggleEdit:(id)sender {

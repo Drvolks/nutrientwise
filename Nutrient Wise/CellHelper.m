@@ -36,7 +36,11 @@ static CellHelper *instance = nil;
     return self;
 }
 
-- (UITableViewCell *) makeNutientValueCell:(UITableView *) table:(NSString *) rowIdentifier:(NSArray *) nutritiveValues:(NSIndexPath *) indexPath:(ConversionFactor *) conversionFactor {
+- (UITableViewCell *) makeNutientValueCell:(UITableView *) table
+                                          rowIdentifier:(NSString *) rowIdentifier
+                                          nutritiveValues:(NSArray *) nutritiveValues
+                                          indexPath:(NSIndexPath *) indexPath
+                                          conversionFactor:(ConversionFactor *) conversionFactor {
     NSUInteger row = [indexPath row];
     
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:rowIdentifier];
@@ -69,7 +73,10 @@ static CellHelper *instance = nil;
     return cell;
 }
 
-- (UITableViewCell *) makeFoodNameCell:(UITableView *) table:(NSString *)rowIdentifier:(NSIndexPath *)indexPath:(NSArray *) searchResults {
+- (UITableViewCell *) makeFoodNameCell:(UITableView *) table
+                                      rowIdentifier:(NSString *)rowIdentifier
+                                      indexPath:(NSIndexPath *)indexPath
+                                      searchResults:(NSArray *) searchResults {
     UITableViewCell *cell = [table dequeueReusableCellWithIdentifier:rowIdentifier];
     if(cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:rowIdentifier];

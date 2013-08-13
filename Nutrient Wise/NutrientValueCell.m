@@ -10,12 +10,30 @@
 
 @implementation NutrientValueCell
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+@synthesize avecIndex;
+
+- (id)initWithStyle:(UITableViewCellStyle)style
+    reuseIdentifier:(NSString *)reuseIdentifier
 {
+    return [self initWithStyle:style reuseIdentifier:reuseIdentifier avecIndex:FALSE];
+}
+
+- (id)initWithStyle:(UITableViewCellStyle)style
+        reuseIdentifier:(NSString *)reuseIdentifier
+          avecIndex:(BOOL)pAvecIndex
+{
+    avecIndex = pAvecIndex;
+    
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        // Initialization code
+        self.textLabel.textAlignment = UITextAlignmentLeft;
+        self.textLabel.numberOfLines = 0;
+        self.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
+        self.detailTextLabel.textAlignment = UITextAlignmentRight;
+        
+        //[self definirTailleLabels];
     }
+    
     return self;
 }
 
@@ -24,6 +42,22 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    [self definirTailleLabels];
+}
+
+- (void) definirTailleLabels {
+    int pos = 245;
+    if(avecIndex == YES) {
+        pos = 235;
+    }
+    
+    self.textLabel.frame = CGRectMake(15, 10, pos-20, 20);
+    self.detailTextLabel.frame = CGRectMake(pos,10,65,20);
 }
 
 @end

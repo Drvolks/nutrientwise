@@ -266,10 +266,10 @@
         return cell;
     }
     else if(section == kFirstNutritiveValuesSection) {
-        return [cellHelper makeNutientValueCell:tableView rowIdentifier:kRowIdentifierNutient nutritiveValues:nutritiveValues indexPath:indexPath conversionFactor:selectedConversionFactor];
+        return [cellHelper makeNutientValueCell:tableView rowIdentifier:kRowIdentifierNutient nutritiveValues:nutritiveValues indexPath:indexPath conversionFactor:selectedConversionFactor avecIndex:FALSE];
     } 
     else if(section == genericSection) {
-        return [cellHelper makeNutientValueCell:tableView rowIdentifier:kRowIdentifierNutient nutritiveValues:genericValues indexPath:indexPath conversionFactor:selectedConversionFactor];
+        return [cellHelper makeNutientValueCell:tableView rowIdentifier:kRowIdentifierNutient nutritiveValues:genericValues indexPath:indexPath conversionFactor:selectedConversionFactor avecIndex:FALSE];
     }
     else if(section == allSection) {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kRowIdentifierAll];

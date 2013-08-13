@@ -144,8 +144,22 @@
     NSString *key = [keys objectAtIndex:section];
     NSArray *nutientInSection = [nutritiveValuesIndex objectForKey:key];
     
-    return [cellHelper makeNutientValueCell:tableView rowIdentifier:kRowIdentifier nutritiveValues:nutientInSection indexPath:indexPath conversionFactor:selectedConversionFactor];
+    return [cellHelper makeNutientValueCell:tableView rowIdentifier:kRowIdentifier nutritiveValues:nutientInSection indexPath:indexPath conversionFactor:selectedConversionFactor avecIndex:TRUE];
 }
+
+/*
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSUInteger section = [indexPath section];
+    NSString *key = [keys objectAtIndex:section];
+    NSArray *nutientInSection = [nutritiveValuesIndex objectForKey:key];
+    
+    NSString *name = [cellHelper nutrientNameForRow:indexPath nutritiveValues:nutientInSection];
+    
+    CGSize textSize = [name sizeWithFont:[UIFont systemFontOfSize:17] constrainedToSize:CGSizeMake([tableView frame].size.width - 20, 100)];
+    return textSize.height + 13.0f;
+}
+ */
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return ([keys count] > 0) ? [keys count] : 1;

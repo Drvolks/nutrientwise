@@ -9,6 +9,7 @@
 #import "CellHelper.h"
 #import "NutritiveName.h"
 #import "NutritiveValue.h"
+#import "NutrientValueCell.h"
 
 #define kDebug NO
 #define kNutritiveNameColumn @"nutritiveName"
@@ -40,10 +41,12 @@ static CellHelper *instance = nil;
                                           rowIdentifier:(NSString *) rowIdentifier
                                           nutritiveValues:(NSArray *) nutritiveValues
                                           indexPath:(NSIndexPath *) indexPath
-                                          conversionFactor:(ConversionFactor *) conversionFactor {
+                                          conversionFactor:(ConversionFactor *) conversionFactor
+                                          avecIndex:(BOOL)avecIndex
+{
     NSUInteger row = [indexPath row];
     
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:rowIdentifier];
+    NutrientValueCell *cell = [[NutrientValueCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:rowIdentifier avecIndex:avecIndex];
     
     NutritiveValue *nutritiveValue = [nutritiveValues objectAtIndex:row];
     NutritiveName *nutritiveName = [nutritiveValue valueForKey:kNutritiveNameColumn];
@@ -51,7 +54,7 @@ static CellHelper *instance = nil;
     NSString *name = [nutritiveName valueForKey:[languageHelper nameColumn]];
     
     cell.textLabel.text = name;
-    
+
     NSDecimalNumberHandler *roundingBehavior = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:NSRoundPlain scale:1 raiseOnExactness:FALSE raiseOnOverflow:TRUE raiseOnUnderflow:TRUE raiseOnDivideByZero:TRUE]; 
     
     NSDecimalNumber *value = [nutritiveValue valueForKey:kNutritiveValueColumn];
@@ -70,6 +73,15 @@ static CellHelper *instance = nil;
     cell.detailTextLabel.text = [[[value decimalNumberByRoundingAccordingToBehavior:roundingBehavior] stringValue] stringByAppendingString:[nutritiveName valueForKey:kUnitColumn]];
     
     return cell;
+}
+
+- (NSString *) nutrientNameForRow:(NSIndexPath *)indexPath
+                nutritiveValues:(NSArray *) nutritiveValues{
+    NSUInteger row = [indexPath row];
+    NutritiveValue *nutritiveValue = [nutritiveValues objectAtIndex:row];
+    NutritiveName *nutritiveName = [nutritiveValue valueForKey:kNutritiveNameColumn];
+    
+    return [nutritiveName valueForKey:[languageHelper nameColumn]];
 }
 
 - (UITableViewCell *) makeFoodNameCell:(UITableView *) table

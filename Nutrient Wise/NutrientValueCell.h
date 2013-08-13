@@ -10,4 +10,10 @@
 
 @interface NutrientValueCell : UITableViewCell
 
+@property (nonatomic) BOOL avecIndex;
+
+- (id)initWithStyle:(UITableViewCellStyle)style
+    reuseIdentifier:(NSString *)reuseIdentifier
+          avecIndex:(BOOL)pAvecIndex;
+
 @end

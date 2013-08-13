@@ -20,10 +20,13 @@
                              rowIdentifier:(NSString *) rowIdentifier
                              nutritiveValues:(NSArray *) nutritiveValues
                              indexPath:(NSIndexPath *) indexPath
-                             conversionFactor:(ConversionFactor *) conversionFactor;
+                             conversionFactor:(ConversionFactor *) conversionFactor
+                             avecIndex:(BOOL)avecIndex;
 - (UITableViewCell *) makeFoodNameCell:(UITableView *) table
                              rowIdentifier:(NSString *)rowIdentifier
                              indexPath:(NSIndexPath *)indexPath
                              searchResults:(NSArray *) searchResults;
+- (NSString *) nutrientNameForRow:(NSIndexPath *)indexPath
+        nutritiveValues:(NSArray *) nutritiveValues;
 
 @end

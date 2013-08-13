@@ -10,6 +10,7 @@
 		17F98E8A14D50123004644BF /* ArrayHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F98E8914D50123004644BF /* ArrayHelper.m */; };
 		6E3E404414BA535E002048B8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E3E404314BA535E002048B8 /* CoreData.framework */; };
 		6E417F3B14BE50B000F2A2AC /* Finder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E417F3A14BE50B000F2A2AC /* Finder.m */; };
+		6E47A71417BADCD400BC44E5 /* NutrientValueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E47A71317BADCD400BC44E5 /* NutrientValueCell.m */; };
 		6E528B8F14CDA01800712D87 /* ProfileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E528B8E14CDA01800712D87 /* ProfileHelper.m */; };
 		6E528B9314CDA9FD00712D87 /* FavoriteHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E528B9214CDA9FD00712D87 /* FavoriteHelper.m */; };
 		6E6F3FAE1624D43300457BE9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E6F3FAD1624D43300457BE9 /* Default-568h@2x.png */; };
@@ -101,6 +102,8 @@
 		6E3E404314BA535E002048B8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		6E417F3914BE50B000F2A2AC /* Finder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finder.h; sourceTree = "<group>"; };
 		6E417F3A14BE50B000F2A2AC /* Finder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finder.m; sourceTree = "<group>"; };
+		6E47A71217BADCD400BC44E5 /* NutrientValueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NutrientValueCell.h; sourceTree = "<group>"; };
+		6E47A71317BADCD400BC44E5 /* NutrientValueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NutrientValueCell.m; sourceTree = "<group>"; };
 		6E528B8D14CDA01800712D87 /* ProfileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileHelper.h; sourceTree = "<group>"; };
 		6E528B8E14CDA01800712D87 /* ProfileHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileHelper.m; sourceTree = "<group>"; };
 		6E528B9114CDA9FD00712D87 /* FavoriteHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteHelper.h; sourceTree = "<group>"; };
@@ -347,6 +350,8 @@
 				6E417F6114BE584300F2A2AC /* Model */,
 				6E740AEC14C77964007A0C72 /* Search.h */,
 				6E740AED14C77964007A0C72 /* Search.m */,
+				6E47A71217BADCD400BC44E5 /* NutrientValueCell.h */,
+				6E47A71317BADCD400BC44E5 /* NutrientValueCell.m */,
 				6E740AEE14C77964007A0C72 /* Search.xib */,
 				6EAD166E14CC7F6300D82BFD /* SearchController.h */,
 				6EAD166F14CC7F6300D82BFD /* SearchController.m */,
@@ -491,6 +496,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0500;
+				TargetAttributes = {
+					6EB9B2F014BA0AEB007C9666 = {
+						DevelopmentTeam = 654X66AK24;
+					};
+				};
 			};
 			buildConfigurationList = 6EB9B2EB14BA0AEB007C9666 /* Build configuration list for PBXProject "Nutrient Wise" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -590,6 +600,7 @@
 				6E81DD4914D5BB5000A680DE /* SearchController.m in Sources */,
 				6E81DD4814D5BB3300A680DE /* Search.h in Sources */,
 				6EB9B30214BA0AEB007C9666 /* main.m in Sources */,
+				6E47A71417BADCD400BC44E5 /* NutrientValueCell.m in Sources */,
 				6EB9B30614BA0AEB007C9666 /* AppDelegate.m in Sources */,
 				6E417F3B14BE50B000F2A2AC /* Finder.m in Sources */,
 				6E740AEF14C77964007A0C72 /* Search.m in Sources */,
@@ -740,14 +751,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Nutrient Wise/Nutrient Wise.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Jean-Francois Dufour (7XPDQ77MET)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
 				INFOPLIST_FILE = "Nutrient Wise/Nutrient Wise-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "Nutrient Wise";
-				PROVISIONING_PROFILE = "AB14DD42-80EF-4338-A0DF-49E470FACD43";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -756,15 +768,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Nutrient Wise/Nutrient Wise.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Jean-Francois Dufour";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jean-Francois Dufour";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
 				INFOPLIST_FILE = "Nutrient Wise/Nutrient Wise-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "Nutrient Wise";
-				PROVISIONING_PROFILE = "F3DA0569-B8A5-4BDB-A4A1-11F086EE6935";
+				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "F3DA0569-B8A5-4BDB-A4A1-11F086EE6935";
 				WRAPPER_EXTENSION = app;
 			};
@@ -841,7 +853,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Nutrient Wise/Nutrient Wise.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jean-Francois Dufour";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";

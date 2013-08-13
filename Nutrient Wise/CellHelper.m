@@ -43,14 +43,13 @@ static CellHelper *instance = nil;
                                           conversionFactor:(ConversionFactor *) conversionFactor {
     NSUInteger row = [indexPath row];
     
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:rowIdentifier];
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:rowIdentifier];
     
     NutritiveValue *nutritiveValue = [nutritiveValues objectAtIndex:row];
     NutritiveName *nutritiveName = [nutritiveValue valueForKey:kNutritiveNameColumn];
     
     NSString *name = [nutritiveName valueForKey:[languageHelper nameColumn]];
     
-    cell.textLabel.font = [UIFont systemFontOfSize:12];
     cell.textLabel.text = name;
     
     NSDecimalNumberHandler *roundingBehavior = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:NSRoundPlain scale:1 raiseOnExactness:FALSE raiseOnOverflow:TRUE raiseOnUnderflow:TRUE raiseOnDivideByZero:TRUE]; 

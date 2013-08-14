@@ -40,3 +40,6 @@
 
 /* about */
 "About" = "À Propos";
+
+/* Actions */
+"Cancel" = "Annuler";

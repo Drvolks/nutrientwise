@@ -16,6 +16,8 @@
 "firstViewTitle" = "First launch";
 "firstViewText" = "You can choose to display the nutritive values that are the most important to you by visiting the Profile tab.";
 "firstViewButton" = "Ok";
+"addFavorite" = "Add to favorites";
+"removeFavorite" = "Remove from favorites";
 
 /* profiles */
 "rein" = "Kidney Disease";

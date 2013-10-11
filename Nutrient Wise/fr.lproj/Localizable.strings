@@ -16,6 +16,8 @@
 "firstViewTitle" = "Première utilisation";
 "firstViewText" = "Vous pouvez choisir d'afficher les valeurs nutritives les plus importantes pour vous en visitant l'onglet Profil.";
 "firstViewButton" = "Ok";
+"addFavorite" = "Ajouter aux favoris";
+"removeFavorite" = "Retirer des favoris";
 
 /* profiles */
 "rein" = "Insuffisance Rénale";

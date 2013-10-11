@@ -52,6 +52,7 @@
 @synthesize selectedConversionFactor;
 @synthesize cellHelper;
 @synthesize genericValues;
+@synthesize activity;
 
 - (id)initWithFood:(FoodName *)foodEntity {
     foodName = foodEntity;
@@ -112,6 +113,18 @@
     [self prepareDisplay];
 }
 
+- (void) initActivity {
+    FavoriteActivity *favoriteActivity = [[FavoriteActivity alloc]initWithFood:foodName];
+    
+    NSArray *applicationActivities = @[favoriteActivity];
+    NSArray *activitiesItems = @[@"TODO 2"];
+    NSArray *exclusedActivities = @[UIActivityTypeCopyToPasteboard, UIActivityTypeMail, UIActivityTypeAirDrop, UIActivityTypeAssignToContact, UIActivityTypeMessage, UIActivityTypePostToFacebook, UIActivityTypePostToFlickr, UIActivityTypePostToTencentWeibo, UIActivityTypePostToTwitter, UIActivityTypePrint, UIActivityTypeSaveToCameraRoll];
+    
+    activity = [[UIActivityViewController alloc] initWithActivityItems:activitiesItems applicationActivities:applicationActivities];
+    
+    activity.excludedActivityTypes = exclusedActivities;
+}
+
 - (NSArray *) cleanGenericValues:(NSArray *) allKeys {
     NSArray *profileKeys = [self nutritiveValueKeys:[profileHelper selectedProfile]];
     NSMutableArray *newValues = [[NSMutableArray alloc] init];
@@ -170,19 +183,8 @@
 }
 
 - (void)launchShareActivityView:(id)sender {
-    
-    FavoriteActivity *favoriteActivity = [[FavoriteActivity alloc]initWithFood:foodName];
-    
-    NSArray *applicationActivities = @[favoriteActivity];
-    NSArray *activitiesItems = @[@"TODO 2"];
-    NSArray *exclusedActivities = @[UIActivityTypeCopyToPasteboard, UIActivityTypeMail];
-    
-    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:activitiesItems applicationActivities:applicationActivities];
-    
-    activityVC.excludedActivityTypes = exclusedActivities;
-    
-   [self presentViewController:activityVC animated:YES completion:nil];
-    
+    [self initActivity];
+    [self presentViewController:activity animated:YES completion:nil];
 }
 
 - (ConversionFactor *) pickAConversionFactor:(NSSet *)conversionFactors {

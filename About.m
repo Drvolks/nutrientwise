@@ -74,8 +74,8 @@
     NSString* htmlString = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
     [about loadHTMLString:htmlString baseURL:nil];
     
-    about.backgroundColor = [UIColor clearColor];
-    [about setOpaque:NO];
+    //about.backgroundColor = [UIColor clearColor];
+    //[about setOpaque:NO];
 }
 
 -(BOOL) webView:(UIWebView *)inWeb shouldStartLoadWithRequest:(NSURLRequest *)inRequest navigationType:(UIWebViewNavigationType)inType {

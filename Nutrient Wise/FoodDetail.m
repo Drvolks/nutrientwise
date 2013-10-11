@@ -13,6 +13,7 @@
 #import "MeasureSelection.h"
 #import "AllNutritiveValues.h"
 #import "ArrayHelper.h"
+#import "FavoriteActivity.h"
 
 #define kDebug NO
 #define kTitle @"NutritiveValues"
@@ -26,8 +27,6 @@
 #define kMeasureColumn @"maesure"
 #define kMeasureIdColumn @"measureId"
 #define kNutritiveNameColumn @"nutritiveName"
-#define kImageNotFavorite @"favorite_add.png"
-#define kImageFavorite @"favorite_remove.png"
 #define kMeasureShouldStartWith @"1 "
 #define kSortPrefix @"nutritiveName."
 #define kSelectedMeasureSectionTitle @"Selected Measure"
@@ -140,18 +139,9 @@
     navigationLabel.font = [UIFont systemFontOfSize:12];
     navigationLabel.lineBreakMode = NSLineBreakByWordWrapping;
     navigationLabel.numberOfLines = 2;
-    //[navigationLabel setBackgroundColor:[UIColor clearColor]];
-	//[navigationLabel setTextColor:[UIColor whiteColor]];
     self.navigationItem.titleView = navigationLabel;
     
-    BOOL isFavorite = [favoriteHelper isFavorite:foodName];
-    NSString *image = kImageNotFavorite;
-    if(isFavorite) {
-        image = kImageFavorite;                
-    }
-    
-    UIBarButtonItem *favoriteButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:nil];
-    //[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:image] style:UIBarButtonItemStylePlain target:self action:@selector(favoriteButtonPressed:)];
+    UIBarButtonItem *favoriteButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(launchShareActivityView:)];
     self.navigationItem.rightBarButtonItem = favoriteButton;
     
     if(selectedConversionFactor == nil) {
@@ -179,22 +169,20 @@
     }
 }
 
-- (void)launchShareActivityView:(UIImage *)image withData:(NSData *)data {
+- (void)launchShareActivityView:(id)sender {
     
-    FavoriteActivity
+    FavoriteActivity *favoriteActivity = [[FavoriteActivity alloc]initWithFood:foodName];
     
-    // avoid adding nil items to shareActivities array
-    if ((image) && (data)) shareActivities = @[activityProvider, image, data];
-    else if ((image) && (!data)) shareActivities = @[activityProvider, image];
-    else if ((!image) && (data)) shareActivities = @[activityProvider, data];
+    NSArray *applicationActivities = @[favoriteActivity];
+    NSArray *activitiesItems = @[@"TODO 2"];
+    NSArray *exclusedActivities = @[UIActivityTypeCopyToPasteboard, UIActivityTypeMail];
     
-    UIActivityViewController *activityView = [[UIActivityViewController alloc] initWithActivityItems:shareActivities applicationActivities:nil];
-    [activityView setExcludedActivityTypes:@[UIActivityTypeAssignToContact, UIActivityTypeMessage]];
-    [activityView setCompletionHandler:^(NSString *activityType, BOOL completed) {
-        NSLog(@"Activity: %@  ..  Completed: %d", activityType, completed);
-    }];
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:activitiesItems applicationActivities:applicationActivities];
     
-    [self presentViewController:activityView animated:YES completion:nil];
+    activityVC.excludedActivityTypes = exclusedActivities;
+    
+   [self presentViewController:activityVC animated:YES completion:nil];
+    
 }
 
 - (ConversionFactor *) pickAConversionFactor:(NSSet *)conversionFactors {
@@ -303,17 +291,6 @@
     }
     
     return nil; 
-}
-
-- (IBAction)favoriteButtonPressed:(id)sender {
-    if([favoriteHelper isFavorite:foodName])
-    {
-        [favoriteHelper removeFavorite:foodName];
-    } else {
-        [favoriteHelper addFoodToFavorite:foodName];
-    }
-    
-    [self prepareDisplay];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

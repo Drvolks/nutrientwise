@@ -19,7 +19,7 @@
             <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <nil key="simulatedDestinationMetrics"/>
-            <tabBar key="tabBar" contentMode="scaleToFill" selectedItem="55" id="5">
+            <tabBar key="tabBar" contentMode="scaleToFill" id="5">
                 <rect key="frame" x="0.0" y="431" width="320" height="49"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -102,7 +102,7 @@
                 </navigationController>
                 <navigationController id="51" customClass="SettingsController">
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" tag="3" title="Settings" image="gear.png" id="55"/>
+                    <tabBarItem key="tabBarItem" tag="3" title="Settings" image="740-gear.png" id="55"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -128,8 +128,8 @@
     </objects>
     <resources>
         <image name="708-search.png" width="28" height="28"/>
+        <image name="740-gear.png" width="28" height="28"/>
         <image name="748-heart.png" width="28" height="25"/>
         <image name="809-clipboard.png" width="20" height="28"/>
-        <image name="gear.png" width="32" height="32"/>
     </resources>
 </document>

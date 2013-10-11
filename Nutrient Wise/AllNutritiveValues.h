@@ -27,5 +27,6 @@
 - (id) initWithFoodName:(FoodName *) food
                        conversionFactor:(ConversionFactor *) conversionFactor;
 - (void) buildIndex;
+- (NSString*) decomposeAndFilterString:(NSString*) string;
 
 @end

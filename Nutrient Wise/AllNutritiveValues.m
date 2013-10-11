@@ -74,20 +74,6 @@
     [self buildIndex];
 }
 
-- (void) generateKeys {
-    keys = [[NSMutableArray alloc] init];
-    
-    for(NutritiveValue *nutritiveValue in nutritiveValues) {
-        NutritiveName *nutrientName = [nutritiveValue valueForKey:kNutritiveNameColumn];
-        NSString *name = [nutrientName valueForKey:[languageHelper nameColumn]];
-        NSString *firstLetter = [[name substringToIndex:1] uppercaseString];
-        
-        if([keys valueForKey:firstLetter] == nil) {
-            [keys addObject:firstLetter];
-        }
-    }
-}
-
 - (void) buildIndex {
     nutritiveValuesIndex = [[NSMutableDictionary alloc] init];
     keys = [[NSMutableArray alloc] init];
@@ -95,7 +81,8 @@
     for(NutritiveValue *nutritiveValue in nutritiveValues) {
         NutritiveName *nutrientName = [nutritiveValue valueForKey:kNutritiveNameColumn];
         NSString *name = [nutrientName valueForKey:[languageHelper nameColumn]];
-        NSString *firstLetter = [[name substringToIndex:1] uppercaseString];
+        NSString *nameDecomposed = [self decomposeAndFilterString:name];
+        NSString *firstLetter = [[nameDecomposed substringToIndex:1] uppercaseString];
         
         NSMutableArray *valuesInLetter = [nutritiveValuesIndex objectForKey:firstLetter];
         if(valuesInLetter == nil) {
@@ -106,6 +93,24 @@
         [valuesInLetter addObject:nutritiveValue];
         [nutritiveValuesIndex setObject:valuesInLetter forKey:firstLetter];
     }
+}
+
+- (NSString*) decomposeAndFilterString: (NSString*) string
+{
+    NSMutableString *decomposedString = [[string decomposedStringWithCanonicalMapping] mutableCopy];
+    NSCharacterSet *nonBaseSet = [NSCharacterSet nonBaseCharacterSet];
+    NSRange range = NSMakeRange([decomposedString length], 0);
+    
+    while (range.location > 0) {
+        range = [decomposedString rangeOfCharacterFromSet:nonBaseSet
+                                                  options:NSBackwardsSearch range:NSMakeRange(0, range.location)];
+        if (range.length == 0) {
+            break;
+        }
+        [decomposedString deleteCharactersInRange:range];
+    }
+    
+    return decomposedString;
 }
 
 - (void)viewDidUnload
@@ -146,20 +151,6 @@
     
     return [cellHelper makeNutientValueCell:tableView rowIdentifier:kRowIdentifier nutritiveValues:nutientInSection indexPath:indexPath conversionFactor:selectedConversionFactor avecIndex:TRUE];
 }
-
-/*
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSUInteger section = [indexPath section];
-    NSString *key = [keys objectAtIndex:section];
-    NSArray *nutientInSection = [nutritiveValuesIndex objectForKey:key];
-    
-    NSString *name = [cellHelper nutrientNameForRow:indexPath nutritiveValues:nutientInSection];
-    
-    CGSize textSize = [name sizeWithFont:[UIFont systemFontOfSize:17] constrainedToSize:CGSizeMake([tableView frame].size.width - 20, 100)];
-    return textSize.height + 13.0f;
-}
- */
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return ([keys count] > 0) ? [keys count] : 1;

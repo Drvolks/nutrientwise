@@ -150,7 +150,8 @@
         image = kImageFavorite;                
     }
     
-    UIBarButtonItem *favoriteButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:image] style:UIBarButtonItemStylePlain target:self action:@selector(favoriteButtonPressed:)];  
+    UIBarButtonItem *favoriteButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:nil];
+    //[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:image] style:UIBarButtonItemStylePlain target:self action:@selector(favoriteButtonPressed:)];
     self.navigationItem.rightBarButtonItem = favoriteButton;
     
     if(selectedConversionFactor == nil) {
@@ -176,6 +177,24 @@
     if(kDebug) {
         NSLog(@"Preparing display for FoodId %@", [foodName valueForKey:kFoodIdColumn]);
     }
+}
+
+- (void)launchShareActivityView:(UIImage *)image withData:(NSData *)data {
+    
+    FavoriteActivity
+    
+    // avoid adding nil items to shareActivities array
+    if ((image) && (data)) shareActivities = @[activityProvider, image, data];
+    else if ((image) && (!data)) shareActivities = @[activityProvider, image];
+    else if ((!image) && (data)) shareActivities = @[activityProvider, data];
+    
+    UIActivityViewController *activityView = [[UIActivityViewController alloc] initWithActivityItems:shareActivities applicationActivities:nil];
+    [activityView setExcludedActivityTypes:@[UIActivityTypeAssignToContact, UIActivityTypeMessage]];
+    [activityView setCompletionHandler:^(NSString *activityType, BOOL completed) {
+        NSLog(@"Activity: %@  ..  Completed: %d", activityType, completed);
+    }];
+    
+    [self presentViewController:activityView animated:YES completion:nil];
 }
 
 - (ConversionFactor *) pickAConversionFactor:(NSSet *)conversionFactors {

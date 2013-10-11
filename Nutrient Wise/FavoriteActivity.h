@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FoodName.h"
+#import "FavoriteHelper.h"
+#import "LanguageHelper.h"
 
 @interface FavoriteActivity : UIActivity
+
+@property (strong, nonatomic) FoodName *foodName;
+@property (strong, nonatomic) FavoriteHelper *favoriteHelper;
+@property (strong, nonatomic) LanguageHelper *languageHelper;
+
+- (id) initWithFood:(FoodName*)pFoodName;
 
 @end

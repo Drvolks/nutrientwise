@@ -28,6 +28,7 @@
 @property (strong, nonatomic) FavoriteHelper *favoriteHelper;
 @property (strong, nonatomic) ConversionFactor *selectedConversionFactor;
 @property (strong, nonatomic) CellHelper *cellHelper;
+@property (strong, nonatomic) UIActivityViewController *activity;
 
 - (id)initWithFood:(FoodName *)foodEntity;
 - (NSArray *) nutritiveValueKeys:(NSString *) profile;

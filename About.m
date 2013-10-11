@@ -41,7 +41,9 @@
 {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor underPageBackgroundColor];
+    self.navigationController.navigationBar.translucent = NO;
+    about.scrollView.scrollEnabled = NO;
+    about.scrollView.bounces = NO;
     
     languageHelper = [LanguageHelper sharedInstance];
     
@@ -73,9 +75,6 @@
     
     NSString* htmlString = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
     [about loadHTMLString:htmlString baseURL:nil];
-    
-    //about.backgroundColor = [UIColor clearColor];
-    //[about setOpaque:NO];
 }
 
 -(BOOL) webView:(UIWebView *)inWeb shouldStartLoadWithRequest:(NSURLRequest *)inRequest navigationType:(UIWebViewNavigationType)inType {

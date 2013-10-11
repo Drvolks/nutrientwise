@@ -19,7 +19,7 @@
             <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <nil key="simulatedDestinationMetrics"/>
-            <tabBar key="tabBar" contentMode="scaleToFill" id="5">
+            <tabBar key="tabBar" contentMode="scaleToFill" selectedItem="55" id="5">
                 <rect key="frame" x="0.0" y="431" width="320" height="49"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -27,7 +27,7 @@
             <viewControllers>
                 <navigationController id="23" customClass="SearchController">
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="Search" image="magnifier.png" id="27"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="708-search.png" id="27"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -50,7 +50,7 @@
                 </navigationController>
                 <navigationController id="35" customClass="FavoritesController">
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" tag="1" title="Favorites" image="heart.png" id="39"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="Favorites" image="748-heart.png" id="39"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -79,7 +79,7 @@
                 </navigationController>
                 <navigationController id="56" customClass="ProfilesController">
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" tag="2" title="Profile" image="book_bookmark.png" id="60"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="Profile" image="809-clipboard.png" id="60"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -127,9 +127,9 @@
         </tabBarController>
     </objects>
     <resources>
-        <image name="book_bookmark.png" width="32" height="32"/>
+        <image name="708-search.png" width="28" height="28"/>
+        <image name="748-heart.png" width="28" height="25"/>
+        <image name="809-clipboard.png" width="20" height="28"/>
         <image name="gear.png" width="32" height="32"/>
-        <image name="heart.png" width="32" height="32"/>
-        <image name="magnifier.png" width="32" height="32"/>
     </resources>
 </document>

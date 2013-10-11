@@ -9,7 +9,6 @@
 #import "SearchController.h"
 #import "Search.h"
 #import "MKiCloudSync.h"
-#import "UIColor+NavigationColor.h"
 
 #define kDebug NO
 #define kMainNib @"TabBarController"

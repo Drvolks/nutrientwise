@@ -81,8 +81,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.view.backgroundColor = [UIColor underPageBackgroundColor];
  
     languageHelper = [LanguageHelper sharedInstance];
     profileHelper = [ProfileHelper sharedInstance];

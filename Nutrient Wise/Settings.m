@@ -49,8 +49,6 @@
 {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor underPageBackgroundColor];
-    
     languageHelper = [LanguageHelper sharedInstance];
     
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];

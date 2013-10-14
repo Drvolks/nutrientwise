@@ -22,6 +22,7 @@
 		6E2E51681808B46F00583908 /* 809-clipboard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2E51661808B46F00583908 /* 809-clipboard@2x.png */; };
 		6E2E51731808B5FF00583908 /* 740-gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2E51711808B5FF00583908 /* 740-gear.png */; };
 		6E2E51741808B5FF00583908 /* 740-gear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2E51721808B5FF00583908 /* 740-gear@2x.png */; };
+		6E2E5178180C73BC00583908 /* UISearchBar+UISearchBarLocalized.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2E5177180C73BC00583908 /* UISearchBar+UISearchBarLocalized.m */; };
 		6E3E404414BA535E002048B8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E3E404314BA535E002048B8 /* CoreData.framework */; };
 		6E417F3B14BE50B000F2A2AC /* Finder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E417F3A14BE50B000F2A2AC /* Finder.m */; };
 		6E47A71417BADCD400BC44E5 /* NutrientValueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E47A71317BADCD400BC44E5 /* NutrientValueCell.m */; };
@@ -114,6 +115,8 @@
 		6E2E51661808B46F00583908 /* 809-clipboard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "809-clipboard@2x.png"; sourceTree = "<group>"; };
 		6E2E51711808B5FF00583908 /* 740-gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "740-gear.png"; sourceTree = "<group>"; };
 		6E2E51721808B5FF00583908 /* 740-gear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "740-gear@2x.png"; sourceTree = "<group>"; };
+		6E2E5176180C73BC00583908 /* UISearchBar+UISearchBarLocalized.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+UISearchBarLocalized.h"; sourceTree = "<group>"; };
+		6E2E5177180C73BC00583908 /* UISearchBar+UISearchBarLocalized.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+UISearchBarLocalized.m"; sourceTree = "<group>"; };
 		6E3E404314BA535E002048B8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		6E417F3914BE50B000F2A2AC /* Finder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finder.h; sourceTree = "<group>"; };
 		6E417F3A14BE50B000F2A2AC /* Finder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finder.m; sourceTree = "<group>"; };
@@ -261,6 +264,15 @@
 			name = Activities;
 			sourceTree = "<group>";
 		};
+		6E2E5175180C739800583908 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				6E2E5176180C73BC00583908 /* UISearchBar+UISearchBarLocalized.h */,
+				6E2E5177180C73BC00583908 /* UISearchBar+UISearchBarLocalized.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		6E417F6114BE584300F2A2AC /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -359,6 +371,7 @@
 			isa = PBXGroup;
 			children = (
 				6EF19C5F14DAAD25002790E7 /* Nutrient Wise.entitlements */,
+				6E2E5175180C739800583908 /* Categories */,
 				6E2E513F180852BF00583908 /* Activities */,
 				17F98E8214D4FFFF004644BF /* Helpers */,
 				6E417F6114BE584300F2A2AC /* Model */,
@@ -632,6 +645,7 @@
 				6E81DCBA14D4714000A680DE /* SettingsController.m in Sources */,
 				6E81DCBF14D4779F00A680DE /* SettingsLanguage.m in Sources */,
 				6E81DCC414D47B1E00A680DE /* ProfilesController.m in Sources */,
+				6E2E5178180C73BC00583908 /* UISearchBar+UISearchBarLocalized.m in Sources */,
 				6E2E5142180852DF00583908 /* FavoriteActivity.m in Sources */,
 				6E81DCC914D47BF700A680DE /* ProfileSelection.m in Sources */,
 				17F98E8A14D50123004644BF /* ArrayHelper.m in Sources */,

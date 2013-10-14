@@ -10,6 +10,7 @@
 #import "Finder.h"
 #import "LanguageHelper.h"
 #import "CellHelper.h"
+#import "UISearchBar+UISearchBarLocalized.h"
 
 @interface Search : UIViewController <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, ChangeLanguage>
 

@@ -11,6 +11,7 @@
 #import "AppDelegate.h"
 
 #define kTitle @"Search"
+#define kCancel @"Cancel"
 #define kRowIdentifier @"rowIdentifier"
 #define kClearSearchBar @""
 
@@ -107,6 +108,9 @@
 
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)bar { 
     [bar setShowsCancelButton:YES animated:YES];
+    
+    [bar cancelButton:[languageHelper localizedString:kCancel]];
+    
     return YES;  
 }  
 

@@ -182,6 +182,7 @@
 
 - (void)launchShareActivityView:(id)sender {
     [self initActivity];
+    activity.navigationItem.rightBarButtonItem.title = @"meow";
     [self presentViewController:activity animated:YES completion:nil];
 }
 

@@ -26,10 +26,10 @@
     
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        self.textLabel.textAlignment = UITextAlignmentLeft;
+        self.textLabel.textAlignment = NSTextAlignmentLeft;
         self.textLabel.numberOfLines = 0;
         self.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
-        self.detailTextLabel.textAlignment = UITextAlignmentRight;
+        self.detailTextLabel.textAlignment = NSTextAlignmentRight;
         
         //[self definirTailleLabels];
     }

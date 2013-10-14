@@ -115,7 +115,7 @@
     FavoriteActivity *favoriteActivity = [[FavoriteActivity alloc]initWithFood:foodName];
     
     NSArray *applicationActivities = @[favoriteActivity];
-    NSArray *activitiesItems = @[@"TODO 2"];
+    NSArray *activitiesItems = @[@""];
     NSArray *exclusedActivities = @[UIActivityTypeCopyToPasteboard, UIActivityTypeMail, UIActivityTypeAirDrop, UIActivityTypeAssignToContact, UIActivityTypeMessage, UIActivityTypePostToFacebook, UIActivityTypePostToFlickr, UIActivityTypePostToTencentWeibo, UIActivityTypePostToTwitter, UIActivityTypePrint, UIActivityTypeSaveToCameraRoll];
     
     activity = [[UIActivityViewController alloc] initWithActivityItems:activitiesItems applicationActivities:applicationActivities];
@@ -182,7 +182,6 @@
 
 - (void)launchShareActivityView:(id)sender {
     [self initActivity];
-    activity.navigationItem.rightBarButtonItem.title = @"meow";
     [self presentViewController:activity animated:YES completion:nil];
 }
 

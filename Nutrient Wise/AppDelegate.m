@@ -52,8 +52,6 @@
     
     [MKiCloudSync start];
     
-    [[BITHockeyManager sharedHockeyManager] testIdentifier];
-    
     return YES;
 } 
 

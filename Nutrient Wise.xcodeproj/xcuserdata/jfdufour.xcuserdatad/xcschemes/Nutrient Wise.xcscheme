@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6EB9B31C14BA0AEB007C9666"
-               BuildableName = "Nutrient WiseTests.octest"
+               BuildableName = "Nutrient WiseTests.xctest"
                BlueprintName = "Nutrient WiseTests"
                ReferencedContainer = "container:Nutrient Wise.xcodeproj">
             </BuildableReference>

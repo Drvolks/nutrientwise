@@ -10,29 +10,29 @@
 	<string>Nutrient Wise</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>C8A78DC4-7063-4429-8B68-C95390D76A24</key>
+		<key>E2314103308ABA5DCA39898B12F9EF5AEFD8F586</key>
 		<string>https://bitbucket.org/consultationmassawippi/nutrientwise.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Nutrient Wise.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>C8A78DC4-7063-4429-8B68-C95390D76A24</key>
+		<key>E2314103308ABA5DCA39898B12F9EF5AEFD8F586</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://bitbucket.org/consultationmassawippi/nutrientwise.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>C8A78DC4-7063-4429-8B68-C95390D76A24</string>
+	<string>E2314103308ABA5DCA39898B12F9EF5AEFD8F586</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>C8A78DC4-7063-4429-8B68-C95390D76A24</string>
+			<string>E2314103308ABA5DCA39898B12F9EF5AEFD8F586</string>
 			<key>IDESourceControlWCCName</key>
 			<string>NutrientWise</string>
 		</dict>

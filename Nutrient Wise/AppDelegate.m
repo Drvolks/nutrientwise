@@ -9,6 +9,7 @@
 #import "SearchController.h"
 #import "Search.h"
 #import "MKiCloudSync.h"
+#import <HockeySDK/HockeySDK.h>
 
 #define kDebug NO
 #define kMainNib @"TabBarController"
@@ -50,6 +51,8 @@
     [self pushManagedContextToViewControllers];
     
     [MKiCloudSync start];
+    
+    [[BITHockeyManager sharedHockeyManager] testIdentifier];
     
     return YES;
 } 

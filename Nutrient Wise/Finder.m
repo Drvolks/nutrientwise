@@ -43,7 +43,7 @@
     NSError *error;
     NSArray *result = [managedObjectContext executeFetchRequest:fetchRequest error:&error];
     if(kDebug) {
-        NSLog(@"Number of result %lu", [result count]);
+        NSLog(@"Number of result %lu", (unsigned long)[result count]);
     }
     if(result != nil && [result count] > 0) {
         return [result objectAtIndex:0];

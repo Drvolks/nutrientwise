@@ -6,8 +6,8 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
-@interface Nutrient_WiseTests : SenTestCase
+@interface Nutrient_WiseTests : XCTestCase
 
 @end

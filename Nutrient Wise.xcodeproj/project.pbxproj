@@ -77,7 +77,6 @@
 		6EB9B2FA14BA0AEB007C9666 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB9B2F914BA0AEB007C9666 /* CoreGraphics.framework */; };
 		6EB9B30214BA0AEB007C9666 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB9B30114BA0AEB007C9666 /* main.m */; };
 		6EB9B30614BA0AEB007C9666 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB9B30514BA0AEB007C9666 /* AppDelegate.m */; };
-		6EB9B31F14BA0AEB007C9666 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB9B31E14BA0AEB007C9666 /* SenTestingKit.framework */; };
 		6EB9B32014BA0AEB007C9666 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB9B2F514BA0AEB007C9666 /* UIKit.framework */; };
 		6EB9B32114BA0AEB007C9666 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB9B2F714BA0AEB007C9666 /* Foundation.framework */; };
 		6EB9B32914BA0AEB007C9666 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EB9B32714BA0AEB007C9666 /* InfoPlist.strings */; };
@@ -205,7 +204,6 @@
 		6EB9B30414BA0AEB007C9666 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6EB9B30514BA0AEB007C9666 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6EB9B31D14BA0AEB007C9666 /* Nutrient WiseTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nutrient WiseTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6EB9B31E14BA0AEB007C9666 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		6EB9B32614BA0AEB007C9666 /* Nutrient WiseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Nutrient WiseTests-Info.plist"; sourceTree = "<group>"; };
 		6EB9B32814BA0AEB007C9666 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6EB9B32A14BA0AEB007C9666 /* Nutrient_WiseTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Nutrient_WiseTests.h; sourceTree = "<group>"; };
@@ -237,7 +235,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EB9B31F14BA0AEB007C9666 /* SenTestingKit.framework in Frameworks */,
 				6EB9B32014BA0AEB007C9666 /* UIKit.framework in Frameworks */,
 				6EB9B32114BA0AEB007C9666 /* Foundation.framework in Frameworks */,
 			);
@@ -374,7 +371,6 @@
 				6EB9B2F514BA0AEB007C9666 /* UIKit.framework */,
 				6EB9B2F714BA0AEB007C9666 /* Foundation.framework */,
 				6EB9B2F914BA0AEB007C9666 /* CoreGraphics.framework */,
-				6EB9B31E14BA0AEB007C9666 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -526,7 +522,7 @@
 			name = "Nutrient WiseTests";
 			productName = "Nutrient WiseTests";
 			productReference = 6EB9B31D14BA0AEB007C9666 /* Nutrient WiseTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -534,7 +530,8 @@
 		6EB9B2E814BA0AEB007C9666 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastTestingUpgradeCheck = 0600;
+				LastUpgradeCheck = 0600;
 				TargetAttributes = {
 					6EB9B2F014BA0AEB007C9666 = {
 						DevelopmentTeam = 654X66AK24;
@@ -731,10 +728,12 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Jean-Francois Dufour (654X66AK24)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jean-Francois Dufour (654X66AK24)";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -744,6 +743,7 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -769,12 +769,15 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Jean-Francois Dufour (654X66AK24)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jean-Francois Dufour";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -797,15 +800,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = "Nutrient Wise/Nutrient Wise.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Jean-Francois Dufour (7XPDQ77MET)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jean-Francois Dufour (7XPDQ77MET)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
 				INFOPLIST_FILE = "Nutrient Wise/Nutrient Wise-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "Nutrient Wise";
-				PROVISIONING_PROFILE = "B4894700-816C-4D99-9D87-4D7893DDF969";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -817,15 +820,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = "Nutrient Wise/Nutrient Wise.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Jean-Francois Dufour (654X66AK24)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
 				INFOPLIST_FILE = "Nutrient Wise/Nutrient Wise-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "Nutrient Wise";
-				PROVISIONING_PROFILE = "B4894700-816C-4D99-9D87-4D7893DDF969";
+				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B4894700-816C-4D99-9D87-4D7893DDF969";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -838,14 +841,13 @@
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Nutrient Wise.app/Nutrient Wise";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
 				INFOPLIST_FILE = "Nutrient WiseTests/Nutrient WiseTests-Info.plist";
 				PRODUCT_NAME = "Nutrient WiseTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -855,14 +857,13 @@
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Nutrient Wise.app/Nutrient Wise";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
 				INFOPLIST_FILE = "Nutrient WiseTests/Nutrient WiseTests-Info.plist";
 				PRODUCT_NAME = "Nutrient WiseTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -876,12 +877,15 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Jean-Francois Dufour (654X66AK24)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jean-Francois Dufour (654X66AK24)";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -904,15 +908,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = "Nutrient Wise/Nutrient Wise.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Jean-Francois Dufour (654X66AK24)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
 				INFOPLIST_FILE = "Nutrient Wise/Nutrient Wise-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "Nutrient Wise";
-				PROVISIONING_PROFILE = "B4894700-816C-4D99-9D87-4D7893DDF969";
+				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B4894700-816C-4D99-9D87-4D7893DDF969";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -925,14 +929,13 @@
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Nutrient Wise.app/Nutrient Wise";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
 				INFOPLIST_FILE = "Nutrient WiseTests/Nutrient WiseTests-Info.plist";
 				PRODUCT_NAME = "Nutrient WiseTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = "Ad hoc distribution";
 		};

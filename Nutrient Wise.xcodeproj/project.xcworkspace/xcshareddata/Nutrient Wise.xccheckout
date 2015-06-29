@@ -11,17 +11,17 @@
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>E2314103308ABA5DCA39898B12F9EF5AEFD8F586</key>
-		<string>https://bitbucket.org/consultationmassawippi/nutrientwise.git</string>
+		<string>ssh://bitbucket.org/consultationmassawippi/nutrientwise.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Nutrient Wise.xcodeproj/project.xcworkspace</string>
+	<string>Nutrient Wise.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>E2314103308ABA5DCA39898B12F9EF5AEFD8F586</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://bitbucket.org/consultationmassawippi/nutrientwise.git</string>
+	<string>ssh://bitbucket.org/consultationmassawippi/nutrientwise.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>E2314103308ABA5DCA39898B12F9EF5AEFD8F586</string>
 			<key>IDESourceControlWCCName</key>
-			<string>NutrientWise</string>
+			<string>nutrientwise</string>
 		</dict>
 	</array>
 </dict>

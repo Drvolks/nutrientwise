@@ -40,6 +40,7 @@
 		6E740AEA14C7761E007A0C72 /* TabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E740AE814C7761E007A0C72 /* TabBarController.xib */; };
 		6E740AEF14C77964007A0C72 /* Search.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E740AED14C77964007A0C72 /* Search.m */; };
 		6E740AF014C77964007A0C72 /* Search.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E740AEE14C77964007A0C72 /* Search.xib */; };
+		6E7C6EB81B41B1D600651D99 /* MKiCloudSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7C6EB71B41B1D600651D99 /* MKiCloudSync.m */; };
 		6E81DC7D14CE1F4A00A680DE /* FavoritesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81DC7C14CE1F4A00A680DE /* FavoritesController.m */; };
 		6E81DC8314CE32D600A680DE /* About.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81DC8114CE32D500A680DE /* About.m */; };
 		6E81DC8414CE32D600A680DE /* About.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E81DC8214CE32D600A680DE /* About.xib */; };
@@ -86,13 +87,11 @@
 		6EB9B32914BA0AEB007C9666 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EB9B32714BA0AEB007C9666 /* InfoPlist.strings */; };
 		6EB9B32C14BA0AEB007C9666 /* Nutrient_WiseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB9B32B14BA0AEB007C9666 /* Nutrient_WiseTests.m */; };
 		6EDE66E519BCB86F00C63B0D /* HockeySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EDE66E119BCB86F00C63B0D /* HockeySDK.framework */; };
-		6EDE66E619BCB86F00C63B0D /* HockeySDK.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6EDE66E319BCB86F00C63B0D /* HockeySDK.xcconfig */; };
 		6EDE66E719BCB86F00C63B0D /* HockeySDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6EDE66E419BCB86F00C63B0D /* HockeySDKResources.bundle */; };
 		6EE9EB3414DC786A00F8ABC5 /* DATA_v1.5.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 6EE9EB3314DC786A00F8ABC5 /* DATA_v1.5.sqlite */; };
 		6EE9EB3C14DCAFA800F8ABC5 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 6EE9EB3B14DCAFA800F8ABC5 /* iTunesArtwork */; };
 		6EF19C5414DA01AB002790E7 /* HeaderCM@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EF19C5214DA01AB002790E7 /* HeaderCM@2x.png */; };
 		6EF19C5514DA01AB002790E7 /* HeaderCM.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EF19C5314DA01AB002790E7 /* HeaderCM.png */; };
-		6EF19C5914DA05B5002790E7 /* MKiCloudSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EF19C5814DA05B5002790E7 /* MKiCloudSync.m */; };
 		6EF19C6114DB46CF002790E7 /* about-fr.html in Resources */ = {isa = PBXBuildFile; fileRef = 6EF19C6014DB46CF002790E7 /* about-fr.html */; };
 		6EF19C6314DB4A23002790E7 /* about-en.html in Resources */ = {isa = PBXBuildFile; fileRef = 6EF19C6214DB4A23002790E7 /* about-en.html */; };
 /* End PBXBuildFile section */
@@ -149,6 +148,8 @@
 		6E740AEC14C77964007A0C72 /* Search.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Search.h; sourceTree = "<group>"; };
 		6E740AED14C77964007A0C72 /* Search.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Search.m; sourceTree = "<group>"; };
 		6E740AEE14C77964007A0C72 /* Search.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Search.xib; sourceTree = "<group>"; };
+		6E7C6EB61B41B1D600651D99 /* MKiCloudSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKiCloudSync.h; sourceTree = "<group>"; };
+		6E7C6EB71B41B1D600651D99 /* MKiCloudSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKiCloudSync.m; sourceTree = "<group>"; };
 		6E81DC7B14CE1F4A00A680DE /* FavoritesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesController.h; sourceTree = "<group>"; };
 		6E81DC7C14CE1F4A00A680DE /* FavoritesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesController.m; sourceTree = "<group>"; };
 		6E81DC8014CE32D500A680DE /* About.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = About.h; path = ../About.h; sourceTree = "<group>"; };
@@ -226,8 +227,6 @@
 		6EE9EB3B14DCAFA800F8ABC5 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
 		6EF19C5214DA01AB002790E7 /* HeaderCM@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HeaderCM@2x.png"; sourceTree = "<group>"; };
 		6EF19C5314DA01AB002790E7 /* HeaderCM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HeaderCM.png; sourceTree = "<group>"; };
-		6EF19C5714DA05B5002790E7 /* MKiCloudSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKiCloudSync.h; sourceTree = "<group>"; };
-		6EF19C5814DA05B5002790E7 /* MKiCloudSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKiCloudSync.m; sourceTree = "<group>"; };
 		6EF19C5F14DAAD25002790E7 /* Nutrient Wise.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Nutrient Wise.entitlements"; sourceTree = "<group>"; };
 		6EF19C6014DB46CF002790E7 /* about-fr.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "about-fr.html"; sourceTree = "<group>"; };
 		6EF19C6214DB4A23002790E7 /* about-en.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "about-en.html"; sourceTree = "<group>"; };
@@ -268,8 +267,8 @@
 				6E81DCB314D46D6D00A680DE /* CellHelper.h */,
 				6E81DCB414D46D6D00A680DE /* CellHelper.m */,
 				6EAD167C14CCCE8800D82BFD /* LanguageHelper.h */,
-				6E528B9114CDA9FD00712D87 /* FavoriteHelper.h */,
 				6EAD167D14CCCE8800D82BFD /* LanguageHelper.m */,
+				6E528B9114CDA9FD00712D87 /* FavoriteHelper.h */,
 				6E528B9214CDA9FD00712D87 /* FavoriteHelper.m */,
 				6E528B8D14CDA01800712D87 /* ProfileHelper.h */,
 				6E528B8E14CDA01800712D87 /* ProfileHelper.m */,
@@ -522,8 +521,8 @@
 		6EF19C5614DA059C002790E7 /* external */ = {
 			isa = PBXGroup;
 			children = (
-				6EF19C5714DA05B5002790E7 /* MKiCloudSync.h */,
-				6EF19C5814DA05B5002790E7 /* MKiCloudSync.m */,
+				6E7C6EB61B41B1D600651D99 /* MKiCloudSync.h */,
+				6E7C6EB71B41B1D600651D99 /* MKiCloudSync.m */,
 			);
 			name = external;
 			sourceTree = "<group>";
@@ -574,8 +573,9 @@
 		6EB9B2E814BA0AEB007C9666 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastTestingUpgradeCheck = 0600;
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0700;
 				TargetAttributes = {
 					6EB9B2F014BA0AEB007C9666 = {
 						DevelopmentTeam = 654X66AK24;
@@ -617,7 +617,6 @@
 				6EAD166814CC7DE700D82BFD /* Settings.xib in Resources */,
 				6E2E51601808B3E700583908 /* 748-heart@2x.png in Resources */,
 				6E2E5186180C8FA700583908 /* nutrientwise_58.png in Resources */,
-				6EDE66E619BCB86F00C63B0D /* HockeySDK.xcconfig in Resources */,
 				6EAD166D14CC7DF500D82BFD /* Profiles.xib in Resources */,
 				6EAD167914CC93CF00D82BFD /* FoodDetail.xib in Resources */,
 				6E2E51501808ABDE00583908 /* 709-plus@2x.png in Resources */,
@@ -731,8 +730,8 @@
 				6E81DD8314D5CEF000A680DE /* NutritiveValue.m in Sources */,
 				6E81DD8414D5CEF000A680DE /* ConversionFactor.m in Sources */,
 				6E81DD8514D5CEF000A680DE /* FoodName.m in Sources */,
+				6E7C6EB81B41B1D600651D99 /* MKiCloudSync.m in Sources */,
 				6E81DD8614D5CEF000A680DE /* NutritiveName.m in Sources */,
-				6EF19C5914DA05B5002790E7 /* MKiCloudSync.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -798,8 +797,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -814,7 +815,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "Nutrient Wise";
 				PROVISIONING_PROFILE = "";
@@ -840,6 +841,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
@@ -848,7 +850,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PRODUCT_NAME = "Nutrient Wise";
 				PROVISIONING_PROFILE = "";
@@ -863,6 +865,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Nutrient Wise/Nutrient Wise.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -874,9 +877,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
 				INFOPLIST_FILE = "Nutrient Wise/Nutrient Wise-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.consultationmassawippi.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "Nutrient Wise";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Nutrient Wise/Nutrient Wise-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -887,6 +894,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Nutrient Wise/Nutrient Wise.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -898,10 +906,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
 				INFOPLIST_FILE = "Nutrient Wise/Nutrient Wise-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.consultationmassawippi.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "Nutrient Wise";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Nutrient Wise/Nutrient Wise-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -918,6 +929,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
 				INFOPLIST_FILE = "Nutrient WiseTests/Nutrient WiseTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "Consultation-Massawippi.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "Nutrient WiseTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -934,6 +946,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
 				INFOPLIST_FILE = "Nutrient WiseTests/Nutrient WiseTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "Consultation-Massawippi.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "Nutrient WiseTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -956,6 +969,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
@@ -964,7 +978,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PRODUCT_NAME = "Nutrient Wise";
 				PROVISIONING_PROFILE = "";
@@ -979,6 +993,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Nutrient Wise/Nutrient Wise.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -990,10 +1005,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
 				INFOPLIST_FILE = "Nutrient Wise/Nutrient Wise-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.consultationmassawippi.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "Nutrient Wise";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Nutrient Wise/Nutrient Wise-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1010,6 +1028,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
 				INFOPLIST_FILE = "Nutrient WiseTests/Nutrient WiseTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "Consultation-Massawippi.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "Nutrient WiseTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};

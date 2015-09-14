@@ -50,7 +50,8 @@ static LanguageHelper *instance = nil;
 
 - (NSString *) localizedString:(NSString *)key {
     if(bundle == nil) {
-        NSString *path = [[ NSBundle mainBundle ] pathForResource:[self language] ofType:kBundleExt ];
+        NSString *langue = [self language];
+        NSString *path = [[ NSBundle mainBundle ] pathForResource:langue ofType:kBundleExt ];
         bundle = [NSBundle bundleWithPath:path];
     }
     
@@ -60,6 +61,15 @@ static LanguageHelper *instance = nil;
 - (NSString *) language {
     NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];
     NSString *language = [settings objectForKey:kLanguageSetting];
+    
+    NSUInteger length = [language length];
+    if(length > 2) {
+        language = [language substringToIndex:2];
+    }
+    
+    if(![language isEqualToString:kFrench] && ![language isEqualToString:kEnglish]) {
+        language = kEnglish;
+    }
     
     return language;
 }

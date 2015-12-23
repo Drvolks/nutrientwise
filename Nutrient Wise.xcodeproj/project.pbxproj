@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		17F98E8A14D50123004644BF /* ArrayHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F98E8914D50123004644BF /* ArrayHelper.m */; };
 		6E2E5142180852DF00583908 /* FavoriteActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2E5141180852DF00583908 /* FavoriteActivity.m */; };
-		6E2E51441808A81900583908 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E2E51431808A81900583908 /* test.jpg */; };
 		6E2E514F1808ABDE00583908 /* 709-plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2E514D1808ABDE00583908 /* 709-plus.png */; };
 		6E2E51501808ABDE00583908 /* 709-plus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2E514E1808ABDE00583908 /* 709-plus@2x.png */; };
 		6E2E51531808AD5C00583908 /* 709-minus.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2E51511808AD5C00583908 /* 709-minus.png */; };
@@ -92,10 +91,7 @@
 		6EB9B32114BA0AEB007C9666 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB9B2F714BA0AEB007C9666 /* Foundation.framework */; };
 		6EB9B32914BA0AEB007C9666 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EB9B32714BA0AEB007C9666 /* InfoPlist.strings */; };
 		6EB9B32C14BA0AEB007C9666 /* Nutrient_WiseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB9B32B14BA0AEB007C9666 /* Nutrient_WiseTests.m */; };
-		6EDE66E519BCB86F00C63B0D /* HockeySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EDE66E119BCB86F00C63B0D /* HockeySDK.framework */; };
-		6EDE66E719BCB86F00C63B0D /* HockeySDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6EDE66E419BCB86F00C63B0D /* HockeySDKResources.bundle */; };
 		6EE9EB3414DC786A00F8ABC5 /* DATA_v1.5.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 6EE9EB3314DC786A00F8ABC5 /* DATA_v1.5.sqlite */; };
-		6EE9EB3C14DCAFA800F8ABC5 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 6EE9EB3B14DCAFA800F8ABC5 /* iTunesArtwork */; };
 		6EF19C5414DA01AB002790E7 /* HeaderCM@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EF19C5214DA01AB002790E7 /* HeaderCM@2x.png */; };
 		6EF19C5514DA01AB002790E7 /* HeaderCM.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EF19C5314DA01AB002790E7 /* HeaderCM.png */; };
 		6EF19C6114DB46CF002790E7 /* about-fr.html in Resources */ = {isa = PBXBuildFile; fileRef = 6EF19C6014DB46CF002790E7 /* about-fr.html */; };
@@ -117,7 +113,6 @@
 		17F98E8914D50123004644BF /* ArrayHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayHelper.m; sourceTree = "<group>"; };
 		6E2E5140180852DF00583908 /* FavoriteActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteActivity.h; sourceTree = "<group>"; };
 		6E2E5141180852DF00583908 /* FavoriteActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteActivity.m; sourceTree = "<group>"; };
-		6E2E51431808A81900583908 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
 		6E2E514D1808ABDE00583908 /* 709-plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "709-plus.png"; sourceTree = "<group>"; };
 		6E2E514E1808ABDE00583908 /* 709-plus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "709-plus@2x.png"; sourceTree = "<group>"; };
 		6E2E51511808AD5C00583908 /* 709-minus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "709-minus.png"; sourceTree = "<group>"; };
@@ -232,11 +227,7 @@
 		6EB9B32814BA0AEB007C9666 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6EB9B32A14BA0AEB007C9666 /* Nutrient_WiseTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Nutrient_WiseTests.h; sourceTree = "<group>"; };
 		6EB9B32B14BA0AEB007C9666 /* Nutrient_WiseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Nutrient_WiseTests.m; sourceTree = "<group>"; };
-		6EDE66E119BCB86F00C63B0D /* HockeySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HockeySDK.framework; sourceTree = "<group>"; };
-		6EDE66E319BCB86F00C63B0D /* HockeySDK.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = HockeySDK.xcconfig; sourceTree = "<group>"; };
-		6EDE66E419BCB86F00C63B0D /* HockeySDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HockeySDKResources.bundle; sourceTree = "<group>"; };
 		6EE9EB3314DC786A00F8ABC5 /* DATA_v1.5.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = DATA_v1.5.sqlite; sourceTree = "<group>"; };
-		6EE9EB3B14DCAFA800F8ABC5 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
 		6EF19C5214DA01AB002790E7 /* HeaderCM@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HeaderCM@2x.png"; sourceTree = "<group>"; };
 		6EF19C5314DA01AB002790E7 /* HeaderCM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HeaderCM.png; sourceTree = "<group>"; };
 		6EF19C5F14DAAD25002790E7 /* Nutrient Wise.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Nutrient Wise.entitlements"; sourceTree = "<group>"; };
@@ -254,7 +245,6 @@
 				6E53D38419BCAEB2004CFAF7 /* QuartzCore.framework in Frameworks */,
 				6E53D38219BCAEAB004CFAF7 /* CoreText.framework in Frameworks */,
 				6E3E404414BA535E002048B8 /* CoreData.framework in Frameworks */,
-				6EDE66E519BCB86F00C63B0D /* HockeySDK.framework in Frameworks */,
 				6EB9B2F614BA0AEB007C9666 /* UIKit.framework in Frameworks */,
 				6EB9B2F814BA0AEB007C9666 /* Foundation.framework in Frameworks */,
 				6EB9B2FA14BA0AEB007C9666 /* CoreGraphics.framework in Frameworks */,
@@ -328,8 +318,6 @@
 		6E81DC8514CE336800A680DE /* Icons */ = {
 			isa = PBXGroup;
 			children = (
-				6E2E51431808A81900583908 /* test.jpg */,
-				6EE9EB3B14DCAFA800F8ABC5 /* iTunesArtwork */,
 				6E2E51551808B25900583908 /* 708-search.png */,
 				6E2E51561808B25900583908 /* 708-search@2x.png */,
 				6E2E514D1808ABDE00583908 /* 709-plus.png */,
@@ -405,7 +393,6 @@
 		6EB9B2F414BA0AEB007C9666 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6EDE66E019BCB86F00C63B0D /* HockeySDK.embeddedframework */,
 				6E53D38719BCAEC2004CFAF7 /* SystemConfiguration.framework */,
 				6E53D38519BCAEB8004CFAF7 /* Security.framework */,
 				6E53D38319BCAEB1004CFAF7 /* QuartzCore.framework */,
@@ -519,25 +506,6 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		6EDE66E019BCB86F00C63B0D /* HockeySDK.embeddedframework */ = {
-			isa = PBXGroup;
-			children = (
-				6EDE66E119BCB86F00C63B0D /* HockeySDK.framework */,
-				6EDE66E219BCB86F00C63B0D /* Resources */,
-			);
-			name = HockeySDK.embeddedframework;
-			path = "HockeySDK-iOS/HockeySDK.embeddedframework";
-			sourceTree = "<group>";
-		};
-		6EDE66E219BCB86F00C63B0D /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				6EDE66E319BCB86F00C63B0D /* HockeySDK.xcconfig */,
-				6EDE66E419BCB86F00C63B0D /* HockeySDKResources.bundle */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		6EF19C5614DA059C002790E7 /* external */ = {
 			isa = PBXGroup;
 			children = (
@@ -648,7 +616,6 @@
 				6E81DC8414CE32D600A680DE /* About.xib in Resources */,
 				6E777B2C1BA77B50004FC8B4 /* Default-480h.png in Resources */,
 				6E81DC9D14D0CBB000A680DE /* MeasureSelection.xib in Resources */,
-				6E2E51441808A81900583908 /* test.jpg in Resources */,
 				6E81DCA214D0D58200A680DE /* AllNutritiveValues.xib in Resources */,
 				6E777B201BA77565004FC8B4 /* nutrientwise_180.png in Resources */,
 				6E2E517C180C8D6700583908 /* Images.xcassets in Resources */,
@@ -658,7 +625,6 @@
 				6E81DCC014D4779F00A680DE /* SettingsLanguage.xib in Resources */,
 				6E2E5187180C8FA700583908 /* nutrientwise_80.png in Resources */,
 				6E81DCCA14D47BF700A680DE /* ProfileSelection.xib in Resources */,
-				6EDE66E719BCB86F00C63B0D /* HockeySDKResources.bundle in Resources */,
 				6E2E51581808B25900583908 /* 708-search@2x.png in Resources */,
 				6E81DD5014D5BD4000A680DE /* Default@2x.png in Resources */,
 				6E81DD5214D5BD4600A680DE /* Default.png in Resources */,
@@ -674,7 +640,6 @@
 				6E777B321BA77C58004FC8B4 /* Default-1136h@2x.png in Resources */,
 				6EF19C6314DB4A23002790E7 /* about-en.html in Resources */,
 				6EE9EB3414DC786A00F8ABC5 /* DATA_v1.5.sqlite in Resources */,
-				6EE9EB3C14DCAFA800F8ABC5 /* iTunesArtwork in Resources */,
 				6E2E51681808B46F00583908 /* 809-clipboard@2x.png in Resources */,
 				6E2E5188180C8FA700583908 /* nutrientwise_120.png in Resources */,
 				6E777B1E1BA774F4004FC8B4 /* nutrientwise_58.png in Resources */,
@@ -896,10 +861,6 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/HockeySDK-iOS/HockeySDK.embeddedframework",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
 				INFOPLIST_FILE = "Nutrient Wise/Nutrient Wise-Info.plist";
@@ -925,10 +886,6 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/HockeySDK-iOS/HockeySDK.embeddedframework",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
 				INFOPLIST_FILE = "Nutrient Wise/Nutrient Wise-Info.plist";
@@ -1024,10 +981,6 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/HockeySDK-iOS/HockeySDK.embeddedframework",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
 				INFOPLIST_FILE = "Nutrient Wise/Nutrient Wise-Info.plist";

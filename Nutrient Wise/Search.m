@@ -23,6 +23,7 @@
 @synthesize finder;
 @synthesize languageHelper;
 @synthesize cellHelper;
+@synthesize banner;
 
 - (id) init {
     return self;
@@ -50,6 +51,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    #ifdef FREE
+        [self.banner setAdUnitID:@"ca-app-pub-2793046476751764/3785848734"];
+        self.banner.rootViewController = self;
+        GADRequest *request = [GADRequest request];
+        #ifdef DEBUG
+            request.testDevices = @[@"9daac87965735d59a75181ae69755337", kGADSimulatorID];
+        #endif
+        [self.banner loadRequest:request];
+        [self.banner setHidden:false];
+    #else
+        [self.banner setHidden:true];
+    #endif
     
     languageHelper = [LanguageHelper sharedInstance];
     cellHelper = [CellHelper sharedInstance];

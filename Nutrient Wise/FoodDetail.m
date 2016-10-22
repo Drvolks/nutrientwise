@@ -13,7 +13,6 @@
 #import "MeasureSelection.h"
 #import "AllNutritiveValues.h"
 #import "ArrayHelper.h"
-#import "FavoriteActivity.h"
 
 #define kDebug NO
 #define kTitle @"NutritiveValues"
@@ -111,17 +110,6 @@
     [self prepareDisplay];
 }
 
-- (void) initActivity {
-    FavoriteActivity *favoriteActivity = [[FavoriteActivity alloc]initWithFood:foodName];
-    
-    NSArray *applicationActivities = @[favoriteActivity];
-    NSArray *activitiesItems = @[@""];
-    NSArray *exclusedActivities = @[UIActivityTypeCopyToPasteboard, UIActivityTypeMail, UIActivityTypeAirDrop, UIActivityTypeAssignToContact, UIActivityTypeMessage, UIActivityTypePostToFacebook, UIActivityTypePostToFlickr, UIActivityTypePostToTencentWeibo, UIActivityTypePostToTwitter, UIActivityTypePrint, UIActivityTypeSaveToCameraRoll];
-    
-    activity = [[UIActivityViewController alloc] initWithActivityItems:activitiesItems applicationActivities:applicationActivities];
-    
-    activity.excludedActivityTypes = exclusedActivities;
-}
 
 - (NSArray *) cleanGenericValues:(NSArray *) allKeys {
     NSArray *profileKeys = [self nutritiveValueKeys:[profileHelper selectedProfile]];
@@ -152,8 +140,7 @@
     navigationLabel.numberOfLines = 2;
     self.navigationItem.titleView = navigationLabel;
     
-    UIBarButtonItem *favoriteButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(launchShareActivityView:)];
-    self.navigationItem.rightBarButtonItem = favoriteButton;
+    [self initFavotiteButton];
     
     if(selectedConversionFactor == nil) {
         NSNumber *favoriteConversion = [favoriteHelper favoriteConversionMeasure:foodName];
@@ -180,9 +167,27 @@
     }
 }
 
-- (void)launchShareActivityView:(id)sender {
-    [self initActivity];
-    [self presentViewController:activity animated:YES completion:nil];
+- (void) initFavotiteButton {
+    UIImage *buttonImage = [UIImage imageNamed:@"NotFavorite"];
+    if([favoriteHelper isFavorite:foodName])
+    {
+        buttonImage = [UIImage imageNamed:@"Favorite"];
+    }
+    UIBarButtonItem *favoriteButton = [[UIBarButtonItem alloc] initWithImage:buttonImage style:UIBarButtonItemStylePlain target:self action:@selector(favoritePressed:)];
+    
+    self.navigationItem.rightBarButtonItem = favoriteButton;
+}
+
+- (void)favoritePressed:(id)sender {
+    if([favoriteHelper isFavorite:foodName])
+    {
+        [favoriteHelper removeFavorite:foodName];
+    } else {
+        [favoriteHelper addFoodToFavorite:foodName];
+    }
+
+    [self initFavotiteButton];
+    
 }
 
 - (ConversionFactor *) pickAConversionFactor:(NSSet *)conversionFactors {

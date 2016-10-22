@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		17F98E8A14D50123004644BF /* ArrayHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F98E8914D50123004644BF /* ArrayHelper.m */; };
+		6BF73BC73825CBF9D01198D9 /* Pods_Nutrient_Wise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E03C3E708C4DADBF3AC5B3E5 /* Pods_Nutrient_Wise.framework */; };
 		6E012CC01DBBB79100E35258 /* SearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD166F14CC7F6300D82BFD /* SearchController.m */; };
 		6E012CC11DBBB79100E35258 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB9B30114BA0AEB007C9666 /* main.m */; };
 		6E012CC21DBBB79100E35258 /* NutrientValueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E47A71317BADCD400BC44E5 /* NutrientValueCell.m */; };
@@ -181,6 +182,8 @@
 		6EF19C5514DA01AB002790E7 /* HeaderCM.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EF19C5314DA01AB002790E7 /* HeaderCM.png */; };
 		6EF19C6114DB46CF002790E7 /* about-fr.html in Resources */ = {isa = PBXBuildFile; fileRef = 6EF19C6014DB46CF002790E7 /* about-fr.html */; };
 		6EF19C6314DB4A23002790E7 /* about-en.html in Resources */ = {isa = PBXBuildFile; fileRef = 6EF19C6214DB4A23002790E7 /* about-en.html */; };
+		B22A553FDB6027ACA3B4A873 /* Pods_Nutrient_WiseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C449B6732BFF92FBE920C8C /* Pods_Nutrient_WiseTests.framework */; };
+		E0B3147EA9A2226863F2257B /* Pods_Nutrient_Wise_Lite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2695314292F3542A05A6583 /* Pods_Nutrient_Wise_Lite.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -194,8 +197,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		030EF7F2AFA33EBD53D33244 /* Pods-Nutrient WiseTests.ad hoc distribution.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nutrient WiseTests.ad hoc distribution.xcconfig"; path = "Pods/Target Support Files/Pods-Nutrient WiseTests/Pods-Nutrient WiseTests.ad hoc distribution.xcconfig"; sourceTree = "<group>"; };
+		112E8FC04821BEC4334280A8 /* Pods-Nutrient Wise Lite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nutrient Wise Lite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nutrient Wise Lite/Pods-Nutrient Wise Lite.debug.xcconfig"; sourceTree = "<group>"; };
 		17F98E8814D50123004644BF /* ArrayHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayHelper.h; sourceTree = "<group>"; };
 		17F98E8914D50123004644BF /* ArrayHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayHelper.m; sourceTree = "<group>"; };
+		3C449B6732BFF92FBE920C8C /* Pods_Nutrient_WiseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nutrient_WiseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E77E01E97E51B4CDA03D88A /* Pods-Nutrient Wise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nutrient Wise.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nutrient Wise/Pods-Nutrient Wise.release.xcconfig"; sourceTree = "<group>"; };
+		56BA06BD233E44ACEDA32CFA /* Pods-Nutrient Wise.ad hoc distribution.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nutrient Wise.ad hoc distribution.xcconfig"; path = "Pods/Target Support Files/Pods-Nutrient Wise/Pods-Nutrient Wise.ad hoc distribution.xcconfig"; sourceTree = "<group>"; };
+		602569440D19BFD5CDA833A7 /* Pods-Nutrient WiseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nutrient WiseTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nutrient WiseTests/Pods-Nutrient WiseTests.release.xcconfig"; sourceTree = "<group>"; };
 		6E012D1C1DBBB79100E35258 /* Nutrient Wise Lite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nutrient Wise Lite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E012D1D1DBBB79100E35258 /* Nutrient Wise free-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Nutrient Wise free-Info.plist"; path = "/Users/jfdufour/Documents/Programmation/nutrientwise/Nutrient Wise free-Info.plist"; sourceTree = "<absolute>"; };
 		6E2E5140180852DF00583908 /* FavoriteActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteActivity.h; sourceTree = "<group>"; };
@@ -320,6 +329,12 @@
 		6EF19C5F14DAAD25002790E7 /* Nutrient Wise.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Nutrient Wise.entitlements"; sourceTree = "<group>"; };
 		6EF19C6014DB46CF002790E7 /* about-fr.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "about-fr.html"; sourceTree = "<group>"; };
 		6EF19C6214DB4A23002790E7 /* about-en.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "about-en.html"; sourceTree = "<group>"; };
+		83677DDC44DAEA0B8A9EACF8 /* Pods-Nutrient Wise Lite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nutrient Wise Lite.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nutrient Wise Lite/Pods-Nutrient Wise Lite.release.xcconfig"; sourceTree = "<group>"; };
+		9CD354FFCBC271106E68734C /* Pods-Nutrient WiseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nutrient WiseTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nutrient WiseTests/Pods-Nutrient WiseTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A68209798C096C0E6D23E4F2 /* Pods-Nutrient Wise Lite.ad hoc distribution.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nutrient Wise Lite.ad hoc distribution.xcconfig"; path = "Pods/Target Support Files/Pods-Nutrient Wise Lite/Pods-Nutrient Wise Lite.ad hoc distribution.xcconfig"; sourceTree = "<group>"; };
+		D52313B58D84EC3C0C9F85A4 /* Pods-Nutrient Wise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nutrient Wise.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nutrient Wise/Pods-Nutrient Wise.debug.xcconfig"; sourceTree = "<group>"; };
+		E03C3E708C4DADBF3AC5B3E5 /* Pods_Nutrient_Wise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nutrient_Wise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2695314292F3542A05A6583 /* Pods_Nutrient_Wise_Lite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nutrient_Wise_Lite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -335,6 +350,7 @@
 				6E012CE61DBBB79100E35258 /* UIKit.framework in Frameworks */,
 				6E012CE71DBBB79100E35258 /* Foundation.framework in Frameworks */,
 				6E012CE81DBBB79100E35258 /* CoreGraphics.framework in Frameworks */,
+				E0B3147EA9A2226863F2257B /* Pods_Nutrient_Wise_Lite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +366,7 @@
 				6EB9B2F614BA0AEB007C9666 /* UIKit.framework in Frameworks */,
 				6EB9B2F814BA0AEB007C9666 /* Foundation.framework in Frameworks */,
 				6EB9B2FA14BA0AEB007C9666 /* CoreGraphics.framework in Frameworks */,
+				6BF73BC73825CBF9D01198D9 /* Pods_Nutrient_Wise.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +376,7 @@
 			files = (
 				6EB9B32014BA0AEB007C9666 /* UIKit.framework in Frameworks */,
 				6EB9B32114BA0AEB007C9666 /* Foundation.framework in Frameworks */,
+				B22A553FDB6027ACA3B4A873 /* Pods_Nutrient_WiseTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +499,7 @@
 				6EB9B2F414BA0AEB007C9666 /* Frameworks */,
 				6EB9B2F214BA0AEB007C9666 /* Products */,
 				6E012D1D1DBBB79100E35258 /* Nutrient Wise free-Info.plist */,
+				8FCF18759C2F2421765627B3 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -505,6 +524,9 @@
 				6EB9B2F514BA0AEB007C9666 /* UIKit.framework */,
 				6EB9B2F714BA0AEB007C9666 /* Foundation.framework */,
 				6EB9B2F914BA0AEB007C9666 /* CoreGraphics.framework */,
+				E03C3E708C4DADBF3AC5B3E5 /* Pods_Nutrient_Wise.framework */,
+				E2695314292F3542A05A6583 /* Pods_Nutrient_Wise_Lite.framework */,
+				3C449B6732BFF92FBE920C8C /* Pods_Nutrient_WiseTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -619,6 +641,22 @@
 			name = external;
 			sourceTree = "<group>";
 		};
+		8FCF18759C2F2421765627B3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D52313B58D84EC3C0C9F85A4 /* Pods-Nutrient Wise.debug.xcconfig */,
+				3E77E01E97E51B4CDA03D88A /* Pods-Nutrient Wise.release.xcconfig */,
+				56BA06BD233E44ACEDA32CFA /* Pods-Nutrient Wise.ad hoc distribution.xcconfig */,
+				112E8FC04821BEC4334280A8 /* Pods-Nutrient Wise Lite.debug.xcconfig */,
+				83677DDC44DAEA0B8A9EACF8 /* Pods-Nutrient Wise Lite.release.xcconfig */,
+				A68209798C096C0E6D23E4F2 /* Pods-Nutrient Wise Lite.ad hoc distribution.xcconfig */,
+				9CD354FFCBC271106E68734C /* Pods-Nutrient WiseTests.debug.xcconfig */,
+				602569440D19BFD5CDA833A7 /* Pods-Nutrient WiseTests.release.xcconfig */,
+				030EF7F2AFA33EBD53D33244 /* Pods-Nutrient WiseTests.ad hoc distribution.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -626,10 +664,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6E012D181DBBB79100E35258 /* Build configuration list for PBXNativeTarget "Nutrient Wise Lite" */;
 			buildPhases = (
+				334DBA8DEA32F958D8B8437B /* [CP] Check Pods Manifest.lock */,
 				6E012CBF1DBBB79100E35258 /* Sources */,
 				6E012CE01DBBB79100E35258 /* Frameworks */,
 				6E012CE91DBBB79100E35258 /* Resources */,
 				6E012D171DBBB79100E35258 /* ShellScript */,
+				3E4B465CD98A598CB3539193 /* [CP] Embed Pods Frameworks */,
+				BD3EB6FF41F052B53DE2FA3B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -644,10 +685,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6EB9B32F14BA0AEB007C9666 /* Build configuration list for PBXNativeTarget "Nutrient Wise" */;
 			buildPhases = (
+				01422DC830F7256EBC88C846 /* [CP] Check Pods Manifest.lock */,
 				6EB9B2ED14BA0AEB007C9666 /* Sources */,
 				6EB9B2EE14BA0AEB007C9666 /* Frameworks */,
 				6EB9B2EF14BA0AEB007C9666 /* Resources */,
 				6E53D38019BCAE61004CFAF7 /* ShellScript */,
+				5D433514C720DEA0ECAEA01B /* [CP] Embed Pods Frameworks */,
+				35BCEC76A2C5673D5B390180 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -662,10 +706,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6EB9B33214BA0AEB007C9666 /* Build configuration list for PBXNativeTarget "Nutrient WiseTests" */;
 			buildPhases = (
+				8A9B93A7DD74977346BEACB0 /* [CP] Check Pods Manifest.lock */,
 				6EB9B31814BA0AEB007C9666 /* Sources */,
 				6EB9B31914BA0AEB007C9666 /* Frameworks */,
 				6EB9B31A14BA0AEB007C9666 /* Resources */,
 				6EB9B31B14BA0AEB007C9666 /* ShellScript */,
+				CBF4EEE52B6C838E662A15B5 /* [CP] Embed Pods Frameworks */,
+				A49038010C43DA061E10C3BC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -836,6 +883,81 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		01422DC830F7256EBC88C846 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		334DBA8DEA32F958D8B8437B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		35BCEC76A2C5673D5B390180 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nutrient Wise/Pods-Nutrient Wise-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E4B465CD98A598CB3539193 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nutrient Wise Lite/Pods-Nutrient Wise Lite-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D433514C720DEA0ECAEA01B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nutrient Wise/Pods-Nutrient Wise-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6E012D171DBBB79100E35258 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -874,6 +996,66 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		8A9B93A7DD74977346BEACB0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A49038010C43DA061E10C3BC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nutrient WiseTests/Pods-Nutrient WiseTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD3EB6FF41F052B53DE2FA3B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nutrient Wise Lite/Pods-Nutrient Wise Lite-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBF4EEE52B6C838E662A15B5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nutrient WiseTests/Pods-Nutrient WiseTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1004,6 +1186,7 @@
 /* Begin XCBuildConfiguration section */
 		6E012D191DBBB79100E35258 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 112E8FC04821BEC4334280A8 /* Pods-Nutrient Wise Lite.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1030,6 +1213,7 @@
 		};
 		6E012D1A1DBBB79100E35258 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83677DDC44DAEA0B8A9EACF8 /* Pods-Nutrient Wise Lite.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1056,6 +1240,7 @@
 		};
 		6E012D1B1DBBB79100E35258 /* Ad hoc distribution */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A68209798C096C0E6D23E4F2 /* Pods-Nutrient Wise Lite.ad hoc distribution.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1167,6 +1352,7 @@
 		};
 		6EB9B33014BA0AEB007C9666 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D52313B58D84EC3C0C9F85A4 /* Pods-Nutrient Wise.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1192,6 +1378,7 @@
 		};
 		6EB9B33114BA0AEB007C9666 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E77E01E97E51B4CDA03D88A /* Pods-Nutrient Wise.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1217,6 +1404,7 @@
 		};
 		6EB9B33314BA0AEB007C9666 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CD354FFCBC271106E68734C /* Pods-Nutrient WiseTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Nutrient Wise.app/Nutrient Wise";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1234,6 +1422,7 @@
 		};
 		6EB9B33414BA0AEB007C9666 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 602569440D19BFD5CDA833A7 /* Pods-Nutrient WiseTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Nutrient Wise.app/Nutrient Wise";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1290,6 +1479,7 @@
 		};
 		6EF19C5C14DA0F7D002790E7 /* Ad hoc distribution */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56BA06BD233E44ACEDA32CFA /* Pods-Nutrient Wise.ad hoc distribution.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1315,6 +1505,7 @@
 		};
 		6EF19C5D14DA0F7D002790E7 /* Ad hoc distribution */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 030EF7F2AFA33EBD53D33244 /* Pods-Nutrient WiseTests.ad hoc distribution.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Nutrient Wise.app/Nutrient Wise";
 				FRAMEWORK_SEARCH_PATHS = (

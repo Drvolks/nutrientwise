@@ -31,7 +31,6 @@
 		6E012CD31DBBB79100E35258 /* SettingsLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81DCBD14D4779D00A680DE /* SettingsLanguage.m */; };
 		6E012CD41DBBB79100E35258 /* ProfilesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81DCC214D47B1B00A680DE /* ProfilesController.m */; };
 		6E012CD51DBBB79100E35258 /* UISearchBar+UISearchBarLocalized.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2E5177180C73BC00583908 /* UISearchBar+UISearchBarLocalized.m */; };
-		6E012CD61DBBB79100E35258 /* FavoriteActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2E5141180852DF00583908 /* FavoriteActivity.m */; };
 		6E012CD71DBBB79100E35258 /* ProfileSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81DCC714D47BF500A680DE /* ProfileSelection.m */; };
 		6E012CD81DBBB79100E35258 /* ArrayHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F98E8914D50123004644BF /* ArrayHelper.m */; };
 		6E012CD91DBBB79100E35258 /* Model.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 6E81DD7614D5CEDD00A680DE /* Model.xcdatamodel */; };
@@ -96,7 +95,6 @@
 		6E012D161DBBB79100E35258 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E6F3FAD1624D43300457BE9 /* Default-568h@2x.png */; };
 		6E012D1F1DBBB9CC00E35258 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E012D1E1DBBB9CC00E35258 /* GoogleService-Info.plist */; };
 		6E012D201DBBBE3100E35258 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E012D1E1DBBB9CC00E35258 /* GoogleService-Info.plist */; };
-		6E2E5142180852DF00583908 /* FavoriteActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2E5141180852DF00583908 /* FavoriteActivity.m */; };
 		6E2E514F1808ABDE00583908 /* 709-plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2E514D1808ABDE00583908 /* 709-plus.png */; };
 		6E2E51501808ABDE00583908 /* 709-plus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2E514E1808ABDE00583908 /* 709-plus@2x.png */; };
 		6E2E51531808AD5C00583908 /* 709-minus.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2E51511808AD5C00583908 /* 709-minus.png */; };
@@ -210,8 +208,6 @@
 		6E012D1C1DBBB79100E35258 /* Nutrient Wise Lite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nutrient Wise Lite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E012D1D1DBBB79100E35258 /* Nutrient Wise free-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Nutrient Wise free-Info.plist"; path = "/Users/jfdufour/Documents/Programmation/nutrientwise/Nutrient Wise free-Info.plist"; sourceTree = "<absolute>"; };
 		6E012D1E1DBBB9CC00E35258 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		6E2E5140180852DF00583908 /* FavoriteActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteActivity.h; sourceTree = "<group>"; };
-		6E2E5141180852DF00583908 /* FavoriteActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteActivity.m; sourceTree = "<group>"; };
 		6E2E514D1808ABDE00583908 /* 709-plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "709-plus.png"; sourceTree = "<group>"; };
 		6E2E514E1808ABDE00583908 /* 709-plus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "709-plus@2x.png"; sourceTree = "<group>"; };
 		6E2E51511808AD5C00583908 /* 709-minus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "709-minus.png"; sourceTree = "<group>"; };
@@ -403,15 +399,6 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
-		6E2E513F180852BF00583908 /* Activities */ = {
-			isa = PBXGroup;
-			children = (
-				6E2E5140180852DF00583908 /* FavoriteActivity.h */,
-				6E2E5141180852DF00583908 /* FavoriteActivity.m */,
-			);
-			name = Activities;
-			sourceTree = "<group>";
-		};
 		6E2E5175180C739800583908 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -540,7 +527,6 @@
 			children = (
 				6EF19C5F14DAAD25002790E7 /* Nutrient Wise.entitlements */,
 				6E2E5175180C739800583908 /* Categories */,
-				6E2E513F180852BF00583908 /* Activities */,
 				17F98E8214D4FFFF004644BF /* Helpers */,
 				6E417F6114BE584300F2A2AC /* Model */,
 				6E740AEC14C77964007A0C72 /* Search.h */,
@@ -1097,7 +1083,6 @@
 				6E012CD31DBBB79100E35258 /* SettingsLanguage.m in Sources */,
 				6E012CD41DBBB79100E35258 /* ProfilesController.m in Sources */,
 				6E012CD51DBBB79100E35258 /* UISearchBar+UISearchBarLocalized.m in Sources */,
-				6E012CD61DBBB79100E35258 /* FavoriteActivity.m in Sources */,
 				6E012CD71DBBB79100E35258 /* ProfileSelection.m in Sources */,
 				6E012CD81DBBB79100E35258 /* ArrayHelper.m in Sources */,
 				6E012CD91DBBB79100E35258 /* Model.xcdatamodel in Sources */,
@@ -1136,7 +1121,6 @@
 				6E81DCBF14D4779F00A680DE /* SettingsLanguage.m in Sources */,
 				6E81DCC414D47B1E00A680DE /* ProfilesController.m in Sources */,
 				6E2E5178180C73BC00583908 /* UISearchBar+UISearchBarLocalized.m in Sources */,
-				6E2E5142180852DF00583908 /* FavoriteActivity.m in Sources */,
 				6E81DCC914D47BF700A680DE /* ProfileSelection.m in Sources */,
 				17F98E8A14D50123004644BF /* ArrayHelper.m in Sources */,
 				6E81DD7714D5CEDD00A680DE /* Model.xcdatamodel in Sources */,

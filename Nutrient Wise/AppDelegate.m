@@ -9,6 +9,9 @@
 #import "SearchController.h"
 #import "Search.h"
 #import "MKiCloudSync.h"
+#ifdef FREE
+    @import Firebase;
+#endif
 
 #define kDebug NO
 #define kMainNib @"TabBarController"
@@ -44,6 +47,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self setup];
+    
+    #ifdef FREE
+        [FIRApp configure];
+        [GADMobileAds configureWithApplicationID:@"ca-app-pub-2793046476751764/3785848734"];
+    #endif
     
     [self setupTabBarController];
     [self pushManagedContextToViewControllers];

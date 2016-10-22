@@ -11,11 +11,21 @@
 #import "LanguageHelper.h"
 #import "CellHelper.h"
 #import "UISearchBar+UISearchBarLocalized.h"
+#ifdef FREE
+    @import GoogleMobileAds;
+#endif
 
 @interface Search : UIViewController <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, ChangeLanguage>
 
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (strong, nonatomic) IBOutlet UITableView *resultTable;
+#ifdef FREE
+    @property (weak, nonatomic) IBOutlet GADBannerView  *banner;
+#else
+    @property (weak, nonatomic) IBOutlet UIView *banner;
+#endif
+
+
 @property (strong, nonatomic) NSArray *searchResults;
 @property (strong, nonatomic) Finder *finder;
 @property (strong, nonatomic) LanguageHelper *languageHelper;

@@ -95,6 +95,7 @@
 		6E012D151DBBB79100E35258 /* nutrientwise_58.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E777B1D1BA774F4004FC8B4 /* nutrientwise_58.png */; };
 		6E012D161DBBB79100E35258 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E6F3FAD1624D43300457BE9 /* Default-568h@2x.png */; };
 		6E012D1F1DBBB9CC00E35258 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E012D1E1DBBB9CC00E35258 /* GoogleService-Info.plist */; };
+		6E012D201DBBBE3100E35258 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E012D1E1DBBB9CC00E35258 /* GoogleService-Info.plist */; };
 		6E2E5142180852DF00583908 /* FavoriteActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2E5141180852DF00583908 /* FavoriteActivity.m */; };
 		6E2E514F1808ABDE00583908 /* 709-plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2E514D1808ABDE00583908 /* 709-plus.png */; };
 		6E2E51501808ABDE00583908 /* 709-plus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2E514E1808ABDE00583908 /* 709-plus@2x.png */; };
@@ -775,6 +776,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E012D201DBBBE3100E35258 /* GoogleService-Info.plist in Resources */,
 				6E012CEA1DBBB79100E35258 /* Localizable.strings in Resources */,
 				6E012CEB1DBBB79100E35258 /* Localizable.strings in Resources */,
 				6E012CEC1DBBB79100E35258 /* TabBarController.xib in Resources */,

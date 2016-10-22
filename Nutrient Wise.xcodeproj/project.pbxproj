@@ -740,6 +740,11 @@
 				TargetAttributes = {
 					6E012CBE1DBBB79100E35258 = {
 						DevelopmentTeam = 654X66AK24;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					6EB9B2F014BA0AEB007C9666 = {
 						DevelopmentTeam = 654X66AK24;

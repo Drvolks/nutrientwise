@@ -1,0 +1,6 @@
+framework module Pods_Nutrient_Wise_Lite {
+  umbrella header "Pods-Nutrient Wise Lite-umbrella.h"
+
+  export *
+  module * { export * }
+}

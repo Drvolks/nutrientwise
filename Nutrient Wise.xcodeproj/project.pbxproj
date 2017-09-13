@@ -207,7 +207,6 @@
 		56BA06BD233E44ACEDA32CFA /* Pods-Nutrient Wise.ad hoc distribution.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nutrient Wise.ad hoc distribution.xcconfig"; path = "Pods/Target Support Files/Pods-Nutrient Wise/Pods-Nutrient Wise.ad hoc distribution.xcconfig"; sourceTree = "<group>"; };
 		602569440D19BFD5CDA833A7 /* Pods-Nutrient WiseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nutrient WiseTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nutrient WiseTests/Pods-Nutrient WiseTests.release.xcconfig"; sourceTree = "<group>"; };
 		6E012D1C1DBBB79100E35258 /* Nutrient Wise Lite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nutrient Wise Lite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6E012D1D1DBBB79100E35258 /* Nutrient Wise free-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Nutrient Wise free-Info.plist"; path = "/Users/jfdufour/Documents/Programmation/nutrientwise/Nutrient Wise free-Info.plist"; sourceTree = "<absolute>"; };
 		6E012D1E1DBBB9CC00E35258 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6E2E514D1808ABDE00583908 /* 709-plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "709-plus.png"; sourceTree = "<group>"; };
 		6E2E514E1808ABDE00583908 /* 709-plus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "709-plus@2x.png"; sourceTree = "<group>"; };
@@ -323,6 +322,7 @@
 		6EB9B32814BA0AEB007C9666 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6EB9B32A14BA0AEB007C9666 /* Nutrient_WiseTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Nutrient_WiseTests.h; sourceTree = "<group>"; };
 		6EB9B32B14BA0AEB007C9666 /* Nutrient_WiseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Nutrient_WiseTests.m; sourceTree = "<group>"; };
+		6EBCD17D1F69EB1200B1D8C9 /* Nutrient Wise free-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Nutrient Wise free-Info.plist"; sourceTree = "<group>"; };
 		6EE9EB3314DC786A00F8ABC5 /* DATA_v1.5.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = DATA_v1.5.sqlite; sourceTree = "<group>"; };
 		6EF19C5214DA01AB002790E7 /* HeaderCM@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HeaderCM@2x.png"; sourceTree = "<group>"; };
 		6EF19C5314DA01AB002790E7 /* HeaderCM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HeaderCM.png; sourceTree = "<group>"; };
@@ -488,7 +488,6 @@
 				6EB9B32414BA0AEB007C9666 /* Nutrient WiseTests */,
 				6EB9B2F414BA0AEB007C9666 /* Frameworks */,
 				6EB9B2F214BA0AEB007C9666 /* Products */,
-				6E012D1D1DBBB79100E35258 /* Nutrient Wise free-Info.plist */,
 				6E012D1E1DBBB9CC00E35258 /* GoogleService-Info.plist */,
 				8FCF18759C2F2421765627B3 /* Pods */,
 			);
@@ -583,6 +582,7 @@
 			isa = PBXGroup;
 			children = (
 				6EB9B2FD14BA0AEB007C9666 /* Nutrient Wise-Info.plist */,
+				6EBCD17D1F69EB1200B1D8C9 /* Nutrient Wise free-Info.plist */,
 				6EB9B30114BA0AEB007C9666 /* main.m */,
 				6EF19C6014DB46CF002790E7 /* about-fr.html */,
 				6EF19C6214DB4A23002790E7 /* about-en.html */,
@@ -1208,7 +1208,7 @@
 					"COCOAPODS=1",
 					"FREE=1",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Nutrient Wise free-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Nutrient Wise/Nutrient Wise free-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.consultationmassawippi.Nutrient-Wise.free";
@@ -1242,7 +1242,7 @@
 					"COCOAPODS=1",
 					"FREE=1",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Nutrient Wise free-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Nutrient Wise/Nutrient Wise free-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.consultationmassawippi.Nutrient-Wise.free";
@@ -1276,7 +1276,7 @@
 					"COCOAPODS=1",
 					"FREE=1",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Nutrient Wise free-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Nutrient Wise/Nutrient Wise free-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.consultationmassawippi.Nutrient-Wise.free";

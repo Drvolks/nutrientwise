@@ -1199,7 +1199,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = YES;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 654X66AK24;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
@@ -1208,7 +1208,7 @@
 					"COCOAPODS=1",
 					"FREE=1",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Nutrient Wise/Nutrient Wise free-Info.plist";
+				INFOPLIST_FILE = "Nutrient Wise/Nutrient Wise free-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.consultationmassawippi.Nutrient-Wise.free";
@@ -1233,7 +1233,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = YES;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 654X66AK24;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
@@ -1242,7 +1242,7 @@
 					"COCOAPODS=1",
 					"FREE=1",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Nutrient Wise/Nutrient Wise free-Info.plist";
+				INFOPLIST_FILE = "Nutrient Wise/Nutrient Wise free-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.consultationmassawippi.Nutrient-Wise.free";
@@ -1267,7 +1267,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = YES;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 654X66AK24;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
@@ -1276,7 +1276,7 @@
 					"COCOAPODS=1",
 					"FREE=1",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Nutrient Wise/Nutrient Wise free-Info.plist";
+				INFOPLIST_FILE = "Nutrient Wise/Nutrient Wise free-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.consultationmassawippi.Nutrient-Wise.free";
@@ -1398,7 +1398,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = YES;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 654X66AK24;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
@@ -1427,7 +1427,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = YES;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 654X66AK24;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
@@ -1537,7 +1537,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = YES;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 654X66AK24;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";

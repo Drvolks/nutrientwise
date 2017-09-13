@@ -61,6 +61,8 @@
         #endif
         [self.banner loadRequest:request];
         [self.banner setHidden:false];
+    
+        self.banner.center = CGPointMake(self.view.center.x, self.view.frame.size.height-CGSizeFromGADAdSize(kGADAdSizeBanner).height/2);
     #else
         [self.banner setHidden:true];
     #endif

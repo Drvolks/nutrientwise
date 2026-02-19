@@ -12,8 +12,8 @@
 
 #define kDebug NO
 #define kMainNib @"TabBarController"
-#define kDatabase @"DATA_v1.5.sqlite"
-#define kDatabaseFileName @"DATA_v1.5"
+#define kDatabase @"DATA_v2.sqlite"
+#define kDatabaseFileName @"DATA_v2"
 #define kDatabaseFileExt @"sqlite"
 #define kModelFileName @"Model"
 #define kModelFileExt @"mom"
@@ -215,7 +215,11 @@
     
     NSError *error = nil;
     __persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
-    if (![__persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error])
+    NSDictionary *options = @{
+        NSMigratePersistentStoresAutomaticallyOption : @YES,
+        NSInferMappingModelAutomaticallyOption : @YES
+    };
+    if (![__persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:options error:&error])
     {
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();

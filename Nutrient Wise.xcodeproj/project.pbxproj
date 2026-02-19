@@ -92,7 +92,7 @@
 		6EB9B32914BA0AEB007C9666 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EB9B32714BA0AEB007C9666 /* InfoPlist.strings */; };
 		6EB9B32C14BA0AEB007C9666 /* Nutrient_WiseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB9B32B14BA0AEB007C9666 /* Nutrient_WiseTests.m */; };
 		6EDD97862F47CB4D004E72AE /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EDD97852F47CB4D004E72AE /* Launch Screen.storyboard */; };
-		6EE9EB3414DC786A00F8ABC5 /* DATA_v1.5.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 6EE9EB3314DC786A00F8ABC5 /* DATA_v1.5.sqlite */; };
+		6EE9EB3414DC786A00F8ABC5 /* DATA_v2.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 6EE9EB3314DC786A00F8ABC5 /* DATA_v2.sqlite */; };
 		6EF19C5414DA01AB002790E7 /* HeaderCM@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EF19C5214DA01AB002790E7 /* HeaderCM@2x.png */; };
 		6EF19C5514DA01AB002790E7 /* HeaderCM.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EF19C5314DA01AB002790E7 /* HeaderCM.png */; };
 		6EF19C6114DB46CF002790E7 /* about-fr.html in Resources */ = {isa = PBXBuildFile; fileRef = 6EF19C6014DB46CF002790E7 /* about-fr.html */; };
@@ -228,7 +228,7 @@
 		6EB9B32A14BA0AEB007C9666 /* Nutrient_WiseTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Nutrient_WiseTests.h; sourceTree = "<group>"; };
 		6EB9B32B14BA0AEB007C9666 /* Nutrient_WiseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Nutrient_WiseTests.m; sourceTree = "<group>"; };
 		6EDD97852F47CB4D004E72AE /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		6EE9EB3314DC786A00F8ABC5 /* DATA_v1.5.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = DATA_v1.5.sqlite; sourceTree = "<group>"; };
+		6EE9EB3314DC786A00F8ABC5 /* DATA_v2.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = DATA_v2.sqlite; sourceTree = "<group>"; };
 		6EF19C5214DA01AB002790E7 /* HeaderCM@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HeaderCM@2x.png"; sourceTree = "<group>"; };
 		6EF19C5314DA01AB002790E7 /* HeaderCM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HeaderCM.png; sourceTree = "<group>"; };
 		6EF19C5F14DAAD25002790E7 /* Nutrient Wise.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Nutrient Wise.entitlements"; sourceTree = "<group>"; };
@@ -494,7 +494,7 @@
 				6E81DCEB14D4A6CB00A680DE /* en.lproj */,
 				6E81DC8514CE336800A680DE /* Icons */,
 				6E81DD7614D5CEDD00A680DE /* Model.xcdatamodel */,
-				6EE9EB3314DC786A00F8ABC5 /* DATA_v1.5.sqlite */,
+				6EE9EB3314DC786A00F8ABC5 /* DATA_v2.sqlite */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -636,7 +636,7 @@
 				6E777B321BA77C58004FC8B4 /* Default-1136h@2x.png in Resources */,
 				6EF19C6314DB4A23002790E7 /* about-en.html in Resources */,
 				6EDD97862F47CB4D004E72AE /* Launch Screen.storyboard in Resources */,
-				6EE9EB3414DC786A00F8ABC5 /* DATA_v1.5.sqlite in Resources */,
+				6EE9EB3414DC786A00F8ABC5 /* DATA_v2.sqlite in Resources */,
 				6E2E51681808B46F00583908 /* 809-clipboard@2x.png in Resources */,
 				6E2E5188180C8FA700583908 /* nutrientwise_120.png in Resources */,
 				6E777B1E1BA774F4004FC8B4 /* nutrientwise_58.png in Resources */,

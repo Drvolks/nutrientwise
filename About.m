@@ -13,12 +13,12 @@
 
 // English strings
 #define kCreatedByEn @"Nutrient Wise is a creation of Consultation Massawippi inc."
-#define kDataSourceEn @"The data is adapted from: Canadian Nutrient File, Health Canada, 2010"
+#define kDataSourceEn @"The data is adapted from: Canadian Nutrient File, Health Canada, 2015"
 #define kDataSourceLinkTextEn @"www.healthcanada.gc.ca/cnf"
 
 // French strings
 #define kCreatedByFr @"Nutrient Wise est une cr\u00e9ation de Consultation Massawippi inc."
-#define kDataSourceFr @"Les donn\u00e9es sont adapt\u00e9es de : Fichier canadien sur les \u00e9l\u00e9ments nutritifs, Sant\u00e9 Canada, 2010"
+#define kDataSourceFr @"Les donn\u00e9es sont adapt\u00e9es de : Fichier canadien sur les \u00e9l\u00e9ments nutritifs, Sant\u00e9 Canada, 2015"
 #define kDataSourceLinkTextFr @"www.santecanada.gc.ca/fcen"
 
 @implementation About {

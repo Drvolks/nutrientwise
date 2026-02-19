@@ -21,8 +21,10 @@
 @synthesize arrayHelper;
 
 - (id) initWithProfile:(NSString *)pSelectedProfile {
-    selectedProfile = pSelectedProfile;
-    
+    self = [super initWithNibName:@"ProfileSelection" bundle:nil];
+    if (self) {
+        selectedProfile = pSelectedProfile;
+    }
     return self;
 }
 

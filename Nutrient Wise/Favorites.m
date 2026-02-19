@@ -50,7 +50,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
     favoriteHelper = [FavoriteHelper sharedInstance];
     languageHelper = [LanguageHelper sharedInstance];
     cellHelper = [CellHelper sharedInstance];
@@ -64,31 +64,24 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     [self loadFavorites];
-
 }
 
 - (void) loadFavorites {
     NSArray *favoriteIds = [[self.favoriteHelper favotiteFoodIds] allValues];
     NSMutableArray *favoriteEntities = [[NSMutableArray alloc] init];
-    
-    if(kDebug) {
-        NSLog(@"ids = %@", favoriteIds);
-    }
-    
+
     for(NSNumber *favorite in favoriteIds) {
-        if(kDebug) {
-            NSLog(@"search for %@", favorite);
-        }
         FoodName *food = [finder getFoodName:favorite];
         if(food) {
             [favoriteEntities addObject:food];
         }
     }
-    
+
     //Sort Data
     self.favorites = [arrayHelper sortMutableArray:favoriteEntities key:[languageHelper nameColumn] ascending:YES];
-    
+
     [table reloadData];
 }
 

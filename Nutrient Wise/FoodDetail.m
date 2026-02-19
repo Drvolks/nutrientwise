@@ -54,7 +54,10 @@
 @synthesize activity;
 
 - (id)initWithFood:(FoodName *)foodEntity {
-    foodName = foodEntity;
+    self = [super initWithNibName:@"FoodDetail" bundle:nil];
+    if (self) {
+        foodName = foodEntity;
+    }
     return self;
 }
 

@@ -43,5 +43,8 @@
 /* about */
 "About" = "À Propos";
 
+/* Search */
+"SearchHint" = "Recherchez un aliment pour voir ses valeurs nutritives";
+
 /* Actions */
 "Cancel" = "Annuler";

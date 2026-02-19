@@ -234,7 +234,6 @@
 		6EF19C5F14DAAD25002790E7 /* Nutrient Wise.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Nutrient Wise.entitlements"; sourceTree = "<group>"; };
 		6EF19C6014DB46CF002790E7 /* about-fr.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "about-fr.html"; sourceTree = "<group>"; };
 		6EF19C6214DB4A23002790E7 /* about-en.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "about-en.html"; sourceTree = "<group>"; };
-
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -893,6 +892,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2;
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.consultationmassawippi.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "Nutrient Wise";
 				PROVISIONING_PROFILE = "";
@@ -923,6 +923,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2;
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.consultationmassawippi.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "Nutrient Wise";
 				PROVISIONING_PROFILE = "";
@@ -1036,6 +1037,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2;
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.consultationmassawippi.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "Nutrient Wise";
 				PROVISIONING_PROFILE = "";

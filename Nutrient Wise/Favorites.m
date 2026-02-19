@@ -51,6 +51,9 @@
 {
     [super viewDidLoad];
 
+    self.view.backgroundColor = [UIColor systemBackgroundColor];
+    table.backgroundColor = [UIColor systemBackgroundColor];
+
     favoriteHelper = [FavoriteHelper sharedInstance];
     languageHelper = [LanguageHelper sharedInstance];
     cellHelper = [CellHelper sharedInstance];

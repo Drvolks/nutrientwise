@@ -51,7 +51,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
+    self.view.backgroundColor = [UIColor systemBackgroundColor];
+    self.resultTable.backgroundColor = [UIColor systemBackgroundColor];
+
     #ifdef FREE
         [self.banner setAdUnitID:@"ca-app-pub-2793046476751764/3785848734"];
         self.banner.rootViewController = self;

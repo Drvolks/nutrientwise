@@ -19,7 +19,10 @@
 @synthesize finder;
 
 - (id)initWithLanguage:(NSString *) pSelectedLanguage {
-    selectedLanguage =pSelectedLanguage;
+    self = [super initWithNibName:@"SettingsLanguage" bundle:nil];
+    if (self) {
+        selectedLanguage = pSelectedLanguage;
+    }
     return self;
 }
 

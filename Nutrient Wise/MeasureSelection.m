@@ -24,9 +24,11 @@
 
 - (id) initWithConversionFactors:(NSArray *) pConversionFactors
         selectedConversionFactor:(ConversionFactor *)pSelectedConversionFactor {
-    conversionFactors = pConversionFactors;
-    selectedConversionFactor = pSelectedConversionFactor;
-    
+    self = [super initWithNibName:@"MeasureSelection" bundle:nil];
+    if (self) {
+        conversionFactors = pConversionFactors;
+        selectedConversionFactor = pSelectedConversionFactor;
+    }
     return self;
 }
 

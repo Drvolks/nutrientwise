@@ -32,10 +32,13 @@
 
 - (id) initWithFoodName:(FoodName *)food
                        conversionFactor:(ConversionFactor *) conversionFactor {
-    foodName = food;
-    selectedConversionFactor = conversionFactor;
-    NSSet *nutritiveValueEntities = [foodName valueForKey:kNutritiveValuesAttribute];    
-    nutritiveValues = [nutritiveValueEntities allObjects];
+    self = [super initWithNibName:@"AllNutritiveValues" bundle:nil];
+    if (self) {
+        foodName = food;
+        selectedConversionFactor = conversionFactor;
+        NSSet *nutritiveValueEntities = [foodName valueForKey:kNutritiveValuesAttribute];
+        nutritiveValues = [nutritiveValueEntities allObjects];
+    }
     return self;
 }
 

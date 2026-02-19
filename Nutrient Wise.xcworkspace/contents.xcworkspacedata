@@ -4,7 +4,4 @@
    <FileRef
       location = "group:Nutrient Wise.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:Pods/Pods.xcodeproj">
-   </FileRef>
 </Workspace>

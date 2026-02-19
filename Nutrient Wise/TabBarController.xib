@@ -40,7 +40,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <viewControllers>
-                        <viewController id="37" customClass="Favorites">
+                        <viewController nibName="Favorites" id="37" customClass="Favorites">
                             <extendedEdge key="edgesForExtendedLayout"/>
                             <navigationItem key="navigationItem" title="Root View Controller" id="38">
                                 <barButtonItem key="rightBarButtonItem" title="Item" id="42">
@@ -59,7 +59,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <viewControllers>
-                        <viewController id="58" customClass="Profiles">
+                        <viewController nibName="Profiles" id="58" customClass="Profiles">
                             <extendedEdge key="edgesForExtendedLayout"/>
                             <navigationItem key="navigationItem" title="Root View Controller" id="59"/>
                         </viewController>
@@ -72,7 +72,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <viewControllers>
-                        <viewController id="53" customClass="Settings">
+                        <viewController nibName="Settings" id="53" customClass="Settings">
                             <extendedEdge key="edgesForExtendedLayout"/>
                             <navigationItem key="navigationItem" title="Root View Controller" id="54"/>
                         </viewController>

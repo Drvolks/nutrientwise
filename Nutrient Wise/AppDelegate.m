@@ -9,9 +9,6 @@
 #import "SearchController.h"
 #import "Search.h"
 #import "MKiCloudSync.h"
-#ifdef FREE
-    @import Firebase;
-#endif
 
 #define kDebug NO
 #define kMainNib @"TabBarController"
@@ -48,11 +45,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self setup];
     
-    #ifdef FREE
-        [FIRApp configure];
-        [GADMobileAds configureWithApplicationID:@"ca-app-pub-2793046476751764/3785848734"];
-    #endif
-    
     [self setupTabBarController];
     [self pushManagedContextToViewControllers];
     
@@ -64,7 +56,6 @@
 - (void) setupTabBarController {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [[NSBundle mainBundle] loadNibNamed:kMainNib owner:self options:nil];
-    [self.window addSubview:rootController.view];
     [self.window setRootViewController:rootController];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
@@ -115,18 +106,17 @@
 
 - (void) pushManagedContextToViewControllers {
     NSManagedObjectContext *context = [self managedObjectContext];
-    
-    
-    
+
     NSArray *viewControllers = [rootController viewControllers];
     for (id viewController in viewControllers) {
-        // Translate the tab labels
         if ([viewController respondsToSelector:@selector(setFinder:)]) {
             [viewController setFinder:[[Finder alloc] initWithContext:context]];
-            
-            if ([viewController respondsToSelector:@selector(setViewControllers:)]) {
-                NSArray *viewControllers2 = [viewController viewControllers];
-                for (id viewController2 in viewControllers2) {
+        }
+
+        if ([viewController respondsToSelector:@selector(viewControllers)]) {
+            NSArray *viewControllers2 = [viewController viewControllers];
+            for (id viewController2 in viewControllers2) {
+                if ([viewController2 respondsToSelector:@selector(setFinder:)]) {
                     [viewController2 setFinder:[[Finder alloc] initWithContext:context]];
                 }
             }

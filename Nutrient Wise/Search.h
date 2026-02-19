@@ -26,6 +26,9 @@
 #endif
 
 
+@property (strong, nonatomic) UIView *emptyStateView;
+@property (strong, nonatomic) UILabel *emptyStateLabel;
+
 @property (strong, nonatomic) NSArray *searchResults;
 @property (strong, nonatomic) Finder *finder;
 @property (strong, nonatomic) LanguageHelper *languageHelper;

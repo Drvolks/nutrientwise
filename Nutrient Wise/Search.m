@@ -12,6 +12,7 @@
 
 #define kTitle @"Search"
 #define kCancel @"Cancel"
+#define kSearchHint @"SearchHint"
 #define kRowIdentifier @"rowIdentifier"
 #define kClearSearchBar @""
 
@@ -24,6 +25,8 @@
 @synthesize languageHelper;
 @synthesize cellHelper;
 @synthesize banner;
+@synthesize emptyStateView;
+@synthesize emptyStateLabel;
 
 - (id) init {
     return self;
@@ -72,10 +75,46 @@
     
     languageHelper = [LanguageHelper sharedInstance];
     cellHelper = [CellHelper sharedInstance];
-    
+
+    // Empty state view
+    emptyStateView = [[UIView alloc] init];
+    emptyStateView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:emptyStateView];
+
+    UIImage *icon = [UIImage imageNamed:@"LaunchIcon"];
+    UIImageView *iconView = [[UIImageView alloc] initWithImage:icon];
+    iconView.translatesAutoresizingMaskIntoConstraints = NO;
+    iconView.layer.cornerRadius = 20;
+    iconView.clipsToBounds = YES;
+    [emptyStateView addSubview:iconView];
+
+    emptyStateLabel = [[UILabel alloc] init];
+    emptyStateLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    emptyStateLabel.font = [UIFont systemFontOfSize:16];
+    emptyStateLabel.textColor = [UIColor secondaryLabelColor];
+    emptyStateLabel.textAlignment = NSTextAlignmentCenter;
+    emptyStateLabel.numberOfLines = 0;
+    [emptyStateView addSubview:emptyStateLabel];
+
+    [NSLayoutConstraint activateConstraints:@[
+        [emptyStateView.topAnchor constraintEqualToAnchor:searchBar.bottomAnchor],
+        [emptyStateView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor],
+        [emptyStateView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor],
+        [emptyStateView.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor],
+
+        [iconView.centerXAnchor constraintEqualToAnchor:emptyStateView.centerXAnchor],
+        [iconView.centerYAnchor constraintEqualToAnchor:emptyStateView.centerYAnchor constant:-60],
+        [iconView.widthAnchor constraintEqualToConstant:90],
+        [iconView.heightAnchor constraintEqualToConstant:90],
+
+        [emptyStateLabel.topAnchor constraintEqualToAnchor:iconView.bottomAnchor constant:16],
+        [emptyStateLabel.leadingAnchor constraintEqualToAnchor:emptyStateView.leadingAnchor constant:40],
+        [emptyStateLabel.trailingAnchor constraintEqualToAnchor:emptyStateView.trailingAnchor constant:-40],
+    ]];
+
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [appDelegate registerLanguageDelegate:self];
-    
+
     [self languageChanged];
 }
 
@@ -97,6 +136,12 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (void) updateEmptyState {
+    BOOL hasResults = [searchResults count] > 0;
+    BOOL isSearching = [searchBar.text length] > 0;
+    emptyStateView.hidden = hasResults || isSearching;
+}
+
 - (void) resetSearch {
     searchResults = [[NSArray alloc] init];
 }
@@ -106,6 +151,7 @@
 
     self.searchResults = [finder searchFoodByName:text];
     [resultTable reloadData];
+    [self updateEmptyState];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -125,12 +171,12 @@
     [searchBar resignFirstResponder];
 }
 
-- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)bar { 
+- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)bar {
     [bar setShowsCancelButton:YES animated:YES];
-    
+
     [bar cancelButton:[languageHelper localizedString:kCancel]];
-    
-    return YES;  
+
+    return YES;
 }  
 
 - (BOOL)searchBarShouldEndEditing:(UISearchBar *)bar {  
@@ -142,9 +188,10 @@
     if([searchText length] == 0) {
         [self resetSearch];
         [resultTable reloadData];
+        [self updateEmptyState];
         return;
     }
-    
+
     [self search:searchText];
 }
 
@@ -152,6 +199,7 @@
     searchBar.text = kClearSearchBar;
     [self resetSearch];
     [resultTable reloadData];
+    [self updateEmptyState];
 
     [searchBar resignFirstResponder];
 }
@@ -175,10 +223,12 @@
 
 - (void) languageChanged {
     self.title = [languageHelper localizedString:kTitle];
-    
+    emptyStateLabel.text = [languageHelper localizedString:kSearchHint];
+
     searchBar.text = kClearSearchBar;
     [self resetSearch];
     [resultTable reloadData];
+    [self updateEmptyState];
 }
 
 @end

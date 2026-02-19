@@ -60,7 +60,7 @@
     languageHelper = [LanguageHelper sharedInstance];
 
     // App icon
-    UIImage *icon = [UIImage imageNamed:@"AppIcon"];
+    UIImage *icon = [UIImage imageNamed:@"LaunchIcon"];
     _iconView = [[UIImageView alloc] initWithImage:icon];
     _iconView.translatesAutoresizingMaskIntoConstraints = NO;
     _iconView.layer.cornerRadius = 20;

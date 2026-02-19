@@ -57,7 +57,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [[NSBundle mainBundle] loadNibNamed:kMainNib owner:self options:nil];
     [self.window setRootViewController:rootController];
-    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.backgroundColor = [UIColor systemBackgroundColor];
     [self.window makeKeyAndVisible];
 
     [self setTabLabels];

@@ -48,7 +48,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
+    self.view.backgroundColor = [UIColor systemBackgroundColor];
+    table.backgroundColor = [UIColor systemBackgroundColor];
+
     languageHelper = [LanguageHelper sharedInstance];
     profileHelper = [ProfileHelper sharedInstance];
     

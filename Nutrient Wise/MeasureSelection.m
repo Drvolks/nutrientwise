@@ -54,7 +54,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
+    self.view.backgroundColor = [UIColor systemBackgroundColor];
+    for (UIView *subview in self.view.subviews) {
+        if ([subview isKindOfClass:[UITableView class]]) {
+            subview.backgroundColor = [UIColor systemBackgroundColor];
+        }
+    }
+
     languageHelper = [LanguageHelper sharedInstance];
 }
 

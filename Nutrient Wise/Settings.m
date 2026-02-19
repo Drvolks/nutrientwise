@@ -48,9 +48,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
+    self.view.backgroundColor = [UIColor systemBackgroundColor];
+    table.backgroundColor = [UIColor systemBackgroundColor];
+
     languageHelper = [LanguageHelper sharedInstance];
-    
+
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [appDelegate registerLanguageDelegate:self];
     

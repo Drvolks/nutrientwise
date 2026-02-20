@@ -49,7 +49,7 @@
 		6E777B321BA77C58004FC8B4 /* Default-1136h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E777B311BA77C58004FC8B4 /* Default-1136h@2x.png */; };
 		6E777B331BA77ED7004FC8B4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E81DD5614D5C33600A680DE /* Localizable.strings */; };
 		6E777B341BA77F34004FC8B4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E81DCEC14D4A6CB00A680DE /* Localizable.strings */; };
-		6E7C6EB81B41B1D600651D99 /* MKiCloudSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7C6EB71B41B1D600651D99 /* MKiCloudSync.m */; };
+		6E7C6EB81B41B1D600651D99 /* ICloudSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7C6EB71B41B1D600651D99 /* ICloudSync.m */; };
 		6E81DC7D14CE1F4A00A680DE /* FavoritesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81DC7C14CE1F4A00A680DE /* FavoritesController.m */; };
 		6E81DC8314CE32D600A680DE /* About.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81DC8114CE32D500A680DE /* About.m */; };
 		6E81DC8414CE32D600A680DE /* About.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E81DC8214CE32D600A680DE /* About.xib */; };
@@ -158,8 +158,8 @@
 		6E777B291BA77AF1004FC8B4 /* Default-960h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-960h@2x.png"; sourceTree = "<group>"; };
 		6E777B2B1BA77B50004FC8B4 /* Default-480h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-480h.png"; sourceTree = "<group>"; };
 		6E777B311BA77C58004FC8B4 /* Default-1136h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-1136h@2x.png"; sourceTree = "<group>"; };
-		6E7C6EB61B41B1D600651D99 /* MKiCloudSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKiCloudSync.h; sourceTree = "<group>"; };
-		6E7C6EB71B41B1D600651D99 /* MKiCloudSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKiCloudSync.m; sourceTree = "<group>"; };
+		6E7C6EB61B41B1D600651D99 /* ICloudSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICloudSync.h; sourceTree = "<group>"; };
+		6E7C6EB71B41B1D600651D99 /* ICloudSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICloudSync.m; sourceTree = "<group>"; };
 		6E81DC7B14CE1F4A00A680DE /* FavoritesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesController.h; sourceTree = "<group>"; };
 		6E81DC7C14CE1F4A00A680DE /* FavoritesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesController.m; sourceTree = "<group>"; };
 		6E81DC8014CE32D500A680DE /* About.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = About.h; path = ../About.h; sourceTree = "<group>"; };
@@ -507,8 +507,8 @@
 		6EF19C5614DA059C002790E7 /* external */ = {
 			isa = PBXGroup;
 			children = (
-				6E7C6EB61B41B1D600651D99 /* MKiCloudSync.h */,
-				6E7C6EB71B41B1D600651D99 /* MKiCloudSync.m */,
+				6E7C6EB61B41B1D600651D99 /* ICloudSync.h */,
+				6E7C6EB71B41B1D600651D99 /* ICloudSync.m */,
 			);
 			name = external;
 			sourceTree = "<group>";
@@ -723,7 +723,7 @@
 				6E81DD8314D5CEF000A680DE /* NutritiveValue.m in Sources */,
 				6E81DD8414D5CEF000A680DE /* ConversionFactor.m in Sources */,
 				6E81DD8514D5CEF000A680DE /* FoodName.m in Sources */,
-				6E7C6EB81B41B1D600651D99 /* MKiCloudSync.m in Sources */,
+				6E7C6EB81B41B1D600651D99 /* ICloudSync.m in Sources */,
 				6E81DD8614D5CEF000A680DE /* NutritiveName.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

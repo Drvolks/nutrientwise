@@ -1,3 +1,6 @@
 #xcuserdata
 *.xcuserstate
 Nutrient Wise.xcodeproj/project.xcworkspace/xcuserdata/*
+
+# macOS
+.DS_Store

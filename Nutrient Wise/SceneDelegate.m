@@ -1,6 +1,6 @@
 #import "SceneDelegate.h"
 #import "AppDelegate.h"
-#import "MKiCloudSync.h"
+#import "ICloudSync.h"
 
 @implementation SceneDelegate
 
@@ -18,7 +18,7 @@
 
     [appDelegate setTabLabels];
     [appDelegate pushManagedContextToViewControllers];
-    [MKiCloudSync start];
+    [ICloudSync start];
 }
 
 - (void)sceneDidDisconnect:(UIScene *)scene {

@@ -8,7 +8,7 @@
 #import "AppDelegate.h"
 #import "SearchController.h"
 #import "Search.h"
-#import "MKiCloudSync.h"
+#import "ICloudSync.h"
 
 #define kDebug NO
 #define kMainNib @"TabBarController"

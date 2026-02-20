@@ -87,6 +87,7 @@
 		6EB9B2FA14BA0AEB007C9666 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB9B2F914BA0AEB007C9666 /* CoreGraphics.framework */; };
 		6EB9B30214BA0AEB007C9666 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB9B30114BA0AEB007C9666 /* main.m */; };
 		6EB9B30614BA0AEB007C9666 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB9B30514BA0AEB007C9666 /* AppDelegate.m */; };
+		BB00000114BA0AEB007C9666 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB00000314BA0AEB007C9666 /* SceneDelegate.m */; };
 		6EB9B32014BA0AEB007C9666 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB9B2F514BA0AEB007C9666 /* UIKit.framework */; };
 		6EB9B32114BA0AEB007C9666 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB9B2F714BA0AEB007C9666 /* Foundation.framework */; };
 		6EB9B32914BA0AEB007C9666 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EB9B32714BA0AEB007C9666 /* InfoPlist.strings */; };
@@ -222,6 +223,8 @@
 		6EB9B30314BA0AEB007C9666 /* Nutrient Wise-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Nutrient Wise-Prefix.pch"; sourceTree = "<group>"; };
 		6EB9B30414BA0AEB007C9666 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6EB9B30514BA0AEB007C9666 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BB00000214BA0AEB007C9666 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		BB00000314BA0AEB007C9666 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		6EB9B31D14BA0AEB007C9666 /* Nutrient WiseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nutrient WiseTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EB9B32614BA0AEB007C9666 /* Nutrient WiseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Nutrient WiseTests-Info.plist"; sourceTree = "<group>"; };
 		6EB9B32814BA0AEB007C9666 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -445,6 +448,8 @@
 				6E81DCBE14D4779D00A680DE /* SettingsLanguage.xib */,
 				6EB9B30414BA0AEB007C9666 /* AppDelegate.h */,
 				6EB9B30514BA0AEB007C9666 /* AppDelegate.m */,
+				BB00000214BA0AEB007C9666 /* SceneDelegate.h */,
+				BB00000314BA0AEB007C9666 /* SceneDelegate.m */,
 				6E740AE814C7761E007A0C72 /* TabBarController.xib */,
 				6E81DC8014CE32D500A680DE /* About.h */,
 				6E81DC8114CE32D500A680DE /* About.m */,
@@ -692,6 +697,7 @@
 				6EB9B30214BA0AEB007C9666 /* main.m in Sources */,
 				6E47A71417BADCD400BC44E5 /* NutrientValueCell.m in Sources */,
 				6EB9B30614BA0AEB007C9666 /* AppDelegate.m in Sources */,
+				BB00000114BA0AEB007C9666 /* SceneDelegate.m in Sources */,
 				6E417F3B14BE50B000F2A2AC /* Finder.m in Sources */,
 				6E740AEF14C77964007A0C72 /* Search.m in Sources */,
 				6EAD166214CC7DD500D82BFD /* Favorites.m in Sources */,

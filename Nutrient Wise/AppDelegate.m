@@ -43,24 +43,16 @@
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [self setup];
-    
-    [self setupTabBarController];
-    [self pushManagedContextToViewControllers];
-    
-    [MKiCloudSync start];
-    
     return YES;
-} 
+}
 
-- (void) setupTabBarController {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    [[NSBundle mainBundle] loadNibNamed:kMainNib owner:self options:nil];
-    [self.window setRootViewController:rootController];
-    self.window.backgroundColor = [UIColor systemBackgroundColor];
-    [self.window makeKeyAndVisible];
+#pragma mark - UISceneSession Lifecycle
 
-    [self setTabLabels];
+- (UISceneConfiguration *)application:(UIApplication *)application configurationForConnectingSceneSession:(UISceneSession *)connectingSceneSession options:(UISceneConnectionOptions *)options {
+    return [[UISceneConfiguration alloc] initWithName:@"Default Configuration" sessionRole:connectingSceneSession.role];
+}
+
+- (void)application:(UIApplication *)application didDiscardSceneSessions:(NSSet<UISceneSession *> *)sceneSessions {
 }
 
 - (void) setup {

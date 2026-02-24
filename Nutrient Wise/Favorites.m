@@ -85,6 +85,14 @@
     //Sort Data
     self.favorites = [arrayHelper sortMutableArray:favoriteEntities key:[languageHelper nameColumn] ascending:YES];
 
+    if([self.favorites count] == 0) {
+        self.navigationItem.rightBarButtonItem = nil;
+        [self.table setEditing:NO animated:NO];
+    } else if(self.navigationItem.rightBarButtonItem == nil) {
+        UIBarButtonItem *editButton = [[UIBarButtonItem alloc] initWithTitle:[languageHelper localizedString:kEdit] style:UIBarButtonItemStylePlain target:self action:@selector(toggleEdit:)];
+        self.navigationItem.rightBarButtonItem = editButton;
+    }
+
     [table reloadData];
 }
 
@@ -133,6 +141,11 @@
     [favoriteHelper removeFavorite:foodName];
     [self.favorites removeObjectAtIndex:row];
     [table deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+
+    if([self.favorites count] == 0) {
+        [self.table setEditing:NO animated:YES];
+        self.navigationItem.rightBarButtonItem = nil;
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

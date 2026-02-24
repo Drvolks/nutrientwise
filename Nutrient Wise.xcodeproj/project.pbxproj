@@ -888,7 +888,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = YES;
-				CURRENT_PROJECT_VERSION = 410;
+				CURRENT_PROJECT_VERSION = 411;
 				DEVELOPMENT_TEAM = DEVELOPMENT_TEAM;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
@@ -898,7 +898,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2;
+				MARKETING_VERSION = 2.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "BUNDLE_ID_PREFIX.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "Nutrient Wise";
 				PROVISIONING_PROFILE = "";
@@ -919,7 +919,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = YES;
-				CURRENT_PROJECT_VERSION = 410;
+				CURRENT_PROJECT_VERSION = 411;
 				DEVELOPMENT_TEAM = DEVELOPMENT_TEAM;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
@@ -929,7 +929,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2;
+				MARKETING_VERSION = 2.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "BUNDLE_ID_PREFIX.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "Nutrient Wise";
 				PROVISIONING_PROFILE = "";
@@ -1033,7 +1033,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = YES;
-				CURRENT_PROJECT_VERSION = 410;
+				CURRENT_PROJECT_VERSION = 411;
 				DEVELOPMENT_TEAM = DEVELOPMENT_TEAM;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
@@ -1043,7 +1043,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2;
+				MARKETING_VERSION = 2.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "BUNDLE_ID_PREFIX.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "Nutrient Wise";
 				PROVISIONING_PROFILE = "";

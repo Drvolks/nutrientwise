@@ -33,10 +33,10 @@ rm -rf "$EXPORT_DIR"
 # --- Bump build number ---
 
 cd "$SCRIPT_DIR"
-CURRENT_BUILD=$(/usr/libexec/PlistBuddy -c "Print CFBundleVersion" "Nutrient Wise/Nutrient Wise-Info.plist")
+CURRENT_BUILD=$(xcrun agvtool what-version -terse)
 NEW_BUILD=$((CURRENT_BUILD + 1))
 echo "=== Bumping build number: $CURRENT_BUILD → $NEW_BUILD ==="
-/usr/libexec/PlistBuddy -c "Set :CFBundleVersion $NEW_BUILD" "Nutrient Wise/Nutrient Wise-Info.plist"
+xcrun agvtool new-version -all "$NEW_BUILD"
 
 # --- Archive ---
 

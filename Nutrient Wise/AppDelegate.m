@@ -12,8 +12,8 @@
 
 #define kDebug NO
 #define kMainNib @"TabBarController"
-#define kDatabase @"DATA_v2.sqlite"
-#define kDatabaseFileName @"DATA_v2"
+#define kDatabase @"DATA_v3.sqlite"
+#define kDatabaseFileName @"DATA_v3"
 #define kDatabaseFileExt @"sqlite"
 #define kModelFileName @"Model"
 #define kModelFileExt @"mom"

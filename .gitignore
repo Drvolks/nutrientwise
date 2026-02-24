@@ -2,5 +2,9 @@
 *.xcuserstate
 Nutrient Wise.xcodeproj/project.xcworkspace/xcuserdata/*
 
+# SQLite runtime files
+*.sqlite-shm
+*.sqlite-wal
+
 # macOS
 .DS_Store

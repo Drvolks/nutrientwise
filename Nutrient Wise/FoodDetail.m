@@ -212,6 +212,11 @@
     return [[conversionFactors allObjects] objectAtIndex:0];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [table reloadData];
+}
+
 - (void)viewDidUnload
 {
     [super viewDidUnload];

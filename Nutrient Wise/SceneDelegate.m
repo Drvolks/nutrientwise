@@ -14,9 +14,8 @@
     [[NSBundle mainBundle] loadNibNamed:@"TabBarController" owner:appDelegate options:nil];
     [self.window setRootViewController:appDelegate.rootController];
     self.window.backgroundColor = [UIColor systemBackgroundColor];
-    [self.window makeKeyAndVisible];
-
     [appDelegate setTabLabels];
+    [self.window makeKeyAndVisible];
     [appDelegate pushManagedContextToViewControllers];
     [ICloudSync start];
 }

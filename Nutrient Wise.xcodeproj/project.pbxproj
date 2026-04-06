@@ -237,6 +237,8 @@
 		6EF19C6214DB4A23002790E7 /* about-en.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "about-en.html"; sourceTree = "<group>"; };
 		BB00000214BA0AEB007C9666 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		BB00000314BA0AEB007C9666 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		CA00000100000000000CA001 /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
+		CA00000200000000000CA002 /* Secret.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secret.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -375,6 +377,7 @@
 				6EB9B2F414BA0AEB007C9666 /* Frameworks */,
 				6EB9B2F214BA0AEB007C9666 /* Products */,
 				6E012D1E1DBBB9CC00E35258 /* GoogleService-Info.plist */,
+				CA00000300000000000CA003 /* Configs */,
 			);
 			sourceTree = "<group>";
 		};
@@ -513,6 +516,15 @@
 			name = external;
 			sourceTree = "<group>";
 		};
+		CA00000300000000000CA003 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				CA00000100000000000CA001 /* Base.xcconfig */,
+				CA00000200000000000CA002 /* Secret.xcconfig */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -565,7 +577,6 @@
 				LastUpgradeCheck = 2620;
 				TargetAttributes = {
 					6EB9B2F014BA0AEB007C9666 = {
-						DevelopmentTeam = DEVELOPMENT_TEAM;
 						SystemCapabilities = {
 							com.apple.iCloud = {
 								enabled = 1;
@@ -776,6 +787,7 @@
 /* Begin XCBuildConfiguration section */
 		6EB9B32D14BA0AEB007C9666 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA00000100000000000CA001 /* Base.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -832,6 +844,7 @@
 		};
 		6EB9B32E14BA0AEB007C9666 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA00000100000000000CA001 /* Base.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -889,7 +902,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = YES;
 				CURRENT_PROJECT_VERSION = 412;
-				DEVELOPMENT_TEAM = DEVELOPMENT_TEAM;
+				DEVELOPMENT_TEAM = "$(DEVELOPMENT_TEAM)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
 				INFOPLIST_FILE = "Nutrient Wise/Nutrient Wise-Info.plist";
@@ -898,8 +911,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "BUNDLE_ID_PREFIX.$(PRODUCT_NAME:rfc1034identifier)";
+				MARKETING_VERSION = 2.0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID_PREFIX).$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "Nutrient Wise";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Nutrient Wise/Nutrient Wise-Bridging-Header.h";
@@ -920,7 +933,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = YES;
 				CURRENT_PROJECT_VERSION = 412;
-				DEVELOPMENT_TEAM = DEVELOPMENT_TEAM;
+				DEVELOPMENT_TEAM = "$(DEVELOPMENT_TEAM)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
 				INFOPLIST_FILE = "Nutrient Wise/Nutrient Wise-Info.plist";
@@ -929,8 +942,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "BUNDLE_ID_PREFIX.$(PRODUCT_NAME:rfc1034identifier)";
+				MARKETING_VERSION = 2.0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID_PREFIX).$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "Nutrient Wise";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -952,7 +965,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
 				INFOPLIST_FILE = "Nutrient WiseTests/Nutrient WiseTests-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "BUNDLE_ID_PREFIX.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID_PREFIX).${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "Nutrient WiseTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -969,7 +982,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
 				INFOPLIST_FILE = "Nutrient WiseTests/Nutrient WiseTests-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "BUNDLE_ID_PREFIX.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID_PREFIX).${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "Nutrient WiseTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -977,6 +990,7 @@
 		};
 		6EF19C5B14DA0F7D002790E7 /* Ad hoc distribution */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA00000100000000000CA001 /* Base.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -1034,7 +1048,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = YES;
 				CURRENT_PROJECT_VERSION = 412;
-				DEVELOPMENT_TEAM = DEVELOPMENT_TEAM;
+				DEVELOPMENT_TEAM = "$(DEVELOPMENT_TEAM)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
 				INFOPLIST_FILE = "Nutrient Wise/Nutrient Wise-Info.plist";
@@ -1043,8 +1057,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "BUNDLE_ID_PREFIX.$(PRODUCT_NAME:rfc1034identifier)";
+				MARKETING_VERSION = 2.0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID_PREFIX).$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "Nutrient Wise";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -1066,7 +1080,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
 				INFOPLIST_FILE = "Nutrient WiseTests/Nutrient WiseTests-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "BUNDLE_ID_PREFIX.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID_PREFIX).${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "Nutrient WiseTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};

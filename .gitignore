@@ -8,3 +8,16 @@ Nutrient Wise.xcodeproj/project.xcworkspace/xcuserdata/*
 
 # macOS
 .DS_Store
+
+# Secrets — never commit
+Configs/Secret.xcconfig
+GoogleService-Info.plist
+ExportOptions.plist
+
+# Legacy Xcode source control
+*.xccheckout
+
+# Provisioning profiles & certificates
+*.mobileprovision
+*.p8
+*.p12

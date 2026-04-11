@@ -48,4 +48,4 @@ Nutritional data comes from the [Canadian Nutrient File](https://www.canada.ca/e
 - Objective-C / UIKit (XIB-based, no Storyboards)
 - Core Data with SQLite backing store
 - UIScene lifecycle
-- Targets iOS 26+
+- Targets iOS 15+

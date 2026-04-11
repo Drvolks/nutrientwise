@@ -2,31 +2,18 @@
 //  Nutrient_WiseTests.m
 //  Nutrient WiseTests
 //
-//  Created by drvolks on 12-01-08.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Legacy entry point kept so the existing pbxproj reference still builds.
+//  Real coverage lives in per-class files: LanguageHelperTests,
+//  ProfileHelperTests, ArrayHelperTests, FavoriteHelperTests, FinderTests.
 //
 
 #import "Nutrient_WiseTests.h"
 
 @implementation Nutrient_WiseTests
 
-- (void)setUp
-{
-    [super setUp];
-    
-    // Set-up code here.
-}
-
-- (void)tearDown
-{
-    // Tear-down code here.
-    
-    [super tearDown];
-}
-
-- (void)testExample
-{
-    XCTFail(@"Unit tests are not implemented yet in Nutrient WiseTests");
+- (void)testHostAppLoads {
+    // Smoke test: the host app bundle must load or nothing else will run.
+    XCTAssertNotNil([NSBundle mainBundle]);
 }
 
 @end

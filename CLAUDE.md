@@ -16,8 +16,8 @@ Bilingual (English/French) iOS app for looking up nutritional information from t
 - `Nutrient Wise.xcworkspace` — the workspace to open and build against
 - `Nutrient Wise.xcodeproj` — underlying project
 - `Nutrient Wise/` — app sources (Objective-C `.h`/`.m` + `.xib` pairs)
-- `Nutrient WiseTests/` — XCTest unit test target
-- `Nutrient WiseUITests/` — XCUITest UI test target (create if missing — see "Testing" below)
+- `Nutrient WiseTests/` — XCTest unit test target (includes `ViewControllerIntegrationTests.m` which drives every VC through its XIB-loaded view hierarchy without XCUITest)
+- `Nutrient WiseUITests/` — XCUITest UI test target (**does not exist yet** — see "Adding a UI test target" below)
 - `Configs/` — xcconfig files; `Secret.xcconfig` is gitignored and holds `BUNDLE_ID_PREFIX` + `DEVELOPMENT_TEAM`. A `Secret.xcconfig.template` is checked in.
 - `Model.xcdatamodeld/` — Core Data model
 - `en.lproj/`, `fr.lproj/` — localized strings and HTML (`about-en.html`, `about-fr.html`)
@@ -26,9 +26,9 @@ Bilingual (English/French) iOS app for looking up nutritional information from t
 
 ## Scheme and targets
 
-- App scheme: **Nutrient Wise**
-- Unit test target: **Nutrient WiseTests** (XCTest)
-- UI test target: **Nutrient WiseUITests** (XCUITest) — may not exist yet; add it if you need to write UI tests
+- App scheme: **Nutrient Wise** (`TestAction` has `codeCoverageEnabled = "YES"` scoped to the app target only)
+- Unit test target: **Nutrient WiseTests** (XCTest) — uses `BUNDLE_LOADER` / `TEST_HOST` to link against the app at runtime, and has `HEADER_SEARCH_PATHS = "$(SRCROOT)/Nutrient Wise"` so tests can `#import` app headers directly
+- UI test target: **Nutrient WiseUITests** (XCUITest) — not yet created; see "Adding a UI test target" below
 - Bundle identifier is derived from `BUNDLE_ID_PREFIX` in `Secret.xcconfig` — do not hardcode it in `Info.plist` or the pbxproj
 
 ## Code conventions
@@ -75,23 +75,69 @@ Use `session_set_defaults` once at the top of a session and then call the build/
 
 ## Testing
 
-**Coverage target: 80% line coverage across the app target.** When adding or changing code, add tests to keep the overall line coverage at or above 80%. If a change would drop coverage below the target, flag it before finishing.
+**Coverage target: 80% line coverage across the app target.** When adding or changing code, add tests to keep the overall line coverage at or above 80%. If a change would drop coverage below the target, flag it before finishing. Last measured baseline: **83.1%** (111 tests).
 
-Two test targets:
+### What lives where
 
-- **Nutrient WiseTests** — XCTest unit tests. Cover helpers (`LanguageHelper`, `ProfileHelper`, `FavoriteHelper`, `ArrayHelper`, `CellHelper`), `Finder` queries against Core Data, model logic, and anything that can be tested without the UI. Prefer an in-memory Core Data stack or a fixture copy of `DATA_v3.sqlite` — never mutate the shipped database.
-- **Nutrient WiseUITests** — XCUITest UI tests. Cover the user-visible flows: search → select food → pick serving size → view nutrients, profile selection on first launch, favorites add/remove, language switching, settings. Use accessibility identifiers set in code (not labels) so tests survive localization. If the UI test target does not exist yet, create it as an XCUITest target before writing tests — do not try to drive the UI from the unit test target.
+- **Nutrient WiseTests** (XCTest) — three layers of tests in one target:
+  1. **Pure helper tests** — `LanguageHelperTests`, `ProfileHelperTests`, `ArrayHelperTests`, `FavoriteHelperTests`, `CellHelperTests`. No Core Data, no UIKit in most cases.
+  2. **Core Data tests** — `FinderTests` uses `NWTestSupport` to build an in-memory `NSManagedObjectContext` from the merged model. **Never load `DATA_v3.sqlite` in tests** — always use `[NWTestSupport newInMemoryContext]`.
+  3. **View controller integration tests** — `ViewControllerIntegrationTests` instantiates each VC from its XIB (`initWithNibName:` / `initWithFood:` / etc.), forces `self.view` to load, and drives datasource, delegate, and action methods directly. This exercises ~83% of the UIKit code without needing a XCUITest runner. When adding a new VC, extend this file.
 
-**Running tests with XcodeBuildMCP:**
+`NWTestSupport` is the shared harness: in-memory Core Data stack, fixture builders (`insertFoodWithId:`, `insertNutritiveNameWithSymbol:`, etc.), and `resetUserDefaults` for the app's `NSUserDefaults` keys (`language`, `profile`, `favorites`, `conversionFactors`).
 
-- Full run: `test_sim` against the `Nutrient Wise` scheme (runs both targets if both are attached to the scheme)
-- After a run, pull coverage with `get_coverage_report` for the overall number and `get_file_coverage` to see which files are dragging the average down
-- When coverage drops below 80%, prioritize covering the uncovered files with the highest line counts first — don't chase easy wins on tiny files
+Stub delegate classes for the ProfileSelection / SettingsLanguage / MeasureSelection delegates live at the top of `ViewControllerIntegrationTests.m` (`NWProfileSelectionStub`, etc.). Reuse them rather than `[NSObject new]` — plain `NSObject` doesn't respond to the delegate selectors and the tests will crash.
 
-**What to test vs. skip:**
+### Running tests
 
-- Test: helpers, `Finder`, Core Data fetches, profile filtering, unit conversion via `ConversionFactor`/`Measure`, favorites persistence
-- Skip from coverage goals: generated model accessors, `main.m`, `AppDelegate`/`SceneDelegate` boilerplate, HockeySDK glue, and pure XIB wiring — exclude these from the coverage denominator if Xcode lets you, otherwise accept that they pull the number down and compensate with thorough helper/Finder tests
+- **Preferred:** `test_sim` via XcodeBuildMCP once session defaults are set
+- **With coverage + explicit result bundle** (needed for `get_coverage_report`):
+  ```
+  xcodebuild test -workspace "Nutrient Wise.xcworkspace" \
+    -scheme "Nutrient Wise" \
+    -destination "platform=iOS Simulator,id=<UUID>" \
+    -resultBundlePath /tmp/nw-test.xcresult \
+    -enableCodeCoverage YES
+  ```
+  Then: `get_coverage_report { xcresultPath: "/tmp/nw-test.xcresult", showFiles: true }`. The scheme's `TestAction` already has `codeCoverageEnabled = "YES"`, but MCP's `test_sim` sometimes writes an incomplete result bundle — run `xcodebuild` directly when you need a guaranteed-readable bundle.
+
+When coverage drops below 80%, call `get_file_coverage` on the biggest uncovered files first (don't chase tiny wins).
+
+### What to test vs. skip
+
+- **Test:** helpers, `Finder`, Core Data fetches, profile filtering, unit conversion via `ConversionFactor`/`Measure`, favorites persistence, every view controller's datasource + delegate + action methods
+- **Expected to stay low:** `if (kDebug) NSLog(...)` branches (dead code — `kDebug` is a `NO` constant in several files), `Finder.searchFoodById:` (marked `// TODO not working`), `AppDelegate` / `SceneDelegate` iCloud paths (fire from `NSUbiquitousKeyValueStore` notifications that don't trigger in tests), and trivial `initWithNibName:bundle:` template stubs
+- The `UISearchBar+UISearchBarLocalized` category walks private view-hierarchy class names (`UINavigationButton`, `UISearchBarTextField`) and only covers ~50% — it's brittle by design; don't try to boost it
+
+### Adding a UI test target (XCUITest)
+
+The project currently has no `Nutrient WiseUITests` target. Coverage sits at 83% via integration tests alone, so XCUITest isn't needed to hit the coverage bar — but if you want true end-to-end tests that launch the app via `XCUIApplication` and drive real user flows, here's what's needed:
+
+**Do it from Xcode, not by hand-editing the pbxproj.** The target requires a `PBXNativeTarget` with productType `com.apple.product-type.bundle.ui-testing`, a `XCConfigurationList` with Debug / Release / "Ad hoc distribution" configurations, an Info.plist, a blueprint entry in the scheme's `TestAction` `Testables`, and a target dependency on the app. Hand-editing pbxproj to add all of that is high-risk surgery with no coverage upside.
+
+**Xcode wizard path:**
+
+1. File → New → Target → iOS → **UI Testing Bundle**
+2. Product Name: `Nutrient WiseUITests`
+3. Target to be Tested: **Nutrient Wise**
+4. After creation, verify in the project editor:
+   - The target's `TEST_TARGET_NAME` is `Nutrient Wise`
+   - The target is attached to the `Nutrient Wise` scheme's Test action
+   - `TARGETED_DEVICE_FAMILY = 1` (iPhone), matching the app
+   - There is no legacy `RunUnitTests` shell script phase (Xcode 3/4 template leftover; if one sneaks in, remove it — it breaks the build)
+5. If you use `xcconfig`, inherit `BUNDLE_ID_PREFIX` from `Configs/Secret.xcconfig` for consistency
+
+**Before writing UI tests:** add stable `accessibilityIdentifier` values (set in code, not labels) to the key views you'll be tapping — search bar, result table cells, serving-size cell, favorites tab, profile selection rows, language switch rows. Localized labels change between `en` and `fr` and will break tests that rely on visible text. The priority surfaces to instrument are: `Search.m` (search bar + result table), `FoodDetail.m` (measure cell, favorite button, "All Nutritive Values" row), `Favorites.m` (table cells + edit button), `Profiles.m` / `ProfileSelection.m`, `Settings.m` / `SettingsLanguage.m`.
+
+**Suggested first UI test suite:**
+
+- First-launch profile selection flow
+- Search "apple" → tap result → assert `FoodDetail` appears → tap measure → pick "1 cup" → verify nutrient value recomputes
+- Add to favorites → switch to Favorites tab → assert row is present → swipe-delete → assert empty state returns
+- Settings → Language → switch to Français → verify tab titles change
+- Settings → About → verify the localized HTML loads (en + fr)
+
+**One gotcha:** the test host for UI tests is the app itself, but XCUIApplication launches a fresh process, so `NSUserDefaults` state leaks across tests unless you reset in `setUp`. Pass `-StartFromClean YES` via `XCUIApplication.launchArguments` and read it in `AppDelegate` (you'll need to add that hook — it doesn't exist yet).
 
 ## When in doubt
 

@@ -91,6 +91,15 @@
 		6EB9B32114BA0AEB007C9666 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB9B2F714BA0AEB007C9666 /* Foundation.framework */; };
 		6EB9B32914BA0AEB007C9666 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EB9B32714BA0AEB007C9666 /* InfoPlist.strings */; };
 		6EB9B32C14BA0AEB007C9666 /* Nutrient_WiseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB9B32B14BA0AEB007C9666 /* Nutrient_WiseTests.m */; };
+		7A00000200000000000A0002 /* NWTestSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A00000100000000000A0002 /* NWTestSupport.m */; };
+		7A00000200000000000A0003 /* LanguageHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A00000100000000000A0003 /* LanguageHelperTests.m */; };
+		7A00000200000000000A0004 /* ProfileHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A00000100000000000A0004 /* ProfileHelperTests.m */; };
+		7A00000200000000000A0005 /* ArrayHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A00000100000000000A0005 /* ArrayHelperTests.m */; };
+		7A00000200000000000A0006 /* FavoriteHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A00000100000000000A0006 /* FavoriteHelperTests.m */; };
+		7A00000200000000000A0007 /* FinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A00000100000000000A0007 /* FinderTests.m */; };
+		7A00000200000000000A0008 /* CellHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A00000100000000000A0008 /* CellHelperTests.m */; };
+		7A00000200000000000A0009 /* ViewControllerIntegrationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A00000100000000000A0009 /* ViewControllerIntegrationTests.m */; };
+		7A00000300000000000A0001 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E3E404314BA535E002048B8 /* CoreData.framework */; };
 		6EDD97862F47CB4D004E72AE /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EDD97852F47CB4D004E72AE /* Launch Screen.storyboard */; };
 		6EE9EB3414DC786A00F8ABC5 /* DATA_v3.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 6EE9EB3314DC786A00F8ABC5 /* DATA_v3.sqlite */; };
 		6EF19C5414DA01AB002790E7 /* HeaderCM@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EF19C5214DA01AB002790E7 /* HeaderCM@2x.png */; };
@@ -228,6 +237,15 @@
 		6EB9B32814BA0AEB007C9666 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6EB9B32A14BA0AEB007C9666 /* Nutrient_WiseTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Nutrient_WiseTests.h; sourceTree = "<group>"; };
 		6EB9B32B14BA0AEB007C9666 /* Nutrient_WiseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Nutrient_WiseTests.m; sourceTree = "<group>"; };
+		7A00000100000000000A0001 /* NWTestSupport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NWTestSupport.h; sourceTree = "<group>"; };
+		7A00000100000000000A0002 /* NWTestSupport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NWTestSupport.m; sourceTree = "<group>"; };
+		7A00000100000000000A0003 /* LanguageHelperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LanguageHelperTests.m; sourceTree = "<group>"; };
+		7A00000100000000000A0004 /* ProfileHelperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileHelperTests.m; sourceTree = "<group>"; };
+		7A00000100000000000A0005 /* ArrayHelperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArrayHelperTests.m; sourceTree = "<group>"; };
+		7A00000100000000000A0006 /* FavoriteHelperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavoriteHelperTests.m; sourceTree = "<group>"; };
+		7A00000100000000000A0007 /* FinderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FinderTests.m; sourceTree = "<group>"; };
+		7A00000100000000000A0008 /* CellHelperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CellHelperTests.m; sourceTree = "<group>"; };
+		7A00000100000000000A0009 /* ViewControllerIntegrationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewControllerIntegrationTests.m; sourceTree = "<group>"; };
 		6EDD97852F47CB4D004E72AE /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		6EE9EB3314DC786A00F8ABC5 /* DATA_v3.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = DATA_v3.sqlite; sourceTree = "<group>"; };
 		6EF19C5214DA01AB002790E7 /* HeaderCM@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HeaderCM@2x.png"; sourceTree = "<group>"; };
@@ -263,6 +281,7 @@
 			files = (
 				6EB9B32014BA0AEB007C9666 /* UIKit.framework in Frameworks */,
 				6EB9B32114BA0AEB007C9666 /* Foundation.framework in Frameworks */,
+				7A00000300000000000A0001 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +500,15 @@
 			children = (
 				6EB9B32A14BA0AEB007C9666 /* Nutrient_WiseTests.h */,
 				6EB9B32B14BA0AEB007C9666 /* Nutrient_WiseTests.m */,
+				7A00000100000000000A0001 /* NWTestSupport.h */,
+				7A00000100000000000A0002 /* NWTestSupport.m */,
+				7A00000100000000000A0003 /* LanguageHelperTests.m */,
+				7A00000100000000000A0004 /* ProfileHelperTests.m */,
+				7A00000100000000000A0005 /* ArrayHelperTests.m */,
+				7A00000100000000000A0006 /* FavoriteHelperTests.m */,
+				7A00000100000000000A0007 /* FinderTests.m */,
+				7A00000100000000000A0008 /* CellHelperTests.m */,
+				7A00000100000000000A0009 /* ViewControllerIntegrationTests.m */,
 				6EB9B32514BA0AEB007C9666 /* Supporting Files */,
 			);
 			path = "Nutrient WiseTests";
@@ -553,7 +581,6 @@
 				6EB9B31814BA0AEB007C9666 /* Sources */,
 				6EB9B31914BA0AEB007C9666 /* Frameworks */,
 				6EB9B31A14BA0AEB007C9666 /* Resources */,
-				6EB9B31B14BA0AEB007C9666 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -744,6 +771,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EB9B32C14BA0AEB007C9666 /* Nutrient_WiseTests.m in Sources */,
+				7A00000200000000000A0002 /* NWTestSupport.m in Sources */,
+				7A00000200000000000A0003 /* LanguageHelperTests.m in Sources */,
+				7A00000200000000000A0004 /* ProfileHelperTests.m in Sources */,
+				7A00000200000000000A0005 /* ArrayHelperTests.m in Sources */,
+				7A00000200000000000A0006 /* FavoriteHelperTests.m in Sources */,
+				7A00000200000000000A0007 /* FinderTests.m in Sources */,
+				7A00000200000000000A0008 /* CellHelperTests.m in Sources */,
+				7A00000200000000000A0009 /* ViewControllerIntegrationTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -966,6 +1001,10 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Nutrient Wise",
+				);
 				INFOPLIST_FILE = "Nutrient WiseTests/Nutrient WiseTests-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID_PREFIX).${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "Nutrient WiseTests";
@@ -983,6 +1022,10 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Nutrient Wise",
+				);
 				INFOPLIST_FILE = "Nutrient WiseTests/Nutrient WiseTests-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID_PREFIX).${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "Nutrient WiseTests";
@@ -1082,6 +1125,10 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrient Wise/Nutrient Wise-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Nutrient Wise",
+				);
 				INFOPLIST_FILE = "Nutrient WiseTests/Nutrient WiseTests-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID_PREFIX).${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "Nutrient WiseTests";

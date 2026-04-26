@@ -214,7 +214,29 @@
     if (![__persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:options error:&error])
     {
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
+
+        // Attempt 1: delete corrupted store and re-copy from bundle
+        [fileManager removeItemAtPath:storePath error:nil];
+        NSString *defaultStorePath = [[NSBundle mainBundle] pathForResource:kDatabaseFileName ofType:kDatabaseFileExt];
+        if (defaultStorePath) {
+            [fileManager copyItemAtPath:defaultStorePath toPath:storePath error:nil];
+
+            // Retry adding store after recovery copy
+            if ([__persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:options error:&error]) {
+                NSLog(@"Database recovered from bundled copy after corruption.");
+                return __persistentStoreCoordinator;
+            }
+        }
+
+        // Attempt 2 failed: present error dialog
+        NSString *message = error ? [error localizedDescription] : @"Unknown error loading database.";
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Database Error"
+                                                        message:[NSString stringWithFormat:@"Could not load the database: %@", message]
+                                                       delegate:nil
+                                              cancelButtonTitle:@"Contact Support"
+                                              otherButtonTitles:nil];
+        [alert show];
+        return nil;
     }    
     
     return __persistentStoreCoordinator;

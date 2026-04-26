@@ -563,7 +563,6 @@
 				6EB9B2ED14BA0AEB007C9666 /* Sources */,
 				6EB9B2EE14BA0AEB007C9666 /* Frameworks */,
 				6EB9B2EF14BA0AEB007C9666 /* Resources */,
-				6E53D38019BCAE61004CFAF7 /* ShellScript */,
 			);
 			buildRules = (
 			);

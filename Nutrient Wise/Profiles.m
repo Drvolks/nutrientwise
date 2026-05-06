@@ -128,9 +128,18 @@
         return cell;
     }
     
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    return nil; 
+    NSAssert(NO, @"Unexpected section %lu in %@ cellForRowAtIndexPath", (unsigned long)section, NSStringFromClass([self class]));
+    NSLog(@"[Profiles] Unexpected section %lu in cellForRowAtIndexPath. Returning fallback cell.", (unsigned long)section);
+
+    UITableViewCell *fallbackCell = [tableView dequeueReusableCellWithIdentifier:@"FallbackCell"]; 
+    if(fallbackCell == nil) {
+        fallbackCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"FallbackCell"];
+    }
+
+    fallbackCell.textLabel.text = @"";
+    fallbackCell.accessoryType = UITableViewCellAccessoryNone;
+
+    return fallbackCell;
 }
 
 - (void) profileSelected:(NSString *) profile {

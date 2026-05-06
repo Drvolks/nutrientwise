@@ -230,12 +230,24 @@
 
         // Attempt 2 failed: present error dialog
         NSString *message = error ? [error localizedDescription] : @"Unknown error loading database.";
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Database Error"
-                                                        message:[NSString stringWithFormat:@"Could not load the database: %@", message]
-                                                       delegate:nil
-                                              cancelButtonTitle:@"Contact Support"
-                                              otherButtonTitles:nil];
-        [alert show];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Database Error"
+                                                                       message:[NSString stringWithFormat:@"Could not load the database: %@", message]
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"Contact Support"
+                                                                 style:UIAlertActionStyleDefault
+                                                               handler:nil];
+        [alert addAction:defaultAction];
+
+        dispatch_async(dispatch_get_main_queue(), ^{
+            UIViewController *presentingController = self.window.rootViewController;
+            while (presentingController.presentedViewController) {
+                presentingController = presentingController.presentedViewController;
+            }
+
+            if (presentingController) {
+                [presentingController presentViewController:alert animated:YES completion:nil];
+            }
+        });
         return nil;
     }    
     
